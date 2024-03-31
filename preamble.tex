@@ -1,0 +1,54 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[english, russian]{babel}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+
+\usepackage{amsmath, amsfonts, amssymb, amsthm, mathtools, mathtext}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}[section]
+\newtheorem{lemma}{Лемма}[section]
+\newtheorem{mention}{Замечание}[section]
+\newtheorem{corollary}{Следствие}[theorem]
+\newtheorem{definition}{Определение}[section]
+\newtheorem{example}{Пример}[section]
+\newtheorem{sentence}{Предложение}[section]
+\newtheorem{explanation}{Пояснение}[section]
+
+\usepackage{geometry}
+\geometry{top=25mm}
+\geometry{bottom=30mm}
+\geometry{left=15mm}
+\geometry{right=15mm}
+
+\usepackage{titleps}
+\newpagestyle{main}{
+	\setheadrule{0.4pt}
+	\sethead{НИУ ВШЭ}{}{Корчагин Егор}
+	\setfootrule{0.4pt}
+	\setfoot{Конспект лекций по математическому анализу 2023/2024}{}{\thepage}
+}
+\pagestyle{main}
+
+\usepackage{soulutf8}
+
+\newcommand{\deriv}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\I}{\mathbb I}
+
+\renewcommand{\phi}{\varphi}
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\kappa}{\varkappa}
+
+\DeclareMathOperator{\Kerr}{Ker}
+\DeclareMathOperator{\Imm}{Im}
+
+\DeclareMathOperator*{\argmax}{argmax}
+
+\newcommand{\percent}{\mathbin{\%}}
+\newcommand{\symdiff}{\mathbin{\triangle}}
