@@ -1,21 +1,24 @@
-\documentclass[a4paper, 12pt]{article}
+\documentclass[a4paper, 12pt]{report}
+
+\title{Конспект лекций по математическому анализу 2023/2024}
+\author{Корчагин Егор}
+\date { \today }
 
 \usepackage[english, russian]{babel}
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{indentfirst}
 
-\usepackage{amsmath, amsfonts, amssymb, amsthm, mathtools, mathtext}
+\usepackage{xr, amsmath, amsfonts, amssymb, amsthm, mathtools, mathtext}
 
-\theoremstyle{plain}
-\newtheorem{theorem}{Теорема}[section]
-\newtheorem{lemma}{Лемма}[section]
-\newtheorem{mention}{Замечание}[section]
-\newtheorem{corollary}{Следствие}[theorem]
-\newtheorem{definition}{Определение}[section]
-\newtheorem{example}{Пример}[section]
-\newtheorem{sentence}{Предложение}[section]
-\newtheorem{explanation}{Пояснение}[section]
+\newtheorem{theorem}{Теорема}[chapter]
+\newtheorem{lemma}[theorem]{Лемма}
+\newtheorem{mention}[theorem]{Замечание}
+\newtheorem{corollary}[theorem]{Следствие}
+\newtheorem{definition}[theorem]{Определение}
+\newtheorem{example}[theorem]{Пример}
+\newtheorem{sentence}[theorem]{Предложение}
+\newtheorem*{explanation}{Пояснение}
 
 \usepackage{geometry}
 \geometry{top=25mm}
