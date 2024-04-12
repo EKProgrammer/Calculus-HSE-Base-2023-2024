@@ -87,18 +87,18 @@
 		\[ = \frac{f^{(n)}(c)}{n!}(x - c)^n + o((x - c)^n) = (x - c)^n \bigg(\frac{f^{(n)}(c)}{n!} + o(1)\bigg) \]
 		Т. к. $o(1) \to 0$ при $x \to c$, то по определению предела
 		\[ \exists B_{\delta}(c): \forall x \in B_{\delta}(c) \rightarrow |o(1)| < \epsilon = \bigg|\frac{f^{(n)}{(c)}}{n!}\bigg| \Rightarrow \]
-		$\Rightarrow \forall x \in B_{\delta}(x) \big(\frac{f^{(n)}(c)}{n!} + o(1)\big)$ имеет тот же знак, что и $f^{(n)}(c)$
+		$\Rightarrow \forall x \in B_{\delta}(c)$ $\big(\frac{f^{(n)}(c)}{n!} + o(1)\big)$ имеет тот же знак, что и $f^{(n)}(c)$
 		\begin{enumerate}
-			\item Если $n = 2k$ и $f^{(n)}(c) > 0$, то $f(x) = (x - c)^n \big(\frac{f^{(n)}(c)}{n!} + o(1)\big) = (x - c)^{2k} \cdot A(x)$ $(A(x) > 0$ $\forall x \in B_{\delta}(x))$
+			\item Если $n = 2k$ и $f^{(n)}(c) > 0$, то $f(x) = (x - c)^n \big(\frac{f^{(n)}(c)}{n!} + o(1)\big) = (x - c)^{2k} \cdot A(x)$ $(A(x) > 0$ $\forall x \in B_{\delta}(c))$
 			
 			При $x = c$ $f(c) = 0$; так только мы отходим от точки $c$, $f(x) > 0 \Rightarrow c$ - точка минимума.
-			\item Если $n = 2k$ и $f^{(n)}(c) < 0$, то $f(x) = (x - c)^n \big(\frac{f^{(n)}(c)}{n!} + o(1)\big) = (x - c)^{2k} \cdot A(x)$ $(A(x) < 0$ $\forall x \in B_{\delta}(x))$
+			\item Если $n = 2k$ и $f^{(n)}(c) < 0$, то $f(x) = (x - c)^n \big(\frac{f^{(n)}(c)}{n!} + o(1)\big) = (x - c)^{2k} \cdot A(x)$ $(A(x) < 0$ $\forall x \in B_{\delta}(c))$
 			
 			При $x = c$ $f(c) = 0$; так только мы отходим от точки $c$, $f(x) < 0 \Rightarrow c$ - точка максимума.
-			\item Если $n = 2k + 1$ и $f^{(n)}(c) > 0$, то $f(x) = (x - c)^n \big(\frac{f^{(n)}(c)}{n!} + o(1)\big) = (x - c)^{2k + 1} \cdot A(x)$ $(A(x) > 0$ $\forall x \in B_{\delta}(x))$
+			\item Если $n = 2k + 1$ и $f^{(n)}(c) > 0$, то $f(x) = (x - c)^n \big(\frac{f^{(n)}(c)}{n!} + o(1)\big) = (x - c)^{2k + 1} \cdot A(x)$ $(A(x) > 0$ $\forall x \in B_{\delta}(c))$
 			
 			При $x = c$ $f(c) = 0$; так только мы отходим от точки $c$ в положительную сторону, $f(x) > 0$; так только мы отходим от точки $c$ в отрицательную сторону, $f(x) < 0 \Rightarrow c$ - ни точка максимума, ни точка минимума.
-			\item Если $n = 2k + 1$ и $f^{(n)}(c) < 0$, то $f(x) = (x - c)^n \big(\frac{f^{(n)}(c)}{n!} + o(1)\big) = (x - c)^{2k + 1} \cdot A(x)$ $(A(x) < 0$ $\forall x \in B_{\delta}(x))$
+			\item Если $n = 2k + 1$ и $f^{(n)}(c) < 0$, то $f(x) = (x - c)^n \big(\frac{f^{(n)}(c)}{n!} + o(1)\big) = (x - c)^{2k + 1} \cdot A(x)$ $(A(x) < 0$ $\forall x \in B_{\delta}(c))$
 			
 			При $x = c$ $f(c) = 0$; так только мы отходим от точки $c$ в положительную сторону, $f(x) < 0$; так только мы отходим от точки $c$ в отрицательную сторону, $f(x) > 0 \Rightarrow c$ - ни точка максимума, ни точка минимума.
 		\end{enumerate}
@@ -118,7 +118,7 @@
 	    
 	    Функция $t f(x) + (1 - t) f(y)$ от $t$ является линейной и она задаёт хорду c концами в точках $(x, f(x))$ (при $t = 1$) и $(y, f(y))$ (при $t = 0$). 
 	    
-	    Получается с левой стороны неравенства - это значение функции на отрезке $[x, y]$, а с правой - ордината точки на хорде и понятно, что неравенство выполняется.
+	    Получается с левой стороны неравенства - это значение функции в точке на отрезке $[x, y]$, а с правой - ордината точки на хорде и понятно, что неравенство выполняется.
 	\end{explanation}
 	
 	\begin{center}
@@ -143,9 +143,18 @@
 		\[ yf(z) - zf(z) - yf(x) + zf(x) \leqslant zf(y) - xf(y) - zf(z) + xf(z) \]
 		\[ xf(z) - yf(z) \geqslant zf(x) - yf(x) + xf(y) - zf(y) \]
 		
-		Т. к. $x < y < z$, то $\exists t \in [0, 1]$ $z = t \cdot x + (1 - t) \cdot y \Leftrightarrow t = \frac{z - y}{x - y}$
+		Т. к. $x < z < y$, то $\exists t \in [0, 1]$ $z = t \cdot x + (1 - t) \cdot y \Leftrightarrow t = \frac{z - y}{x - y}$.
 		
 		Т. к. $f(x)$ - выпукла, то $f(z) = f(t \cdot x + (1 - t) \cdot y) \leqslant t f(x) + (1 - t) f(y) = \frac{z - y}{x - y} f(x) + \frac{x - z}{x - y} f(y) \Leftrightarrow xf(z) - yf(z) \geqslant zf(x) - yf(x) + xf(y) - zf(y)$, т. е пришли к тому же самому неравенству.
+		
+		В обратную сторону.	Имеем, что
+		\[ \frac{f(z) - f(x)}{z - x} \leqslant \frac{f(y) - f(z)}{y - z} \Rightarrow xf(z) - yf(z) \geqslant zf(x) - yf(x) + xf(y) - zf(y) \Rightarrow \]
+		\[ \Rightarrow f(z) \leqslant \frac{z - y}{x - y} f(x) + \frac{x - z}{x - y} f(y) \]
+		Т. к. $x < z < y$, то $\exists t \in [0, 1]$ $z = t \cdot x + (1 - t) \cdot y \Leftrightarrow t = \frac{z - y}{x - y}$.
+		
+		Значит
+		\[  f(t \cdot x + (1 - t) \cdot y) \leqslant t f(x) + (1 - t) f(y), \]
+		что является определением выпуклости функции.
 	\end{proof}
 	
 	\begin{theorem}
@@ -179,11 +188,11 @@
 	\end{corollary}
 	
 	\begin{proof}
-		$f''(x) \geqslant 0 \Rightarrow f'(x)$ неубывает. 
+		$f''(x) \geqslant 0 \Leftrightarrow f'(x)$ неубывает. 
 	\end{proof}
 	
 	\begin{corollary}
-		Пусть $f$ — дифференцируемая выпуклая функция на интервале $(a, b)$. Тогда $f(x) \geqslant f'(x)(x - c) + f(x)$ для всех $x, c \in (a, b)$.
+		Пусть $f$ — дифференцируемая выпуклая функция на интервале $(a, b)$. Тогда $f(x) \geqslant f'(c)(x - c) + f(c)$ для всех $x, c \in (a, b)$.
     \end{corollary}
     
     \begin{proof}
@@ -193,12 +202,12 @@
     		\[ (*) \Leftrightarrow \frac{f(x) - f(c)}{x - c} \geqslant f'(c) \]
     		По теореме Лагранжа $\exists \xi \in (c, x) :$
     		\[ \frac{f(x) - f(c)}{x - c} = f'(\xi) \geqslant f'(c), \]
-    		т. к. функция выпукла и по теореме 5.5 и функция неубывает.
+    		т. к. функция выпукла и по теореме 6.5 и функция неубывает.
     		\item Пусть $x < c$
     		\[ (*) \Leftrightarrow \frac{f(x) - f(c)}{x - c} \leqslant f'(c) \]
     		По теореме Лагранжа $\exists \xi \in (x, c) :$
     		\[ \frac{f(x) - f(c)}{x - c} = f'(\xi) \leqslant f'(c), \]
-    		т. к. функция выпукла и по теореме 5.5 и функция неубывает.
+    		т. к. функция выпукла и по теореме 6.5 и функция неубывает.
     		\item Пусть $x = c$. Тогда $(*): 0 \geqslant 0$.
     	\end{enumerate}
     \end{proof}
@@ -278,14 +287,14 @@
 		
 		По теореме Лангранжа 
 		
-		$\forall a, b \in I, a \leqslant b$ $\exists c \in (a, b) \rightarrow$ Ф$(a)$ - Ф$(b) = f'(c)(a - b) = 0 \cdot (a - b) = 0.$ Значит Ф$(x) = const$.
+		$\forall a, b \in I, a \leqslant b$ $\exists c \in (a, b) \rightarrow$ Ф$(a)$ - Ф$(b) = $ Ф$'(c)(a - b) = 0 \cdot (a - b) = 0.$ Значит Ф$(x) = const$.
 	\end{proof}
 	
 	\begin{definition}
 		Множество всех первообразных функции $f$ на некотором заданном интервале $I$ называется \underline{неопределённым интегралом} от $f$ и обозначается $\displaystyle\int f(x) \; dx$.
 	\end{definition}
 	
-	$\displaystyle\int f(x) \; dx = \{F(x) + C$ | $F(x)$ - первообразная $f(x), c \in \R\}$
+	$\displaystyle\int f(x) \; dx = \{F(x) + C$ | $F(x)$ - первообразная $f(x), C \in \R\}$
 	
 	\section{Таблица первообразных}
 	\begin{itemize}
@@ -449,7 +458,7 @@
 	\end{theorem}
 	
 	\begin{proof}
-		Пусть $Q(x) = (x - a_1)^{m_1} \cdot ... \cdot (x - a_s)^{m_s} \cdot (x^2 + p_1x + q_1)^{n_1} \cdot ... \cdot (x^2 + p_kx + q_k)^{n_k}.$ По теореме 23.2 дробь $\frac{P(x)}{Q(x)}$ раскладывается в сумму элементарных дробей
+		Пусть $Q(x) = (x - a_1)^{m_1} \cdot ... \cdot (x - a_s)^{m_s} \cdot (x^2 + p_1x + q_1)^{n_1} \cdot ... \cdot (x^2 + p_kx + q_k)^{n_k}.$ По теореме 8.8 дробь $\frac{P(x)}{Q(x)}$ раскладывается в сумму элементарных дробей
 		\[\frac{P(x)}{Q(x)} = R(x) + \sum_{i = 1}^{s} \sum_{j = 1}^{m_i} \frac{A_{ij}}{(x - a_i)^j} + \sum_{i = 1}^{k} \sum_{j = 1}^{n_i} \frac{B_{ij}x + C_{ij}}{(x^2 + p_ix + q_i)^j}.\]
 		(Здесь более сильное утверждение: любая рациональная функция раскладывается в виде суммы \textit{именно таких} элементарных дробей)
 		
@@ -479,7 +488,7 @@
 	\section{Метод Остроградского}
 	
 	\begin{theorem}[Формула Остроградского]
-		Пусть $deg P < deg Q$. Тогда:
+		Пусть $\deg{P} < \deg{Q}$. Тогда:
 		\[ \int \frac{P(x)}{Q(x)} \; dx = \frac{P_1(x)}{Q_1(x)} + \int \frac{P_2(x)}{Q_2(x)} \; dx,\]
 		где $Q_2(x)$ имеет те же корни, что и многочлен $Q(x)$, но
 		однократно, $Q_1(x) = \frac{Q(x)}{Q_2(x)}$, а $P_1(x)$ и $P_2(x)$ находятся методом неопределенных коэффициентов после дифференцирования формулы, с учетом $\deg{P_1(x)} < \deg{Q_1(x)}, \deg{P_2(x)} < \deg{Q_2(x)}$.
@@ -490,7 +499,7 @@
 		\[ \deg{A(x)} < \deg{B(x)}, \deg{C(x)} < \deg{D(x)} \]
 		\[ \frac{A(x)}{B(x)} + \frac{C(x)}{D(x)} = \frac{A(x)D(x) + C(x)B(x)}{B(x)D(x)} \]
 		\[ \deg{A(x)D(x)} = \deg{A(x)} + \deg{D(x)} < \deg{B(x)} + \deg{D(x)} \]
-		\[ \deg{C(x)B(x)} = \deg{C(x)} + \deg{B(x)} < \deg{D(x)} + \deg{B(x)} < \deg{B(x)} + \deg{D(x)} \]
+		\[ \deg{C(x)B(x)} = \deg{C(x)} + \deg{B(x)} < \deg{D(x)} + \deg{B(x)} = \deg{B(x)} + \deg{D(x)} \]
 		Тогда
 		\[ \deg{A(x)D(x) + C(x)B(x)} = max(\deg{A(x)D(x)}), \deg{C(x)B(x)}) < \]
 		\[ < \deg{B(x)} + \deg{D(x)} \]
@@ -509,7 +518,7 @@
 		
 		В $5. \displaystyle\int \frac{Mx + N}{(x^2 + px + q)^n} \; dx = \frac{M}{2} \frac{(x^2 + px + q)^{1 - n}}{1 - n} + \bigg(N - \frac{Mp}{2}\bigg) J_n \bigg(x + \frac{p}{2}, \sqrt{q - \frac{p^2}{4}}\bigg)$, у первого слагаемого степень $n - 1$ в знаменателе. Теперь нужно разобраться с $J_n$.
 		
-		В $4.\displaystyle J_{n}(x, a) = \frac{1}{2(n - 1)a^2} \bigg(\frac{x}{(x^2 + a^2)^{n - 1}} + (2n - 1)J_{n - 1}(x, a)\bigg)$ у первого слагаемого в знаменателе степень на 1 меньше, а второе слагаемое - это интеграл следующего порядка. Когда мы применим реккурентную формулу для $J_{n - 1}$, то получим дробь со степенью ещё на 1 меньше в знаменателе. Продолжим этот процесс пока не дойдём до первой степени в знаменателе. Если сложить дроби, у которых степень в знаменателе убывает, то получится дробь, у которой знаменатель имеет степень $n - 1$, т. е. на 1 меньше. А интеграл от дроби со степенью 1 в знаменателе, на которой мы остановились, имеет вид $\displaystyle\int \frac{P_2(x)}{Q_2(x)} \; dx$.
+		В $4.\displaystyle J_{n}(x, a) = \frac{1}{2(n - 1)a^2} \bigg(\frac{x}{(x^2 + a^2)^{n - 1}} + (2n - 1)J_{n - 1}(x, a)\bigg)$ у первого слагаемого в знаменателе степень на 1 меньше, а второе слагаемое - это интеграл следующего порядка. Когда мы применим реккурентную формулу для $J_{n - 1}$, то получим дробь со степенью ещё на 1 меньше в знаменателе. Продолжим этот процесс пока не дойдём до первой степени в знаменателе. Если сложить дроби, у которых степень в знаменателе убывает, то получится дробь, у которой знаменатель имеет степень $n - 1$, т. е. на 1 меньше. А интеграл от дроби со степенью 1 в знаменателе, на котором мы остановились, имеет вид $\displaystyle\int \frac{P_2(x)}{Q_2(x)} \; dx$.
 	\end{proof}
 	
 	\begin{mention}
@@ -585,7 +594,7 @@
 	
 	\begin{definition}
 		Функция $f$ называется интегрируемой по Риману на отрезке
-		$[a, b]$, если существует такое число $I$, что $\forall \epsilon > 0 \exists \delta > 0: \forall$ размеченного разбиения $(T, \xi)$ с диаметром разбиения $\Delta_T < \delta$ выполнено $|\sigma(f, T, \xi) - I| < \epsilon$.
+		$[a, b]$, если существует такое число $I$, что $\forall \epsilon > 0$ $\exists \delta > 0: \forall$ размеченного разбиения $(T, \xi)$ с диаметром разбиения $\Delta_T < \delta$ выполнено $|\sigma(f, T, \xi) - I| < \epsilon$.
 		
 		Число $I$ называют интегралом функции $f$ на отрезке $[a, b]$ и
 		обозначают $\displaystyle\int^{b}_{a} f(x) \; dx$.
@@ -653,7 +662,7 @@
     	Первые два утверждения означают, что $I_1 = \int_a^b f(x) \; dx, I_2 = \int_a^b g(x) \; dx.$
     	
     	Рассмотрим интегральную сумму 
-    	\[ \sigma(\alpha f + \beta g, T, \xi) = \sum_{k = 1}^n (\alpha f(\xi_k) + \beta g(\xi_k)) \Delta x_k = \sum_{k = 1}^n \alpha f(\epsilon_k) \Delta x_k + \sum_{k = 1}^n \beta g(\xi_k) \Delta x_k = \]
+    	\[ \sigma(\alpha f + \beta g, T, \xi) = \sum_{k = 1}^n (\alpha f(\xi_k) + \beta g(\xi_k)) \Delta x_k = \sum_{k = 1}^n \alpha f(\xi_k) \Delta x_k + \sum_{k = 1}^n \beta g(\xi_k) \Delta x_k = \]
     	\[ = \alpha \sigma(f, T, \xi) + \beta \sigma(g, T, \xi) \]
     	
     	Фиксируем $\epsilon > 0$ и возьмём $\delta = \min{(\delta_1, \delta_2)} \Rightarrow |\sigma(\alpha f + \beta g, T, \xi) - \alpha I_1 - \beta I_2| = |\alpha \sigma(f, T, \xi) + \beta \sigma(g, T, \xi) - \alpha I_1 - \beta I_2| \leqslant |\alpha \sigma(f, T, \xi) - \alpha I_1| + |\beta \sigma(g, T, \xi) - \beta I_2| \leqslant |\alpha| \epsilon + |\beta| \epsilon = (|\alpha| + |\beta|) \epsilon$
@@ -667,7 +676,7 @@
     \end{sentence}
     
     \begin{proof}
-    	$f(x) \leqslant g(x) \Leftrightarrow g(x) - f(x) \geqslant 0$ и $\int_a^b f(x) \; dx \leqslant \int_a^b g(x) \; dx \Leftrightarrow \int_a^b g(x) - f(x) \; dx$ (пользуемся линейностью). Пусть $h(x) = g(x) - f(x) \Rightarrow$ требуется доказать, что $h(x) \geqslant 0 \Rightarrow \int_a^b h(x) \geqslant 0$.
+    	$f(x) \leqslant g(x) \Leftrightarrow g(x) - f(x) \geqslant 0$ и $\int_a^b f(x) \; dx \leqslant \int_a^b g(x) \; dx \Leftrightarrow \int_a^b g(x) - f(x) \; dx \geqslant 0$ (пользуемся линейностью). Пусть $h(x) = g(x) - f(x) \Rightarrow$ требуется доказать, что $h(x) \geqslant 0 \Rightarrow \int_a^b h(x) \geqslant 0$.
     	
     	По определению $\forall \epsilon > 0$ $\exists \delta > 0 : \forall (T, \xi)$ c $\Delta_T < \delta \rightarrow  |\sigma(h, T, \xi) - \int_a^b h(x) \; dx| < \epsilon \Leftrightarrow \int_a^b h(x) - \epsilon < \underline{\sigma(h, T, \xi) < \int_a^b h(x) + \epsilon}$.
     	
@@ -739,7 +748,7 @@
     		Четвёртое неравенство на самом деле является равенством и доказывается как первое равенство.
     		\item Рассмотрим отрезок $[a, b]$. На нём определено разбиение $T$. Теперь рассмотрим измельчение разбиения $T'$. Оно содержит те же точки, что и в $T$, но добавлет ещё свои точки.
     		
-    		Красные точки - точки разбиения $T$, красные и синие точки - точки измельчения $T'$.
+    		Красные точки - точки разбиения $T$, красные и зелёные точки - точки измельчения $T'$.
     		\begin{center}
     			\includegraphics[width=0.3\textwidth]{img/lecture26/segment_division}
     		\end{center}
@@ -779,7 +788,7 @@
     		\includegraphics[width=0.2\textwidth]{img/lecture26/coloring_segments}
     	\end{center}
     	
-    	Точки $T_{\epsilon}$ делят отрезок c чёрными концами на число чёрных точек + 1. Тогда точки из $T_{\epsilon}$ могут разбить на не более, чем $2|T_{\epsilon}|$ отрезков, потому что максимум достигается, когда в каждом отрезке мы ставим по одной чёрной точке (т. е. разбиваем отрезок на два).
+    	Точки $T_{\epsilon}$ делят отрезок c красными концами на число чёрных точек + 1. Тогда точки из $T_{\epsilon}$ могут разбить на не более, чем $2|T_{\epsilon}|$ отрезков, потому что максимум достигается, когда в каждом отрезке мы ставим по одной чёрной точке (т. е. разбиваем отрезок на два).
     	
     	\begin{center}
     		\includegraphics[width=0.2\textwidth]{img/lecture26/segment_number_estimation}
@@ -802,7 +811,7 @@
     	
     	Аналогично доказывается, что $I^{*} \geqslant S(f, T) - \epsilon$.
     	
-    	\underline{Уточнение.} Если фиксируем $\epsilon$, то $T_{\epsilon}$ - фиксированное число. $f(x)$ интегрируема $\Rightarrow$ она ограничена (по предложению 25.1) $\Rightarrow$ супремум ограничен, поэтому такое $\delta$ рассматривать корректно.
+    	\underline{Уточнение.} Если фиксируем $\epsilon$, то $T_{\epsilon}$ - фиксированное число. $f(x)$ интегрируема $\Rightarrow$ она ограничена (по предложению 9.5) $\Rightarrow$ супремум ограничен, поэтому такое $\delta$ рассматривать корректно.
     \end{proof}
     
     \begin{theorem}[Критерий Дарбу]
@@ -815,17 +824,16 @@
     		\[ \forall \epsilon > 0 \text{ } \exists \delta > 0: \forall (T, \xi) \text{ с } \Delta_T < \delta \rightarrow |\sigma(f, T, \xi) - I| < \epsilon \]
     		\[ I - \epsilon < \sigma(f, T, \xi) < I + \epsilon \]
     		\[ I - \epsilon \leqslant \inf_{\xi} {\sigma(f, T, \xi)} = s(f, T) \leqslant \sup_{T} {s(f, T)} = I_{*} \]
-    		\[ I^{*} = \inf_{T} {S(f, T)} \leqslant S(f, T) = \sup_{\epsilon} {\sigma(f, T, \xi)} \leqslant I + \epsilon \]
+    		\[ I^{*} = \inf_{T} {S(f, T)} \leqslant S(f, T) = \sup_{\xi} {\sigma(f, T, \xi)} \leqslant I + \epsilon \]
     		
     		Докажем, что $I_{*} \leqslant I^{*}$:
-    		\[ \forall T_1, T_2 \text{ } s(f, T_1) \leqslant S(f, T_2) \Rightarrow \sup_{T_1} {s(f, T_1)} \leqslant S(f, T_2) \Rightarrow \sup_{T_1} {s(f, T_1)} \leqslant S(f, T_2) \Rightarrow \]
-    		\[ \Rightarrow \sup_{T_1} {s(f, T_1)} \leqslant \inf_{T_2} {S(f, T_2)} \]
+    		\[ \forall T_1, T_2 \text{ } s(f, T_1) \leqslant S(f, T_2) \Rightarrow \sup_{T_1} {s(f, T_1)} \leqslant S(f, T_2) \Rightarrow \sup_{T_1} {s(f, T_1)} \leqslant \inf_{T_2} {S(f, T_2)} \]
     		Тогда
     		\[ I - \epsilon \leqslant I_{*} \leqslant I^{*} \leqslant I + \epsilon \]
     		Устремляя $\epsilon \to 0$, получаем, что $I_{*} = I^{*}$.
     		\item[$\Leftarrow$] $I = I_{*} = I^{*}$
-    		\[ \forall \epsilon > 0 \text{ } \exists \delta > 0 : \forall T \text{ с } \Delta_T < \delta \rightarrow I - \epsilon = I_{*} - \epsilon \leqslant (\text{лемма 26.1}) \text{ } s(f, T) \leqslant \]
-    		\[ \leqslant \sigma(f, T, \xi) \leqslant S(f, T) \leqslant (\text{лемма 26.1}) \text{ } I^{*} + \epsilon = I + \epsilon \Rightarrow |\sigma(f, T, \xi) - I| < \epsilon, \]
+    		\[ \forall \epsilon > 0 \text{ } \exists \delta > 0 : \forall T \text{ с } \Delta_T < \delta \rightarrow I - \epsilon = I_{*} - \epsilon \leqslant (\text{лемма 10.3}) \text{ } s(f, T) \leqslant \]
+    		\[ \leqslant \sigma(f, T, \xi) \leqslant S(f, T) \leqslant (\text{лемма 10.3}) \text{ } I^{*} + \epsilon = I + \epsilon \Rightarrow |\sigma(f, T, \xi) - I| < \epsilon, \]
     		что есть определение интеграла.
     	\end{enumerate}
     \end{proof}
@@ -846,7 +854,7 @@
     		
     		По определению супремума и инфимума
     		\[ \forall \delta > 0 \text{ } \exists x_{\delta}: \sup_{x \in \Delta} {f(x)} \leqslant f(x_{\delta}) + \delta \]
-    		\[ \forall \delta > 0 \text{ } \exists y_{\delta}: \sup_{y \in \Delta} {f(y)} \geqslant f(y_{\delta}) + \delta \]
+    		\[ \forall \delta > 0 \text{ } \exists y_{\delta}: \inf_{y \in \Delta} {f(y)} \geqslant f(y_{\delta}) - \delta \]
     		Тогда
     		\[ \sup_{x \in \Delta} {f(x)} - \inf_{y \in \Delta}{f(y)} \leqslant f(x_{\delta}) - f(y_{\delta}) + 2\delta \leqslant  \sup_{x, y \in \Delta} {|f(x) - f(y)|} + 2\delta \Rightarrow \]
     		\[ \Rightarrow \sup_{x \in \Delta} {f(x)} - \inf_{y \in \Delta}{f(y)} \leqslant  \sup_{x, y \in \Delta} {|f(x) - f(y)|} \text{ при } \delta \to 0 \]
@@ -876,7 +884,7 @@
     		\item[$1 \Rightarrow 2$] Применяем критерий Дарбу.
     		\item[$2 \Rightarrow 3$] Пусть $f$ - интегрируемая функция на $[a, b]$. Тогда $I^{*} = I_{*} = I$.
     		
-    		По лемме 26.1
+    		По лемме 10.3
     		\[ \forall \epsilon > 0 \text{ } \exists \delta > 0: \forall T \text{ c } \Delta_T < \delta:
     		\displaystyle \left\{{
     			\begin{matrix}
@@ -903,7 +911,7 @@
     \end{corollary}
     
     \begin{proof}
-    	$f$ - интегрируема на $[a, b] \Leftrightarrow$ по пункту 4 теоремы 27.1 
+    	$f$ - интегрируема на $[a, b] \Leftrightarrow$ по пункту 4 теоремы 10.6 
     	\[ \forall \epsilon > 0 \text{ } \exists T: \sum_{k = 1}^n \omega(f, \Delta_k) \Delta x_k < \epsilon. \]
     	\underline{Доказательство для модуля функции}
     	
@@ -917,7 +925,7 @@
     	\[ \sum_{k = 1}^n \omega(f^2, \Delta_k) \Delta x_k \leqslant \sum_{k = 1}^n 2\sup_{x \in \Delta_k} {|f(x)| \omega(f, \Delta_k) \Delta x_k} \leqslant 2\sup_{x \in [a, b]} |f(x)| \sum_{k = 1}^n \omega(f, \Delta_k) \Delta x_k \leqslant \]
     	\[ \leqslant M \cdot \epsilon, \text{где M - константа}. \]
     	
-    	В обоих случаях в конце мы применяем теорему 27.1 и заключаем, что функции интегрируемы на $[a, b]$.
+    	В обоих случаях в конце мы применяем теорему 10.6 и заключаем, что функции интегрируемы на $[a, b]$.
     	
     	Интегрируемость функции на подотрезке докажем далее.
     \end{proof}
@@ -943,7 +951,7 @@
     	Пусть $\Delta x_k = \Delta x_j$ $\forall k, j$. Тогда
     	\[ (*) = \Delta x_1 \sum_{k = 1}^n (f(x_k) - f(x_{k - 1})) = \Delta_T (f(b) - f(a)) \]
     	Следовательно, $\forall T -$ разбиение $[a, b]$ на одинаковые части с $\Delta_T < \frac{\epsilon}{f(b) - f(a)}$
-    	\[ \sum_{k = 1}^n \omega(f, \Delta_k) \Delta x_k \leqslant \epsilon \cdot (f(b) - f(a)). \]
+    	\[ \sum_{k = 1}^n \omega(f, \Delta_k) \Delta x_k \leqslant \epsilon. \]
     	
         Для убывающей $f$ доказывается аналогично.
     \end{proof}
@@ -961,14 +969,14 @@
     \end{center}
     
     \begin{explanation}
-    	Другими словами, существует $\delta$ на оси OX такая, что расстояние между $x$ и $y$ меньше, чем $\delta$, и разность между значениями функции $x$ и $y$ помещается в этот $\epsilon-$корридор.
+    	Другими словами, существует $\delta$ на оси OX такая, что расстояние между $x$ и $y$ меньше, чем $\delta$, и разность между значениями функции в точках $x$ и $y$ помещается в этот $\epsilon-$корридор.
     \end{explanation}
     
     \begin{mention}
     	Если функция является равномерно-непрерывной, то она является и непрерывной, т. к. определение непрерывности слабее:
     	\[ f - \text{непрерывна на } X \Rightarrow \forall x_0 \in X \text{ } \forall \epsilon > 0 \text{ } \exists \delta > 0: \forall x \in B_{\delta}(x_0) \rightarrow |f(x) - f(x_0)| < \epsilon \]
     	
-    	В обратную сторону это не правда, см. пункт 2) примера 27.1.
+    	В обратную сторону это не правда, см. пункт 2) примера 10.12.
     \end{mention}
     
     \begin{example}
@@ -1012,7 +1020,7 @@
     	В силу предыдущей теоремы $f$ равномерно непрерывна на $[a, b]$. Поэтому 
     	\[ \forall \epsilon > 0 \text{ } \exists \delta > 0 : \forall T \text{ с } \Delta_T < \delta \text{ } \forall x, y \in \Delta_k \rightarrow \sup_{x, y \in \Delta_k} {|f(x) - f(y)|} < \epsilon \text{ } \forall k \Rightarrow \]
     	\[ \Rightarrow \omega(f, \Delta_k) < \epsilon \text{ } \forall k.\]
-    	Для такого разбиения $\displaystyle \sum_{k = 1}^n \omega(f, \Delta_k) \Delta x_k < \epsilon |b - a| \Rightarrow$ по теореме 27.1 функция $f$ интегрируема по Риману на $[a, b]$.
+    	Для такого разбиения $\displaystyle \sum_{k = 1}^n \omega(f, \Delta_k) \Delta x_k < \epsilon |b - a| \Rightarrow$ по теореме 10.6 функция $f$ интегрируема по Риману на $[a, b]$.
     \end{proof}
     
     \section*{Лекция 28: Формула Ньютона-Лейбница}
@@ -1024,7 +1032,7 @@
     \end{corollary}
     
     \begin{proof}
-    	$f$ - интегрируема на $[a, b] \Rightarrow$ по теореме 27.1 $\forall \epsilon > 0 \text{ } \exists T:$
+    	$f$ - интегрируема на $[a, b] \Rightarrow$ по теореме 10.6 $\forall \epsilon > 0 \text{ } \exists T:$
     	\[ \sum_{k = 1}^n \omega(f, \Delta_k) \cdot \Delta x_k < \epsilon \Leftrightarrow 0 \leqslant \sum_{k = 1}^n \sup_{x \in \Delta_k} {f(x)} \cdot \Delta_k - \sum_{k = 1}^n \inf_{x \in \Delta_k} {f(x)} \cdot \Delta_k < \epsilon \Leftrightarrow \]
     	\[ \Leftrightarrow 0 \leqslant S(f, T) - s(f, T) < \epsilon \]
     	\begin{center}
@@ -1035,7 +1043,7 @@
     	\end{center}
     	\[ \sum_{k = 1}^{n_2} \omega(f, \Delta^2_k) \Delta^2 x_k \leqslant \sum_{k = 1}^{n_1} \omega(f, \Delta^1_k) \Delta^1 x_k \leqslant \sum_{k = 1}^n \omega(f, \Delta_k) \Delta x_k < \epsilon \]
     	
-    	Первое неравенство выполняется, потому что в новую сумму мы добавили слагаемые отрезков, не входящих в отрезок $[c, d]$, но принадлежащих отрезку $[a, b]$, колебание функции всегда неотрицательно (разность супремума и инфимума функции неотрицательна). Здесь мы переходим от разбиения $T_2$ к разбиению $T_1$. Второе неравенство выполняется, потому что $T_1$ - это измельчение разбиения $T$. На измельчении нижняя сумма Дарбу $s(f, T_1)$ только больше, а верхняя сумма Дарбу $S(f, T_1)$ только меньше, значит разность $S(f, T_1) - s(f, T_1) \leqslant S(f, T) - s(f, T)$ (лемма 25.1, пункт 2).
+    	Первое неравенство выполняется, потому что в новую сумму мы добавили слагаемые отрезков, не входящих в отрезок $[c, d]$, но принадлежащих отрезку $[a, b]$, колебание функции всегда неотрицательно (разность супремума и инфимума функции неотрицательна). Здесь мы переходим от разбиения $T_2$ к разбиению $T_1$. Второе неравенство выполняется, потому что $T_1$ - это измельчение разбиения $T$. На измельчении нижняя сумма Дарбу $s(f, T_1)$ только больше, а верхняя сумма Дарбу $S(f, T_1)$ только меньше, значит разность $S(f, T_1) - s(f, T_1) \leqslant S(f, T) - s(f, T)$ (лемма 10.2, пункт 2).
     \end{proof}
     
     \begin{corollary}
@@ -1053,7 +1061,7 @@
     		$f$ - интегрируема на $[a, b] \Rightarrow$ по определению $\forall \epsilon > 0 \text{ } \exists \delta > 0: \forall T$ с $\Delta_T < \delta$ и $\xi \rightarrow |\sigma(f, T_n, \xi_n) - I| < \epsilon$
     		
     		Тогда
-    		\[ \forall \epsilon > 0 \text{ } \exists N: \forall n > N \text{ } \Delta_{T_n} < \delta \Rightarrow |\sigma(f, T_n, \xi_n) - I| < \epsilon \Rightarrow \sigma(f, T_n, \xi_n) \rightarrow I \]
+    		\[ \forall \epsilon > 0 \text{ } \exists N: \forall n > N \text{ } \Delta_{T_n} < \delta \rightarrow |\sigma(f, T_n, \xi_n) - I| < \epsilon \Rightarrow \sigma(f, T_n, \xi_n) \rightarrow I \]
     	\end{proof}
     	
     	Это означает, что если функция интегрируемая, то можно выбирать любое разбиение, с стремящимся к нулю диаметром, чтобы найти интеграл.
@@ -1063,14 +1071,14 @@
     		\includegraphics[width=0.3\textwidth]{img/lecture28/partition_with_c_dot}
     	\end{center}
     	
-    	$f$ - интегрируема $\Rightarrow \forall \epsilon > 0 \text{ } \exists \delta > 0: \forall T \text{ } \Delta_T < \delta \rightarrow |\sigma(f, T, \xi) - I| < \epsilon$
+    	$f$ - интегрируема $\Rightarrow \forall \epsilon > 0 \text{ } \exists \delta > 0: \forall T \text{ с } \Delta_T < \delta \rightarrow |\sigma(f, T, \xi) - I| < \epsilon$
     	
     	$\Delta_T < \delta \Rightarrow \Delta_{T_1} < \delta, \Delta_{T_2} < \delta \Rightarrow |\sigma(f, T_1, \xi_1) - I_1| < \epsilon, |\sigma(f, T_2, \xi_2) - I_2| < \epsilon$
     	
     	Пусть отрезок $[a, c]$ поделен на $n_1$ отрезков. Тогда    	
     	\[ \sigma(f, T, \xi) = \sum_{k = 1}^n f(\xi_k) \Delta x_k = \sum_{k = 1}^{n_1} f(\xi_k) \Delta x_k + \sum_{k = n_1 + 1}^n f(\xi_k) \Delta x_k = \sigma(f, T_1, \xi_1) + \sigma(f, T_2, \xi_2) \Rightarrow \]
     	\[ \Rightarrow |\sigma(f, T, \xi) - I_1 - I_2| = |\sigma(f, T_1, \xi_1) + \sigma(f, T_2, \xi_2) - I_1 - I_2| \leqslant \]
-    	\[ \leqslant |\sigma(f, T_1, \xi_1) - I_1| + |\sigma(f, T_2, \xi_2) - I_2| \leqslant 2\epsilon \]
+    	\[ \leqslant |\sigma(f, T_1, \xi_1) - I_1| + |\sigma(f, T_2, \xi_2) - I_2| < 2\epsilon \]
     	Следовательно,
     	\[ \sigma(f, T, \xi) \to I, \sigma(f, T, \xi) \to I_1 + I_2 \Rightarrow I_1 + I_2 = I \]
     \end{proof}
@@ -1138,7 +1146,7 @@
     \end{corollary}
     
     \begin{explanation}
-    	Если во всех точках $f$ непрерывна, то по теореме 28.3 первообразная $f$ существует во всех точках.
+    	Если во всех точках $f$ непрерывна, то по теореме 10.19 первообразная $f$ существует во всех точках.
     \end{explanation}
     
     \section{Формула интегрирования по частям}
@@ -1178,7 +1186,7 @@
     \end{theorem}
     
     \begin{proof}
-    	$f$ — непрерывна на $[a, b] \Rightarrow f$ - интегрируема на $[\phi(a), \phi(b)]$ (функция интегрируема на любом подотрезке $[a, b]$) и у $f$ есть первообразная (по теореме 28.2).
+    	$f$ — непрерывна на $[a, b] \Rightarrow f$ - интегрируема на $[\phi(a), \phi(b)]$ (функция интегрируема на любом подотрезке $[a, b]$) и у $f$ есть первообразная (по теореме 10.19).
     	
     	Тогда у функции $f(\phi(t))\phi'(t)$ тоже есть первообразная $F(\phi(t))$.
     	
@@ -1270,7 +1278,7 @@
 		\begin{enumerate}
 			\item По определению $\int_a^b f(x) \; dx = \lim_{t \to b-} \int_a^t f(x) \; dx$.
 			
-			По теореме 28.2 если $F(t) = \int_a^t f(x) \; dx$ интегрируема на $[a, b]$, то $F(t)$ непрерывна на $[a, b] \Rightarrow \lim_{t \to b-} \int_a^t f(x) \; dx = F(b) = \int_a^b f(x) \; dx$.
+			По теореме 10.19 если $F(t) = \int_a^t f(x) \; dx$ интегрируема на $[a, b]$, то $F(t)$ непрерывна на $[a, b] \Rightarrow \lim_{t \to b-} \int_a^t f(x) \; dx = F(b) = \int_a^b f(x) \; dx$.
 			\item $\int_a^b \alpha f(x) + \beta g(x) \; dx = \lim_{t \to b-} \int_a^t \alpha f(x) + \beta g(x) \; dx \text{ (здесь уже обычный опреде-}$
 			
 			$\text{лённый интеграл, применяем линейность)} = \lim_{t \to b-} \alpha \int_a^t f(x) \; dx + \beta \int_a^t g(x) \; dx = \alpha \lim_{t \to b-} \int_a^t f(x) \; dx + \beta \lim_{t \to b-} \int_a^t g(x) \; dx = \alpha \int_a^b f(x) \; dx + \beta \int_a^b g(x) \; dx$
@@ -1298,11 +1306,11 @@
 		\[ \exists \int_a^b f(x) \; dx = \lim_{y \to b-} \int_a^y f(x) \; dx\]
 		
 		Рассмотрим следующий интеграл (мы не знаем заранее, существует ли он):
-		\[ \int_{\alpha}^{\beta} f(\phi(t)) \phi'(t) = \lim_{s \to \beta} \int_{\alpha}^s f(\phi(t))\phi'(t) \; dt \]
+		\[ \int_{\alpha}^{\beta} f(\phi(t)) \phi'(t)\; dt = \lim_{s \to \beta} \int_{\alpha}^s f(\phi(t))\phi'(t) \; dt \]
 		
-		При этом не важно с какой стороны $s$ стремится к бета $\beta$ (справа или слева), потому что мы определили интеграл как в случае $\alpha < \beta$, так и в случае $\beta < \alpha$.
+		При этом не важно с какой стороны $s$ стремится к $\beta$ (справа или слева), потому что мы определили интеграл как в случае $\alpha < \beta$, так и в случае $\beta < \alpha$.
 		
-		Для данного определённого интеграла под пределом действует формула интегрирования заменой (теорема 29.1).
+		Для данного определённого интеграла под пределом действует формула интегрирования заменой (теорема 11.1).
 		
 		\[ \lim_{s \to \beta} \int_{\alpha}^s f(\phi(t))\phi'(t) \; dt = \lim_{s \to \beta} \int_{\phi(\alpha)}^{\phi(s)} f(x) \; dx \]
 		
@@ -1319,7 +1327,7 @@
 	\end{theorem}
 	
 	\begin{proof}
-		Если существует $\displaystyle\lim_{x \to b - 0} f(x)g(x)$, то $\lim_{x \to b - 0} f(x)g(x) - f(a)g(a)$ - это число. Тогда функции $f'g$ и $fg'$ одновременно интегрируемы или не интегрируемы в несобственном смысле на $[a, b)$.
+		Если существует $\displaystyle\lim_{x \to b - 0} f(x)g(x)$, то $\displaystyle\lim_{x \to b - 0} f(x)g(x) - f(a)g(a)$ - это число. Тогда функции $f'g$ и $fg'$ одновременно интегрируемы или не интегрируемы в несобственном смысле на $[a, b)$.
 		
 		В случае интегрируемости
 		\[ \int_a^b f(t)g'(t) \; dt = \lim_{x \to b} \int_a^x f(t)g'(t) \; dt \]
@@ -1336,13 +1344,13 @@
 		$[a; \xi] \subseteq [a; b)$ и неограниченна в левой окрестности точки $x = b$. Тогда для сходимости интеграла
 		\[ \int_a^b f(x) \; dx \]
 		необходимо и достаточно, чтобы для любого числа $\epsilon > 0$
-		существовало такое число $\eta$ ????, что при любых $\eta_1, \eta_2 \in (\eta; b)$
+		существовало такое число $\eta$, что при любых $\eta_1, \eta_2 \in (\eta; b)$
 		\[ \bigg| \int_{\eta_1}^{\eta_2} f(x) \; dx \bigg| < \epsilon. \]
 	\end{theorem}
 	
 	\begin{proof}
 		Запишем критерий Коши для функции $F(x) = \int_a^x f(t) \; dt$:
-		\[ \exists \lim_{x \to b-} F(x) \Leftrightarrow \forall \epsilon > 0 \text{ } \exists \delta > 0 \text{ } \forall \eta_1, \eta_2 \in B_{\delta}(b) \rightarrow |F(\eta_1) - F(\eta_2)| < \epsilon \Rightarrow \]
+		\[ \exists \lim_{x \to b-} F(x) \Leftrightarrow \forall \epsilon > 0 \text{ } \exists \delta = \eta > 0 \text{ } \forall \eta_1, \eta_2 \in B_{\delta}(b) \rightarrow |F(\eta_1) - F(\eta_2)| < \epsilon \Rightarrow \]
 		\[ \Rightarrow \bigg| \int_{a}^{\eta_1} f(x) \; dx - \int_{a}^{\eta_2} f(x) \; dx \bigg| = \bigg| \int_{a}^{\eta_1} f(x) \; dx + \int_{\eta_2}^{a} f(x) \; dx \bigg| = \bigg| \int_{\eta_2}^{\eta_1} f(x) \; dx \bigg| = \]
 		\[ = \bigg| \int_{\eta_1}^{\eta_2} f(x) \; dx \bigg| < \epsilon \]
 	\end{proof}
@@ -1360,10 +1368,10 @@
 	\end{sentence}
 	
 	\begin{proof}
-		Запишем критерий Коши (теорема 29.5)
+		Запишем критерий Коши (теорема 11.9)
 		\[ \int_a^b |f(x)| \; dx \text{ - сходится} \Leftrightarrow \forall \epsilon > 0 \text{ } \exists \delta > 0: \eta_1, \eta_2 \in B_{\delta}(b) \rightarrow \bigg| \int_{\eta_1}^{\eta_2} |f(x)| \; dx \bigg| < \epsilon \]
 		
-		Применяем замечание 25.1 (первое неравенство)
+		Применяем замечание 9.8 (первое неравенство)
 		\[ \bigg| \int_{\eta_1}^{\eta_2} f(x) \; dx \bigg| \leqslant \int_{\eta_1}^{\eta_2} |f(x)| \; dx \leqslant \bigg| \int_{\eta_1}^{\eta_2} |f(x)| \; dx \bigg| < \epsilon \]
 		Значит сходится интеграл $\displaystyle \int_a^b f(t) \; dt$.
 	\end{proof}
@@ -1404,10 +1412,12 @@
 	\end{theorem}
 	
 	\begin{proof}
-		Рассмотрим функцию $F(y) = \int_a^y f(x) \; dx$. На любом отрезке $[x_1, x_2] \subset [a, b)$ функция $f(x)$ интегрируема (в силу следствия 10.14) и, поскольку $f(x) \geqslant 0, F(y)$ - монотонна:
+		Рассмотрим функцию $F(y) = \int_a^y f(x) \; dx$. На любом отрезке $[x_1, x_2] \subset [a, b)$ функция $f(x)$ интегрируема (в силу следствия 10.15) и, поскольку $f(x) \geqslant 0, F(y)$ - монотонна:
 		\[ F(x_2) = \int_a^{x_2} f(x) \; dx = \int_a^{x_1} f(x) \; dx + \int_{x_1}^{x_2} f(x) \; dx \geqslant  \int_a^{x_1} f(x) \; dx = F(x_1). \]
 		Тогда, в силу теоремы Вейерштраса 3.18, если $F(y)$ - ограничена, то
 		\[ \sup_{y \in [a, b]} F(y) = \lim_{y \to b} \int_a^y f(x) \; dx = \int_a^b f(x) \; dx. \]
+		В обратную сторону
+		\[ \exists \int_a^b f(x) \; dx = \lim_{y \to b} \int_a^y f(x) \; dx \Rightarrow F(x) - \text{ограничена.} \]
 	\end{proof}
 	
 	\section{Первый признак сравнения}
@@ -1425,7 +1435,7 @@
 		Поскольку $0 \leqslant f(x) \leqslant g(x)$, из монотонности интеграла 9.7 следует, что для любого $y \in [a, b)$:
 		\[ 0 \leqslant \int_a^y f(x) \; dx \leqslant \int_a^y g(x) \; dx. \]
 		
-		Если $\int_a^b g(x) \; dx$ сходится, то по критерию сходимости несобственного интеграла от знакопостоянной функции 11.11 функция $G(y) = \int_a^y g(x) \; dx$ — ограничена. Тогда из неравенства выше следует, что и функция $F(y) = \int_a^y f(x) \; dx$ ограничена. Отсюда, в силу теоремы 11.11, следует сходимость интеграла $\int_a^b f(x) \; dx$.
+		Если $\int_a^b g(x) \; dx$ сходится, то по критерию сходимости несобственного интеграла от знакопостоянной функции 11.15 функция $G(y) = \int_a^y g(x) \; dx$ — ограничена. Тогда из неравенства выше следует, что и функция $F(y) = \int_a^y f(x) \; dx$ ограничена. Отсюда, в силу теоремы 11.15, следует сходимость интеграла $\int_a^b f(x) \; dx$.
 		
 		Если же $\int_a^b f(x) \; dx$ расходится, то $F(y)$ неограничена, как и функция $G(y)$.
 	\end{proof}
@@ -1450,9 +1460,9 @@
 		\[ \int_a^b f(x) \; dx = \int_a^{b_1} f(x) \; dx + \int_{b_1}^b f(x) \; dx \text{ и } \int_a^b g(x) \; dx = \int_a^{b_1} g(x) \; dx + \int_{b_1}^b g(x) \; dx. \]
 	    При этом $\int_a^{b_1} f(x) \; dx$ и $\int_a^{b_1} g(x) \; dx$ - определенный интегралы, не влияющие на сходимость. 
 	    
-	    Исследуем интегралы $\int_{b_1}^b f(x) \; dx$ и $\int_{b_1}^b g(x) \; dx$. Если $\int_{b_1}^b g(x) \; dx$ сходится, то сходится и интеграл $\int_{b_1}^b M g(x) \; dx = M \int_{b_1}^b g(x) \; dx$. Тогда по первому признаку сравнения 11.12 интеграл $\int_{b_1}^b f(x) \; dx$ тоже сходится.
+	    Исследуем интегралы $\int_{b_1}^b f(x) \; dx$ и $\int_{b_1}^b g(x) \; dx$. Если $\int_{b_1}^b g(x) \; dx$ сходится, то сходится и интеграл $\int_{b_1}^b M g(x) \; dx = M \int_{b_1}^b g(x) \; dx$. Тогда по первому признаку сравнения 11.16 интеграл $\int_{b_1}^b f(x) \; dx$ тоже сходится.
 	    
-	    И наоборот, если $\int_{b_1}^b g(x) \; dx$ расходится, то расходится и $\int_{b_1}^b m g(x) \; dx = m \int_{b_1}^b g(x) \; dx$. Тогда по первому признаку сравнения 11.12 интеграл $\int_{b_1}^b f(x) \; dx$ тоже расходится.
+	    И наоборот, если $\int_{b_1}^b g(x) \; dx$ расходится, то расходится и $\int_{b_1}^b m g(x) \; dx = m \int_{b_1}^b g(x) \; dx$. Тогда по первому признаку сравнения 11.16 интеграл $\int_{b_1}^b f(x) \; dx$ тоже расходится.
 	\end{proof}
 	
 	\section{Второй признак сравнения}
@@ -1509,7 +1519,7 @@
 	\end{corollary}
 	
 	\begin{proof}
-		Ряд $\sum_{k = 1} |a_n|$ сходится по первому признаку сравнения. Если ряд сходится абсолютно, то он и просто сходится.
+		Ряд $\sum_{k = 1}^{\infty} |a_n|$ сходится по первому признаку сравнения. Если ряд сходится абсолютно, то он и просто сходится.
 	\end{proof}
 	
 	\section{Второй признак сравнения}
@@ -1553,6 +1563,23 @@
 		Пусть $f(x) \geqslant 0$ и не возрастает на промежутке $[1, +\infty)$. Тогда ряд $\displaystyle \sum_{n = 1}^{\infty} f(n)$ и интеграл $\displaystyle \int_1^{+\infty} f(x) \; dx$ сходятся и расходятся одновременно. 
 	\end{sentence}
 	
+	\begin{proof}
+		Обозначим через $\displaystyle S_n = \sum_{k = 1}^n f(k)$ частичную сумму ряда $\displaystyle \sum_{k = 1}^{\infty} f(k)$. Поскольку $f(x) \geqslant 0$, последовательность $S_n$ монотонно возрастает.
+		
+		Заметим, что $\forall b > 1$ функция $f(x)$ интегрируема на любом отрезке $[1, b]$, поскольку $f(x)$ монотонна (следствие 10.9). Также заметим, что в силу монотонности $f(x)$ для $x \in [n, n + 1]$ выполнено
+		\[ f(n) \geqslant f(x) \geqslant f(n + 1). \]
+		Тем самым, $\forall n \in \N$ выполнено
+		\[ \int_n^{n + 1} f(n) \; dx = f(n)((n + 1) - n) = f(n) \geqslant \int_n^{n + 1} f(x) \; dx \geqslant f(n + 1) = \]
+		\[ =  f(n + 1)((n + 1) - n) = \int_n^{n + 1} f(n + 1) \; dx. \]
+		Отсюда, если $\int_1^{+\infty} f(x) \; dx$ сходится, то
+		\[ S_n - f(1) = f(2) + ... + f(n) \leqslant \int_1^n f(x) \; dx \leqslant \int_1^{+\infty} f(x) \; dx < +\infty, \]
+		что означает ограниченность $S_n$ и, в силу монотонности $S_n$ и теоремы Вейерштрасса 2.14, сходимость ряда $\displaystyle \sum_{k = 1}^{\infty} f(k)$.
+		
+		Если же $\int_1^{+\infty} f(x) \; dx$ расходится, то $\displaystyle \lim_{n \to \infty} \int_1^n f(x) \; dx = +\infty$, и
+		\[ S_n = f(1) + ... + f(n) \geqslant \int_n^{n + 1} f(x) \; dx \to +\infty, \]
+		что означает расходимость ряда $\displaystyle \sum_{k = 1}^{\infty} f(k)$.
+	\end{proof}
+	
 	\begin{example}
 		Ряд $\displaystyle \sum_{n = 1}^{\infty} \frac{1}{n^p}$ сходится при $p > 1$ и расходится при $p \leqslant 1$.
 	\end{example}
@@ -1566,7 +1593,7 @@
 		Пусть $a_k > 0$ $\forall k \in \N$. Тогда
 		\begin{enumerate}
 			\item если существует $k_0 \in \N$ и $q \in (0, 1)$ такие, что $\frac{a_{k + 1}}{a_k} \leqslant q$ $\forall k \geqslant k_0,$ то ряд $\displaystyle \sum_{k = 1}^{\infty} a_k$ сходится;
-			\item если $\exists k_0 : \forall k \leqslant k_0 \rightarrow \frac{a_{k + 1}}{a_k} \geqslant 1$, то ряд $\displaystyle \sum_{k = 1}^{\infty} a_k$ расходится.
+			\item если $\exists k_0 : \forall k \geqslant k_0 \rightarrow \frac{a_{k + 1}}{a_k} \geqslant 1$, то ряд $\displaystyle \sum_{k = 1}^{\infty} a_k$ расходится.
 		\end{enumerate}
 	\end{theorem}
 	
@@ -1574,7 +1601,7 @@
 		\begin{enumerate}
 			\item Знаем, что ряд $\sum_{k = 1}^{\infty} q^n$ сходится при $|q| < 1$
 			
-			Пусть $\frac{a_{n + 1}}{a_k} \leqslant q < 1 \text{ } \forall k \geqslant k_0$
+			Пусть $\frac{a_{k + 1}}{a_k} \leqslant q < 1 \text{ } \forall k \geqslant k_0$
 			
 			\[ a_{k + 1} = \frac{a_{k + 1}}{a_k} \cdot a_k = \frac{a_{k + 1}}{a_k} \cdot \frac{a_k}{a_{k - 1}} \cdot a_{k - 1} = \frac{a_{k + 1}}{a_k} \cdot \frac{a_k}{a_{k - 1}} \cdot ... \cdot \frac{a_{k_0 + 1}}{a_{k_0}} \cdot a_{k_0} \leqslant q^{k - k_0 + 1} a_{k_0} \Leftrightarrow \]
 			\[ \Leftrightarrow a_k \leqslant q^{k - k_0} a_{k_0} \Rightarrow \sum_{k = k_0}^{\infty} a_k \leqslant \sum_{k = k_0}^{\infty} q^{k - k_0} a_{k_0} \Rightarrow \text{ряд } \sum_{k = k_0}^{\infty} q^{k - k_0} a_{k_0} \text{ сходится} \Leftrightarrow \]
@@ -1706,7 +1733,7 @@
 		\[ = \ln{\bigg(1 - \frac{p}{n} + \frac{p}{n} + O\bigg(\frac{1}{n^{1 + \delta}}\bigg) + O\bigg(\frac{1}{n^2}\bigg)\bigg)} = (3) \]
 	    Если $\delta > 1$, то $O\big(\frac{1}{n^{1 + \delta}}\big) = O\big(\frac{1}{n^2}\big)$; если $\delta < 1$, то $O\big(\frac{1}{n^2}\big) = O\big(\frac{1}{n^{1 + \delta}}\big)$.
 	    
-		Возьмём $\delta' = \min{(\delta, 1)} \geqslant 1$. Тогда
+		Возьмём $\delta' = \min{(\delta, 1)}$. Тогда
 		\[ (3) = \ln{\bigg(1 + O\bigg(\frac{1}{n^{1 + \delta'}}\bigg)\bigg)} = (4) \]
 		Применим формулу Тейлора для $\ln{(1 + x)}$
 		\[ (4) = O\bigg(\frac{1}{n^{1 + \delta'}}\bigg) + O\bigg(O\bigg(\frac{1}{n^{1 + \delta'}}\bigg)\bigg) = O\bigg(\frac{1}{n^{1 + \delta'}}\bigg) \]
@@ -1722,7 +1749,7 @@
 	    \[ \frac{a_{N + 1}}{a_1} (N + 1)^p = e^S \cdot e^{o(1)} = (5) \]
 	    Применим формулу Тейлора для $e^{o(1)}$
 	    \[ (5) = e^S \cdot (1 + o(1) + o(o(1))) = e^S \cdot (1 + o(1)) \]
-	    \[ \frac{a_{N + 1}}{\frac{e^S a_1}{(N + 1)^p}} = 1 + o(1) \Rightarrow \lim_{n \to \infty} \frac{a_{N + 1}}{\frac{e^S a_1}{(N + 1)^p}} = 1 \Rightarrow a_n \sim \frac{const}{n^p} \]
+	    \[ \frac{a_{N + 1}}{\frac{e^S a_1}{(N + 1)^p}} = 1 + o(1) \Rightarrow \lim_{n \to \infty} \frac{a_{N + 1}}{\frac{e^S a_1}{(N + 1)^p}} = 1 \Rightarrow a_n \sim \frac{const}{n^p} (\text{второй признак сравнения}) \]
 	\end{proof}
 	
 	\section*{Лекция 32: Признаки Абеля и Дирихле}
@@ -1765,7 +1792,7 @@
 		
 		Пусть $b'_n = b_n - b \Rightarrow b'_n$ стремится монотонно к нулю.
 		
-		По признаку Дирихле сходится ряд $\sum_{k = 1}^{\infty} a_n b'_n$. Здесь мы пользуемся, что $\sum_{n = 1}^{\infty} a_n \Rightarrow$ частичная сумма $\sum_{k = 1}^{n} a_k$ ограничена.
+		По признаку Дирихле сходится ряд $\sum_{k = 1}^{\infty} a_n b'_n$. Здесь мы пользуемся, что $\sum_{n = 1}^{\infty} a_n$ сходится $\Rightarrow$ частичная сумма $\sum_{k = 1}^{n} a_k$ ограничена.
 		
 		\[ \sum_{k = 1}^n a_k b'_k = \sum_{k = 1}^n a_k (b_k - b) = \sum_{k = 1}^n a_k b_k - b \sum_{k = 1}^n a_k \]
 		$\sum_{k = 1}^n a_k b'_k$ - сходится, $b \sum_{k = 1}^n a_k$ - сходится $\Rightarrow \sum_{k = 1}^n a_k b_k$ - сходится.
@@ -1784,7 +1811,7 @@
 			
 			Если $\sum_{k = 1}^{\infty} a_k b_k$ - сходится, то $\sum_{k = k_0}^{\infty} a_k b_k$ - сходится.
 			
-			Последовательность $b'_k = \{\frac{1}{b_k}\}$ - монотонна, ограничена $\Rightarrow \sum_{k = k_0}^{\infty} (a_k \cdot b_k) \cdot b'_k$ - сходится по признаку Абеля $\Rightarrow \sum_{k = k_0}^{\infty} a_k$ - сходится $\Rightarrow$ по принципу локализации $\sum_{k = 1}^{\infty} a_k$.
+			Последовательность $b'_k = \{\frac{1}{b_k}\}$ - монотонна, ограничена $\Rightarrow \sum_{k = k_0}^{\infty} (a_k \cdot b_k) \cdot b'_k$ - сходится по признаку Абеля $\Rightarrow \sum_{k = k_0}^{\infty} a_k$ - сходится $\Rightarrow$ по принципу локализации $\sum_{k = 1}^{\infty} a_k$ - сходится.
 		\end{enumerate}
 	\end{proof}
 	
@@ -1874,10 +1901,11 @@
     \begin{proof}
 	    Пусть разбиение $T = \{a = x_0, x_1, ..., x_{n - 1}, x_n = b\}$.
 	    
-	    Функция $f(x)$ - монотонная $\Rightarrow$ интегрируема (Следствие 27.1.3), $g(x)$ по условию леммы интегрируема $\Rightarrow f(x)g(x)$ интегрируема.
+	    Функция $f(x)$ - монотонная $\Rightarrow$ интегрируема (Следствие 10.9), $g(x)$ по условию леммы интегрируема $\Rightarrow f(x)g(x)$ интегрируема.
 	    
 	    Воспользуемся аддитивностью интеграла.
-	    \[ \int_a^b f(x)g(x) \; dx = \sum_{k = 0}^{n - 1} f(x_k) \int_{x_k}^{x_{k + 1}} g(x) \; dx + \sum_{k = 0}^{n - 1} \int_{x_k}^{x_{k + 1}} (f(x) - f(x_k)) g(x) \; dx \]
+	    \[ \int_a^b f(x)g(x) \; dx = \sum_{k = 0}^{n - 1} \int_{x_k}^{x_{k + 1}} f(x)g(x) \; dx = \sum_{k = 0}^{n - 1} f(x_k) \int_{x_k}^{x_{k + 1}} g(x) \; dx + \]
+	    \[ + \sum_{k = 0}^{n - 1} \int_{x_k}^{x_{k + 1}} (f(x) - f(x_k)) g(x) \; dx \]
 	    Пусть $\sigma = \sum_{k = 0}^{n - 1} f(x_k) \int_{x_k}^{x_{k + 1}} g(x) \; dx, \rho = \sum_{k = 0}^{n - 1} \int_{x_k}^{x_{k + 1}} (f(x) - f(x_k)) g(x) \; dx$.
 	    
 	    Докажем, что $\rho \to 0$ при $\Delta_T \to 0$.
@@ -1887,13 +1915,13 @@
 	    Если функция $g(x)$ интегрируема по Риману, то она ограничена числом $M$.
 	    \[ (*) \leqslant \sum_{k = 0}^{n - 1} \int_{x_k}^{x_{k + 1}} \omega(f, \Delta_k) M \; dx = \sum_{k = 0}^{n - 1} \omega(f, \Delta_k) M \int_{x_k}^{x_{k + 1}} 1 \; dx =  \sum_{k = 0}^{n - 1} \omega(f, \Delta_k) M \Delta x_k = \] 
 	    \[ = M \sum_{k = 0}^{n - 1} \omega(f, \Delta_k) \Delta x_k \]
-	    $f$ интегрируема $\Rightarrow \omega(f, \Delta_k) \Delta x_k \to 0$ по замечанию 28.1 (или по критерию Дарбу).
+	    $f$ интегрируема $\Rightarrow \omega(f, \Delta_k) \Delta x_k \to 0$ при $\Delta_T \to 0$ по критерию Дарбу.
 	    
 	    Обозначение: $G(x) = \int_a^x g(x) \; dx$
 	    \[ \sigma = \sum_{k = 0}^{n - 1} f(x_k) \cdot (G(x_{k + 1}) - G(x_k)) = \sum_{k = 0}^{n - 1} f(x_k) G(x_{k + 1}) - \sum_{k = 0}^{n - 1} f(x_k) G(x_k) = (**) \]
 	    Т. к. $f(x_0) G(x_0) = f(a) G(a) = f(a) \cdot 0 = 0$, то мы можем изменить индекс суммирования у первой суммы, а последнее слагаемое вынести отдельно.
 	    \[ (**) = \sum_{k = 1}^{n - 1} G(x_k) (f(x_{k - 1}) - f(x_k)) + f(x_{n - 1}) G(b) = (***) \]
-	    По теореме 28.2 $G(x)$ - непрерывна. Тогда $m = \min{G(x)}, M = \max{G(x)}$ и $G(x)$ достигает эти значения. Кроме того, $f(x_{k - 1}) - f(x_k) \geqslant 0$.
+	    По теореме 10.19 $G(x)$ - непрерывна. Тогда $m = \min{G(x)}, M = \max{G(x)}$ и $G(x)$ достигает эти значения. Кроме того, $f(x_{k - 1}) - f(x_k) \geqslant 0$.
 	    \[ (***) \geqslant m \sum_{k = 1}^{n - 1} (f(x_{k - 1}) - f(x_k)) + f(x_{n - 1}) m = m f(a) \]
 	    Аналогично, $\sigma \leqslant M f(a)$.
 	    
@@ -2117,8 +2145,16 @@
     \end{theorem}
     
     \begin{center}
-    	\includegraphics[width=0.2\textwidth]{img/lecture33/the_area_of_the_figure4}
+    	\includegraphics[width=0.3\textwidth]{img/lecture33/the_area_of_the_figure4}
     \end{center}
+    
+    \begin{proof}
+    	Обозначим через $G$ тело, образованное вращением вокруг оси $Ox$ фигуры Ф. Рассмотрим разбиение $T = \{x_0, x_1, ..., x_n\}$ отрезка $[a; b]$. Заметим, что фигура $C_1(T)$, состоящая из цилиндров высоты $h_k = x_k - x_{k - 1}$ радиуса $R = \sup_{x \in \Delta_k} f(x)$, покрывает тело вращения $G$. А фигура $C_2(T)$, состоящая из цилиндров высоты $h_k = x_k - x_{k - 1}$ радиуса $R = \inf_{x \in \Delta_k} f(x)$, наоборот, вписана в тело вращения $G$. Как известно, объем цилиндра радиуса $R$ и высоты $h$ равен $\pi R^2 h$. Отсюда получаем, что
+    	\[ \mu(C_2(T)) = \sum_{k = 1}^n \pi \inf_{x \in \Delta_k} f^2(x) \Delta x_k \leqslant \sum_{k = 1}^n \pi \sup_{x \in \Delta_k} f^2(x) \Delta x_k = \mu(C_1(T)). \]
+    	В правом и левой частях неравенства стоят в точности нижняя и верхняя суммы Дарбу для функции $\pi f^2(x)$. Поскольку функция $f(x)$ непрерывна, она является интегрируемой (следствие 10.13). А значит интегрируем и ее квадрат (следствие 10.7). Тем самым получаем, что
+    	\[ \mu(C_1(T)), \mu(C_2(T)) \to I = \pi \int_a^b f^2(x) \; dx \text{ при } \Delta_T \to 0. \]
+    	Это означает, что $G$ измеримо по Жордану, и его объем равен $V = \pi \int_a^b f^2(x) \; dx$.
+    \end{proof}
     
     \begin{example}
     	Найти объем тела, образованного при вращении круга $(x - a)^2 + y^2 \leqslant a^2$ вокруг оси Oy.

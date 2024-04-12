@@ -55,17 +55,17 @@
 \contentsline {section}{\numberline {11.14}Первый признак сравнения}{54}{}%
 \contentsline {section}{\numberline {11.15}Второй признак сравнения}{55}{}%
 \contentsline {section}{\numberline {11.16}Интегральный признак}{56}{}%
-\contentsline {section}{\numberline {11.17}Признак Даламбера}{56}{}%
-\contentsline {section}{\numberline {11.18}Радикальный признак Коши}{57}{}%
-\contentsline {section}{\numberline {11.19}Признак Гаусса}{59}{}%
-\contentsline {section}{\numberline {11.20}Признак Дирихле}{61}{}%
-\contentsline {section}{\numberline {11.21}Признак Абеля}{62}{}%
-\contentsline {section}{\numberline {11.22}Признак Лейбница}{63}{}%
-\contentsline {section}{\numberline {11.23}Теоремы о среднем}{63}{}%
-\contentsline {section}{\numberline {11.24}Признак Дирихле}{66}{}%
-\contentsline {section}{\numberline {11.25}Признак Абеля}{68}{}%
-\contentsline {chapter}{\numberline {12}Некоторые приложения интеграла}{69}{}%
-\contentsline {section}{\numberline {12.1}Вычисление площади плоских тел}{69}{}%
-\contentsline {section}{\numberline {12.2}Площадь в полярной системе координат}{70}{}%
-\contentsline {section}{\numberline {12.3}Объем тел вращения}{73}{}%
-\contentsline {section}{\numberline {12.4}Длина кривой}{74}{}%
+\contentsline {section}{\numberline {11.17}Признак Даламбера}{57}{}%
+\contentsline {section}{\numberline {11.18}Радикальный признак Коши}{58}{}%
+\contentsline {section}{\numberline {11.19}Признак Гаусса}{60}{}%
+\contentsline {section}{\numberline {11.20}Признак Дирихле}{62}{}%
+\contentsline {section}{\numberline {11.21}Признак Абеля}{63}{}%
+\contentsline {section}{\numberline {11.22}Признак Лейбница}{64}{}%
+\contentsline {section}{\numberline {11.23}Теоремы о среднем}{64}{}%
+\contentsline {section}{\numberline {11.24}Признак Дирихле}{67}{}%
+\contentsline {section}{\numberline {11.25}Признак Абеля}{69}{}%
+\contentsline {chapter}{\numberline {12}Некоторые приложения интеграла}{70}{}%
+\contentsline {section}{\numberline {12.1}Вычисление площади плоских тел}{70}{}%
+\contentsline {section}{\numberline {12.2}Площадь в полярной системе координат}{71}{}%
+\contentsline {section}{\numberline {12.3}Объем тел вращения}{74}{}%
+\contentsline {section}{\numberline {12.4}Длина кривой}{76}{}%
