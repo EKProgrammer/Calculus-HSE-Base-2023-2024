@@ -202,12 +202,12 @@
     		\[ (*) \Leftrightarrow \frac{f(x) - f(c)}{x - c} \geqslant f'(c) \]
     		По теореме Лагранжа $\exists \xi \in (c, x) :$
     		\[ \frac{f(x) - f(c)}{x - c} = f'(\xi) \geqslant f'(c), \]
-    		т. к. функция выпукла и по теореме 6.5 и функция неубывает.
+    		т. к. функция выпукла и по теореме 6.5 функция неубывает.
     		\item Пусть $x < c$
     		\[ (*) \Leftrightarrow \frac{f(x) - f(c)}{x - c} \leqslant f'(c) \]
     		По теореме Лагранжа $\exists \xi \in (x, c) :$
     		\[ \frac{f(x) - f(c)}{x - c} = f'(\xi) \leqslant f'(c), \]
-    		т. к. функция выпукла и по теореме 6.5 и функция неубывает.
+    		т. к. функция выпукла и по теореме 6.5 функция неубывает.
     		\item Пусть $x = c$. Тогда $(*): 0 \geqslant 0$.
     	\end{enumerate}
     \end{proof}
@@ -231,7 +231,7 @@
     	Тогда из выпуклости функции
     	\[ (*) \leqslant t f\bigg(\frac{t_1}{t} f(x_1) + ... + \frac{t_n}{t} f(x_n)\bigg) + t_{n + 1} f(x_{n + 1}) = (**)  \]
     	$\frac{t_1}{t} + ... + \frac{t_n}{t} = \frac{t_1 + ... + t_n}{t} = \frac{t}{t} = 1$. Применяем предположение индукции
-    	\[ (**) \leqslant t\bigg(\frac{t_1}{t} f(x_1) + ... + \frac{t_n}{t} f(n)\bigg) + t_{n + 1} f(x_{n + 1}) = t_1 f(x_1) + ... + t_n f(n) + t_{n + 1} f(x_{n + 1}) \]
+    	\[ (**) \leqslant t_1 f(x_1) + ... + t_n f(x_n) + t_{n + 1} f(x_{n + 1}) \]
     \end{proof}
     
     \begin{example}[Неравенство о средних]
@@ -342,7 +342,7 @@
 			
 			$=\displaystyle\int f'(x)g(x) + f(x)g'(x) \; dx = \displaystyle\int f'(x)g(x) \; dx + \displaystyle\int f(x)g'(x) \; dx$ (линейность)
 			
-			$\Rightarrow \displaystyle\int f(x)g'(x) = f(x)g(x) - \displaystyle\int f'(x)g(x) \; dx$.
+			$\Rightarrow \displaystyle\int f(x)g'(x) \; dx = f(x)g(x) - \displaystyle\int f'(x)g(x) \; dx$.
 			
 			\item $(F(\phi(t)))'_t = F'_x(\phi(t))\phi'(t) = f(\phi(t))\phi'(t) \Rightarrow F(\phi(t)) \in \displaystyle\int f(\phi(t))\phi'(t)dt$.
 			
@@ -626,7 +626,7 @@
 			
 			Тогда $\sigma(I_{\Q}, T, \xi) = \sum^{n}_{k = 1} I_{\Q}(\xi_k) \Delta x_k = \sum^{n}_{k = 1} 1 \cdot \Delta x_k = \sum^{n}_{k = 1} \Delta x_k = b - a$ и $\sigma(I_{\Q}, T, \zeta) = \sum^{n}_{k = 1} I_{\Q}(\zeta_k) \Delta x_k = \sum^{n}_{k = 1} 0 \cdot \Delta x_k = 0$.
 			
-			Тогда для любого $T$ с любым диаметром разбиения можно взять разметку, такую что иногда сумма равна $b - a$, иногда 1. Если $b - a \neq 0$, то функция не интегрируема.
+			Тогда для любого $T$ с любым диаметром разбиения можно взять разметку, такую что иногда сумма равна $b - a$, иногда 0. Если $b - a \neq 0$, то функция не интегрируема.
 		\end{enumerate}	
 	\end{explanation}
     
@@ -678,7 +678,7 @@
     \begin{proof}
     	$f(x) \leqslant g(x) \Leftrightarrow g(x) - f(x) \geqslant 0$ и $\int_a^b f(x) \; dx \leqslant \int_a^b g(x) \; dx \Leftrightarrow \int_a^b g(x) - f(x) \; dx \geqslant 0$ (пользуемся линейностью). Пусть $h(x) = g(x) - f(x) \Rightarrow$ требуется доказать, что $h(x) \geqslant 0 \Rightarrow \int_a^b h(x) \geqslant 0$.
     	
-    	По определению $\forall \epsilon > 0$ $\exists \delta > 0 : \forall (T, \xi)$ c $\Delta_T < \delta \rightarrow  |\sigma(h, T, \xi) - \int_a^b h(x) \; dx| < \epsilon \Leftrightarrow \int_a^b h(x) - \epsilon < \underline{\sigma(h, T, \xi) < \int_a^b h(x) + \epsilon}$.
+    	По определению $\forall \epsilon > 0$ $\exists \delta > 0 : \forall (T, \xi)$ c $\Delta_T < \delta \rightarrow  |\sigma(h, T, \xi) - \int_a^b h(x) \; dx| < \epsilon \Leftrightarrow \int_a^b h(x) \; dx - \epsilon < \underline{\sigma(h, T, \xi) < \int_a^b h(x) \; dx + \epsilon}$.
     	
     	$\sigma(h, T, \xi) \geqslant 0 (\text{т. к. } h(\xi_k) \geqslant 0 \Rightarrow \sum_{k = 1}^n h(\xi_k) \Delta x_k \geqslant 0) \Rightarrow \int_a^b h(x) + \epsilon > 0$ $\forall \epsilon > 0 \Rightarrow \int_a^b h(x) > -\epsilon$ $\forall \epsilon > 0 \Rightarrow \int_a^b h(x) \geqslant 0.$
     \end{proof}
@@ -742,11 +742,11 @@
     			
     			$\displaystyle \inf_{\xi}{\sigma(f, T, \xi)} \leqslant \sigma(f, T, \xi') \leqslant s(f, T) + \epsilon(b - a)$
     			
-    			При $\epsilon \to 0$, то $\displaystyle \inf_{\xi}{\sigma{(f, T, \xi)}} \leqslant s(f, T)$.
+    			При $\epsilon \to 0$ $\displaystyle \inf_{\xi}{\sigma{(f, T, \xi)}} \leqslant s(f, T)$.
     		\end{enumerate}
     		Второе и третье неравенство в цепочке очевидное.
     		Четвёртое неравенство на самом деле является равенством и доказывается как первое равенство.
-    		\item Рассмотрим отрезок $[a, b]$. На нём определено разбиение $T$. Теперь рассмотрим измельчение разбиения $T'$. Оно содержит те же точки, что и в $T$, но добавлет ещё свои точки.
+    		\item Рассмотрим отрезок $[a, b]$. На нём определено разбиение $T$. Теперь рассмотрим измельчение разбиения $T'$. Оно содержит те же точки, что и в $T$, но добавляет ещё свои точки.
     		
     		Красные точки - точки разбиения $T$, красные и зелёные точки - точки измельчения $T'$.
     		\begin{center}
@@ -761,7 +761,7 @@
     		Приэтом на нескольких маленьких отрезках инфимум не меньше инфимума на одном большом отрезке, потому что на большом отрезке у нас есть больше точек, из которых мы можем выбрать меньшее значение. Если инфимум достигался на красном отрезке, то этот отрезок принадлежит большому, поэтому мы можем взять точку принадлежащую красному отрезку и получить инфимум на большом отрезке не больше, чем на маленьких. Поэтому
     		\[ s(f, T') = \sum_{k = 1}^n\sum_{j = 1}^{k_j} \inf_{\xi \in \Delta_{k, j}}{f(\xi) \cdot \Delta x_{k, j}} \geqslant \sum_{k = 1}^n\sum_{j = 1}^{k_j} \inf_{\xi \in \Delta_k}{f(\xi) \cdot \Delta x_{k, j}} \]
     		Продолжаем преобразования.
-    		\[ \sum_{k = 1}^n \sum_{j = 1}^{k_j} \inf_{\xi \in \Delta_k}{f(\xi) \cdot \Delta x_{k, j}} = \sum_{k = 1}^n \inf_{\xi \in \Delta_k}{f(\xi) \sum_{j = 1}^{k_j} \Delta x_{k, j}} = \sum_{k = 1}^n \inf_{\xi \in \Delta_k}{f(\xi) \Delta x_k} = S(f, T) \]
+    		\[ \sum_{k = 1}^n \sum_{j = 1}^{k_j} \inf_{\xi \in \Delta_k}{f(\xi) \cdot \Delta x_{k, j}} = \sum_{k = 1}^n \inf_{\xi \in \Delta_k}{f(\xi) \sum_{j = 1}^{k_j} \Delta x_{k, j}} = \sum_{k = 1}^n \inf_{\xi \in \Delta_k}{f(\xi) \Delta x_k} = s(f, T) \]
     		Второе неравенство доказывается аналогично.
     		\item
     		\[ T_1 \subset T_1 \cup T_2 \Rightarrow \text{(из пункта 2) } s(f, T) \leqslant s(f, T_1 \cup T_2) \]
@@ -794,7 +794,7 @@
     		\includegraphics[width=0.2\textwidth]{img/lecture26/segment_number_estimation}
     	\end{center}
     	
-    	\underline{Пояснение.} Здесь $\Delta_k$ - отрезок $[x_k, x_{k + 1}]$, подразумеваем под знаком суммы сумму по всем отрезкам, которые образуются этим множеством точек (отрезок образуют соседние точки, т. е. внутри отрезка других точек разбиения нет).
+    	\underline{Пояснение.} Здесь $\Delta_k$ - отрезок $[x_{k - 1}, x_k]$, подразумеваем под знаком суммы сумму по всем отрезкам, которые образуются этим множеством точек (отрезок образуют соседние точки, т. е. внутри отрезка других точек разбиения нет).
     	\[ s(f, T_{\epsilon} \cup T) = \sum_{\Delta_k \in T_{\epsilon} \cup T} \inf_{\xi \in \Delta_k} {f(\xi) \cdot \Delta x_k} = \sum_{\Delta_k \in T_{\epsilon} \cup T \text{ и } \Delta_k \in T} \inf_{\xi \in \Delta_k} {f(\xi) \cdot \Delta x_k} + \]
     	\[ + \sum_{\Delta_k \in T_{\epsilon} \cup T \text{ и } \Delta_k \not\in T} \inf_{\xi \in \Delta_k} {f(\xi) \cdot \Delta x_k} = (*) \]
     	Первая сумма - сумма отрезков с красными концами, вторая сумма - сумма остальных отрезков (т. е. либо оба конца чёрные, либо один конец чёрный, а другой - красный).
@@ -848,7 +848,7 @@
     \begin{explanation}
     	\begin{enumerate}
     		\item В одну сторону
-    		\[ \forall x, y \in \Delta \text{ } f(x) - f(y) \leqslant \sup_{x, y \in \Delta} {(f(x))} - f(y) \leqslant \sup_{x \in \Delta} {f(x)} - \inf_{y \in \Delta} {f(y)} \Rightarrow \]
+    		\[ \forall x, y \in \Delta \text{ } f(x) - f(y) \leqslant \sup_{x \in \Delta} {(f(x))} - f(y) \leqslant \sup_{x \in \Delta} {f(x)} - \inf_{y \in \Delta} {f(y)} \Rightarrow \]
     		\[ \Rightarrow \sup_{x, y \in \Delta}{|f(x) - f(y)|} \leqslant \sup_{x \in \Delta}{f(x)} - \inf_{y \in \Delta}{f(y)} \] 
     		\item В другому сторону
     		
@@ -899,7 +899,7 @@
     		\item[$4 \Rightarrow 1$] В доказательстве критерия Дарбу мы получили следующую цепочку неравенств
     	    \[ s(f, T) \leqslant I_{*} \leqslant I^{*} \leqslant S(f, T) \]
     	    Тогда
-    	    \[ 0 \leqslant I^{*} - I_{*} \leqslant S(f, T) - s(f, T) \leqslant \sum_{k = 1}^n \omega(f, \Delta_k) \Delta x_k < \epsilon \Rightarrow \text{ при } \epsilon \to 0 \text{ } I^{*} = I_{*} \]
+    	    \[ 0 \leqslant I^{*} - I_{*} \leqslant S(f, T) - s(f, T) = \sum_{k = 1}^n \omega(f, \Delta_k) \Delta x_k < \epsilon \Rightarrow \text{ при } \epsilon \to 0 \text{ } I^{*} = I_{*} \]
     	\end{enumerate}
     \end{proof}
     
@@ -1055,7 +1055,7 @@
     	Если интеграл слева существует, то существуют и интегралы cправа по предыдущему следствию (на самом деле утверждение верно в обратную сторону, но доказательство на лекциях не приводилось).
     	
     	\begin{mention}
-    		Если $f$ - интегрируема на $[a, b]$, то для любой последовательности разбиений $T_n$ такой, что $\Delta_{T_n} \to 0$, интегральное разбиение $\sigma(f, T_n, \xi_n) \to I$.
+    		Если $f$ - интегрируема на $[a, b]$, то для любой последовательности разбиений $T_n$ такой, что $\Delta_{T_n} \to 0$, интегральная сумма $\sigma(f, T_n, \xi_n) \to I$.
     	\end{mention}
     	\begin{proof}
     		$f$ - интегрируема на $[a, b] \Rightarrow$ по определению $\forall \epsilon > 0 \text{ } \exists \delta > 0: \forall T$ с $\Delta_T < \delta$ и $\xi \rightarrow |\sigma(f, T_n, \xi_n) - I| < \epsilon$
@@ -1190,7 +1190,7 @@
     	
     	Тогда у функции $f(\phi(t))\phi'(t)$ тоже есть первообразная $F(\phi(t))$.
     	
-    	\[ \int_{\alpha}^{\beta} f(\phi(t))\phi'(t) = F(\phi(\beta)) - F(\phi(\alpha)) = \int_{\phi(\alpha)}^{\phi{(\beta)}} f(x) \; dx \]
+    	\[ \int_{\alpha}^{\beta} f(\phi(t))\phi'(t) \; dt = F(\phi(\beta)) - F(\phi(\alpha)) = \int_{\phi(\alpha)}^{\phi{(\beta)}} f(x) \; dx \]
     \end{proof}
     
     \begin{example}
@@ -2042,13 +2042,12 @@
     \end{proof}
     
     \begin{theorem}
-    	Пусть функции $y = y_1(x)$ и $y = y_2(x)$ непрерывны на $[a; b]$ и $y_2(x) \geqslant y_1(x), x \in [a; b]$. Площадь фигуры Ф, ограниченной графиками
-    	функций $y = y_1(x)$ и $y = y_2(x)$ и соответствующими отрезками прямых $x = a, x = b$, равна
+    	Пусть функции $y = y_1(x)$ и $y = y_2(x)$ непрерывны на $[a; b]$ и $y_2(x) \geqslant y_1(x), x \in [a; b]$. Площадь фигуры Ф, ограниченной графиками функций $y = y_1(x)$ и $y = y_2(x)$ и соответствующими отрезками прямых $x = a, x = b$, равна
     	\[ S = \int_a^b (y_2(x) - y_1(x)) \; dx. \]
     \end{theorem}
     
     \begin{center}
-    	\includegraphics[width=0.3\textwidth]{img/lecture33/the_area_of_the_figure}
+    	\includegraphics[width=0.4\textwidth]{img/lecture33/the_area_of_the_figure}
     \end{center}
     
     \begin{proof}
@@ -2060,24 +2059,20 @@
     \section{Площадь в полярной системе координат}
     
     Полярная система координат — двумерная система координат, в которой каждая точка на плоскости определяется двумя числами — полярным углом и полярным радиусом. 
-    
     \begin{center}
     	\includegraphics[width=0.3\textwidth]{img/lecture33/polar_coordinates}
     \end{center}
-    
     Пару полярных координат $r$ и $\phi$ можно перевести в Декартовы координаты $x$ и $y$ путём применения тригонометрических функций синуса и косинуса
     \[ x = r\cos{\phi}, y = r\sin{\phi} \]
     Для $r$ = 0, $\phi$ может быть произвольным действительным числом. Для $r \neq 0$, чтобы получить уникальное значение $\phi$, следует ограничиться интервалом $[0, 2\pi)$.
     
     \begin{theorem}
-    	Площадь сектора Ф, ограниченного графиком функции $r(\phi)$ в полярных
-    	координатах и соответствующими
-    	отрезками лучей $\phi = \alpha$ и $\phi = \beta$, равна
+    	Площадь сектора Ф, ограниченного графиком функции $r(\phi)$ в полярных координатах и соответствующими отрезками лучей $\phi = \alpha$ и $\phi = \beta$, равна
     	\[ S = \frac{1}{2} \int_{\alpha}^{\beta} r^2(\phi) \; d\phi. \]
     \end{theorem}
     
     \begin{center}
-    	\includegraphics[width=0.2\textwidth]{img/lecture33/the_area_of_the_figure2}
+    	\includegraphics[width=0.3\textwidth]{img/lecture33/the_area_of_the_figure2}
     \end{center}
     
     \begin{proof}
@@ -2117,12 +2112,11 @@
     \end{proof}
     
     \begin{example}
-    	На гиперболе $x^2 - y^2 = a^2$ дана точка $M(x_0; y_0)$. Найти площадь
-    	криволинейного треугольника OAM. 
+    	На гиперболе $x^2 - y^2 = a^2$ дана точка $M(x_0; y_0)$. Найти площадь криволинейного треугольника OAM. 
     \end{example}
     
     \begin{center}
-    	\includegraphics[width=0.2\textwidth]{img/lecture33/the_area_of_the_figure3}
+    	\includegraphics[width=0.3\textwidth]{img/lecture33/the_area_of_the_figure3}
     \end{center}
     
     Зададим в полярной системе координат гиперболу:
@@ -2136,6 +2130,8 @@
     \[ = \frac{a^2}{4} \int_0^{\arctg{\frac{y_0}{x_0}}} \frac{d\sin{2\phi}}{1 - \sin^2{2\phi}} = \frac{a^2}{8} \ln{\bigg|\frac{1 - \sin{2\arctg{\frac{y_0}{x_0}}}}{1 + \sin{2\arctg{\frac{y_0}{x_0}}}}\bigg|} + C = (*) \]
     В силу формулы $\sin{\alpha} = \frac{2\tg{\frac{\alpha}{2}}}{1 + \tg^2{\frac{\alpha}{2}}}$ получаем, что
     \[ (*) = \frac{a^2}{8} \ln{\bigg|\frac{1 - \frac{2 \frac{y_0}{x_0}}{1 + \frac{y_0^2}{x_0^2}}}{1 + \frac{2 \frac{y_0}{x_0}}{1 + \frac{y_0^2}{x_0^2}}}\bigg|} + C \]
+    
+    \section*{Лекция 34: Метрические, нормированные и евклидовы  пространства}
     
     \section{Объем тел вращения}
     
@@ -2151,7 +2147,7 @@
     \begin{proof}
     	Обозначим через $G$ тело, образованное вращением вокруг оси $Ox$ фигуры Ф. Рассмотрим разбиение $T = \{x_0, x_1, ..., x_n\}$ отрезка $[a; b]$. Заметим, что фигура $C_1(T)$, состоящая из цилиндров высоты $h_k = x_k - x_{k - 1}$ радиуса $R = \sup_{x \in \Delta_k} f(x)$, покрывает тело вращения $G$. А фигура $C_2(T)$, состоящая из цилиндров высоты $h_k = x_k - x_{k - 1}$ радиуса $R = \inf_{x \in \Delta_k} f(x)$, наоборот, вписана в тело вращения $G$. Как известно, объем цилиндра радиуса $R$ и высоты $h$ равен $\pi R^2 h$. Отсюда получаем, что
     	\[ \mu(C_2(T)) = \sum_{k = 1}^n \pi \inf_{x \in \Delta_k} f^2(x) \Delta x_k \leqslant \sum_{k = 1}^n \pi \sup_{x \in \Delta_k} f^2(x) \Delta x_k = \mu(C_1(T)). \]
-    	В правом и левой частях неравенства стоят в точности нижняя и верхняя суммы Дарбу для функции $\pi f^2(x)$. Поскольку функция $f(x)$ непрерывна, она является интегрируемой (следствие 10.13). А значит интегрируем и ее квадрат (следствие 10.7). Тем самым получаем, что
+    	В правом и левой частях неравенства стоят в точности нижняя и верхняя суммы Дарбу для функции $\pi f^2(x)$. Поскольку функция $f(x)$ непрерывна, она является интегрируемой (следствие 10.14). А значит интегрируем и ее квадрат (следствие 10.7). Тем самым получаем, что
     	\[ \mu(C_1(T)), \mu(C_2(T)) \to I = \pi \int_a^b f^2(x) \; dx \text{ при } \Delta_T \to 0. \]
     	Это означает, что $G$ измеримо по Жордану, и его объем равен $V = \pi \int_a^b f^2(x) \; dx$.
     \end{proof}
@@ -2160,38 +2156,1015 @@
     	Найти объем тела, образованного при вращении круга $(x - a)^2 + y^2 \leqslant a^2$ вокруг оси Oy.
     \end{example}
     
-    \begin{theorem}
-    	Пусть в полуплоскости $y \geqslant 0$ параметрически задана кривая уравнениями
-    	\[ x(t), y(t), t \in [\alpha; \beta], \]
-    	где $x(t)$ и $y(t)$ — непрерывно дифференцируемые на $[a; b]$ функции. Площадь $S$ поверхности, образованной при вращении данной кривой вокруг оси $Ox$, равна
-    	\[ S = 2\pi \int_{\alpha}^{\beta} y(t) \sqrt{x'^2(t) + y'^2(t)} \; dt. \]
-    \end{theorem}
-    
-    \begin{theorem}
-    	Пусть $y = y(x)$ - непрерывно дифференцируемая на отрезке $[a; b]$ функция.
-    	Площадь $S$ поверхности, образованной при вращении графика этой функции вокруг оси $Ox$, равна
-    	\[ S = 2\pi \int_a^b |y(x)|\sqrt{1 + y'^2(x)} \; dx. \]
-    \end{theorem}
-    
-    \begin{example}
-        Найти площадь поверхности, образованной при вращении эллипса $x^2 + 4y^2 = 36$ вокруг оси $Oy$.
-    \end{example}
+    \begin{explanation}
+    	Хоть здесь фигура вращается вокруг оси $OY$, но нам это не помешает. $(x - a)^2 + y^2 \leqslant a^2$ задаёт круг с центром в точке $(0, a)$ и радиусом $a$. При повороте этой красной окружности получим "бублик". Чтобы посчитать его объём, нужно вычислить объём фигуры, получающейся при вращении вокруг $OY$ правой полуокружности $x(y) = a + \sqrt{a^2 - y^2}$, и вычесть объём фигуры, получающийся при вращении вокруг $OY$ левой полуокружности $x(y) = a - \sqrt{a^2 - y^2}$ (отверстие "бублика"). Пользуясь теоремой 12.5 найдём итоговый объём.
+    	\begin{center}
+    		\includegraphics[width=0.5\textwidth]{img/lecture34/plot}
+    	\end{center}
+    	\[ V = \pi \int_{-a}^a (a + \sqrt{a^2 - y^2})^2 - (a - \sqrt{a^2 - y^2})^2 \; dy = 4\pi \int_{-a}^a a\sqrt{a^2 - y^2} \; dy = \]
+    	\[ = 4\pi a \int_{-a}^a \sqrt{a^2 - y^2} \; dy \]
+    	Отдельно считаем такой интеграл
+    	\[ \int_{-a}^a \sqrt{a^2 - y^2} \; dy = a^2 \int_{-a}^a \sqrt{1 - (\frac{y}{a})^2} \; d(\frac{y}{a}) = a^2 \int_{-1}^1 \sqrt{1 - t^2} \; dt = \]
+    	\[ = a^2 \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \sqrt{1 - \sin^2{x}} \; d(\sin{x}) = a^2 \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \cos{x} \; d(\sin{x}) \]
+    	Далее
+    	\[ I = \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \cos{x} \; d(\sin{x}) = \cos{x} \sin{x} \bigg|_{-\frac{\pi}{2}}^{\frac{\pi}{2}} -  \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \sin{x} \; d(\cos{x}) = \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \sin^2{x} \; dx = \]
+    	\[ = \pi - \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \cos^2{x} \; dx = \pi - I \]
+    	Тогда
+    	\[ \int_{-a}^a \sqrt{a^2 - y^2} \; dy = \frac{a^2 \pi}{2} \]
+    	Следовательно
+    	\[ V = 4\pi a \int_{-a}^a \sqrt{a^2 - y^2} \; dy = 2a^3 \pi^2 \]
+    \end{explanation}
     
     \section{Длина кривой}
     
+    Для описания длины дуги кривой мы будем использовать иной подход — определим длину кривой через свойства, которым она должна удовлетворять.
+    
+    Чтобы этот подход был более понятен, сначала реализуем его на площади фигуры.
+    
+    Пусть $f \geqslant 0$ на $[a, b]$. И пусть $S(\alpha, \beta)$ площадь под графиком функции $f$ на отрезке $[\alpha, \beta] \subset [a, b]$. Разумные требования на $S$ — это
+    \begin{enumerate}
+    	\item аддитивность: $S(\alpha, \gamma) = S(\alpha, \beta) + S(\beta, \gamma)$ при $a \leqslant \alpha < \beta < \gamma \leqslant b$;
+    	\item монотонность по включению: $\displaystyle \inf_{x \in [\alpha, \beta]} f(x) (\beta - \alpha) \leqslant S(\alpha, \beta) \leqslant \sup_{x \in [\alpha, \beta]} f(x) (\beta - \alpha).$
+    \end{enumerate}
+    
+    \begin{sentence}
+    	Пусть $f$ интегрируема по Риману на $[a, b]$. При выполнении выше описанных условий $S(a, b) = \int_a^b f(x) \; dx$.
+    \end{sentence}
+    
+    \begin{proof}
+    	$T = \{x_0, x_1, ..., x_n\}$ - разбиение $[a, b]$, $I = \int_a^b f(x) \; dx$.
+    	\[ \sum_{k = 1}^n \inf_{x \in \Delta_k} f(x) \Delta x_k \leqslant (\text{аддитивность}) \sum_{k = 1}^n S(x_{k - 1}, x_k) = (\text{монотонность по включению}) \]
+    	\[ = S(a, b) \leqslant \sum_{k = 1}^n \sup_{x \in \Delta_k} f(x) \Delta x_k (\text{аналогично}) \]
+    	Если функция интегрируема, то
+    	\[ \sum_{k = 1}^n \inf_{x \in \Delta_k} f(x) \Delta x_k \to I, \sum_{k = 1}^n \sup_{x \in \Delta_k} f(x) \Delta x_k \to I \Rightarrow S(a, b) \to I \Rightarrow S(a, b) = I \]
+    	(т. к. площадь константа).
+    \end{proof}
+    
     \begin{definition}
-    	Пусть $\gamma : [a, b] \rightarrow \R^3$ - гладкая кривая, т.е. $\gamma(t) = (x(t), y(t), z(t))$ и функции $x, y, z \in C^1([a, b])$. Пусть $\ell(a, b)$ — длина пути соответствующая отрезку $[a, b]$. Тогда длина кривой удовлетворяет следующим требованиям
+    	Пусть $\gamma : [a, b] \rightarrow \R^3$ - гладкая кривая, т.е. $\gamma(t) = (x(t), y(t), z(t))$ и функции $x, y, z \in C^1([a, b])$ (множество функций, у которых первая производная непрерывна). Пусть $\ell(a, b)$ — длина пути соответствующая отрезку $[a, b]$. Тогда длина кривой удовлетворяет следующим требованиям
         \begin{enumerate}
         	\item $\ell(\alpha, \gamma) = \ell(\alpha, \beta) + \ell(\beta, \gamma)$ при $a \leqslant \alpha < \beta < \gamma \leqslant b$;
-        	\item $\inf_{t \in [\alpha, \beta]} |v(t)|(\beta - \alpha) < \ell(\alpha, \beta) \leqslant \sup_{t \in [\alpha, \beta]} |v(t)|(\beta - \alpha)$, где $v(t) = (x'(t), y'(t), z'(t))$.
+        	\item $\displaystyle\inf_{t \in [\alpha, \beta]} |v(t)|(\beta - \alpha) < \ell(\alpha, \beta) \leqslant \sup_{t \in [\alpha, \beta]} |v(t)|(\beta - \alpha)$, где $v(t) = (x'(t), y'(t), z'(t))$.
         \end{enumerate}
     \end{definition}
     
     \begin{theorem}
     	Длина кривой, заданной параметрически уравнениями
     	\[ x = x(t), y = y(t), z = z(t), t \in [a; b], \]
-    	где $x(t), y(t), z(t)$ — непрерывно дифференцируемые на $[a; b]$ функции, равна
-    	\[ s = \int_a^b \sqrt{x'^2 + y'^2 + z'^2} \; dx \]
+    	где $x(t), y(t), z(t)$ - непрерывно дифференцируемые на $[a; b]$ функции, равна
+    	\[ s = \int_a^b \sqrt{(x'(t))^2 + (y'(t))^2 + (z'(t))^2} \; dx \]
     \end{theorem}
-	
+    
+    \begin{proof}
+    	Задаём прямую в $\R^3$, введя при этом параметр $t \in \R$ и точки $(x(t), y(t), z(t))$. Во втором пункте $v(t), t \in [\alpha, \beta]$ - это скорость движения по кривой на временном отрезке $[\alpha, \beta]$. Тогда $|v(t)|(\beta - \alpha)$ - это длина кривой на отрезке $[\alpha, \beta]$. Используя физическую интерпретацию, утверждаем, что скорость - производная по каждой координате: $v = (x'(t), y'(t), z'(t))$. Значит $|v(t)| = \sqrt{(x'(t))^2 + (y'(t))^2 + (z'(t))^2}$.
+    	
+        Рассмотрим разбиение времени $T = \{t_0, t_1, ..., t_n\}$, $\Delta t_k$ - длина отрезка разбиения. По определению
+        \[ \inf_{t \in \Delta_k} |v(t)| \cdot \Delta t_k \leqslant \ell(\Delta t_k) \leqslant \sup_{t \in \Delta_k} |v(t)| \cdot \Delta t_k \]
+        По первому свойству
+        \[ \sum_{k = 1}^n \inf_{t \in \Delta_k} |v(t)| \cdot \Delta t_k \leqslant \ell(a, b) \leqslant \sum_{k = 1}^n \sup_{t \in \Delta_k} |v(t)| \cdot \Delta t_k \]
+        $x(t), y(t), z(t)$ - непрерывно дифференцируемые на $[a; b]$ функции $\Rightarrow$ функция $|v(t)| = \sqrt{(x'(t))^2 + (y'(t))^2 + (z'(t))^2}$ - непрерывна. Значит она интегрируема.
+        
+        Выше мы записали интегральные суммы Дарбу для этой функции $\Rightarrow$
+        \[ \sum_{k = 1}^n \inf_{t \in \Delta_k} |v(t)| \cdot \Delta t_k \to I, \sum_{k = 1}^n \sup_{t \in \Delta_k} |v(t)| \cdot \Delta t_k \to I, I = \int_a^b |v(t)| \; dt. \]
+    \end{proof}
+    
+    \chapter{Предел функции нескольких переменных}
+    
+    \section{Метрическое пространство}
+    
+    \begin{definition}
+    	Пусть $X$ - множество. Функция $d: X \times X \rightarrow [0, +\infty)$ называется \underline{метрикой}, если
+    	\begin{enumerate}
+    		\item $d(x, y) = 0 \Leftrightarrow x = y;$
+    		\item $d(x, y) = d(y, x)$ $\forall x, y \in X;$
+    		\item $d(x, z) \leqslant d(x, y) + d(y, z)$ $\forall x, y, z \in X.$
+    	\end{enumerate}
+    	Пара $(X, d)$ называется \underline{метрическим пространством}.
+    \end{definition}
+    
+    \begin{example}
+    	\begin{itemize}
+    		\item \underline{Дискретная метрика}: $d(x, y) = 0$, если $x = y$, и $d(x, y) = 1$ во всех остальных случаях.
+    		\item \underline{Вещественные числа} с функцией расстояния $d(x, y) = |y - x|$ и евклидово пространство являются полными метрическими пространствами.
+    		\item \underline{Расстояние Хэмминга} в теории кодирования.
+    		
+    		(Расстояние Хэмминга - функция расстояния между двоичными словами, которая равна количеству битов, в которых эти слова различаются. Другими словами - это минимальная длина пути от одного двоичного слова до другого в булевом кубе)
+    		\item \underline{Манхэттенская метрика}: $d(\textbf{p}, \textbf{q}) = \sum^n_{i = 1} |p_i - q_i|$,
+    		где $\textbf{p} = (p_1, p_2, ..., p_n), \textbf{q} = (q_1, q_2, ..., q_n)$ — векторы.
+    	\end{itemize}
+    \end{example}
+    
+    \section{Нормированное пространство}
+    
+    \begin{definition}
+    	Пусть $X$ — линейное пространство. Функция
+    	$||\cdot||: X \rightarrow [0, +\infty)$ называется \underline{нормой}, если
+    	\begin{enumerate}
+    		\item $||x|| = 0 \Leftrightarrow x = 0;$
+    		\item $||\lambda x|| = |\lambda| ||x||$ $\forall x \in X;$
+    		\item $||x + y|| \leqslant ||x|| + ||y||$ $\forall x, y \in X.$
+    	\end{enumerate}
+    	Пара $(X, ||\cdot||)$ называется \underline{нормированным пространством}.
+    \end{definition}
+    Всякое нормированное пространство является метрическим с метрикой $d(x, y) = ||x - y||$.
+    
+    Проверяем свойства метрического пространства.
+    \begin{enumerate}
+    	\item $d(x, y) = 0 \Leftrightarrow ||x - y|| = 0 \Leftrightarrow x - y = 0 \Leftrightarrow x = y.$
+    	\item $d(x, y) = ||x - y|| = |-1|||x - y|| = ||y - x||$
+    	\item Равносильно неравенству треугольника для нормированного пространства.
+    \end{enumerate}
+    
+    \section{Евклидово пространство}
+    
+    \begin{definition}
+    	Пусть $X$ — линейное пространство. Функция $\langle\cdot, \cdot\rangle: X \times X \rightarrow \R$ называется скалярным произведением, если для всех $x, y, z \in X$ и всех $a, b \in \R$ выполнены следующие условия:
+    	\begin{enumerate}
+    		\item $\langle x, x \rangle \geqslant 0$ и $\langle x, x \rangle = 0 \Leftrightarrow x = 0;$
+    		\item $\langle x, y \rangle = \langle y, x \rangle;$
+    		\item $\langle ax + by, z \rangle = a\langle x, z \rangle + b\langle y, z \rangle.$
+    	\end{enumerate}
+    	Линейное пространство $X$ со скалярным произведением называется \underline{евклидовым}.
+    \end{definition}
+    
+    \begin{example}
+    	На линейном пространстве $\R^k$ всех упорядоченных наборов $(x_1, ..., x_k)$ задано скалярное произведение $\langle x, y \rangle := \sum_{j = 1}^k x_j y_j.$ Тем самым, на $\R^k$ задана естественная евклидова метрика
+    	\[ ||x - y|| := \sqrt{|x_1 - y_1|^2 + ... + |x_k - y_k|^2}. \]
+    \end{example}
+    
+    \section{Неравенство Коши–Буняковского}
+    
+    \begin{lemma}[Неравенство Коши–Буняковского]
+    	Пусть $\langle \cdot, \cdot \rangle$ скалярное произведение на линейном пространстве $X$, тогда
+    	\[ |\langle x, y \rangle| \leqslant \sqrt{\langle x, x \rangle} \sqrt{\langle y, y \rangle}. \]
+    \end{lemma}
+    
+    \begin{proof}
+    	Рассмотрим скалярный квадрат: $\langle x + yt, x + yt \rangle \geqslant 0, t \in \R, x, y \in X$. Воспользуемся линейностью
+    	\[ 0 \leqslant \langle x + yt, x + yt \rangle = \langle x, x \rangle + \langle x, yt \rangle + \langle yt, x \rangle + \langle yt, yt \rangle = \langle x, x \rangle + 2t\langle x, y \rangle + t^2\langle y, y \rangle \]
+        Если $\vec{y} = 0$, то просто подставим в исходное неравенство и получим $0 \leqslant 0$. Теперь пусть $\vec{y} \neq 0$. Чтобы неравенство $\langle x, x \rangle + 2t\langle x, y \rangle + t^2\langle y, y \rangle \geqslant 0$ выполнялось, необходимо, чтобы $D = 4\langle x, y \rangle^2 - 4 \langle y, y \rangle \langle x, x \rangle \leqslant 0$. Тогда
+        \[ \langle x, y \rangle^2 \leqslant \langle y, y \rangle \langle x, x \rangle \]
+    \end{proof}
+    
+    \begin{corollary}
+    	На евклидовом пространстве функция $||x|| := \sqrt{\langle x, x \rangle}$ является нормой.
+    \end{corollary}
+    
+    \begin{enumerate}
+    	\item По свойству скалярного произведения $||x|| = \langle x, x \rangle = 0 \Leftrightarrow x = 0$.
+    	\item $||\lambda x|| = \sqrt{\langle \lambda x, \lambda x \rangle} = |\lambda| \sqrt{\langle x, x \rangle} = |\lambda| ||x||$
+    	\item $||x + y||^2 = \langle x + y, x + y \rangle = \langle x, x \rangle + 2 \langle x, y \rangle + \langle y, y \rangle \leqslant \text{(нер-во Коши-Буняковского)}$ $\langle x, x \rangle + 2\sqrt{\langle x, x \rangle} \sqrt{\langle y, y \rangle} + \langle y, y \rangle = (\sqrt{\langle x, x \rangle} + \sqrt{\langle y, y \rangle})^2 = (||x|| + ||y||)^2$
+    \end{enumerate}
+    
+    \section{Предел в метрическом пространстве}
+    
+    \begin{definition}
+    	Пусть $(X, d)$ метрическое пространство.
+    	\begin{enumerate}
+    		\item Множество
+    		\[ B_r(x_0) := \{x \in X: d(x, x_0) < r\} \]
+    		называется открытым шаром радиуса $r$.
+    		\item Последовательность точек $x_n \in X$ называется сходящейся к точке $x$, если для всякого $\epsilon > 0$ найдется такой номер $N(\epsilon)$, что $d(x, x_n) < \epsilon$ для каждого $n \geqslant N(\epsilon)$.
+    		\item Точка $x$ называется предельной для множества $M \subset X$, если для всякого $\epsilon > 0$ выполнено $B_{\epsilon}(x) \cap (M \setminus \{x\}) \neq \varnothing.$
+    	\end{enumerate}
+    \end{definition}
+    
+    \begin{lemma}
+    	Пусть $(X, d)$ метрическое пространство. Тогда
+    	\begin{enumerate}
+    		\item если $x_n \rightarrow x, y_n \rightarrow y$, то $d(x_n, y_n) \rightarrow d(x, y);$
+    		\item предел сходящейся последовательности единственен.
+    	\end{enumerate}
+    \end{lemma}
+    
+    \begin{proof}
+    	\begin{enumerate}
+    		\item Пусть $x_n \to x, y_n \to y$
+    		\[ |d(x_n, y_n) - d(x, y)| = |d(x_n, y_n) - d(x_n, y) + d(x_n, y) - d(x, y)| \leqslant |d(x_n, y_n) - d(x_n, y)| + \]
+    		\[ + |d(x_n, y) - d(x, y)| \text{ } (*) \]
+    		\[ d(x_n, y_n) \leqslant d(x_n, y) + d(y_n, y) \Rightarrow d(x_n, y_n) - d(x_n, y) \leqslant d(y_n, y) \]
+    		\[ d(x_n, y) \leqslant d(x_n, x) + d(x, y) \Rightarrow d(x_n, y) - d(x, y) \leqslant d(x_n, x) \]
+    		\[ (*): |d(x_n, y_n) - d(x_n, y)| + |d(x_n, y) - d(x, y)| \leqslant d(y_n, y) + d(x_n, x) \]
+    		Т. к. $d(y_n, y) \to 0, d(x_n, x) \to 0$, то $d(y_n, y) + d(x_n, x) \to 0 \Rightarrow d(x_n, y_n) \to d(x, y)$.
+    		\item Пусть $x_n \to x, x_n \to y$. По первому пункту $d(x_n, x_n) \to d(x, y)$. Т. к. $d(x_n, x_n) = 0$, то $d(x, y) = 0 \Rightarrow x = y$ (по определению).
+    	\end{enumerate}
+    \end{proof}
+    
+    \newpage
+    
+    \section*{Лекция 35: Предел и непрерывность функции нескольких переменных}
+    
+    Из второго пункта определения 13.8 получаем, что для $x_n \in \R^n$
+    \[ x_n \to x \Leftrightarrow \forall \epsilon > 0 \text{ } \exists N: \forall n \geqslant N \rightarrow ||x_n - x|| < \epsilon \] 
+    
+    \section{Метрическое пространство}
+    
+    \begin{mention}
+    	На $\R^k$ справедливы соотношения
+    	\[ \max_{1 \leqslant j \leqslant k} |x_j| \leqslant ||x|| \leqslant \sqrt{k} \max_{1 \leqslant j \leqslant k} |x_j| \]
+    	для векторов $x = (x_1, ..., x_k)$. Тем самым, последовательность $x_n \rightarrow x$ в $\R^k$ тогда и только тогда, когда $(x_n)_j \rightarrow x_j$.
+    \end{mention}
+    
+    \begin{explanation}
+    	$x = (x_1, ..., x_n) \in \R^n, ||x|| = \sqrt{x_1^2 + x_2^2 + ... + x_n^2}$ (рассматриваем евклидово пространство, см. пример 13.5)
+    	\[ \max_{1 \leqslant j \leqslant n} |x_j| \leqslant \sqrt{0 + ... + 0 + \max_{1 \leqslant j \leqslant n} x_j^2 + 0 + ... + 0} \leqslant \sqrt{x_1^2 + x_2^2 + ... + x_n^2} \leqslant \sqrt{n} \max_{1 \leqslant j \leqslant n} |x_j| \]
+    	Получили неравенство выше.
+    
+    	Пусть $x_n \to x (\Leftrightarrow x_n - x \to 0) \Leftrightarrow ||x_n - x|| \to 0$. Поэтому будем рассматривать пределы векторов, которые стремятся к нулевому вектору.
+    	\begin{enumerate}
+    		\item $\forall j$ $x_j \to 0 \Rightarrow x \to 0$, т. к. $||x|| \leqslant \sqrt{n} \max_{1 \leqslant j \leqslant k} |x_j|$.
+    		\item $\forall j$ $x \to 0 \Rightarrow ||x|| = 0 \Rightarrow x_j \to 0$, т. к. $\max_{1 \leqslant j \leqslant k} |x_j| \leqslant ||x||$.
+    	\end{enumerate}
+    \end{explanation}
+    
+    \begin{sentence}
+    	Пусть $x_n \rightarrow x, y_n \rightarrow y$ в нормированном пространстве $(X, ||\cdot||)$ и $\alpha_n \rightarrow \alpha_0$ в $\R$. Тогда $x_n + y_n \rightarrow x + y$ и $\alpha_n x_n \rightarrow \alpha_0 x$ в $X$.
+    \end{sentence}
+    
+    \begin{proof}
+    	$||x_n + y_n - (x + y)|| \leqslant ||x_n - x|| + ||y_n - y|| \to 0 + 0 = 0$
+    	
+    	$||\alpha_n x_n - \alpha_0 x|| = ||\alpha_n x_n - \alpha_n x + \alpha_n x - \alpha_0 x|| \leqslant ||\alpha_n x_n - \alpha_n x|| + ||\alpha_n x - \alpha_0 x|| = |\alpha_n| \cdot ||x_n - x|| + |\alpha_n - \alpha_0| \cdot ||x|| \to |\alpha_0| \cdot 0 + 0 \cdot ||x|| = 0$
+    \end{proof}
+    
+    
+    \section{Предел функции по Гейне}
+    
+    \begin{definition}[предела функции по Гейне]
+    	Пусть $(X, d_X)$ и $(Y, d_Y)$ два метрических пространства, $a$ - предельная точка множества $X$. Пусть $f : X \setminus \{a\} \rightarrow Y$. Говорят, что $A \in Y$ предел функции $f$ при $x \rightarrow a$, если для каждой  последовательности $x_n \in X \setminus \{a\}, x_n \rightarrow a$, выполнено $f(x_n) \rightarrow A$. Пишут $\displaystyle \lim_{x \rightarrow a} f(x) = A$ или $f(x) \rightarrow A$ при $x \rightarrow a$.
+    \end{definition}
+    
+    \begin{sentence}
+    	Если $\displaystyle \lim_{x \rightarrow a} f(x) = A$ и $\displaystyle \lim_{x \rightarrow a} f(x) = B$, то $A = B$.
+    \end{sentence}
+    
+    \begin{proof}
+    	$a$ - предельная точка $\Rightarrow \exists x_n \in X \backslash \{a\} : x_n \to a \Rightarrow f(x_n) \to A, f(x_n) \to B$ по определению предела функции по Гейне. Но $y_n = f(x_n)$ - последовательность векторов. А мы уже выяснили, что если у последовательности векторов есть предел, то он один (Замечание 13.10).
+    \end{proof}
+    
+    \section{Предел функции по Коши}
+    
+    \begin{definition}[предела функции по Коши]
+    	Пусть $(X, d_X)$ и $(Y, d_Y)$ два метрических пространства, $a$ —
+    	предельная точка множества $X$. Пусть $f : X \setminus \{a\} \rightarrow Y$. Говорят, что $A \in Y$ предел функции $f$ при $x \rightarrow a$, если для каждого $\epsilon > 0$ найдется такое $\delta > 0$, что $d_Y(f(x), A) < \epsilon$ для каждого такого $x \in X$, что $0 < d_X(x, a) < \delta$.
+    \end{definition}
+    
+    В кванторах: $\forall \epsilon > 0$ $\exists \delta > 0: \forall x \in B'_{\delta}(a) \rightarrow f(x) - A < \epsilon$.
+    
+    \section{Эквивалентность определений предела}
+    
+    \begin{theorem}
+    	Определения по Коши и по Гейне равносильны.
+    \end{theorem}
+    
+     \begin{proof}
+    	$ $
+    	
+    	\begin{itemize}
+    		\item[$\text{K} \Rightarrow \text{Г}$] Пусть $A = \lim_{x \to a} f(x)$ по Коши.
+    		\[ \forall \epsilon > 0 \text{ } \exists \delta > 0: \forall x \in B'_{\delta}(a) \rightarrow ||f(x) - A|| < \epsilon \]
+    		Пусть $x_n \in X \backslash \{a\}, x_n \to a \Rightarrow \exists N: \forall n \geqslant N \rightarrow ||x_n - a|| < \delta \Leftrightarrow x_n \in B'_{\delta}(a) \Rightarrow \forall n \geqslant N \rightarrow ||f(x_n) - A|| < \epsilon \Rightarrow f(x_n) \rightarrow A$
+    		\item[$\text{Г} \Rightarrow \text{К}$] $\Leftrightarrow \neg \text{К} \Rightarrow \neg \text{Г}$
+    		\[ \neg\text{К} \Rightarrow \exists \epsilon > 0 : \forall \delta > 0 \text{ } \exists x \in B'_{\delta}(a) : ||f(x) - A|| \geqslant \epsilon \]
+    		Для каждого $\delta = \frac{1}{n}$ $\exists x_n \in B'_{\frac{1}{n}}(a) : ||f(x_n) - A|| \geqslant \epsilon$
+    		
+    		Но $x_n \in X \backslash \{a\}, x_n \to a$ и $f(x_n) \not\to A \Rightarrow \neg \text{Г}$.         
+    	\end{itemize}
+    \end{proof}
+    
+    \section{Арифметические свойства предела}
+    
+    \begin{theorem}[Арифметические свойства предела]
+    	Пусть $(X, d_X)$ метрическое пространство, $a$ — предельная
+    	точка $X$. Пусть $f, g : X \setminus \{a\} \rightarrow \R^k,  \alpha : X \setminus \{a\} \rightarrow \R$. Если $\displaystyle \lim_{x \to a} f(x) = A, \lim_{x \to a} g(x) = B, \lim_{x \to a} \alpha(x) = \alpha_0$, то $\displaystyle \lim_{x \to a} (f(x) + g(x)) = A + B, \lim_{x \to a} (\alpha(x)f(x)) = \alpha_0 A.$
+    \end{theorem}
+    
+    \begin{proof}
+    	По определению предела функции по Гейне если $a$ - предельная точка, то $\forall x_n \in X \backslash \{a\}, x_n \to a \rightarrow f(x_n) \to A, g(x_n) \to B \Rightarrow f(x_n) + g(x_n) \to A + B$, т. к. $f(x_n), g(x_n)$ - векторы (см. предложение 13.11).
+    	
+    	По определению предела функции по Гейне если $a$ - предельная точка, то $\forall x_n \in X \backslash \{a\}, x_n \to a \rightarrow f(x_n) \to A, \alpha(x_n) \to \alpha_0 \Rightarrow \alpha(x_n) f(x_n) \to \alpha_0 A$, т. к. $f(x_n)$ - вектор (см. предложение 13.11).
+    \end{proof}
+    
+    \section{Теорема о пределе сложной функции}
+    
+    \begin{theorem}[О пределе сложной функции]
+    	Пусть $X, Y, Z$ — метрические пространства, $a$ — предельная точка $X, b$ — предельная точка $Y$. Пусть $f : X \setminus \{a\} \rightarrow Y \setminus \{b\}$ и $g : Y \setminus \{b\} \rightarrow Z$. Если $\displaystyle \lim_{x \to a} f(x) = b$ и $\displaystyle \lim_{y \to b} g(y) = c$, то $\displaystyle \lim_{x \to a} g(f(x)) = c$.
+    \end{theorem}
+    
+    \begin{proof}
+    	$ $
+    	\begin{center}
+    		\includegraphics[width=0.3\textwidth]{img/lecture35/limit_of_a_complex_function}
+    	\end{center}
+    	По определению предела функции по Гейне если $a$ - предельная точка, то $\forall x_n \in X \backslash \{a\}, x_n \to a \rightarrow f(x_n) \in Y \backslash \{b\}, f(x_n) \to b \Rightarrow g(f(x_n)) \to c$.
+    \end{proof}
+    
+    Важно: исключение из множеств $X$ и $Y$ точек $a$ и $b$ в функции $f: X \setminus \{a\} \rightarrow Y \setminus \{b\}$ обязательно. Контрпример:
+    \begin{equation*}
+    	f(x) = 0 \text{ } \forall x, g(y) = 
+    	\begin{cases}
+    		1, & y \neq 0 \\
+    		0, & y = 0
+    	\end{cases}
+    \end{equation*}
+    Тогда $\lim_{x \to 0} f(g(x)) = 0, \lim_{y \to 0} g(y) = 1$.
+    
+    \section{Непрерывность функции}
+    
+    \begin{definition}
+    	Пусть $(X, d_X)$ и $(Y, d_Y)$ два метрических пространства. Отображение $f : X \rightarrow Y$ называется непрерывным в точке $x_0 \in X$, если $\displaystyle \lim_{x \to x_0} f(x) = f(x_0)$ или $x_0$ — изолированная точка.
+    \end{definition}
+    
+    \begin{mention}
+    	\begin{enumerate}
+	    	\item Если функция $f(x)$ непрерывна в точке a, то для всякой последовательности $x_n \rightarrow a$ выполнено $f(x_n) \rightarrow f(a)$. Это отличается от определения предела функции по Гейне тем, что не требуется брать $x_n$ отличными от $a$. 
+	    	
+	    	\item То же верно и для определения предела по Коши в случаем непрерывности: для всякого $\epsilon > 0$ найдется $\delta > 0$ такое, что $d_Y(f(x), f(x_0)) < \epsilon$, если $d_X(x, x_0) < \delta$.
+    	\end{enumerate}
+    \end{mention}
+    
+    \begin{explanation}
+    	\begin{enumerate}
+    		\item Если $x_0$ - изолированная точка, то любая последовательность, стремящаяся к $x_0$, состоит только из точек $x_0 \Rightarrow f(x_n) \rightarrow f(x_0)$.
+    		
+    		Пусть $\forall x_n (\neq x_0) \to x_0$ $f(x_n) \to f(x_0)$. От противного: пусть $\exists x_n \to x_0 : f(x_n) \not\rightarrow f(x_0)$, т. е.
+    		\[ \exists \epsilon > 0 \text{ } \forall N: \exists n \geqslant N \rightarrow ||f(x_n) - f(x_0)|| \geqslant \epsilon \Rightarrow \]
+    		\[ \Rightarrow x_n \neq x_0 (\text{т. к. } \epsilon > 0) \Rightarrow \exists x_n (\neq x_0) \to x_0 \text{ } ||f(x_n) - f(x_0))|| \geqslant \epsilon - \text{противоречие.} \]
+    		\item Если $x_0$ - изолированная, то найдётся такое $\delta$-окрестность, что других точек в ней нет:
+    		\[ \forall \epsilon > 0 \text{ } \exists \delta > 0: \forall x \in B_{\delta}(x_0) \rightarrow ||f(x) - f(x_0)|| < \epsilon \]
+    		Если $x_0$ - предельная, то $\lim_{x \to x_0} f(x) = f(x_0) \Leftrightarrow \forall \epsilon > 0$ $\exists \delta > 0: \forall x \in B'_{\delta}(x_0) \rightarrow ||f(x) - f(x_0)|| < \epsilon$ - условие верно, т. к. оно строже.
+    		
+    		В обратную сторону.
+    		
+    		Если $\forall \epsilon > 0 \text{ } \exists \delta > 0: \forall x \in B_{\delta}(x_0) \rightarrow ||f(x) - f(x_0)|| < \epsilon$ - верно, то изолированная точка $x_0$ подходит.
+    		
+    		Теперь возьмём ту же $\delta$ что и в условии выше. Тогда для $x \neq x_0$ верно $\lim_{x \to x_0} f(x) = f(x_0) \Leftrightarrow \forall \epsilon > 0$ $\exists \delta > 0: \forall x \in B'_{\delta}(x_0) \rightarrow ||f(x) - f(x_0)|| < \epsilon$, а для $x = x_0$ $||f(x) - f(x_0)|| = 0 < \epsilon$ - тоже верно.
+    	\end{enumerate}
+    \end{explanation}
+    
+    \section{Непрерывность композиции}
+    
+    \begin{sentence}
+    	Пусть $f : X \rightarrow Y$ непрерывна в точке $a \in X$, $g : Y \rightarrow Z$ непрерывна в точке $f(a) \in Y$. Тогда композиция $g \circ f : X \rightarrow Z$ непрерывна в точке $a$.
+    \end{sentence}
+    
+    \begin{proof}
+    	Если точка $a$ - изолированная на множестве $X$, то тогда любая функция в ней непрерывна. Если она не изолированная, т. е. предельная, то рассмотрим предел в этой точке.
+    	
+    	$f(x)$ - непрерывна в точке $a \Rightarrow \forall x_n \to a$ $f(x_n) \to f(a)$.
+    	
+    	$g(x)$ - непрерывна в точке $f(a) \Rightarrow \forall y_n \to f(a)$ $g(y_n) \to g(f(a)) \Rightarrow \forall x_n$ $f(x_n) \to f(a) \Rightarrow g(f(x_n)) \to g(f(a))$ (по теореме о пределе сложной функции).
+    \end{proof}
+    
+    \begin{sentence}
+    Пусть $f, g : \R^k \rightarrow \R^m$ — непрерывные в точке a функции. Тогда $f + g$ непрерывна в точке $a$. Если $m = 1$, то и $f \cdot g$ непрерывна в точке $a$.
+    \end{sentence}
+    
+    Вообще здесь не очень удачная формулировка. Точнее будет сказать, что $f, g : X \rightarrow \R^m, X \subseteq \R^k$.
+    
+    \begin{proof}
+    	Если $a$ - изолированная точка, то любая функция в ней непрерывна, в частности $f + g$.
+    	
+    	В противном случае если $a$ - предельная точка, то по теореме 13.16 предел суммы функций равен сумме пределов функций.
+    	
+    	Если $m = 1$, то обе функции переводят вектор в скаляр.
+    	
+    	Если $a$ - изолированная точка, то любая функция в ней непрерывна, в частности $f \cdot g$. В случае предельной точки к множеству $X$ пользуемся арифметическими свойствами предела (теорема 13.16).
+    \end{proof}
+    
+    \chapter{Дифференцируемые функции нескольких переменных}
+    
+    \section*{Лекция 36: Дифференцируемость функций нескольких переменных}
+    
+    \section{Дифференцируемое отображение}
+    
+    \begin{definition}
+    	Отображение $f : \R^k \rightarrow \R^m$ называется  дифференцируемым в точке $x$, если для каждого $h \in \R^k$
+    	\[ f(x + h) = f(x) + L(h) + \alpha(h) ||h||, \]
+    	где $L: \R^n \rightarrow \R^m$ - линейное отображение, $\displaystyle \lim_{||h|| \rightarrow 0} ||\alpha(h)|| = 0$.
+    	
+    	Линейное отображение $L$ называют дифференциалом $f$ в точке $x$ и обозначают $df$.
+    \end{definition}
+    
+    \section{Непрерывность дифференцируемого отображения}
+    
+    \begin{mention}
+    	Напомним, что отображение $L: \R^k \rightarrow \R^m$ называется линейным, если
+    	\[ L(a_1 h_1 + a_2 h_2) = a_1 Lh_1 + a_2Lh_2 \]    	
+    	для произвольных векторов $h_1, h_2 \in \R^k$ и произвольных чисел $a_1, a_2 \in \R$. Если в $\R^k$ фиксирован базис $e := \{e_1, ..., e_k\}$, а в $\R^m$ фиксирован базис $e' := \{e'_1, ..., e'_m\}$, то линейное отображение $L$ представимо в виде $L(h) = L(e_1)h_1 + ... + L(e_k)h_k$, где $h = (h_1, ..., h_k)^T$ в базисе $e$, а векторы $L(e_j) = (a_{1, j}, ..., a_{m, j})^T$ в базисе $e'$. В частности, каждое линейное отображение при фиксированных базисах $e$ и $e'$ в $\R^k$ и в $\R^m$ соответственно записывается с помощью матрицы $A = (a_{i, j})$. Кроме того,
+    	\[ ||Lh|| = ||L(e_1)h_1 + ... + L(e_k)h_k|| \leqslant (||L(e_1)|| + ... + ||L(e_k)||) \max_{1 \leqslant j \leqslant k} |h_j| = C \max_{1 \leqslant j \leqslant k} |h_j| \leqslant \]
+    	\[ \leqslant C ||h|| \]
+    	и каждое линейное отображение непрерывно на $\R^k$.
+    	
+    	(Если $||h|| \to 0$, то $||Lh|| \to 0$. Но если линейное отображение непрерывно в 0, то оно непрерывно в любой точке, потому что при $g \to h$ $||L(g) - L(h)|| = ||L(g - h)|| \to 0$)
+    \end{mention}
+    
+    \begin{corollary}
+    	Если отображение $f : \R^k \rightarrow \R^m$ дифференцируемо в точке $x$, то оно непрерывно в точке $x$.
+    \end{corollary}
+    
+    \begin{proof}
+    	Пользуясь определением дифференцируемости, $||f(x + h) - f(x)|| = ||L(h) + \alpha(h)||h|||| \leqslant ||L(h)|| + ||\alpha(h)|| \cdot ||h||$
+    	
+    	$||\alpha(h)|| \cdot ||h|| \to 0$ при $h \to 0$ и, как мы выяснили, $||L(h)|| \to 0 \Rightarrow ||f(x + h) - f(x)|| \to 0 \Rightarrow$ отображение непрерывно в точке $x$.
+    \end{proof}
+    
+    \begin{mention}
+    	Т.к. дифференцируемость $f$ в точке $x$ равносильна тому, что
+    	\[ \lim_{h \to 0} \frac{||f(x + h) - f(x) - Lh||}{||h||} = 0 \]
+    	и т.к. сходимость по норме равносильна покоординатной сходимости (предложение 13.11), то при фиксированном базисе $e' := \{e'_1, ..., e'_m\}$	в $\R^m$ дифференцируемость отображения $f$ равносильно дифференцируемости каждой координаты $f_j$ в точке $x$. В этом случае $Lh = (L_1 h, ..., L_m h)$ в базисе $e'$, где $L_j = df_j$ - дифференциал $j$-й координаты.
+    \end{mention}
+    
+    \begin{proof}
+    	 \[ L(h) = \begin{pmatrix}
+    	 \frac{||f_1(x + h) - f_1(x) - L_1(h)||}{||h||} \\
+    	 ... \\
+    	 \frac{||f_m(x + h) - f_m(x) - L_m(h)||}{||h||} \\
+    	 \end{pmatrix} \]
+    	 Необходимо для дифференцируемости, чтобы этот столбец стремился к нулевому вектору. Но это верно в точности когда каждая координата стремиться к нулю
+    	 $\frac{||f_i(x + h) - f_i(x) - L_i(h)||}{||h||} \to 0$.    	 
+    \end{proof}
+    
+    \section{Производная по направлению}
+    
+    \begin{lemma}
+    	Если отображение $f : \R^k \rightarrow \R$ дифференцируемо в точке $x$, то для каждого вектора $h \in \R^k$ ($f, x, h$ фиксируем) функция $\phi: t \mapsto f(x + th), t \in \R$ дифференцируема в точке 0 и $\displaystyle \frac{d}{dt} f(x + th) \bigg|_{t = 0} = df(h)$. В частности, дифференциал определен единственным образом.	
+    \end{lemma}
+    
+    \begin{proof}
+    	Рассмотрим приращение функции в точках $t$ и $0$
+    	\[ f(x + th) - f(x) = L(th) + \alpha(th) ||th|| \]
+    	\[ \frac{f(x + th) - f(x)}{t} = \frac{tL(h) + t \alpha(th) ||h||}{t} = L(h) + \alpha(th) ||h|| \]
+    	\[ \lim_{t \to 0} \frac{f(x + th) - f(x)}{t} = \lim_{t \to 0} L(h) + \alpha(th) ||h|| =  \]
+    	\[ \phi'(0) = \frac{d}{dt} f(x + th) \bigg|_{t = 0} = L(h) = df(h) \]
+    	Причём на каждом векторе $h$ мы однозначно знаем, чему равняется производная $df(h) = \frac{d}{dt} f(x + th) \bigg|_{t = 0}$, в одномерном случае мы знаем, что производная единственна.
+    \end{proof}
+    
+    \begin{definition}
+    	Пусть $||v|| = 1$. Производная $\displaystyle \deriv{f}{v} (x) := \frac{d}{dt} f(x + tv) \bigg|_{t = 0}$ называется производной по направлению вектора $v$.
+    \end{definition}
+    
+    \begin{center}
+    	\includegraphics[width=0.4\textwidth]{img/lecture36/deriv}
+    \end{center}
+    
+    Если мы зададим функцию в трёхмерном пространстве, то её график - это поверхность. Теперь если мы отметим точку $(x_0, y_0)$ и направление $h$ единичной длины (важно, иначе функция в сечении растянется или сожмётся), то $(x_0, y_0) + th$ заметает всю прямую. Тогда если мы посмотрим на значения функции в этих точках прямой, то мы сделаем сечение этой функции. Получим знакомую функцию в двумерной системе координат, у которой мы уже умеем находить производную. 
+    
+    \begin{example}
+    	Пусть
+    	\[ \displaystyle f(x, y) = \left\{{
+    		\begin{matrix}
+    			\frac{2xy}{x^2 + y^2}, (x, y) \neq (0, 0),  \\
+    			0, (x, y) = (0, 0).
+    		\end{matrix}
+    	}\right. \]
+    	Функция $f$ разрывна в нуле, а значит не дифференцируема, но в точке (0, 0) существуют обе частных производных. Действительно, если $x = r \cos{\phi}, y = r \sin{\phi}$, то функция $f(x, y) = \sin{2\phi}$.
+    	Таким образом, $f(x, y)$ в любой окрестности точки (0, 0) принимает значения $\pm 1$, но $\deriv{f}{x} (0, 0) = \frac{d}{dx} (x, 0) = 0.$ Аналогично $\deriv{f}{y} (0, 0) = 0.$
+    \end{example}
+    
+    \begin{explanation}
+    	 \[ x = r \cos{\phi}, y = r \sin{\phi}, f(x, y) = \frac{2r^2 \sin{\phi} \cos{\phi}}{r^2} = \sin{2\phi} \]
+    	 Значит значение функции в полярной системе координат не зависит от $r \Rightarrow$ в любой окрестности точки (0, 0) $\exists \phi$, в котором $f(x, y)$ принимает значения $\pm 1$, поэтому функция не непрерывна в нуле, тем более не дифференцируема (следствие 14.3).
+    	 \begin{center}
+    	 	\includegraphics[width=0.4\textwidth]{img/lecture36/polar}
+    	 \end{center}
+    	 Производная вдоль $x$
+    	 \[ \deriv{f}{x} = \lim_{t \to 0} \frac{f((0, 0) + t(1, 0)) - f(0, 0)}{t} = \lim_{t \to 0} \frac{f(t, 0) - f(0, 0)}{t} = \lim_{t \to 0} \frac{0 - 0}{t} = 0 \]
+    	 Аналогично производная вдоль $y$ равна 0.
+    \end{explanation}
+    
+    \section{Частная производная}
+    
+    \begin{definition}
+    	Частной производной $\deriv{f}{x_j}$ функции $f : \R^k \rightarrow \R$ в точке $x = (x_1, ..., x_k)$ называется производная по направлению вектора $e_j$, т.е.
+    	\[ \deriv{f}{x_j}(x) = \frac{d}{dt} f(x_1, ..., x_{j - 1}, t, x_{j + 1}, ..., x_k) \bigg|_{t = x_j}. \]
+    \end{definition}
+    
+    \begin{explanation}
+    	По определению производной по направлению 
+    	\[ \deriv{f}{x_j}(x) = \deriv{f}{e_j}(x) = \frac{d}{dt}\bigg(f(x + te_j)\bigg) \bigg|_{t = 0} = \lim_{t \to 0} \frac{f(x + te_j) - f(x)}{t} = \]
+    	\[ = \lim_{t \to 0} \frac{f(x_1, ..., x_{j - 1}, x_j + t, x_{j + 1}, ..., x_k) - f(x_1, ..., x_{j - 1}, x_j, x_{j + 1}, ..., x_k)}{t} = \]
+    	\[ = \frac{d}{dy} f(x_1, ..., x_{j - 1}, y, x_{j + 1}, ..., x_k) \bigg|_{y = t + x_j} \]
+    \end{explanation}
+    
+    \section{Градиент}
+    
+    \begin{mention}
+    	При фиксированном базисе $e = \{e_1, ..., e_k\}$ в $\R^k$ линейные функционалы $dx_1, ..., dx_n$ оказываются сопряженным базисом к $e$, т.е. $dx_i(e_j) = \delta_{i,j}$. Таким образом,
+    	\[ df = \deriv{f}{x_1} dx_1 + ... + \deriv{f}{x_k} dx_k. \]
+    \end{mention}
+    
+    \begin{explanation}
+	    $f: \R^m \rightarrow \R$
+	    
+	    $(e_1, ..., e_k) -$ фиксируем базис.
+	    
+	    $x_1 = \xi(x) = \xi(x_1, ..., x_k)$
+	    
+	    $dx_1 = d\xi$
+	    
+	    $\xi(x + h) - \xi(x) = x_1 + h_1 - x_1 = h_1 = d\xi(h) + \alpha(h) ||h||$
+	    \[ df(h) = df(e_1) h_1 + df(e_2) h_2 + ... + d(e_k) h_k = \deriv{f}{x_1}h_1 + ... + \deriv{f}{x_k}h_k = \deriv{f}{x_1} dx_1(h) + ... + \deriv{f}{x_k} dx_k(h) \]    
+	    Тогда	    
+	    \[ df = \deriv{f}{x_1} dx_1 + \deriv{f}{x_2} dx_2 + ... + \deriv{f}{x_k} dx_k \]
+    \end{explanation}
+    
+    \begin{definition}
+    	\underline{Градиентом} функции $f$ называется вектор $\nabla f := (\deriv{f}{x_1}, ..., \deriv{f}{x_n})$.
+    \end{definition}
+    
+    \section{Свойства градиента}
+    
+    \begin{sentence}
+    	Производная по направлению вектора $v$ равна
+        \[ \deriv{f}{v} = \langle \nabla f(x), v \rangle. \]
+    \end{sentence}
+    
+    \begin{proof}    
+	    Из замечания 14.9
+	    \[ df(h) = \deriv{f}{x_1}h_1 + ... + \deriv{f}{x_k}h_k \Rightarrow \deriv{f}{v} = \langle \nabla f(x), v \rangle. \]
+    \end{proof}
+    
+    \begin{lemma}
+    	Если f дифференцируема в точке $x$ и $df \neq 0$, то наибольшее значение производной вдоль единичного вектора v (т.е. $||v|| = 1$) достигается на векторе $||\nabla f(x)||^{-1} \nabla f(x).$
+    \end{lemma}
+    
+    \begin{proof}
+    	По неравенству Коши-Буняковского
+    	\[ |\langle \nabla f, v \rangle| \leqslant ||\nabla f|| ||h|| \]
+    	Максимум достигается при $v = \frac{\nabla f}{||\nabla f||}$
+    \end{proof}
+    
+    \newpage
+    
+    \section*{Лекция 37: Частные производные высокого порядка}
+    
+    \section{Множество уровня}
+    
+    \begin{definition}
+    	\underline{Множеством уровня} называется
+    	\[ \gamma(h) = \{(x_1, ..., x_n) \text{ } | \text{ } \phi(x_1, ..., x_n) = h\}. \]
+    \end{definition}
+    
+    \begin{sentence}
+    	Градиент функции $\phi$ в точке $\vec{x}^0$ перпендикулярен её множеству уровня, проходящей через эту точку.
+    \end{sentence}
+    
+    Пока без доказательства
+    
+    \section{Матрица Якоби}
+    
+    \begin{mention}
+    	В случае отображения $f : \R^k \rightarrow \R^m$ при фиксированных базисах $e$ и $e'$ в $\R^k$ и в $\R^m$ соответственно, компоненты матрицы дифференциала $df$ имеют $a_{i, j} = \deriv{f_i}{x_j} (x)$, т.е. по строчкам написаны градиенты $\nabla f_i(x).$
+    \end{mention}
+    
+    \begin{definition}
+    	При фиксированных базисах $e$ в $\R^k$ и $e'$ в $\R^m$ матрицу, соответствующую линейному отображению $df$, называют \underline{матрицей Якоби} отображения $f$ в точке $x$ и обозначают $J_f (x)$.
+    \end{definition}
+    
+    \section{Достаточное условие дифференцируемости}
+    
+    \begin{theorem}
+    	Если все частные производные $\deriv{f}{x_j}$ существуют в окрестности точки $x_0$ и непрерывны в этой точке, то $f$ — дифференцируема в точке $x_0$.
+    \end{theorem}
+    
+    \begin{proof}
+    	Индукция по числу переменных.
+    	
+    	$k = 1.$ У функции от одной переменной одна частная производная и она равна производной.
+    	
+    	Пусть утверждение верно для некоторого $k$, докажем для $k + 1$.
+    	
+    	$a = (a_1, a_2, ..., a_{k + 1})$
+    	\[ f(a_1 + h_1, ..., a_{k + 1} + h_{k + 1}) - f(a) = f(a_1 + h_1, ..., a_k + h_k, a_{k + 1}) - f(a_1 + h_1, .., a_k + h_k, a_{k + 1}) + \]
+    	\[ + f(a_1 + h_1, ..., a_k + h_k, a_{k + 1}) - f(a) \]
+    	Пусть
+    	\[ \sigma = f(a_1 + h_1, ..., a_k + h_k, a_{k + 1}) - f(a_1 + h_1, .., a_k + h_k, a_{k + 1}) \]
+    	\[ \rho = f(a_1 + h_1, ..., a_k + h_k, a_{k + 1}) - f(a) \]
+    	Считаем, что функция $\rho$ от $k$ переменных и применяем предположение индукции. Расписываем определение дифференцируемости и формулы дифференциала через частные производные:
+    	\[ \rho = f(a) + \deriv{f}{x_1}(a)h_1 + ... + \deriv{f}{x_k}(a)h_k + \alpha(h)||h|| - f(a) = \deriv{f}{x_1}(a)h_1 + ... + \deriv{f}{x_k}(a)h_k + \alpha(h)||h|| \]
+    	(Важные моменты: $f(a + h) \to f(a)$ при $h \to 0$; у $h$ всего $k + 1$ координат, поэтому если $h \to 0$, то его первые $k$ координат тоже стремятся к нулю)
+    	
+    	По теореме Лангранжа $\exists \xi: 0 < \xi < h_{k + 1}$
+    	\[ \sigma = \deriv{f}{x_{k + 1}}(a_1 + h_1, ..., a_k + h_k, a_{k + 1} + \xi) h_{k + 1} = \deriv{f}{x_{k + 1}}(a)h_{k + 1} - \deriv{f}{x_{k + 1}}(a)h_{k + 1} + \]
+    	\[ + \deriv{f}{x_{k + 1}}(a_1 + h_1, ..., a_k + h_k, a_{k + 1} + \xi)h_{k + 1} = \deriv{f}{x_{k + 1}}(a)h_{k + 1} + \bigg(-\deriv{f}{x_{k + 1}}(a) + \]
+    	\[ + \deriv{f}{x_{k + 1}}(a_1 + h_1, ..., a_k + h_k, a_{k + 1} + \xi)\bigg)h_{k + 1} \]
+    	Пользуясь непрерывностью частных производных и тем, что $h_i \to 0$, $0 < \xi < h_{k + 1}$, получаем, что
+    	\[ \bigg(-\deriv{f}{x_{k + 1}}(a) + \deriv{f}{x_{k + 1}}(a_1 + h_1, ..., a_k + h_k, a_{k + 1} + \xi)\bigg) = \alpha(h) \]
+    	(по условию теоремы частные производные непрерывны)
+    	$|\alpha(h) h_k| < |\alpha(h)| ||h||$
+    	\[ \rho + \sigma = \deriv{f}{x_1}(a)h_1 + ... + \deriv{f}{x_k}(a)h_k + \deriv{f}{x_{k + 1}}(a) + \alpha(h) ||h|| \]
+    	Хочется заметить, что когда мы используем теорему Лангранжа необходимо, чтобы функция не только была дифференцируема, но и непрерывна на каком-то отрезке. Наша функция дифференцируема в некоторой окрестности точки $a$, поэтому можно взять точки $h_k$, которые лежат внутри этой окрестности. Для того, чтобы добиться непрерывности в каждой точке, возьмём окрестность поменьше (с включённой границей), так, чтобы эти точки $h_k$ остались всё ещё в окрестности.
+    	\begin{center}
+    		\includegraphics[width=0.4\textwidth]{img/lecture37/circle}
+    	\end{center}
+    \end{proof}
+    
+    \section{Частные производные высокого порядка}
+    
+    \begin{definition}
+    	Пусть $f : \R^k \rightarrow \R$ и предположим, что в некоторой окрестности $B_r(x_0)$ точки $x_0$ существует частная производная $\pdv{f}{x_j}$. Если функция $x \mapsto \pdv{f}{x_j}$ в точке $x_0$ имеет частную производную по переменной $x_i$, то эта частная производная $\pdv{x_i}(\pdv{f}{x_j})(x_0)$ называется частной производной второго порядка по переменным $x_j$ и $x_i$ и обозначается $\frac{\partial^2 f}{\partial x_i \partial x_j}(x_0)$. 
+    	    	
+    	Частная производная порядка k определяется рекурсивно:
+    	\[ \frac{\partial^k f}{\partial x_{i_1} \cdot \cdot \cdot \partial x_{i_k}} = \pdv{x_{i_1}}(\frac{\partial^{k - 1} f}{\partial x_{i_2} \cdot \cdot \cdot \partial x_{i_k}}). \]
+    \end{definition}
+    
+    \begin{mention}
+    	Частные производные $\frac{\partial^2 f}{\partial x_i \partial x_j}$ и $\frac{\partial^2 f}{\partial x_j \partial x_i}$, вообще говоря, могут не совпадать!
+    \end{mention}
+    
+    \section{Теорема Шварца}
+    
+    \begin{theorem}[Шварц]
+    	Пусть смешанные частные производные $\frac{\partial^2 f}{\partial x \partial y}$ и $\frac{\partial^2 f}{\partial y \partial x}$ существуют в окрестности точки $(x_0, y_0)$ и непрерывны в этой точке. Тогда их значения в точке $(x_0, y_0)$ совпадают.
+    \end{theorem}
+    
+    \begin{proof}
+    	Рассмотрим
+    	\[ F(t, s) = f(x_0 + t, y_0 + s) - f(x_0 + t, y_0) - f(x_0, y_0 + s) + f(x_0, y_)) \]
+    	Пусть
+    	\[ \psi(\tau) = f(x_0 + \tau, y_0 + s) = f(x_0 + \tau, y_0) \]
+    	По теореме Лагранжа $\exists c: 0 < c < t$
+    	\[ F(t, s) = \psi(t) - \psi(0) = \psi'(c) \cdot t \]
+    	\[ \psi'(c) = \deriv{f}{x}(x_0 + c, y_0 + s) - \deriv{f}{x}(x_0 + c, y_0) \]
+    	\[ \phi(u) = \deriv{f}{x}(x_0 + c, y_0 + u) \]
+    	
+    	По теореме Лагранжа $\exists d: 0 < d < s$
+    	\[ \psi'(c) = \phi(s) - \phi(0) = \phi'(d) \cdot s \]
+    	\[ \phi'(d) = \frac{\partial^2 f}{\partial y \partial x}, 0 < d < s, 0 < c < t \]
+    	Для всех $t$ и $s$ из достаточно малой окрестности 0
+    	\[ F(t, s) = \frac{\partial^2 f}{\partial y \partial x}(x_0 + c, y_0 + d) \cdot t \cdot s, 0 < d < s, 0 < c < t \]
+    	Перегруппировать слагаемые иначе, получим
+    	\[ F(t, s) = \frac{\partial^2 f}{\partial x \partial y} \big(x_0 + \widetilde{c}, y_0 + \widetilde{d} \big) \cdot t \cdot s, 0 < \widetilde{d} < s, 0 < \widetilde{c} < t \]
+    	следовательно
+    	\[ \frac{\partial^2 f}{\partial x \partial y} \big(x_0 + \widetilde{c}, y_0 + \widetilde{d} \big) = \frac{\partial^2 f}{\partial y \partial x} (x_0 + c, y_0 + d) \]
+    	\[ t \to 0 \Rightarrow c \to 0, \widetilde{c} \to 0 \]
+    	\[ s \to 0 \Rightarrow d \to 0, \widetilde{d} \to 0 \]
+    	В силу непрерывности смешанных производных
+    	\[ \frac{\partial^2 f}{\partial x \partial y} = \frac{\partial^2 f}{\partial y \partial x} \]
+    \end{proof}
+
+    \section{Теорема Юнга}
+    
+    \begin{theorem}[Юнг]
+    	Пусть $f$ - дифференцируема в окрестности точки $(x_0, y_0)$, а её частные производные $\pdv{f}{x}$ и $\pdv{f}{y}$ дифференцируемы в точке $(x_0, y_0)$. Тогда смешанные частные производные $\frac{\partial^2 f}{\partial x \partial y}$ и $\frac{\partial^2 f}{\partial y \partial x}$ в точке $(x_0, y_0)$ совпадают.
+    \end{theorem}
+    
+    \begin{proof}
+    	Не ограничивая общности, будем считать, что $(x_0, y_0) = (0, 0)$. Рассмотрим функцию
+    	\[ F(t, t) = f(t, t) - f(0, t) - f(t, 0) + f(0, 0). \]
+    	Применяя теорему Лагранжа к функции $g(u) = f(t, u) - f(0, u)$, получаем
+    	\[ F(t, t) = g(t) - g(0) = g'(\xi)t = \bigg(\deriv{f}{y}(t, \xi) - \deriv{f}{y}(0, \xi)\bigg)t. \]
+    	Дифференцируемость $\deriv{f}{y}$ в точке (0, 0) означает, что
+    	\[ \deriv{f}{y}(x, y) = \deriv{f}{y}(0, 0) + \frac{\partial^2 f}{\partial x \partial y}(0, 0)x + \frac{\partial^2 f}{\partial y^2}(0, 0)y + o(\sqrt{x^2 + y^2}). \]
+    	Таким образом,
+    	\[ \deriv{f}{y}(t, \xi) = \deriv{f}{y}(0, 0) + \frac{\partial^2 f}{\partial x \partial y}(0, 0)t + \frac{\partial^2 f}{\partial y^2}(0, 0)\xi + o(\sqrt{t^2 + \xi^2}). \]
+    	и
+    	\[ \deriv{f}{y}(0, \xi) = \deriv{f}{y}(0, 0) + \frac{\partial^2 f}{\partial y^2}(0, 0)\xi + o(\xi). \]
+    	Т. к. $0 \leqslant \xi \leqslant t$, то $o(\sqrt{t^2 + \xi^2}) = o(t)$ (т. к. $\sqrt{t^2 + \xi^2} \leqslant \sqrt{2}t$) и $o(\xi) = o(t)$. Таким образом,
+    	\[ F(t, t) = \frac{\partial^2 f}{\partial x \partial y}(0, 0)t^2 + o(t^2). \]
+    	Аналогично, обозначив $g(u) = f(t, u) - f(u, 0)$, получим
+    	\[ F(t, t) = \frac{\partial^2 f}{\partial y \partial x}(0, 0)t^2 + o(t^2). \]
+    	Приняв полученные выражения, поделив на $t^2$ и устремив $t$ к нулю, получаем
+    	\[ \frac{\partial^2 f}{\partial x \partial y}(0, 0) = \frac{\partial^2 f}{\partial y \partial x}(0, 0). \]
+    \end{proof}
+    
+    \begin{mention}
+    	Условия теорем Юнга и Шварца не следуют друг из друга.
+    \end{mention}
+    
+    \section{Дифференцируемость (m + 1) раз}
+    
+    \begin{definition}
+    	Пусть $f : \R^n \rightarrow \R$ дифференцируема в окрестности точки $a$. Говорят, что $f$ дважды дифференцируема в точке $a$, если все её частные производные $\pdv{f}{x_i}$ дифференцируемы в точке $a$. Пусть $f$ - $m$ раз дифференцируема в окрестности точки $a$. Говорят, что $f$ дифференцируема $(m + 1)$ раз в точке $a$, если все частные производные $m$-того порядка $\frac{\partial^m f}{\partial x_{i_1} ... \partial x_{i_m}}$ дифференцируемы в точке $a$.
+    \end{definition}
+    
+    \begin{corollary}
+    	Если $f$ - $m$ раз дифференцируема в точке $a$, то значения производных порядка $m$  $\frac{\partial^m f}{\partial x_{i_1} ... \partial x_{i_m}}(a)$ не зависят от порядка дифференцирования.
+    \end{corollary}
+    
+    \begin{proof}
+    	База индукции для $m = 2$: теорема Юнга.
+    	
+    	Переход: рассмотрим производную порядка $m + 1$.
+    	\[ \deriv{}{x_{k_{m + 1}}} \bigg(\frac{\partial^m f}{\partial x_{k_m} ... \partial x_{k_1}}\bigg) \]
+    	По предположению индукции внутри скобок можно дифференцировать в любом порядке. Поскольку функция $\frac{\partial^m f}{\partial x_{k_m} ... \partial x_{k_1}}$ дифференцируема, то по теореме Юнга мы можем переставлять частную производную по переменной $x_{k_{m + 1}}$ в любое место.
+    \end{proof}
+    
+    \newpage
+    
+    \section*{Лекция 38: Правила дифференцирования}
+    
+    \section{Дифференциалы высоких порядков}
+    
+    Предположим, что $f : \R^k \rightarrow \R$ - дифференцируема в окрестности точки $a$ и предположим, что ее частные производные $\pdv{f}{x_j}$ дифференцируемы в точке $a$. Тогда при каждом $h \in \R^k$ возникает функция $x \mapsto df|_x (h) = \deriv{f}{x_1}(x) h_1 + ... + \deriv{f}{x_k}(x) h_k$, дифференцируема в точке $a$. Ее дифференциал
+    \[ d(df(h))|_a (q) = \bigg(\sum_{j = 1}^k \frac{\partial^2 f}{\partial x_j \partial x_1}(a) q_j \bigg) h_1 + ... + \bigg(\sum_{j = 1}^k \frac{\partial^2 f}{\partial x_j \partial x_k}(a) q_j \bigg) h_k. \]
+    Т.е. получена билинейная форма $d(df(h))|_a (q) = \sum_{i, j = 1}^k = \frac{\partial^2 f}{\partial x_j \partial x_i}(a) q_j h_i$. Эта билинейная форма оказывается симметричной по теореме Юнга, а т.к. симметричная билинейная форма однозначно задается своей квадратичной формой
+    \[ d(df(h))|_a (h) = \sum_{i, j = 1}^k \frac{\partial^2 f}{\partial x_j \partial x_i}(a) h_j h_i = \sum_{i, j = 1}^k \frac{\partial^2 f}{\partial x_j \partial x_i}(a) dx_j(h) dx_i(h),\]
+    то эту квадратичную форму $d^2 f := \sum_{i,j = 1}^k \frac{\partial^2 f}{\partial x_j \partial x_i}(a) dx_j dx_i$ и называют \underline{вторым диф-} \underline{ференциалом} функции $f$.
+    
+    \begin{definition}
+    	Если f — m раз дифференцируема в точке a, то
+    	\[  d^n f|_a := \sum_{1 \leqslant j_1, ..., j_n \leqslant k???} \frac{\partial^n f}{\partial x_{j_1} ... \partial x_{j_n}}(a) dx_{j_1} ... dx_{j_n}. \]
+    	Последняя запись означает лишь то, что при вычислении $n$-го дифференциала на векторе $h \in \R^k$ надо воспользоваться линейностью, а
+    	\[ [dx_{j_1} ... dx_{j_n}](h) := dx_{j_1}(h) ... dx_{j_n}(h) = h_{j_1} ... h_{j_n}. \]
+    \end{definition}
+    
+    \section{Правила дифференцирования}
+    
+    \begin{theorem}
+    	Пусть функции $f, g : \R^k \rightarrow \R$ дифференцируемы в некоторой точке $x$. Тогда, для произвольных чисел $a, b \in \R$, функции $af + bg$ и $fg$ дифференцируемы в точке $x$ и $d(af + bg) = adf + bdg$ и $d(fg) = fdg + gdf$.
+    \end{theorem}
+    
+    \begin{proof}
+    	$\alpha(h), \beta(h), \gamma(h) \to 0$ при $h \to 0$
+    	\begin{enumerate}
+    		\item Здесь доказываем в общем случае, т. е. для функций $f, g : \R^k \rightarrow \R^n$.
+    	    \[ f(x + h) - f(x) = df|_x(h) + \alpha(h)||h|| \]
+    	    \[ g(x + h) - g(x) = dg|_x(h) + \beta(h)||h|| \]
+    	    \[ (af + bg)(x + h) - (af + bg)(x) = af(x + h) + bg(x + h) - af(x) - bg(x) = \]
+    	    \[ = a(df|_x(h) + \alpha(h)||h||) + b(dg|_x(h) + \beta(h)||h||) = a \cdot df(h) + b \cdot dg(h) + (\alpha(h) + \beta(h))||h|| = \]
+    	    \[ = a \cdot df(h) + b \cdot dg(h) + \gamma(h)||h|| \]
+    	    \item 
+    	    \[ fg(x + h) - fg(x) = f(x + h)g(x + h) - f(x)g(x) = f(x + h)g(x + h) - f(x + h)g(x) + \] \[ + f(x + h)g(x) - f(x)g(x) = f(x + h)(g(x + h) - g(x)) + g(x)(f(x + h) - f(x)) = \]
+    	    \[ = f(x + h) (dg|_x(h) + \beta(h)||h||) + g(x)(df|_x(h) + \alpha(h)||h||) = (*) \]
+    	    Функция $f$ дифференцируема $\Rightarrow$ непрерывна в точке $x$ и $h \to 0$. Тогда
+    	    \[ (*) = (f(x) + o(1)) (dg|_x(h) + \beta(h)||h||) + g(x)(df|_x(h) + \alpha(h)||h||) = f(x)dg|_x(h) + \]
+    	    \[ + f(x)\beta(h)||h|| + o(1)dg|_x(h) + o(1)\beta(h)||h|| + g(x)df|_x(h) + g(x) \alpha(h)||h|| = \]
+    	    \[ = f(x) dg|_x(h) + g(x) df|_x(h) + \gamma(h) ||h||. \]
+    	    $f(x)$ и $g(x)$ - константы $\Rightarrow f(x)\beta(h)||h|| = \gamma(h) ||h||$ и $g(x) \alpha(h)||h|| = \gamma(h) ||h||$
+    	     
+    	    $||dg|_x(h)|| \leqslant C||h||$ (см. конец замечания 14.2) $\Rightarrow o(1)dg|_x(h) = \gamma(h) ||h||$
+    	    
+    	    $o(1)\beta(h)||h|| = \gamma(h) ||h||$
+    	\end{enumerate}
+    \end{proof}
+    
+    \section{Дифференцирование сложной функции}
+    
+    \begin{theorem}
+    	Пусть $f : \R^k \rightarrow \R^m$, $g : \R^m \rightarrow \R^n$, причем отображение $f$ дифференцируемо в точке $a$, отображение $g$ дифференцируемо в точке $f(a)$. Тогда отображение $g \circ f$ дифференцируемо в точке $a$ и $d(g \circ f)|_a = dg|_{f(a)} \circ df|_a$.
+    \end{theorem}
+    
+    \begin{proof}
+    	$h \in \R^k, q \in \R^m$
+    	\[ f(a + h) = f(a) + df|_a(h) + \alpha(h) ||h|| \]
+    	\[ g(f(a) + q) = g(f(a)) + dg|_{f(a)}(q) + \beta(q)||q|| \]
+    	\[ g(f(a + h)) - g(f(a)) = g(f(a) + (f(a + h) - f(a))) - g(f(a)) = (*) \]
+    	Функция $f$ - дифференцируема $\Rightarrow$ непрерывна $\Rightarrow$ при $h \to 0$, $f(a + h) - f(a) \to 0 \Rightarrow q \to 0$, поэтому
+    	\[ (*) = g(f(a)) + dg|_{f(a)}(f(a + h) - f(a)) + \beta(f(a + h) - f(a))||f(a + h) - f(a)|| - g(f(a)) = \]
+    	\[ = dg|_{f(a)}(df|_a(h) + \alpha(h)||h||) + \gamma(h)||h|| = (**) \]
+    	Докажем, что 
+    	\[ \gamma(h) = \beta(f(a + h) - f(a))\frac{||f(a + h) - f(a)||}{||h||}, \]
+    	где $\gamma(h)$ - бесконечно малая функция.
+    	Функция $f$ - дифференцируема $\Rightarrow$ непрерывна $\Rightarrow$ при $h \to 0$, $f(a + h) - f(a) \to 0$
+    	\[ \frac{||f(a + h) - f(a)||}{||h||} = ||df(\frac{h}{||h||}) + \alpha(h)|| \leqslant \text{(неравенство треугольника)} \]
+    	\[ \leqslant ||df\bigg(\frac{h}{||h||}\bigg)|| + ||\alpha(h)|| \]
+    	По замечанию 14.2 $||df\big(\frac{h}{||h||}\big)|| \leqslant C||\frac{h}{||h||}|| = C$
+    	
+    	Далее продолжаем преобразования
+    	\[ (**) = dg|_{f(a)} \cdot df|_a{(h)} + ||h||dg|_{f(a)}(\alpha(h)) + \gamma(h)||h|| = (***) \]
+    	По замечанию 14.2 $||h||dg|_{f(a)}(\alpha(h)) \leqslant C||\alpha(h)|| \to 0$
+    	\[ (***) = dg|_{f(a)} \cdot df|_a{(h)} + \gamma_2(h)||h|| \]
+    	$dg|_{f(a)} \cdot df|_a{(h)}$ означают композицию двух линейных отображений.
+    \end{proof}
+    
+    \begin{mention}
+    	Поясним запись $d(g \circ f)|_a = dg|_{f(a)} \circ df|_a$. Здесь $df|_a : \R^k \rightarrow \R^m$ есть линейное отображение и $dg|_{f(z)} : \R^m \rightarrow \R^n$ есть линейное отображение. Тогда их композиция $dg|_{f(a)} \circ df|_a : \R^k \rightarrow \R^n$ есть линейное отображение, действующее по правилу $dg|_{f(a)} \circ df|_a (h) = dg|_{f(a)} (df|_a (h))$.
+    \end{mention}
+    
+    \begin{mention}
+    	Матрица Якоби композиции функций $g \circ f$ в точке $a$ равняется произведению матриц Якоби отображения $f$ в точке $a$ и отображения $g$ в точке $f(a)$. В частности, при $n = 1$, для функции $g(x_1, ..., x_m)$ и отображения
+    	\[ f(y_1, ..., y_k) = (f_1(y_1, ..., y_k), ..., f_m(y_1, ..., y_k)), \]
+    	во-первых, выполнено:
+    	\[ \frac{\partial (g \circ f)}{\partial y_j}(a) = \frac{\partial g}{\partial x_1}(f(a)) \frac{\partial f_1}{\partial y_j}(a) + ... + \frac{\partial g}{\partial x_m}(f(a)) \frac{\partial f_m}{\partial y_j}(a). \]
+    	Во-вторых, выполнено так называемое свойство инвариантности 1-го дифференциала: $dg = \pdv{g}{x_1}dx_1 + ... + \pdv{g}{x_m}dx_m$, где нам не важно, являются ли $dx_1, ..., dx_m$ - дифференциалами независимых переменных или же являются дифференциалами некоторых функций $x_j = f_j(y_1, ..., y_k)$.
+    \end{mention}
+    
+    \begin{explanation}
+    	\begin{enumerate}
+    		\item При композиции линейных отображений их матрицы перехода перемножаются. Для каждой функции такие матрицы будут иметь вид
+    		\[ J_f = \begin{pmatrix}
+    			\deriv{f_1}{x_1} & \deriv{f_1}{x_2} & ... & \deriv{f_1}{x_k} \\
+    			\deriv{f_2}{x_1} & \deriv{f_2}{x_2} & ... & \deriv{f_2}{x_k} \\
+    			... & ... & ... & ... \\
+    			\deriv{f_m}{x_1} & \deriv{f_m}{x_2} & ... & \deriv{f_m}{x_k}
+    		\end{pmatrix},
+    		J_g = \begin{pmatrix}
+    			\deriv{g}{f_1} & \deriv{g}{f_2} & ... & \deriv{g}{f_m} \\
+    		\end{pmatrix}. \]
+    		Тогда матрица перехода композиции функций будет равна $J_g J_f$.
+    		\item 
+    		\[ dg(f) = \pdv{(g \circ f)}{x_1}dx_1 + ... + \pdv{(g \circ f)}{x_m}dx_m = \sum_{i = 1}^k \deriv{(g \circ f)}{x_i} \; dx_i = \sum_{i = 1}^k \bigg(\sum_{j = 1}^m \deriv{g}{f_i} \deriv{f_j}{x_i} \bigg) \; dx_i = \]
+    		\[ = \sum_{i = 1}^k \bigg(\sum_{j = 1}^m \deriv{g}{f_i} \deriv{f_i}{x_i}\bigg) \; dx_i = \sum_{j = 1}^m \deriv{g}{f_i} \bigg(\sum_{i = 1}^k \deriv{f_i}{x_i} \; dx_i \bigg) = \sum_{j = 1}^m \deriv{g}{f_i} df_i \]
+    	\end{enumerate}
+    \end{explanation}
+    
+    \begin{example}
+    	Пусть $f(x, y) = \phi(u, v, w)$, где $u = xy, v = x + y, w = x - y$. Тогда
+    	\[ df = \pdv{\phi}{u} du + \pdv{\phi}{v} dv + \pdv{\phi}{w} dw = \frac{\partial \phi}{\partial u} d(xy) + \frac{\partial \phi}{\partial v} d(x + y) + \frac{\partial \phi}{\partial w} d(x - y) = \]
+    	\[ = \frac{\partial \phi}{\partial u}(xdy + ydx) + \frac{\partial \phi}{\partial v}(dx + dy) + \frac{\partial \phi}{\partial w}(dx - dy). \]
+    	В частности, $\pdv{f}{x} = y \pdv{\phi}{u} + \pdv{\phi}{v} + \pdv{\phi}{w}$ и $\pdv{f}{y} = x \pdv{\phi}{u} + \pdv{\phi}{v} - \pdv{\phi}{w}$.
+    \end{example}
+    
+    \section{Дифференциал обратного отображения}
+    
+    \begin{theorem}
+    	Пусть $f : \R^k \rightarrow \R^k$ - есть непрерывная биекция между окрестностями $U(a)$ и $V(f(a))$, причем обратное отображение $f^{-1} : V (f(a)) \rightarrow U(a)$ также непрерывно (т. е. $f$ -	гомеоморфизм между $U(a)$ и $V(f(a))$). Предположим, что $f$ - дифференцируемо в точке $a$ и $df$ - обратимое линейное
+    	отображение. Тогда $f^{-1}$ - дифференцируемо в точке $f(a)$ и $df^{-1}|_{f(a)}	= (df|_a)^{-1}$.
+    \end{theorem}
+    
+    \begin{proof}
+    	Достаточно доказать, что такой предел равен 0.
+    	\[ \lim_{q \to 0} \frac{||f^{-1}(f(a) + q) - f^{-1}(f(a)) - (df|_a)^{-1}(q)||}{||q||} \]
+    	\[ h = f^{-1}(f(a) + q) - f^{-1}(f(a)), h \to 0 \Leftrightarrow q \to 0 \]
+    	\[ h = f^{-1}(f(a) + q) - a \Rightarrow q = f(a + h) - f(a) \]
+    	$f$ дифференцируемо в точке $a$, поэтому
+    	\[ \lim_{h \to 0} \frac{||h - (df|_a)^{-1}(f(a + h) - f(a))||}{||f(a + h) - f(a)||} = \lim_{h \to 0} \frac{||h - (df|_a)^{-1}(df_a(h) + \alpha(h)||h||)||}{||f(a + h) - f(a)||} = \]
+    	Пользуемся линейностью дифференциала и тем, что по замечанию 14.2 $(df|_a)^{-1}(\alpha(h)) \leqslant C||\alpha(h)||$
+    	\[ = \lim_{h \to 0} \frac{||\alpha(h)|| \cdot ||h||}{||df(h) + \alpha(h)||h||||} = \lim_{h \to 0} \frac{||\alpha(h)||}{||df\big(\frac{h}{||h||}\big) + \alpha(h))||} \]
+    	Теперь отдельно оценим знаменатель. $p$ - вектор $\Rightarrow$ по замечанию 14.2
+    	\[ ||(df)^{-1}(p)|| \leqslant C ||p|| \]
+    	Пусть $p = df(h)$.
+    	\[ ||(df)^{-1}(df(h))|| \leqslant C||df(h)|| \]
+    	\[ ||h|| C_2 \leqslant ||df(h)|| \]
+    	Таким образом, применяя неравенство треугольника,
+    	\[ ||df\bigg(\frac{h}{||h||}\bigg) + \alpha(h)|| \geqslant ||df\bigg(\frac{h}{||h||}\bigg)|| - ||\alpha(h)|| \geqslant C - ||\alpha(h)|| \Rightarrow \lim_{h \to 0} \frac{||\alpha(h)||}{||df\big(\frac{h}{||h||}\big) + \alpha(h))||} = 0 \]
+    \end{proof}
+    
+    \newpage
+    
+    \chapter{Экстремумы функций многих переменных}
+    
+    \section*{Лекция 39: Формула Тейлора и экстремум}
+    
+    \section{Формула Тейлора с остаточным членом в интегральной форме}
+    
+    \begin{theorem}[Формула Тейлора с остаточным членом в интегральной форме]
+    	Если $f: \R \rightarrow \R$ непрерывно дифференцируема $m + 1$ раз на отрезке $[a, x]$, то
+    	\[ f(x) = f(a) + f'(a)(x - a) + ... + \frac{1}{m!}f^{(m)}(a)(x - a)^m + \frac{1}{m!} \int_a^x (x - t)^m f^{(m + 1)} \; dt \]
+    \end{theorem}
+    
+    \begin{proof}
+    	База: $m = 0$.
+    	\[ f(x) = f(a) + \int_c^x f'(t) \; dt = f(a) + f(x) - f(a) = f(x) \]
+    	Переход:
+    	\[ R_m = \frac{1}{m!} \int_a^x (x - t)^m f^{(m + 1)}(t) \; dt = -\frac{1}{(m + 1)!} \int_a^x f^{(m + 1)}(t) \; d(x - t)^{m + 1} = \]
+    	\[ = -\frac{(x - t)^{m + 1}}{(m + 1)!} f^{(m + 1)}(t)\bigg|_a^x + \frac{1}{(m + 1)!} \int_a^x (x - t)^{m + 1} f^{(m + 2)}(t) \; dt = \]
+    	\[ = \frac{(x - a)^{m + 1}}{(m + 1)!} f^{(m + 1)}(a) + R_{m + 1} \]
+    \end{proof}
+    
+    \begin{corollary}
+    	Справедливо следующее равенство:
+    	\[ e^x = \sum_{n = 0}^{\infty} \frac{x^n}{n!}, x \in \R. \]
+    \end{corollary}
+    
+    \begin{proof}
+    	\[ \bigg|e^x - \sum_{k = 0}^m \frac{x^k}{k!}\bigg| = \bigg|\frac{1}{m!} \int_0^x (x - t)^m e^t \; dt\bigg| = (*) \]
+    	Пользуемся следующей оценкой
+    	\[ \bigg|\int_a^b \phi(x) \; dx\bigg| \leqslant \sup_{x \in [a, b]} |\phi(x)|(b - a) \]
+    	При $x \geqslant 1$
+    	\[ (*) \leqslant \bigg|\frac{x^{m + 1} e^x}{m!}\bigg| \to 0 \text{ при } m \to \infty \text{ и фиксированном x} \]
+    	При $x < 1$
+    	\[ (*) \leqslant \bigg|\frac{e^x}{m!}\bigg| \to 0 \]
+    \end{proof}
+    
+    \section{Формула Тейлора}
+    
+    \begin{lemma}
+    	Пусть функция $f$ $m$ раз дифференцируема в окрестности точки $a \in \R^k$. Рассмотрим функцию $\phi(t) := f(a + th)$. Тогда $\phi$ $m$ раз дифференцируема в окрестности точки нуль и $\phi^{(m)}(t) = d^mf|_{a + th}(h)$.
+    \end{lemma}
+    
+    \begin{proof}
+    	База индукции: $m = 1$.
+    	\begin{center}
+    		\includegraphics[width=0.4\textwidth]{img/lecture39/matrix_yakobi}
+    	\end{center}    	
+    	$\phi'(t) = f'(a + th) = \begin{pmatrix}
+    		\deriv{f}{x_1} & \deriv{f}{x_2} & ... & \deriv{f}{x_k}
+    	\end{pmatrix} \cdot \begin{pmatrix}
+    	h_1 \\
+    	h_2 \\
+    	... \\
+    	h_k
+    	\end{pmatrix} = \deriv{f}{x_1}(a + th)h_1 + ... + \deriv{f}{x_k}(a + th)h_k = df\bigg|_{a + th}(h)$
+    	
+    	Переход:
+    	\[ \phi^{(m + 1)}(t) = (\phi^{(m)}(t))' = (d^mf|_{a + th}(h))'_t = \bigg(\sum_{j_1, ..., j_m} \frac{\partial^m f(a + th)}{\partial x_{j_1} ... \partial x_{j_m}} h_{j_1} ... h_{j_m}\bigg)'_t = \]
+    	\[ = \sum_{j_1, ..., j_m} \deriv{}{t} \bigg(\frac{\partial^m f(a + th)}{\partial x_{j_1} ... \partial x_{j_m}} h_{j_1} ... h_{j_m}\bigg) = \sum_{j_1, ..., j_m} \sum_{i = 1}^k \frac{\partial^{m + 1} f(a + th)}{\partial x_i \partial x_{j_1} ... \partial x_{j_m}} h_{j_1} ... h_{j_m} h_i = \]
+    	\[ = \sum_{j_1, ..., j_{m + 1}} \frac{\partial^{m + 1} f(a + th)}{\partial x_{j_1} ... \partial x_{j_{m + 1}}} h_{j_1} ... h_{j_{m + 1}} = d^{m + 1}f|_{a + th}(h) \]
+    \end{proof}
+    
+    \begin{theorem}
+    	Пусть функция $f: \R^k \rightarrow \R$ $m$ раз непрерывно дифференцируема в окрестности точки $a$. Тогда справедлива следующая формула Тейлора:
+    	\[ f(a + h) = f(a) + df|_a(h) + \frac{1}{2!}d^2 f|_a(h) + ... + \frac{1}{m!}df^{(m)}|_a(h) + o(||h||^m). \]
+    \end{theorem}
+    
+    \begin{proof}
+    	$\phi: \R \rightarrow \R, \phi(t) = f(a + th)$
+    	\[ \phi(1) = \phi(0) + \phi'(0) \cdot 1 + ... + \frac{\phi^{(m - 1)}(0)}{(m - 1)!} + \frac{1}{(m - 1)!} \int_0^1 (1 - t)^{m - 1} \phi^{(m)}(t) \; dt = \]
+    	\[ \text{(по лемме 15.3)} = f(a) + \frac{df|_a(h)}{1!} + ... + \frac{d^{m - 1}f|_a(h)}{(m - 1)!} + \frac{d^m f|_a(h)}{m!} + R_m \]
+    	\[ R_m = \frac{1}{(m - 1)!} \int_0^1 (1 - t)^{m - 1} \phi^{(m)}(t) \; dt - \frac{\phi^{(m)}}{m!}(0) =  \frac{1}{(m - 1)!} \int_0^1 (1 - t)^{m - 1} \phi^{(m)}(t) \; dt - \]
+    	\[ - \frac{1}{(m - 1)!} \int_0^1 (1 - t)^{m - 1} \phi^{(m)}(0) \; dt = \frac{1}{(m - 1)!} \int_0^1 (1 - t)^{m - 1}(\phi^{(m)}(t) - \phi^{(m)}(0)) \; dt \]
+    	\[ \frac{|R_m|}{||h||^m} \leqslant \frac{\sup{|\phi^{(m)}(t) - \phi^{(m)}(0)|}}{||h||^m m!} =  \]
+    	\[ = \sup{\bigg|\sum_{j_1, ..., j_m} \frac{\partial^m f(a + th)}{\partial x_{j_1} ... \partial x_{j_n}} h_1 ... h_m - \sum_{j_1, ..., j_m} \frac{\partial f(a)}{\partial x_{j_1} ... \partial x_{j_n}} h_1 ... h_m \bigg|} \frac{1}{||h||^m \cdot m!} = (*) \]
+    	\[ \forall k \text{ } |h_{j_k}| \leqslant ||h|| \Rightarrow \frac{|h_{j_1} ... h_{j_m}|}{||h||^m} \frac{1}{m!} \leqslant \frac{1}{m!} \]
+    	$m$-я производная функции непрерывна $\Rightarrow$
+    	\[ \Rightarrow \sum_{j_1, ..., j_m} \frac{\partial^m f(a + th)}{\partial x_{j_1} ... \partial x_{j_n}} - \frac{\partial f(a)}{\partial x_{j_1} ... \partial x_{j_n}} \to 0 \text{ при } h \to 0 \]
+    	Значит $(*) \to 0 \Rightarrow \frac{|R_m|}{||h||^m} \to 0 \Rightarrow R_m = o(||h||^m)$
+    \end{proof}
+    
+    \section{Точка локального экстремума}
+    
+    \begin{definition}
+    	Пусть функция $u = f(x), x \in \R^n$ определена в некоторой окрестности $U(x_0)$ точки $x_0$. Тогда $x_0$ называют точкой
+    	\begin{itemize}
+    		\item \underline{локального максимума} функции, если для всех точек $x \in U(x_0)$ верно неравенство $f(x) \leqslant f(x_0)$;
+    		\item \underline{строгого локального максимума} функции, если для всех точек $x \in U(x_0)$ верно неравенство $f(x) < f(x_0)$;
+    		\item \underline{локального минимума} функции, если для всех точек $x \in U(x_0)$ верно неравенство $f(x) \geqslant f(x_0)$;
+    		\item \underline{строгого локального минимума} функции, если для всех точек $x \in U(x_0)$ верно неравенство $f(x) > f(x_0)$;
+    		\item \underline{локального экстремума} функции, если она входит в одну из перечисленных выше категорий.
+    	\end{itemize}
+    \end{definition}
+    
+    \section{Необходимое условие локального экстремума}
+    \begin{theorem}[Необходимое условие локального экстремума]
+    	Пусть $a$ - точка локального экстремума функции $f$ и предположим, что $f$ дифференцируема в точке $a$. Тогда $df|_a = 0$ (или, что тоже самое, $\deriv{f}{x_j}(a) = 0$ $\forall j$).
+    \end{theorem}
+    
+    \begin{proof}
+    	Пусть $a$ - точка максимума $\Rightarrow$ при фиксированном $h$ и $t \neq 0$ $\phi(0) > \phi(t) = f(a + ht)$.
+    	
+    	$\phi: \R \rightarrow \R \Rightarrow$ необходимое условие $\phi'(0) = 0 = df|_a(h)$ $\forall h$ по лемме 15.3 $\Rightarrow df|_a = 0$.
+    \end{proof}
+    
+    \begin{definition}
+    	Точки, в которых все частные производные равны нулю, называются \underline{стационарными}.
+    \end{definition}
+    
+    \section{Достаточное условие локального экстремума}
+    
+    \begin{theorem}[Достаточное условие локального экстремума]
+    	Пусть $f$ дважды непрерывно дифференцируема в окрестности точки $a$ и предположим, что в точке $a$ выполнено необходимое условие локального экстремума: $df|_a(h) = 0$ $\forall h$. Тогда
+    	\begin{enumerate}
+    		\item если $d^2f|_a(h) > 0$ $\forall h \neq 0$, то $a$ - точка строгого локального минимума;
+    		\item если $d^2f|_a(h) < 0$ $\forall h \neq 0$, то $a$ - точка строгого локального максимума.
+    	\end{enumerate}
+    \end{theorem}
+    
+    \begin{proof}
+    	Докажем первый пункт, второй доказывается аналогично. По теореме 15.4
+    	\[ f(a + h) - f(a) = df|_a(h) + \frac{d^2f|_a}{2}(h) + o(||h||^2) = \frac{d^2f|_a}{2}(h) + o(||h||^2) = \]
+    	\[ = ||h||^2 \bigg(\frac{d^2f|_a(\frac{h}{||h||})}{2} + o(1)\bigg) = (*) \]
+    	$d^2f|_a(\frac{h}{||h||})$ - симметричная билинейная форма
+    	\[ \min_{||u|| = 1} u^T B u = \min_{||u|| = 1} u^T S^T D S u = [v = Su] =  \]
+    	\[ (*) \geqslant ||h||^2 (\frac{m}{2} + o(1)) \Rightarrow \forall h \in B_{\delta}(a) \text{ } ||h||^2 (\frac{m}{2} + o(1)) \geqslant ||h||^2 \frac{m}{4} > 0 \]
+    \end{proof}
+    
+    \section{Критерий Сильвестра}
+   
+    \begin{mention}
+   	    Отметим, что $d^2f|_a(h)$ — это квадратичная форма
+    	\[ \begin{pmatrix}
+    		\frac{\partial^2 f}{\partial x_1^2}(a) & \frac{\partial^2 f}{\partial x_1 \partial x_2}(a) & ... & \frac{\partial^2 f}{\partial x_1 \partial x_k}(a) \\
+    		\frac{\partial^2 f}{\partial x_1 \partial x_2}(a) & \frac{\partial^2 f}{\partial x_2^2}(a) & ... & \frac{\partial^2 f}{\partial x_2}{\partial x_k}(a) \\
+    		... & ... & ... & ... \\
+    	\end{pmatrix} \]
+   	    Условие теоремы выше подразумевает её положительную или отрицательную определенность, что позволяет применить критерий Сильвестра:
+   	    \begin{enumerate} 
+   	    	\item все угловые миноры матрицы квадратичной формы $d^2 f|_a$ положительны $\Leftrightarrow d^2 f|_a$ - положительно определена (т.е. $d^2 f|_a(h) > 0$ при каждом $h \neq 0$);
+   	    	\item угловые миноры матрицы квадратичной формы $d^2 f|_a$ начинаются с отрицательного, а затем чередуют знаки $\Leftrightarrow d^2 f|_a$ - отрицательно определена (т. е. $d^2 f|_a(h) < 0$ при каждом $h \neq 0$).
+	    \end{enumerate}
+    \end{mention}
+    
+    \section{Теорема о неявной функции}
+    
+    Для сокращения всех записей будем использовать обозначение $F'_y(x, y) := \deriv{F}{y}(x, y)$.
+    
+    \begin{theorem}
+    	Пусть $F : \R^2 \rightarrow \R$ — определена и непрерывно дифференцируема (т. е. частные производные непрерывно зависят от точки) в некоторой окрестности $U$ точки $(a, b) \in \R^2$.
+    	
+    	Пусть $1)$ $F(a, b) = 0$ и $2)$ $F'_y(a, b) \neq 0$. Тогда найдутся промежутки $I_x = (a - \alpha, a + \alpha)$ и $I_y = (b - \beta, b + \beta)$ и непрерывно дифференцируемая функция $f : I_x \rightarrow I_y$, для которых $I_x \times Iy \subset U$ и для каждой точки $(x, y) \in I_x \times I_y$ выполнено $F(x, y) = 0 \Leftrightarrow y = f(x)$. Кроме того, $f'(x) = -\frac{F'_x(x, f(x))}{F'_y(x, f(x))}.$
+    \end{theorem}
+    
+    \begin{proof}
+    \end{proof}
+    
+    \begin{theorem}
+    	Пусть $F : \R^{k + 1} \rightarrow \R$ - определена и непрерывно дифференцируема (т. е. частные производные непрерывно зависят от точки) в некоторой окрестности $U$ точки $(a, b) = (a_1, ..., a_k, b) \in \R^{k + 1}$. Пусть $1)$ $F(a, b) = 0$ и $2)$ $F'_y(a, b) \neq 0$. Тогда найдутся $I_x = (a_1 - \alpha_1, a_1 + \alpha_1) \times ... \times (a_k - \alpha_k, a_k + \alpha_k)$ и $I_y = (b - \beta, b + \beta)$ и непрерывно дифференцируемая функция $f : I_x \rightarrow I_y$, для которых $I_x \times I_y \subset U$ и для каждой точки $(x, y) \in I_x \times I_y$ выполнено $F(x, y) = 0 \Leftrightarrow y = f(x)$. Кроме того, $\deriv{f}{x_j}(x) = -\frac{F'_{x_j}(x, f(x))}{F'_y(x, f(x))}$.
+    \end{theorem}
+    
+    \section{Теорема о неявном отображении}
+    
+    \begin{theorem}
+    	Пусть отображение $F : \R^{k + n} \rightarrow \R^n$ — определено и непрерывно дифференцируемо в некоторой окрестности $U$ точки $(a, b) = (a_1, ..., a_k, b_1, ..., b_n) \in \R^{k + n}$. Пусть $1)$ $F(a, b) = 0$ и $2)$ матрица
+    	\[ F'_y(a, b) := \begin{pmatrix}
+    		\deriv{F_1}{y_1}(a, b) & ... & \deriv{F_1}{y_n}(a, b) \\
+    		... & ... & ... \\
+    		\deriv{F_n}{y_1}(a, b) & ... & \deriv{F_n}{y_n}(a, b) \\
+    	\end{pmatrix} - \text{обратима.} \]
+    	Тогда найдутся $I_x = (a_1 - \alpha_1, a_1 + \alpha_1) \times ... \times (a_k - \alpha_k, a_k + \alpha_k)$ и $I_y = (b_1 - \beta_1, b_1 + \beta_1) \times ... \times (b_n - \beta_n, b_n + \beta_n)$ и непрерывно дифференцируемое отображение $f = (f_1, ..., f_n): I_x \rightarrow I_y$, для которых $I_x \times I_y \subset U$ и для каждой точки $(x, y) \in I_x \times I_y$ выполнено
+    	\[ F(x, y) = 0 \Leftrightarrow y = f(x). \]
+    \end{theorem}
+
 \end{document}

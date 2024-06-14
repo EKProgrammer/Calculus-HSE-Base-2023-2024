@@ -1,71 +1,112 @@
 \babel@toc {russian}{}\relax 
-\contentsline {chapter}{\numberline {1}Вещественные числа}{3}{}%
-\contentsline {chapter}{\numberline {2}Предел последовательности}{4}{}%
-\contentsline {chapter}{\numberline {3}Предел функции}{5}{}%
-\contentsline {chapter}{\numberline {4}Непрерывные функции}{6}{}%
-\contentsline {chapter}{\numberline {5}Производная}{7}{}%
-\contentsline {chapter}{\numberline {6}Исследование функций с помощью производных}{8}{}%
-\contentsline {section}{\numberline {6.1}Необходимое условие экстремума}{8}{}%
-\contentsline {section}{\numberline {6.2}Достаточное условие экстремума}{8}{}%
-\contentsline {section}{\numberline {6.3}Выпуклость и вогнутость}{9}{}%
-\contentsline {section}{\numberline {6.4}Неравенство Йенсена}{12}{}%
-\contentsline {section}{\numberline {6.5}Асимптоты}{13}{}%
-\contentsline {chapter}{\numberline {7}Первообразная и неопределенный интеграл}{14}{}%
-\contentsline {section}{\numberline {7.1}Первообразная}{14}{}%
-\contentsline {section}{\numberline {7.2}Таблица первообразных}{15}{}%
-\contentsline {section}{\numberline {7.3}Свойства неопределённого интеграла}{15}{}%
-\contentsline {chapter}{\numberline {8}Интеграл от рациональной функции}{18}{}%
-\contentsline {section}{\numberline {8.1}Рациональная функция}{18}{}%
-\contentsline {section}{\numberline {8.2}Разложение многочлена на неприводимые}{19}{}%
-\contentsline {section}{\numberline {8.3}Правильная дробь}{19}{}%
-\contentsline {section}{\numberline {8.4}Элементарная дробь}{19}{}%
-\contentsline {section}{\numberline {8.5}Разложение дроби на элементарные}{19}{}%
-\contentsline {section}{\numberline {8.6}Интегрирование рациональных функций}{20}{}%
-\contentsline {section}{\numberline {8.7}Метод Остроградского}{21}{}%
-\contentsline {section}{\numberline {8.8}Рациональные функции от $cos$ и $sin$}{23}{}%
-\contentsline {chapter}{\numberline {9}Определенный интеграл}{25}{}%
-\contentsline {section}{\numberline {9.1}Определенный интеграл как площадь}{25}{}%
-\contentsline {section}{\numberline {9.2}Интеграл Римана}{26}{}%
-\contentsline {chapter}{\numberline {10}Критерий Дарбу и классы интегрируемых функций}{29}{}%
-\contentsline {section}{\numberline {10.1}Суммы и интегралы Дарбу}{29}{}%
-\contentsline {section}{\numberline {10.2}Критерий Дарбу}{30}{}%
-\contentsline {section}{\numberline {10.3}Колебание функции}{34}{}%
-\contentsline {section}{\numberline {10.4}Интегрируемость модуля, квадрата и произведения функций}{36}{}%
-\contentsline {section}{\numberline {10.5}Интегрируемость монотонной функции}{37}{}%
-\contentsline {section}{\numberline {10.6}Равномерная непрерывность}{38}{}%
-\contentsline {section}{\numberline {10.7}Интегрируемость непрерывной функции}{39}{}%
-\contentsline {section}{\numberline {10.8}Аддитивность интеграла}{39}{}%
-\contentsline {section}{\numberline {10.9}Формула Ньютона–Лейбница}{41}{}%
-\contentsline {section}{\numberline {10.10}Существование первообразной}{42}{}%
-\contentsline {section}{\numberline {10.11}Формула интегрирования по частям}{43}{}%
-\contentsline {chapter}{\numberline {11}Критерий Дарбу и классы интегрируемых функций}{45}{}%
-\contentsline {section}{\numberline {11.1}Формула интегрирования подстановкой}{45}{}%
-\contentsline {section}{\numberline {11.2}Мера Жордана (дополнительный материал)}{46}{}%
-\contentsline {section}{\numberline {11.3}Несобственный интеграл Римана}{46}{}%
-\contentsline {section}{\numberline {11.4}Свойства несобственного интеграла}{47}{}%
-\contentsline {section}{\numberline {11.5}Формула интегрирования подстановкой}{48}{}%
-\contentsline {section}{\numberline {11.6}Формула интегрирования по частям}{49}{}%
-\contentsline {section}{\numberline {11.7}Критерий Коши}{50}{}%
-\contentsline {section}{\numberline {11.8}Абсолютная сходимость}{50}{}%
-\contentsline {section}{\numberline {11.9}Условная сходимость}{51}{}%
-\contentsline {section}{\numberline {11.10}Несобственный интеграл от знакопостоянной функции}{52}{}%
-\contentsline {section}{\numberline {11.11}Первый признак сравнения}{52}{}%
-\contentsline {section}{\numberline {11.12}Эквивалентность в смысле сходимости интегралов}{53}{}%
-\contentsline {section}{\numberline {11.13}Второй признак сравнения}{54}{}%
-\contentsline {section}{\numberline {11.14}Первый признак сравнения}{54}{}%
-\contentsline {section}{\numberline {11.15}Второй признак сравнения}{55}{}%
-\contentsline {section}{\numberline {11.16}Интегральный признак}{56}{}%
-\contentsline {section}{\numberline {11.17}Признак Даламбера}{57}{}%
-\contentsline {section}{\numberline {11.18}Радикальный признак Коши}{58}{}%
-\contentsline {section}{\numberline {11.19}Признак Гаусса}{60}{}%
-\contentsline {section}{\numberline {11.20}Признак Дирихле}{62}{}%
-\contentsline {section}{\numberline {11.21}Признак Абеля}{63}{}%
-\contentsline {section}{\numberline {11.22}Признак Лейбница}{64}{}%
-\contentsline {section}{\numberline {11.23}Теоремы о среднем}{64}{}%
-\contentsline {section}{\numberline {11.24}Признак Дирихле}{67}{}%
-\contentsline {section}{\numberline {11.25}Признак Абеля}{69}{}%
-\contentsline {chapter}{\numberline {12}Некоторые приложения интеграла}{70}{}%
-\contentsline {section}{\numberline {12.1}Вычисление площади плоских тел}{70}{}%
-\contentsline {section}{\numberline {12.2}Площадь в полярной системе координат}{71}{}%
-\contentsline {section}{\numberline {12.3}Объем тел вращения}{74}{}%
-\contentsline {section}{\numberline {12.4}Длина кривой}{76}{}%
+\contentsline {chapter}{\numberline {1}Вещественные числа}{4}{}%
+\contentsline {chapter}{\numberline {2}Предел последовательности}{5}{}%
+\contentsline {chapter}{\numberline {3}Предел функции}{6}{}%
+\contentsline {chapter}{\numberline {4}Непрерывные функции}{7}{}%
+\contentsline {chapter}{\numberline {5}Производная}{8}{}%
+\contentsline {chapter}{\numberline {6}Исследование функций с помощью производных}{9}{}%
+\contentsline {section}{\numberline {6.1}Необходимое условие экстремума}{9}{}%
+\contentsline {section}{\numberline {6.2}Достаточное условие экстремума}{9}{}%
+\contentsline {section}{\numberline {6.3}Выпуклость и вогнутость}{10}{}%
+\contentsline {section}{\numberline {6.4}Неравенство Йенсена}{13}{}%
+\contentsline {section}{\numberline {6.5}Асимптоты}{14}{}%
+\contentsline {chapter}{\numberline {7}Первообразная и неопределенный интеграл}{15}{}%
+\contentsline {section}{\numberline {7.1}Первообразная}{15}{}%
+\contentsline {section}{\numberline {7.2}Таблица первообразных}{16}{}%
+\contentsline {section}{\numberline {7.3}Свойства неопределённого интеграла}{16}{}%
+\contentsline {chapter}{\numberline {8}Интеграл от рациональной функции}{19}{}%
+\contentsline {section}{\numberline {8.1}Рациональная функция}{19}{}%
+\contentsline {section}{\numberline {8.2}Разложение многочлена на неприводимые}{20}{}%
+\contentsline {section}{\numberline {8.3}Правильная дробь}{20}{}%
+\contentsline {section}{\numberline {8.4}Элементарная дробь}{20}{}%
+\contentsline {section}{\numberline {8.5}Разложение дроби на элементарные}{20}{}%
+\contentsline {section}{\numberline {8.6}Интегрирование рациональных функций}{21}{}%
+\contentsline {section}{\numberline {8.7}Метод Остроградского}{22}{}%
+\contentsline {section}{\numberline {8.8}Рациональные функции от $cos$ и $sin$}{24}{}%
+\contentsline {chapter}{\numberline {9}Определенный интеграл}{26}{}%
+\contentsline {section}{\numberline {9.1}Определенный интеграл как площадь}{26}{}%
+\contentsline {section}{\numberline {9.2}Интеграл Римана}{27}{}%
+\contentsline {chapter}{\numberline {10}Критерий Дарбу и классы интегрируемых функций}{30}{}%
+\contentsline {section}{\numberline {10.1}Суммы и интегралы Дарбу}{30}{}%
+\contentsline {section}{\numberline {10.2}Критерий Дарбу}{31}{}%
+\contentsline {section}{\numberline {10.3}Колебание функции}{35}{}%
+\contentsline {section}{\numberline {10.4}Интегрируемость модуля, квадрата и произведения функций}{37}{}%
+\contentsline {section}{\numberline {10.5}Интегрируемость монотонной функции}{38}{}%
+\contentsline {section}{\numberline {10.6}Равномерная непрерывность}{39}{}%
+\contentsline {section}{\numberline {10.7}Интегрируемость непрерывной функции}{40}{}%
+\contentsline {section}{\numberline {10.8}Аддитивность интеграла}{40}{}%
+\contentsline {section}{\numberline {10.9}Формула Ньютона–Лейбница}{42}{}%
+\contentsline {section}{\numberline {10.10}Существование первообразной}{43}{}%
+\contentsline {section}{\numberline {10.11}Формула интегрирования по частям}{44}{}%
+\contentsline {chapter}{\numberline {11}Критерий Дарбу и классы интегрируемых функций}{46}{}%
+\contentsline {section}{\numberline {11.1}Формула интегрирования подстановкой}{46}{}%
+\contentsline {section}{\numberline {11.2}Мера Жордана (дополнительный материал)}{47}{}%
+\contentsline {section}{\numberline {11.3}Несобственный интеграл Римана}{47}{}%
+\contentsline {section}{\numberline {11.4}Свойства несобственного интеграла}{48}{}%
+\contentsline {section}{\numberline {11.5}Формула интегрирования подстановкой}{49}{}%
+\contentsline {section}{\numberline {11.6}Формула интегрирования по частям}{50}{}%
+\contentsline {section}{\numberline {11.7}Критерий Коши}{51}{}%
+\contentsline {section}{\numberline {11.8}Абсолютная сходимость}{51}{}%
+\contentsline {section}{\numberline {11.9}Условная сходимость}{52}{}%
+\contentsline {section}{\numberline {11.10}Несобственный интеграл от знакопостоянной функции}{53}{}%
+\contentsline {section}{\numberline {11.11}Первый признак сравнения}{53}{}%
+\contentsline {section}{\numberline {11.12}Эквивалентность в смысле сходимости интегралов}{54}{}%
+\contentsline {section}{\numberline {11.13}Второй признак сравнения}{55}{}%
+\contentsline {section}{\numberline {11.14}Первый признак сравнения}{55}{}%
+\contentsline {section}{\numberline {11.15}Второй признак сравнения}{56}{}%
+\contentsline {section}{\numberline {11.16}Интегральный признак}{57}{}%
+\contentsline {section}{\numberline {11.17}Признак Даламбера}{58}{}%
+\contentsline {section}{\numberline {11.18}Радикальный признак Коши}{59}{}%
+\contentsline {section}{\numberline {11.19}Признак Гаусса}{61}{}%
+\contentsline {section}{\numberline {11.20}Признак Дирихле}{63}{}%
+\contentsline {section}{\numberline {11.21}Признак Абеля}{64}{}%
+\contentsline {section}{\numberline {11.22}Признак Лейбница}{65}{}%
+\contentsline {section}{\numberline {11.23}Теоремы о среднем}{65}{}%
+\contentsline {section}{\numberline {11.24}Признак Дирихле}{68}{}%
+\contentsline {section}{\numberline {11.25}Признак Абеля}{70}{}%
+\contentsline {chapter}{\numberline {12}Некоторые приложения интеграла}{71}{}%
+\contentsline {section}{\numberline {12.1}Вычисление площади плоских тел}{71}{}%
+\contentsline {section}{\numberline {12.2}Площадь в полярной системе координат}{72}{}%
+\contentsline {section}{\numberline {12.3}Объем тел вращения}{75}{}%
+\contentsline {section}{\numberline {12.4}Длина кривой}{78}{}%
+\contentsline {chapter}{\numberline {13}Предел функции нескольких переменных}{80}{}%
+\contentsline {section}{\numberline {13.1}Метрическое пространство}{80}{}%
+\contentsline {section}{\numberline {13.2}Нормированное пространство}{80}{}%
+\contentsline {section}{\numberline {13.3}Евклидово пространство}{81}{}%
+\contentsline {section}{\numberline {13.4}Неравенство Коши–Буняковского}{81}{}%
+\contentsline {section}{\numberline {13.5}Предел в метрическом пространстве}{82}{}%
+\contentsline {section}{\numberline {13.6}Метрическое пространство}{84}{}%
+\contentsline {section}{\numberline {13.7}Предел функции по Гейне}{84}{}%
+\contentsline {section}{\numberline {13.8}Предел функции по Коши}{85}{}%
+\contentsline {section}{\numberline {13.9}Эквивалентность определений предела}{85}{}%
+\contentsline {section}{\numberline {13.10}Арифметические свойства предела}{86}{}%
+\contentsline {section}{\numberline {13.11}Теорема о пределе сложной функции}{86}{}%
+\contentsline {section}{\numberline {13.12}Непрерывность функции}{87}{}%
+\contentsline {section}{\numberline {13.13}Непрерывность композиции}{88}{}%
+\contentsline {chapter}{\numberline {14}Дифференцируемые функции нескольких переменных}{89}{}%
+\contentsline {section}{\numberline {14.1}Дифференцируемое отображение}{89}{}%
+\contentsline {section}{\numberline {14.2}Непрерывность дифференцируемого отображения}{89}{}%
+\contentsline {section}{\numberline {14.3}Производная по направлению}{91}{}%
+\contentsline {section}{\numberline {14.4}Частная производная}{93}{}%
+\contentsline {section}{\numberline {14.5}Градиент}{93}{}%
+\contentsline {section}{\numberline {14.6}Свойства градиента}{94}{}%
+\contentsline {section}{\numberline {14.7}Множество уровня}{95}{}%
+\contentsline {section}{\numberline {14.8}Матрица Якоби}{95}{}%
+\contentsline {section}{\numberline {14.9}Достаточное условие дифференцируемости}{95}{}%
+\contentsline {section}{\numberline {14.10}Частные производные высокого порядка}{97}{}%
+\contentsline {section}{\numberline {14.11}Теорема Шварца}{97}{}%
+\contentsline {section}{\numberline {14.12}Теорема Юнга}{98}{}%
+\contentsline {section}{\numberline {14.13}Дифференцируемость (m + 1) раз}{100}{}%
+\contentsline {section}{\numberline {14.14}Дифференциалы высоких порядков}{101}{}%
+\contentsline {section}{\numberline {14.15}Правила дифференцирования}{101}{}%
+\contentsline {section}{\numberline {14.16}Дифференцирование сложной функции}{102}{}%
+\contentsline {section}{\numberline {14.17}Дифференциал обратного отображения}{104}{}%
+\contentsline {chapter}{\numberline {15}Экстремумы функций многих переменных}{106}{}%
+\contentsline {section}{\numberline {15.1}Формула Тейлора с остаточным членом в интегральной форме}{106}{}%
+\contentsline {section}{\numberline {15.2}Формула Тейлора}{107}{}%
+\contentsline {section}{\numberline {15.3}Точка локального экстремума}{109}{}%
+\contentsline {section}{\numberline {15.4}Необходимое условие локального экстремума}{109}{}%
+\contentsline {section}{\numberline {15.5}Достаточное условие локального экстремума}{109}{}%
+\contentsline {section}{\numberline {15.6}Критерий Сильвестра}{110}{}%
+\contentsline {section}{\numberline {15.7}Теорема о неявной функции}{111}{}%
+\contentsline {section}{\numberline {15.8}Теорема о неявном отображении}{111}{}%
