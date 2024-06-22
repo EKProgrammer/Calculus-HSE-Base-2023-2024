@@ -73,7 +73,7 @@
 \contentsline {section}{\numberline {13.1}Метрическое пространство}{80}{}%
 \contentsline {section}{\numberline {13.2}Нормированное пространство}{80}{}%
 \contentsline {section}{\numberline {13.3}Евклидово пространство}{81}{}%
-\contentsline {section}{\numberline {13.4}Неравенство Коши–Буняковского}{81}{}%
+\contentsline {section}{\numberline {13.4}Неравенство Коши–Буняковского}{82}{}%
 \contentsline {section}{\numberline {13.5}Предел в метрическом пространстве}{82}{}%
 \contentsline {section}{\numberline {13.6}Метрическое пространство}{84}{}%
 \contentsline {section}{\numberline {13.7}Предел функции по Гейне}{84}{}%
@@ -96,17 +96,17 @@
 \contentsline {section}{\numberline {14.10}Частные производные высокого порядка}{97}{}%
 \contentsline {section}{\numberline {14.11}Теорема Шварца}{97}{}%
 \contentsline {section}{\numberline {14.12}Теорема Юнга}{98}{}%
-\contentsline {section}{\numberline {14.13}Дифференцируемость (m + 1) раз}{100}{}%
-\contentsline {section}{\numberline {14.14}Дифференциалы высоких порядков}{101}{}%
-\contentsline {section}{\numberline {14.15}Правила дифференцирования}{101}{}%
-\contentsline {section}{\numberline {14.16}Дифференцирование сложной функции}{102}{}%
-\contentsline {section}{\numberline {14.17}Дифференциал обратного отображения}{104}{}%
-\contentsline {chapter}{\numberline {15}Экстремумы функций многих переменных}{106}{}%
-\contentsline {section}{\numberline {15.1}Формула Тейлора с остаточным членом в интегральной форме}{106}{}%
-\contentsline {section}{\numberline {15.2}Формула Тейлора}{107}{}%
-\contentsline {section}{\numberline {15.3}Точка локального экстремума}{109}{}%
-\contentsline {section}{\numberline {15.4}Необходимое условие локального экстремума}{109}{}%
-\contentsline {section}{\numberline {15.5}Достаточное условие локального экстремума}{109}{}%
-\contentsline {section}{\numberline {15.6}Критерий Сильвестра}{110}{}%
-\contentsline {section}{\numberline {15.7}Теорема о неявной функции}{111}{}%
-\contentsline {section}{\numberline {15.8}Теорема о неявном отображении}{111}{}%
+\contentsline {section}{\numberline {14.13}Дифференцируемость (m + 1) раз}{99}{}%
+\contentsline {section}{\numberline {14.14}Дифференциалы высоких порядков}{100}{}%
+\contentsline {section}{\numberline {14.15}Правила дифференцирования}{100}{}%
+\contentsline {section}{\numberline {14.16}Дифференцирование сложной функции}{101}{}%
+\contentsline {section}{\numberline {14.17}Дифференциал обратного отображения}{103}{}%
+\contentsline {chapter}{\numberline {15}Экстремумы функций многих переменных}{105}{}%
+\contentsline {section}{\numberline {15.1}Формула Тейлора с остаточным членом в интегральной форме}{105}{}%
+\contentsline {section}{\numberline {15.2}Формула Тейлора}{106}{}%
+\contentsline {section}{\numberline {15.3}Точка локального экстремума}{108}{}%
+\contentsline {section}{\numberline {15.4}Необходимое условие локального экстремума}{108}{}%
+\contentsline {section}{\numberline {15.5}Достаточное условие локального экстремума}{108}{}%
+\contentsline {section}{\numberline {15.6}Критерий Сильвестра}{109}{}%
+\contentsline {section}{\numberline {15.7}Теорема о неявной функции}{110}{}%
+\contentsline {section}{\numberline {15.8}Теорема о неявном отображении}{110}{}%
