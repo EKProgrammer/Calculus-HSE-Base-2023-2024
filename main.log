@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.7.18)  15 JUN 2024 08:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.7.18)  7 AUG 2024 17:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -445,27 +445,195 @@ File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
 ))
 Package: xparse 2023-02-02 L3 Experimental document command parser
 ))
-\c@theorem=\count279
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.st
+y
+Package: hyperref 2023-02-07 v7.00v Hypertext links for LaTeX
+
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.st
+y
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexc
+mds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarer
+r.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.
+sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdef
+inekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescap
+e.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxma
+cro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.st
+y
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\get
+titlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.
+sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count279
+)
+\@linkdim=\dimen161
+\Hy@linkcounter=\count280
+\Hy@pagecounter=\count281
+
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+\symPD1letters=\mathgroup6
+)
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.st
+y
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.
+sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count282
+
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+\symPUletters=\mathgroup7
+)
+Package hyperref Info: Option `unicode' set `true' on input line 3164.
+Package hyperref Info: Option `unicode' set `true' on input line 4060.
+Package hyperref Info: Option `colorlinks' set `true' on input line 4060.
+Package hyperref Info: Hyper figures OFF on input line 4177.
+Package hyperref Info: Link nesting OFF on input line 4182.
+Package hyperref Info: Hyper index ON on input line 4185.
+Package hyperref Info: Plain pages OFF on input line 4192.
+Package hyperref Info: Backreferencing OFF on input line 4197.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4425.
+\c@Hy@tempcnt=\count283
+
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen162
+
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintc
+alc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count284
+\Field@Width=\dimen163
+\Fld@charsize=\dimen164
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring ON on input line 6060.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.st
+y
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count285
+\c@Item=\count286
+\c@Hfootnote=\count287
+)
+Package hyperref Info: Driver: hpdftex.
+
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2023-02-07 v7.00v Hyperref driver for pdfTeX
+
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.s
+ty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count288
+\c@bookmark@seq@number=\count289
+
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerun
+filecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniq
+uecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip60
+)
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.st
+y
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip61
+\multirow@cntb=\count290
+\multirow@dima=\skip62
+\bigstrutjot=\dimen165
+)
+\c@theorem=\count291
 
 (C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.st
 y
 Package: geometry 2020/01/02 v5.9 Page Geometry
  (C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
-(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
-Package: iftex 2022/02/03 v1.0f TeX engine tests
-))
-\Gm@cnth=\count280
-\Gm@cntv=\count281
-\c@Gm@tempcnt=\count282
-\Gm@bindingoffset=\dimen161
-\Gm@wd@mp=\dimen162
-\Gm@odd@mp=\dimen163
-\Gm@even@mp=\dimen164
-\Gm@layoutwidth=\dimen165
-\Gm@layoutheight=\dimen166
-\Gm@layouthoffset=\dimen167
-\Gm@layoutvoffset=\dimen168
+)
+\Gm@cnth=\count292
+\Gm@cntv=\count293
+\c@Gm@tempcnt=\count294
+\Gm@bindingoffset=\dimen166
+\Gm@wd@mp=\dimen167
+\Gm@odd@mp=\dimen168
+\Gm@even@mp=\dimen169
+\Gm@layoutwidth=\dimen170
+\Gm@layoutheight=\dimen171
+\Gm@layouthoffset=\dimen172
+\Gm@layoutvoffset=\dimen173
 \Gm@dimlist=\toks30
 
 (C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cf
@@ -492,28 +660,20 @@ Package: soul-ori 2023-06-14 v3.1 letterspacing/underlining (mf)
 \SOUL@cmds=\toks34
 \SOUL@buffer=\toks35
 \SOUL@token=\toks36
-\SOUL@syllgoal=\dimen169
-\SOUL@syllwidth=\dimen170
-\SOUL@charkern=\dimen171
-\SOUL@hyphkern=\dimen172
-\SOUL@dimen=\dimen173
-\SOUL@dimeni=\dimen174
-\SOUL@minus=\count283
-\SOUL@comma=\count284
-\SOUL@apo=\count285
-\SOUL@grave=\count286
-\SOUL@spaceskip=\skip60
-\SOUL@ttwidth=\dimen175
-\SOUL@uldp=\dimen176
-\SOUL@ulht=\dimen177
-)
-(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarer
-r.sty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-)
-(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.
-sty
-Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+\SOUL@syllgoal=\dimen174
+\SOUL@syllwidth=\dimen175
+\SOUL@charkern=\dimen176
+\SOUL@hyphkern=\dimen177
+\SOUL@dimen=\dimen178
+\SOUL@dimeni=\dimen179
+\SOUL@minus=\count295
+\SOUL@comma=\count296
+\SOUL@apo=\count297
+\SOUL@grave=\count298
+\SOUL@spaceskip=\skip63
+\SOUL@ttwidth=\dimen180
+\SOUL@uldp=\dimen181
+\SOUL@ulht=\dimen182
 ))) (main.aux)
 \openout1 = `main.aux'.
 
@@ -532,6 +692,10 @@ LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 LaTeX Info: Redefining \th on input line 4.
 
@@ -558,16 +722,16 @@ File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 (C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf
 .mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count287
-\scratchdimen=\dimen178
+\scratchcounter=\count299
+\scratchdimen=\dimen183
 \scratchbox=\box55
-\nofMPsegments=\count288
-\nofMParguments=\count289
+\nofMPsegments=\count300
+\nofMParguments=\count301
 \everyMPshowfont=\toks37
-\MPscratchCnt=\count290
-\MPscratchDim=\dimen179
-\MPnumerator=\count291
-\makeMPintoPDFobject=\count292
+\MPscratchCnt=\count302
+\MPscratchDim=\dimen184
+\MPnumerator=\count303
+\makeMPintoPDFobject=\count304
 \everyMPtoPDFconversion=\toks38
 )))
 (C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopd
@@ -580,9 +744,26 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 s.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-\Gin@req@height=\dimen180
-\Gin@req@width=\dimen181
+\Gin@req@height=\dimen185
+\Gin@req@width=\dimen186
 )
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
+Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
+
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.c
+fg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
+
+(C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.l
+tx))
+Package hyperref Info: Link coloring ON on input line 4.
+ (main.out) (main.out)
+\@outlinefile=\write3
+\openout3 = `main.out'.
+
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -626,57 +807,324 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
 (C:\Users\Р•РіРѕСЂ\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+LaTeX Font Info:    Trying to load font information for PD1+cmr on input line 6
+.
+LaTeX Font Info:    No file PD1cmr.fd. on input line 6.
+
+
+LaTeX Font Warning: Font shape `PD1/cmr/m/up' undefined
+(Font)              using `PD1/pdf/m/n' instead on input line 6.
+
+LaTeX Font Info:    Trying to load font information for PU+cmr on input line 6.
+
+LaTeX Font Info:    No file PUcmr.fd. on input line 6.
+
+LaTeX Font Warning: Font shape `PU/cmr/m/up' undefined
+(Font)              using `PU/pdf/m/n' instead on input line 6.
+
 [1
 
 {C:/Users/Р•РіРѕСЂ/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-(main.toc [1
+(main.toc
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.39 ...° С‡Р»РµРЅРѕРІ СЂСЏРґР°}{36}{section.2.23}
+                                                  % [1
 
-] [2])
-\tf@toc=\write3
-\openout3 = `main.toc'.
+] [2] [3] [4])
+\tf@toc=\write4
+\openout4 = `main.toc'.
 
- [3]
+ [5]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 1.
-[4
-
-]
-{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 2.
-[5
-
-]
-{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 3.
 [6
 
 ]
-{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 4.
-[7
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
-]
-{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 5.
-
-Overfull \hbox (10.27852pt too wide) in paragraph at lines 54--54
-[]\T2A/cmr/bx/n/17.28 Лекция 17: Тео-ре-мы о сред-нем для диф-фе-рен-ци-ру-е-мы
-х функ-
  []
 
-[8
+[7]
+<img/lecture1/function.png, id=924, 514.92375pt x 545.78906pt>
+File: img/lecture1/function.png Graphic file (type png)
+<use img/lecture1/function.png>
+Package pdftex.def Info: img/lecture1/function.png  used on input line 92.
+(pdftex.def)             Requested size: 102.42836pt x 108.56458pt.
+<img/lecture1/injection1.png, id=925, 500.62032pt x 526.96875pt>
+File: img/lecture1/injection1.png Graphic file (type png)
+<use img/lecture1/injection1.png>
+Package pdftex.def Info: img/lecture1/injection1.png  used on input line 101.
+(pdftex.def)             Requested size: 102.42836pt x 107.81218pt.
+<img/lecture1/injection2.png, id=926, 500.62032pt x 526.96875pt>
+File: img/lecture1/injection2.png Graphic file (type png)
+<use img/lecture1/injection2.png>
+Package pdftex.def Info: img/lecture1/injection2.png  used on input line 102.
+(pdftex.def)             Requested size: 102.42836pt x 107.81218pt.
+<img/lecture1/surjection.png, id=927, 500.62032pt x 526.96875pt>
+File: img/lecture1/surjection.png Graphic file (type png)
+<use img/lecture1/surjection.png>
+Package pdftex.def Info: img/lecture1/surjection.png  used on input line 111.
+(pdftex.def)             Requested size: 102.42836pt x 107.81218pt.
+<img/lecture1/bijection.png, id=928, 500.62032pt x 526.96875pt>
+File: img/lecture1/bijection.png Graphic file (type png)
+<use img/lecture1/bijection.png>
+Package pdftex.def Info: img/lecture1/bijection.png  used on input line 119.
+(pdftex.def)             Requested size: 102.42836pt x 107.81218pt.
+ [8 <./img/lecture1/function.png> <./img/lecture1/injection1.png> <./img/lectur
+e1/injection2.png> <./img/lecture1/surjection.png>]
+<img/lecture1/proof_bijection.png, id=937, 489.32813pt x 537.50812pt>
+File: img/lecture1/proof_bijection.png Graphic file (type png)
+<use img/lecture1/proof_bijection.png>
+Package pdftex.def Info: img/lecture1/proof_bijection.png  used on input line 1
+32.
+(pdftex.def)             Requested size: 153.64644pt x 168.77464pt.
+
+Overfull \hbox (11.98547pt too wide) detected at line 138
+\OMS/cmsy/m/n/14.4 8\OML/cmm/m/it/14.4 y \OMS/cmsy/m/n/14.4 2 \OML/cmm/m/it/14.
+4 Y[]\OMS/cmsy/m/n/14.4 9[]\OT1/cmr/m/n/14.4 ![][]\OML/cmm/m/it/14.4 x \OMS/cms
+y/m/n/14.4 2 \OML/cmm/m/it/14.4 X \OT1/cmr/m/n/14.4 : \OML/cmm/m/it/14.4 f\OT1/
+cmr/m/n/14.4 (\OML/cmm/m/it/14.4 x\OT1/cmr/m/n/14.4 ) = \OML/cmm/m/it/14.4 y \O
+MS/cmsy/m/n/14.4 , 8\OML/cmm/m/it/14.4 y \OMS/cmsy/m/n/14.4 2 \OML/cmm/m/it/14.
+4 Y[]\OMS/cmsy/m/n/14.4 9\OT1/cmr/m/n/14.4 !\OML/cmm/m/it/14.4 x \OMS/cmsy/m/n/
+14.4 2 \OML/cmm/m/it/14.4 X \OT1/cmr/m/n/14.4 : \OML/cmm/m/it/14.4 f[]\OT1/cmr/
+m/n/14.4 (\OML/cmm/m/it/14.4 y\OT1/cmr/m/n/14.4 ) = \OML/cmm/m/it/14.4 x:
+ []
+
+<img/lecture1/sequence.png, id=938, 565.36218pt x 511.15968pt>
+File: img/lecture1/sequence.png Graphic file (type png)
+<use img/lecture1/sequence.png>
+Package pdftex.def Info: img/lecture1/sequence.png  used on input line 157.
+(pdftex.def)             Requested size: 153.64644pt x 138.91191pt.
+[9 <./img/lecture1/bijection.png> <./img/lecture1/proof_bijection.png>]
+[10 <./img/lecture1/sequence.png>]
+<img/lecture1/sqrt_of_two.png, id=954, 650.43pt x 167.12437pt>
+File: img/lecture1/sqrt_of_two.png Graphic file (type png)
+<use img/lecture1/sqrt_of_two.png>
+Package pdftex.def Info: img/lecture1/sqrt_of_two.png  used on input line 248.
+(pdftex.def)             Requested size: 307.2929pt x 78.95901pt.
+ [11 <./img/lecture1/sqrt_of_two.png>]
+<img/lecture1/addition.png, id=961, 650.43pt x 429.10312pt>
+File: img/lecture1/addition.png Graphic file (type png)
+<use img/lecture1/addition.png>
+Package pdftex.def Info: img/lecture1/addition.png  used on input line 256.
+(pdftex.def)             Requested size: 204.85672pt x 135.14854pt.
+
+[12 <./img/lecture1/addition.png>] [13] [14] [15] [16] [17]
+{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 2.
+[18
+
+]
+Overfull \hbox (3.74687pt too wide) detected at line 503
+\OT1/cmr/m/n/14.4 2 = \OMS/cmsy/m/n/14.4 j\OML/cmm/m/it/14.4 a[] \OMS/cmsy/m/n/
+14.4 ^^@ \OML/cmm/m/it/14.4 a[]\OMS/cmsy/m/n/14.4 j \OT1/cmr/m/n/14.4 = \OMS/cm
+sy/m/n/14.4 j\OML/cmm/m/it/14.4 a[] \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/it/14.4 a
+ \OT1/cmr/m/n/14.4 + \OML/cmm/m/it/14.4 a \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/it/
+14.4 a[]\OMS/cmsy/m/n/14.4 j \U/msa/m/n/14.4 6 \OMS/cmsy/m/n/14.4 j\OML/cmm/m/i
+t/14.4 a[] \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/it/14.4 a\OMS/cmsy/m/n/14.4 j \OT1
+/cmr/m/n/14.4 + \OMS/cmsy/m/n/14.4 j\OML/cmm/m/it/14.4 a \OMS/cmsy/m/n/14.4 ^^@
+ \OML/cmm/m/it/14.4 a[]\OMS/cmsy/m/n/14.4 j\OT1/cmr/m/n/14.4 ([]) \OML/cmm/m/it
+/14.4 <
+ []
+
+
+Overfull \hbox (0.57095pt too wide) in paragraph at lines 550--551
+[][]\T2A/cmr/bx/n/14.4 Определение 2.8. []\T2A/cmr/m/it/14.4 По-сле-до-ва-тель-
+ность $\OMS/cmsy/m/n/14.4 f\OML/cmm/m/it/14.4 a[]\OMS/cmsy/m/n/14.4 g[]$ \T2A/c
+mr/m/it/14.4 на-зы-ва-ет-ся \T2A/cmr/bx/it/14.4 огра-ни-чен-ной\T2A/cmr/m/it/14
+.4 , ес-
+ []
+
+[19] [20] [21]
+Overfull \hbox (20.50847pt too wide) in paragraph at lines 651--652
+[][]\T2A/cmr/bx/n/14.4 Теорема 2.13 \T2A/cmr/m/n/14.4 (Пе-ре-ход к пре-де-лу в 
+нера-вен-стве)\T2A/cmr/bx/n/14.4 . []\T2A/cmr/m/it/14.4 Пусть $[][] \OML/cmm/m/
+it/14.4 a[] \OT1/cmr/m/n/14.4 = \OML/cmm/m/it/14.4 a; [][] b[] \OT1/cmr/m/n/14.
+4 =
+ []
+
+[22] [23] [24]
+Overfull \hbox (3.9626pt too wide) in paragraph at lines 775--776
+[]\T2A/cmr/m/it/14.4 Всякая по-сле-до-ва-тель-ность
+ []
+
+<img/lecture5/nested_segments.png, id=1082, 624.08156pt x 212.29312pt>
+File: img/lecture5/nested_segments.png Graphic file (type png)
+<use img/lecture5/nested_segments.png>
+Package pdftex.def Info: img/lecture5/nested_segments.png  used on input line 7
+80.
+(pdftex.def)             Requested size: 256.07481pt x 87.10876pt.
+[25 <./img/lecture5/nested_segments.png>]
+Overfull \hbox (8.11893pt too wide) in paragraph at lines 842--844
+\T2A/cmr/m/it/14.4 ность $\OML/cmm/m/it/14.4 m[]$ \T2A/cmr/m/it/14.4 - не убы-в
+а-ет. По-это-му для \T2A/cmr/bx/it/14.4 огра-ни-чен-ной \T2A/cmr/m/it/14.4 по-с
+ле-до-ва-тель-но-сти $\OMS/cmsy/m/n/14.4 f\OML/cmm/m/it/14.4 a[]\OMS/cmsy/m/n/1
+4.4 g[]$
+ []
+
+<img/lecture5/inf_and_sup_examples.jpg, id=1096, 2785.40625pt x 1516.91719pt>
+File: img/lecture5/inf_and_sup_examples.jpg Graphic file (type jpg)
+<use img/lecture5/inf_and_sup_examples.jpg>
+Package pdftex.def Info: img/lecture5/inf_and_sup_examples.jpg  used on input l
+ine 850.
+(pdftex.def)             Requested size: 358.50317pt x 195.23872pt.
+[26]
+Overfull \hbox (10.56949pt too wide) in paragraph at lines 856--857
+[][]\T2A/cmr/bx/n/14.4 Теорема 2.24. []\T2A/cmr/m/it/14.4 Пусть $\OMS/cmsy/m/n/
+14.4 f\OML/cmm/m/it/14.4 a[]\OMS/cmsy/m/n/14.4 g[]$ \T2A/cmr/m/it/14.4 - \T2A/c
+mr/bx/it/14.4 огра-ни-чен-ная \T2A/cmr/m/it/14.4 по-сле-до-ва-тель-ность. То-гд
+а $[] \OML/cmm/m/it/14.4 a[]$
+ []
+
+<img/lecture5/theorem_bolcano.png, id=1105, 545.03625pt x 137.01187pt>
+File: img/lecture5/theorem_bolcano.png Graphic file (type png)
+<use img/lecture5/theorem_bolcano.png>
+Package pdftex.def Info: img/lecture5/theorem_bolcano.png  used on input line 8
+69.
+(pdftex.def)             Requested size: 256.07481pt x 64.37259pt.
+[27 <./img/lecture5/inf_and_sup_examples.jpg> <./img/lecture5/theorem_bolcano.p
+ng>] [28]
+Overfull \hbox (9.27588pt too wide) in paragraph at lines 918--920
+[][]\T2A/cmr/bx/n/14.4 Определение 2.27. []\T2A/cmr/m/it/14.4 Го-во-рят, что по
+-сле-до-ва-тель-ность $\OMS/cmsy/m/n/14.4 f\OML/cmm/m/it/14.4 a[]\OMS/cmsy/m/n/
+14.4 g[]$ \T2A/cmr/bx/it/14.4 фун-да-мен-таль-
+ []
+
+[29] [30] [31] [32] [33]
+Overfull \hbox (13.3554pt too wide) in paragraph at lines 1097--1098
+[][]\T2A/cmr/bx/n/14.4 Следствие 2.38. []\T2A/cmr/m/it/14.4 Из схо-ди-мо-сти ря
+-да $[][] \OMS/cmsy/m/n/14.4 j\OML/cmm/m/it/14.4 a[]\OMS/cmsy/m/n/14.4 j$ \T2A/
+cmr/m/it/14.4 сле-ду-ет схо-ди-мость ря-да $[][] \OML/cmm/m/it/14.4 a[]$\T2A/cm
+r/m/it/14.4 . 
+ []
+
+[34] [35]
+<img/lecture8/sequence.png, id=1174, 599.23875pt x 703.87968pt>
+File: img/lecture8/sequence.png Graphic file (type png)
+<use img/lecture8/sequence.png>
+Package pdftex.def Info: img/lecture8/sequence.png  used on input line 1190.
+(pdftex.def)             Requested size: 102.42836pt x 120.31311pt.
+ [36]
+<img/lecture8/replacement_summands.png, id=1187, 1148.03906pt x 703.87968pt>
+File: img/lecture8/replacement_summands.png Graphic file (type png)
+<use img/lecture8/replacement_summands.png>
+Package pdftex.def Info: img/lecture8/replacement_summands.png  used on input l
+ine 1194.
+(pdftex.def)             Requested size: 204.85672pt x 125.59735pt.
+ [37 <./img/lecture8/sequence.png> <./img/lecture8/replacement_summands.png>] [
+38] [39]
+{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 3.
+[40
+
+]
+<img/lecture9/graphs.jpg, id=1212, 2899.08093pt x 1071.25218pt>
+File: img/lecture9/graphs.jpg Graphic file (type jpg)
+<use img/lecture9/graphs.jpg>
+Package pdftex.def Info: img/lecture9/graphs.jpg  used on input line 1312.
+(pdftex.def)             Requested size: 358.50317pt x 132.46774pt.
+ [41 <./img/lecture9/graphs.jpg>] [42]
+
+LaTeX Warning: Command \cyra invalid in math mode on input line 1385.
+
+Missing character: There is no а in font cmr12!
+[43]
+
+LaTeX Warning: Command \cyrs invalid in math mode on input line 1410.
+
+Missing character: There is no с in font cmr12!
+<img/lecture9/function_composition.png, id=1245, 1017.8025pt x 672.26157pt>
+File: img/lecture9/function_composition.png Graphic file (type png)
+<use img/lecture9/function_composition.png>
+Package pdftex.def Info: img/lecture9/function_composition.png  used on input l
+ine 1414.
+(pdftex.def)             Requested size: 256.07481pt x 169.13179pt.
+[44 <./img/lecture9/function_composition.png>]
+<img/lecture10/first_wonderful_limit.jpg, id=1254, 1866.22218pt x 1920.42468pt>
+
+File: img/lecture10/first_wonderful_limit.jpg Graphic file (type jpg)
+<use img/lecture10/first_wonderful_limit.jpg>
+Package pdftex.def Info: img/lecture10/first_wonderful_limit.jpg  used on input
+ line 1445.
+(pdftex.def)             Requested size: 204.85672pt x 210.80782pt.
+ [45 <./img/lecture10/first_wonderful_limit.jpg>]
+Overfull \hbox (28.98819pt too wide) detected at line 1467
+\OMS/cmsy/m/n/14.4 j [] \OML/cmm/m/it/14.4 x \OMS/cmsy/m/n/14.4 ^^@ [] \OML/cmm
+/m/it/14.4 y\OMS/cmsy/m/n/14.4 j \OT1/cmr/m/n/14.4 = []2 [] [] [] [][] \U/msa/m
+/n/14.4 6 \OT1/cmr/m/n/14.4 2[] [] [][] \U/msa/m/n/14.4 6 \OT1/cmr/m/n/14.4 2[]
+[][] = \OMS/cmsy/m/n/14.4 j\OML/cmm/m/it/14.4 x \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm
+/m/it/14.4 y\OMS/cmsy/m/n/14.4 j
+ []
+
+<img/lecture10/sin_inequality.jpg, id=1262, 2403.98125pt x 2357.80875pt>
+File: img/lecture10/sin_inequality.jpg Graphic file (type jpg)
+<use img/lecture10/sin_inequality.jpg>
+Package pdftex.def Info: img/lecture10/sin_inequality.jpg  used on input line 1
+470.
+(pdftex.def)             Requested size: 102.42836pt x 100.4484pt.
+[46 <./img/lecture10/sin_inequality.jpg>]
+Overfull \hbox (42.9623pt too wide) in paragraph at lines 1517--1522
+[][]
+ []
+
+[47] [48]
+<img/lecture11/right_and_left_limit.jpg, id=1279, 2679.00874pt x 2387.92125pt>
+File: img/lecture11/right_and_left_limit.jpg Graphic file (type jpg)
+<use img/lecture11/right_and_left_limit.jpg>
+Package pdftex.def Info: img/lecture11/right_and_left_limit.jpg  used on input 
+line 1540.
+(pdftex.def)             Requested size: 153.64644pt x 136.92911pt.
+ [49 <./img/lecture11/right_and_left_limit.jpg>] [50]
+Overfull \hbox (16.24614pt too wide) detected at line 1643
+[] \OMS/cmsy/m/n/14.4 ) [] ) [] [] ) [] [] \OT1/cmr/m/n/14.4 = 1 \OMS/cmsy/m/n/
+14.4 ^^A \OT1/cmr/m/n/14.4 1 = 1\OML/cmm/m/it/14.4 :
+ []
+
+[51] [52] [53] [54] [55] [56] [57]
+{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 4.
+[58
+
+] [59] [60]
+
+LaTeX Warning: Command \cyra invalid in math mode on input line 1947.
+
+Missing character: There is no а in font cmr12!
+[61]
+Overfull \hbox (14.87909pt too wide) in paragraph at lines 2021--2022
+[][]\T2A/cmr/bx/n/14.4 Теорема 4.15 \T2A/cmr/m/n/14.4 (Ко-ши)\T2A/cmr/bx/n/14.4
+ . []\T2A/cmr/m/it/14.4 Пусть $\OML/cmm/m/it/14.4 f$ \T2A/cmr/m/it/14.4 непре-р
+ыв-на на от-рез-ке $\OT1/cmr/m/n/14.4 [\OML/cmm/m/it/14.4 a; b\OT1/cmr/m/n/14.4
+ ]$\T2A/cmr/m/it/14.4 . Ес-ли $\OML/cmm/m/it/14.4 f\OT1/cmr/m/n/14.4 (\OML/cmm/
+m/it/14.4 a\OT1/cmr/m/n/14.4 ) = \OML/cmm/m/it/14.4 A; f\OT1/cmr/m/n/14.4 (\OML
+/cmm/m/it/14.4 b\OT1/cmr/m/n/14.4 ) =
+ []
+
+[62] [63] [64]
+{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 5.
+
+Overfull \hbox (10.27852pt too wide) in paragraph at lines 2087--2087
+[][]\T2A/cmr/bx/n/17.28 Лекция 17: Тео-ре-мы о сред-нем для диф-фе-рен-ци-ру-е-
+мых функ-
+ []
+
+[65
 
 ]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 6.
-[9
+[66
 
-] [10]
-<img/lecture21/convex.jpg, id=54, 2949.0175pt x 2118.91624pt>
+] [67]
+<img/lecture21/convex.jpg, id=1485, 2949.0175pt x 2118.91624pt>
 File: img/lecture21/convex.jpg Graphic file (type jpg)
 <use img/lecture21/convex.jpg>
-Package pdftex.def Info: img/lecture21/convex.jpg  used on input line 125.
+Package pdftex.def Info: img/lecture21/convex.jpg  used on input line 2158.
 (pdftex.def)             Requested size: 204.85672pt x 147.17534pt.
- [11 <./img/lecture21/convex.jpg>] [12] [13] [14]
+ [68 <./img/lecture21/convex.jpg>] [69] [70] [71]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 7.
-[15
+[72
 
-] [16]
-Overfull \hbox (10.89473pt too wide) in paragraph at lines 368--369
+] [73]
+Overfull \hbox (10.89473pt too wide) in paragraph at lines 2399--2400
 []$[] [][] \OML/cmm/m/it/14.4 x [] x dx \OT1/cmr/m/n/14.4 = \OMS/cmsy/m/n/14.4 
 ^^@ [] [][] \OML/cmm/m/it/14.4 x\OT1/cmr/m/n/14.4 ([] \OML/cmm/m/it/14.4 x\OT1/
 cmr/m/n/14.4 )[] \OML/cmm/m/it/14.4 dx \OT1/cmr/m/n/14.4 =$ \T2A/cmr/m/it/14.4 
@@ -684,45 +1132,45 @@ cmr/m/n/14.4 )[] \OML/cmm/m/it/14.4 dx \OT1/cmr/m/n/14.4 =$ \T2A/cmr/m/it/14.4
 \OT1/cmr/m/n/14.4 =
  []
 
-[17] [18]
+[74] [75]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 8.
 
-Overfull \hbox (23.65166pt too wide) in paragraph at lines 404--405
+Overfull \hbox (23.65166pt too wide) in paragraph at lines 2435--2436
 []$[] [] \OML/cmm/m/it/14.4 dx \OT1/cmr/m/n/14.4 = [] [][] \OML/cmm/m/it/14.4 d
 x \OT1/cmr/m/n/14.4 = [] [][][] \OMS/cmsy/m/n/14.4 ^^@ [][] \OML/cmm/m/it/14.4 
 dx \OT1/cmr/m/n/14.4 = [] [] \OMS/cmsy/m/n/14.4 ^^@
  []
 
 
-Overfull \hbox (5.78883pt too wide) in paragraph at lines 414--415
-\T2A/cmr/bx/n/14.4 Теорема 8.3. \T2A/cmr/m/it/14.4 Лю-бой мно-го-член един-стве
-н-ным об-ра-зом рас-кла-ды-ва-ет-ся на непри-
+Overfull \hbox (5.78883pt too wide) in paragraph at lines 2445--2446
+[][]\T2A/cmr/bx/n/14.4 Теорема 8.3. []\T2A/cmr/m/it/14.4 Лю-бой мно-го-член еди
+н-ствен-ным об-ра-зом рас-кла-ды-ва-ет-ся на непри-
  []
 
-[19
+[76
 
 ]
-Overfull \hbox (13.70947pt too wide) in paragraph at lines 437--438
-\T2A/cmr/bx/n/14.4 Определение 8.7. \T2A/cmr/m/it/14.4 Пра-виль-ная ра-ци-о-нал
-ь-ная дробь $[]$ на-зы-ва-ет-ся $[]$
+Overfull \hbox (13.70947pt too wide) in paragraph at lines 2468--2469
+[][]\T2A/cmr/bx/n/14.4 Определение 8.7. []\T2A/cmr/m/it/14.4 Пра-виль-ная ра-ци
+-о-наль-ная дробь $[]$ на-зы-ва-ет-ся $[]$
  []
 
 
-Overfull \hbox (6.66304pt too wide) in paragraph at lines 437--438
+Overfull \hbox (6.66304pt too wide) in paragraph at lines 2468--2469
 []$\T2A/cmr/m/it/14.4 , ес-ли еј зна-ме-на-тель $\OML/cmm/m/it/14.4 Q\OT1/cmr/m
 /n/14.4 (\OML/cmm/m/it/14.4 x\OT1/cmr/m/n/14.4 )$ \T2A/cmr/m/it/14.4 пред-став-
 ля-ет со-бой сте-пень непри-
  []
 
-[20] [21]
-Overfull \hbox (13.31674pt too wide) in paragraph at lines 482--483
+[77] [78]
+Overfull \hbox (13.31674pt too wide) in paragraph at lines 2513--2514
 []$\OMS/cmsy/m/n/14.4 ^^A [] [] \OT1/cmr/m/n/14.4 = [][] + []\OML/cmm/m/it/14.4
  N \OMS/cmsy/m/n/14.4 ^^@ [][]\OML/cmm/m/it/14.4 J[][]x \OT1/cmr/m/n/14.4 + []\
 OML/cmm/m/it/14.4 ; [][]$\T2A/cmr/m/n/14.4 . 
  []
 
-[22]
-Overfull \hbox (6.12909pt too wide) in paragraph at lines 511--512
+[79]
+Overfull \hbox (6.12909pt too wide) in paragraph at lines 2542--2543
 \T2A/cmr/m/n/14.4 в ко-то-рой мно-го-чле-ны $\OML/cmm/m/it/14.4 P[]\OT1/cmr/m/n
 /14.4 (\OML/cmm/m/it/14.4 x\OT1/cmr/m/n/14.4 )\OML/cmm/m/it/14.4 ; Q[]\OT1/cmr/
 m/n/14.4 (\OML/cmm/m/it/14.4 x\OT1/cmr/m/n/14.4 )\OML/cmm/m/it/14.4 ; P[]\OT1/c
@@ -733,33 +1181,49 @@ Q[]\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 x\OT1/cmr/m/n/14.4 )$ \T2A/cmr/m/n/14.
 4 удо-вле-тво-ря-ют усло-
  []
 
-[23]
-Overfull \hbox (5.56407pt too wide) in paragraph at lines 519--520
+[80]
+Overfull \hbox (5.56407pt too wide) in paragraph at lines 2550--2551
 []\T2A/cmr/m/n/14.4 В $\OT1/cmr/m/n/14.4 5\OML/cmm/m/it/14.4 : [] [] dx \OT1/cm
 r/m/n/14.4 = [][] + []\OML/cmm/m/it/14.4 N \OMS/cmsy/m/n/14.4 ^^@ [][]\OML/cmm/
 m/it/14.4 J[][]x \OT1/cmr/m/n/14.4 + []\OML/cmm/m/it/14.4 ; [][]$\T2A/cmr/m/n/1
 4.4 ,
  []
 
-[24] [25]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2559.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2559.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2559.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2559.
+
+[81] [82]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 9.
-<img/lecture24/definite_integral.png, id=106, 544.0325pt x 296.60812pt>
+<img/lecture24/definite_integral.png, id=1594, 544.0325pt x 296.60812pt>
 File: img/lecture24/definite_integral.png Graphic file (type png)
 <use img/lecture24/definite_integral.png>
 Package pdftex.def Info: img/lecture24/definite_integral.png  used on input lin
-e 553.
+e 2584.
 (pdftex.def)             Requested size: 358.50317pt x 195.46777pt.
-[26
+[83
 
  <./img/lecture24/definite_integral.png>]
-Overfull \hbox (15.16292pt too wide) in paragraph at lines 584--585
+Overfull \hbox (15.16292pt too wide) in paragraph at lines 2615--2616
 []\T2A/cmr/m/it/14.4 Отрезки $\OT1/cmr/m/n/14.4 [\OML/cmm/m/it/14.4 x[]; x[]\OT
 1/cmr/m/n/14.4 ]$ \T2A/cmr/m/it/14.4 на-зы-ва-ют-ся $[]$. Дли-ну от-рез-ка $\OT
 1/cmr/m/n/14.4 [\OML/cmm/m/it/14.4 x[]; x[]\OT1/cmr/m/n/14.4 ]$
  []
 
-[27] [28]
-Overfull \hbox (6.31366pt too wide) in paragraph at lines 674--676
+[84] [85]
+Overfull \hbox (6.31366pt too wide) in paragraph at lines 2705--2707
 \T2A/cmr/m/it/14.4 Ри-ма-ну на от-рез-ке $\OT1/cmr/m/n/14.4 [\OML/cmm/m/it/14.4
  a; b\OT1/cmr/m/n/14.4 ]$\T2A/cmr/m/it/14.4 . Ес-ли $\OML/cmm/m/it/14.4 f\OT1/c
 mr/m/n/14.4 (\OML/cmm/m/it/14.4 x\OT1/cmr/m/n/14.4 ) \U/msa/m/n/14.4 6 \OML/cmm
@@ -771,51 +1235,51 @@ n/14.4 ) \OML/cmm/m/it/14.4 dx \U/msa/m/n/14.4 6 [][] \OML/cmm/m/it/14.4 g\OT1/
 cmr/m/n/14.4 (\OML/cmm/m/it/14.4 x\OT1/cmr/m/n/14.4 ) \OML/cmm/m/it/14.4 dx:$ 
  []
 
-[29]
+[86]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 10.
-<img/lecture25/integral_darbu.jpg, id=121, 3069.4675pt x 2513.39pt>
+<img/lecture25/integral_darbu.jpg, id=1624, 3069.4675pt x 2513.39pt>
 File: img/lecture25/integral_darbu.jpg Graphic file (type jpg)
 <use img/lecture25/integral_darbu.jpg>
-Package pdftex.def Info: img/lecture25/integral_darbu.jpg  used on input line 7
-14.
+Package pdftex.def Info: img/lecture25/integral_darbu.jpg  used on input line 2
+745.
 (pdftex.def)             Requested size: 204.85672pt x 167.70976pt.
-[30
+[87
 
-] [31 <./img/lecture25/integral_darbu.jpg>]
-<img/lecture26/segment_division.jpg, id=129, 1284.8pt x 778.91pt>
+] [88 <./img/lecture25/integral_darbu.jpg>]
+<img/lecture26/segment_division.jpg, id=1638, 1284.8pt x 778.91pt>
 File: img/lecture26/segment_division.jpg Graphic file (type jpg)
 <use img/lecture26/segment_division.jpg>
 Package pdftex.def Info: img/lecture26/segment_division.jpg  used on input line
- 753.
+ 2784.
 (pdftex.def)             Requested size: 153.64644pt x 93.14426pt.
-<img/lecture26/notations.jpg, id=130, 2259.44125pt x 1434.35875pt>
+<img/lecture26/notations.jpg, id=1639, 2259.44125pt x 1434.35875pt>
 File: img/lecture26/notations.jpg Graphic file (type jpg)
 <use img/lecture26/notations.jpg>
-Package pdftex.def Info: img/lecture26/notations.jpg  used on input line 757.
+Package pdftex.def Info: img/lecture26/notations.jpg  used on input line 2788.
 (pdftex.def)             Requested size: 153.64644pt x 97.52635pt.
- [32 <./img/lecture26/segment_division.jpg> <./img/lecture26/notations.jpg>]
-<img/lecture26/coloring_segments.jpg, id=134, 1924.18875pt x 674.52pt>
+ [89 <./img/lecture26/segment_division.jpg> <./img/lecture26/notations.jpg>]
+<img/lecture26/coloring_segments.jpg, id=1645, 1924.18875pt x 674.52pt>
 File: img/lecture26/coloring_segments.jpg Graphic file (type jpg)
 <use img/lecture26/coloring_segments.jpg>
 Package pdftex.def Info: img/lecture26/coloring_segments.jpg  used on input lin
-e 788.
+e 2819.
 (pdftex.def)             Requested size: 102.42836pt x 35.89966pt.
-<img/lecture26/segment_number_estimation.jpg, id=135, 1936.23375pt x 1249.66875
-pt>
+<img/lecture26/segment_number_estimation.jpg, id=1646, 1936.23375pt x 1249.6687
+5pt>
 File: img/lecture26/segment_number_estimation.jpg Graphic file (type jpg)
 <use img/lecture26/segment_number_estimation.jpg>
 Package pdftex.def Info: img/lecture26/segment_number_estimation.jpg  used on i
-nput line 794.
+nput line 2825.
 (pdftex.def)             Requested size: 102.42836pt x 66.09102pt.
- [33 <./img/lecture26/coloring_segments.jpg> <./img/lecture26/segment_number_es
+ [90 <./img/lecture26/coloring_segments.jpg> <./img/lecture26/segment_number_es
 timation.jpg>]
-Overfull \hbox (21.86877pt too wide) detected at line 802
+Overfull \hbox (21.86877pt too wide) detected at line 2833
 \OT1/cmr/m/n/14.4 (\OMS/cmsy/m/n/14.4 ^^C\OT1/cmr/m/n/14.4 ) = [] [] [] \OMS/cm
 sy/m/n/14.4 ^^@ [] [] \OT1/cmr/m/n/14.4 + [] [] \U/msa/m/n/14.4 6
  []
 
 
-Overfull \hbox (13.71657pt too wide) detected at line 830
+Overfull \hbox (13.71657pt too wide) detected at line 2861
 \OMS/cmsy/m/n/14.4 8\OML/cmm/m/it/14.4 T[]; T[][]s\OT1/cmr/m/n/14.4 (\OML/cmm/m
 /it/14.4 f; T[]\OT1/cmr/m/n/14.4 ) \U/msa/m/n/14.4 6 \OML/cmm/m/it/14.4 S\OT1/c
 mr/m/n/14.4 (\OML/cmm/m/it/14.4 f; T[]\OT1/cmr/m/n/14.4 ) \OMS/cmsy/m/n/14.4 ) 
@@ -824,14 +1288,14 @@ mr/m/n/14.4 (\OML/cmm/m/it/14.4 f; T[]\OT1/cmr/m/n/14.4 ) \OMS/cmsy/m/n/14.4 )
 
  []
 
-[34] [35] [36]
-Overfull \hbox (27.51782pt too wide) in paragraph at lines 906--906
+[91] [92] [93]
+Overfull \hbox (27.51782pt too wide) in paragraph at lines 2937--2937
 []\T2A/cmr/bx/n/17.28 Интегрируемость мо-ду-ля, квад-ра-та и про-из-ве-де-ния ф
 унк-
  []
 
 
-Overfull \hbox (3.80693pt too wide) detected at line 925
+Overfull \hbox (3.80693pt too wide) detected at line 2956
 [] \OML/cmm/m/it/14.4 !\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 f[]; \OT1/cmr/m/n/
 14.4 ^^A[])^^A\OML/cmm/m/it/14.4 x[] \U/msa/m/n/14.4 6 [] \OT1/cmr/m/n/14.4 2 [
 ] [] \U/msa/m/n/14.4 6 \OT1/cmr/m/n/14.4 2 [] \OMS/cmsy/m/n/14.4 j\OML/cmm/m/it
@@ -840,21 +1304,21 @@ Overfull \hbox (3.80693pt too wide) detected at line 925
 /m/n/14.4 ^^A[])^^A\OML/cmm/m/it/14.4 x[] \U/msa/m/n/14.4 6
  []
 
-[37]
-<img/lecture27/uniformly_continuous_function.jpg, id=153, 2468.22125pt x 1889.0
-575pt>
+[94]
+<img/lecture27/uniformly_continuous_function.jpg, id=1682, 2468.22125pt x 1889.
+0575pt>
 File: img/lecture27/uniformly_continuous_function.jpg Graphic file (type jpg)
 <use img/lecture27/uniformly_continuous_function.jpg>
 Package pdftex.def Info: img/lecture27/uniformly_continuous_function.jpg  used 
-on input line 968.
+on input line 2999.
 (pdftex.def)             Requested size: 256.07481pt x 195.97885pt.
- [38]
+ [95]
 
-LaTeX Warning: Command \cyra invalid in math mode on input line 987.
+LaTeX Warning: Command \cyra invalid in math mode on input line 3018.
 
 Missing character: There is no а in font cmr12!
-[39 <./img/lecture27/uniformly_continuous_function.jpg>]
-Overfull \hbox (1.53423pt too wide) detected at line 1011
+[96 <./img/lecture27/uniformly_continuous_function.jpg>]
+Overfull \hbox (1.53423pt too wide) detected at line 3042
 \OML/cmm/m/it/14.4 " \U/msa/m/n/14.4 6 \OMS/cmsy/m/n/14.4 j\OML/cmm/m/it/14.4 f
 \OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 x[]\OT1/cmr/m/n/14.4 ) \OMS/cmsy/m/n/14.4
  ^^@ \OML/cmm/m/it/14.4 f\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 y[]\OT1/cmr/m/n/
@@ -872,28 +1336,28 @@ OMS/cmsy/m/n/14.4 j\OML/cmm/m/it/14.4 f\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 x[
 n/14.4 (\OML/cmm/m/it/14.4 y[]\OT1/cmr/m/n/14.4 )\OMS/cmsy/m/n/14.4 j
  []
 
-<img/lecture28/scheme_segments.jpg, id=160, 986.68625pt x 298.11375pt>
+<img/lecture28/scheme_segments.jpg, id=1700, 986.68625pt x 298.11375pt>
 File: img/lecture28/scheme_segments.jpg Graphic file (type jpg)
 <use img/lecture28/scheme_segments.jpg>
 Package pdftex.def Info: img/lecture28/scheme_segments.jpg  used on input line 
-1039.
+3070.
 (pdftex.def)             Requested size: 102.42836pt x 30.94577pt.
-[40]
-<img/lecture28/partition_designations.jpg, id=164, 2256.43pt x 738.76pt>
+[97]
+<img/lecture28/partition_designations.jpg, id=1709, 2256.43pt x 738.76pt>
 File: img/lecture28/partition_designations.jpg Graphic file (type jpg)
 <use img/lecture28/partition_designations.jpg>
 Package pdftex.def Info: img/lecture28/partition_designations.jpg  used on inpu
-t line 1042.
+t line 3073.
 (pdftex.def)             Requested size: 256.07481pt x 83.83398pt.
-<img/lecture28/partition_with_c_dot.jpg, id=165, 1284.8pt x 725.71124pt>
+<img/lecture28/partition_with_c_dot.jpg, id=1710, 1284.8pt x 725.71124pt>
 File: img/lecture28/partition_with_c_dot.jpg Graphic file (type jpg)
 <use img/lecture28/partition_with_c_dot.jpg>
 Package pdftex.def Info: img/lecture28/partition_with_c_dot.jpg  used on input 
-line 1071.
+line 3102.
 (pdftex.def)             Requested size: 153.64644pt x 86.78261pt.
- [41 <./img/lecture28/scheme_segments.jpg> <./img/lecture28/partition_designati
+ [98 <./img/lecture28/scheme_segments.jpg> <./img/lecture28/partition_designati
 ons.jpg>]
-Overfull \hbox (29.33743pt too wide) detected at line 1079
+Overfull \hbox (29.33743pt too wide) detected at line 3110
 \OML/cmm/m/it/14.4 ^^[\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 f; T; ^^X\OT1/cmr/m
 /n/14.4 ) = [] \OML/cmm/m/it/14.4 f\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 ^^X[]\
 OT1/cmr/m/n/14.4 )^^A\OML/cmm/m/it/14.4 x[] \OT1/cmr/m/n/14.4 = [] \OML/cmm/m/i
@@ -905,27 +1369,28 @@ mm/m/it/14.4 x[] \OT1/cmr/m/n/14.4 + [] \OML/cmm/m/it/14.4 f\OT1/cmr/m/n/14.4 (
 t/14.4 f; T[]; ^^X[]\OT1/cmr/m/n/14.4 ) \OMS/cmsy/m/n/14.4 )
  []
 
-<img/lecture28/Newton_Leibniz_theorem.jpg, id=169, 2201.22375pt x 751.80875pt>
+<img/lecture28/Newton_Leibniz_theorem.jpg, id=1717, 2201.22375pt x 751.80875pt>
+
 File: img/lecture28/Newton_Leibniz_theorem.jpg Graphic file (type jpg)
 <use img/lecture28/Newton_Leibniz_theorem.jpg>
 Package pdftex.def Info: img/lecture28/Newton_Leibniz_theorem.jpg  used on inpu
-t line 1097.
+t line 3128.
 (pdftex.def)             Requested size: 153.64644pt x 52.47137pt.
-[42 <./img/lecture28/partition_with_c_dot.jpg> <./img/lecture28/Newton_Leibniz_
-theorem.jpg>] [43] [44]
-Overfull \hbox (22.09921pt too wide) detected at line 1174
+[99 <./img/lecture28/partition_with_c_dot.jpg> <./img/lecture28/Newton_Leibniz_
+theorem.jpg>] [100] [101]
+Overfull \hbox (22.09921pt too wide) detected at line 3205
 [][] [] \OML/cmm/m/it/14.4 x dx \OT1/cmr/m/n/14.4 = \OML/cmm/m/it/14.4 x [] x[]
 [] \OMS/cmsy/m/n/14.4 ^^@ [][] \OML/cmm/m/it/14.4 x d [] x \OT1/cmr/m/n/14.4 = 
 [] \OMS/cmsy/m/n/14.4 ^^@ [][] [] \OML/cmm/m/it/14.4 dx \OT1/cmr/m/n/14.4 = [] 
 \OMS/cmsy/m/n/14.4 ^^@ [] [][] [] \OT1/cmr/m/n/14.4 =
  []
 
-[45]
+[102]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 11.
-[46
+[103
 
-] [47]
-Overfull \hbox (4.45247pt too wide) in paragraph at lines 1282--1283
+] [104]
+Overfull \hbox (4.45247pt too wide) in paragraph at lines 3313--3314
 []$[][] \OML/cmm/m/it/14.4 f\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 x\OT1/cmr/m/
 n/14.4 ) + \OML/cmm/m/it/14.4 ^^Lg\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 x\OT1/c
 mr/m/n/14.4 ) \OML/cmm/m/it/14.4 dx \OT1/cmr/m/n/14.4 = [][] [][] \OML/cmm/m/it
@@ -935,31 +1400,31 @@ m/m/it/14.4 dx[]$
  []
 
 
-Overfull \hbox (22.3363pt too wide) in paragraph at lines 1284--1285
+Overfull \hbox (22.3363pt too wide) in paragraph at lines 3315--3316
 []$[] \OT1/cmr/m/n/14.4 = [][] \OML/cmm/m/it/14.4  [][] f\OT1/cmr/m/n/14.4 (\O
 ML/cmm/m/it/14.4 x\OT1/cmr/m/n/14.4 ) \OML/cmm/m/it/14.4 dx \OT1/cmr/m/n/14.4 +
  \OML/cmm/m/it/14.4 ^^L [][] g\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 x\OT1/cmr/m
 /n/14.4 ) \OML/cmm/m/it/14.4 dx \OT1/cmr/m/n/14.4 =
  []
 
-[48] [49]
-Overfull \hbox (27.9501pt too wide) in paragraph at lines 1318--1320
+[105] [106]
+Overfull \hbox (27.9501pt too wide) in paragraph at lines 3349--3351
 \T2A/cmr/m/n/14.4 что то-же са-мое, что ин-те-грал в на-ча-ле до-ка-за-тель-ств
 а. Зна-чит ин-те-грал $[][] \OML/cmm/m/it/14.4 f\OT1/cmr/m/n/14.4 (\OML/cmm/m/i
 t/14.4 '\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 t\OT1/cmr/m/n/14.4 ))\OML/cmm/m/i
 t/14.4 '[]\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 t\OT1/cmr/m/n/14.4 )$
  []
 
-[50] [51]
-Overfull \hbox (3.88065pt too wide) detected at line 1400
+[107] [108]
+Overfull \hbox (3.88065pt too wide) detected at line 3431
 [][] [][][] \OML/cmm/m/it/14.4 dx \U/msa/m/n/14.4 > [][] [] \OML/cmm/m/it/14.4 
 dx \OT1/cmr/m/n/14.4 = [][] [] \OMS/cmsy/m/n/14.4 ^^@ [] \OML/cmm/m/it/14.4 dx[
 ]\OT1/cmr/m/n/14.4 2 [][] \OML/cmm/m/it/14.4 x \OT1/cmr/m/n/14.4 = 1 \OMS/cmsy/
 m/n/14.4 ^^@ [] []\OT1/cmr/m/n/14.4 )
  []
 
-[52] [53]
-Overfull \hbox (31.51152pt too wide) in paragraph at lines 1465--1466
+[109] [110]
+Overfull \hbox (31.51152pt too wide) in paragraph at lines 3496--3497
 []\T2A/cmr/m/n/14.4 И на-обо-рот, ес-ли $[][] \OML/cmm/m/it/14.4 g\OT1/cmr/m/n/
 14.4 (\OML/cmm/m/it/14.4 x\OT1/cmr/m/n/14.4 ) \OML/cmm/m/it/14.4 dx$ \T2A/cmr/m
 /n/14.4 рас-хо-дит-ся, то рас-хо-дит-ся и $[][] \OML/cmm/m/it/14.4 mg\OT1/cmr/m
@@ -968,56 +1433,56 @@ Overfull \hbox (31.51152pt too wide) in paragraph at lines 1465--1466
 OT1/cmr/m/n/14.4 ) \OML/cmm/m/it/14.4 dx$\T2A/cmr/m/n/14.4 .
  []
 
-[54] [55]
-Overfull \hbox (10.29973pt too wide) in paragraph at lines 1528--1529
+[111] [112]
+Overfull \hbox (10.29973pt too wide) in paragraph at lines 3559--3560
 \OT1/cmr/m/n/14.4 0$\T2A/cmr/m/it/14.4 . То-гда $[] \OML/cmm/m/it/14.4 a[] \OMS
 /cmsy/m/n/14.4 ^^X [] \OML/cmm/m/it/14.4 b[]\OMS/cmsy/m/n/14.4 ^^@$ \T2A/cmr/m/
 it/14.4 эк-ви-ва-лент-ны по схо-ди-мо-сти, т.е. схо-дят-ся/расходятся
  []
 
 
-Overfull \hbox (43.9309pt too wide) in paragraph at lines 1543--1544
-\T2A/cmr/bx/n/14.4 Пример 11.27. \T2A/cmr/m/it/14.4 Те-перь мы мо-жем от-ве-тит
-ь на во-прос, схо-дит-ся ли ряд $[][] [] []$,
+Overfull \hbox (43.9309pt too wide) in paragraph at lines 3574--3575
+[][]\T2A/cmr/bx/n/14.4 Пример 11.27. []\T2A/cmr/m/it/14.4 Те-перь мы мо-жем от-
+ве-тить на во-прос, схо-дит-ся ли ряд $[][] [] []$,
  []
 
 
-Overfull \hbox (0.32028pt too wide) in paragraph at lines 1563--1564
-\T2A/cmr/bx/n/14.4 Предложение 11.29. \T2A/cmr/m/it/14.4 Пусть $\OML/cmm/m/it/1
-4.4 f\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 x\OT1/cmr/m/n/14.4 ) \U/msa/m/n/14.4
- > \OT1/cmr/m/n/14.4 0$ \T2A/cmr/m/it/14.4 и не воз-рас-та-ет на про-ме-жут-ке 
-$\OT1/cmr/m/n/14.4 [1\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 +\OMS/cmsy/m/n/14.4
- 1\OT1/cmr/m/n/14.4 )$\T2A/cmr/m/it/14.4 .
+Overfull \hbox (0.32028pt too wide) in paragraph at lines 3594--3595
+[][]\T2A/cmr/bx/n/14.4 Предложение 11.29. []\T2A/cmr/m/it/14.4 Пусть $\OML/cmm/
+m/it/14.4 f\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 x\OT1/cmr/m/n/14.4 ) \U/msa/m/
+n/14.4 > \OT1/cmr/m/n/14.4 0$ \T2A/cmr/m/it/14.4 и не воз-рас-та-ет на про-ме-ж
+ут-ке $\OT1/cmr/m/n/14.4 [1\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 +\OMS/cmsy/m/
+n/14.4 1\OT1/cmr/m/n/14.4 )$\T2A/cmr/m/it/14.4 .
  []
 
-[56] [57] [58] [59] [60] [61]
-Overfull \hbox (4.68109pt too wide) detected at line 1746
+[113] [114] [115] [116] [117] [118]
+Overfull \hbox (4.68109pt too wide) detected at line 3777
 \OML/cmm/m/it/14.4 S[] \OT1/cmr/m/n/14.4 = [] [] [] = [] [] = [] []
  []
 
 
-Overfull \hbox (8.37575pt too wide) in paragraph at lines 1760--1761
-\T2A/cmr/bx/n/14.4 Теорема 11.37 \T2A/cmr/m/n/14.4 (При-знак Ди-ри-х-ле)\T2A/cm
-r/bx/n/14.4 . \T2A/cmr/m/it/14.4 Пусть по-сле-до-ва-тель-ность ча-стич-ных сумм
-
+Overfull \hbox (8.37575pt too wide) in paragraph at lines 3791--3792
+[][]\T2A/cmr/bx/n/14.4 Теорема 11.37 \T2A/cmr/m/n/14.4 (При-знак Ди-ри-х-ле)\T2
+A/cmr/bx/n/14.4 . []\T2A/cmr/m/it/14.4 Пусть по-сле-до-ва-тель-ность ча-стич-ны
+х сумм
  []
 
-[62] [63]
-Overfull \hbox (17.28122pt too wide) in paragraph at lines 1791--1792
+[119] [120]
+Overfull \hbox (17.28122pt too wide) in paragraph at lines 3822--3823
 []$\OML/cmm/m/it/14.4 b[]$ \T2A/cmr/m/n/14.4 - мо-но-тон-на и огра-ни-че-на $\O
 MS/cmsy/m/n/14.4 )$ \T2A/cmr/m/n/14.4 (по т. Вей-ер-штрас-са) $\OMS/cmsy/m/n/14
 .4 9 [][] \OML/cmm/m/it/14.4 b[] \OT1/cmr/m/n/14.4 =
  []
 
 
-Overfull \hbox (9.50322pt too wide) in paragraph at lines 1795--1796
+Overfull \hbox (9.50322pt too wide) in paragraph at lines 3826--3827
 []\T2A/cmr/m/n/14.4 По при-зна-ку Ди-ри-х-ле схо-дит-ся ряд $[][] \OML/cmm/m/it
 /14.4 a[]b[]$\T2A/cmr/m/n/14.4 . Здесь мы поль-зу-ем-ся, что $[][] \OML/cmm/m/i
 t/14.4 a[]$
  []
 
-[64] [65] [66] [67] [68] [69]
-Overfull \hbox (2.16615pt too wide) in paragraph at lines 2013--2014
+[121] [122] [123] [124] [125] [126]
+Overfull \hbox (2.16615pt too wide) in paragraph at lines 4044--4045
 []\T2A/cmr/m/n/14.4 Тогда для $\OML/cmm/m/it/14.4 g[]\OT1/cmr/m/n/14.4 (\OML/cm
 m/m/it/14.4 x\OT1/cmr/m/n/14.4 )$ \T2A/cmr/m/n/14.4 и $\OML/cmm/m/it/14.4 f\OT1
 /cmr/m/n/14.4 (\OML/cmm/m/it/14.4 x\OT1/cmr/m/n/14.4 )$ \T2A/cmr/m/n/14.4 вы-по
@@ -1027,60 +1492,61 @@ m/m/it/14.4 x\OT1/cmr/m/n/14.4 )$ \T2A/cmr/m/n/14.4 и $\OML/cmm/m/it/14.4 f\OT1
 t/14.4 dx$
  []
 
-[70]
+[127]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 12.
 
-Overfull \hbox (27.99416pt too wide) in paragraph at lines 2039--2041
+Overfull \hbox (27.99416pt too wide) in paragraph at lines 4070--4072
 \T2A/cmr/m/n/14.4 ность эле-мен-тар-ных фи-гур (пря-мо-уголь-ни-ков) $\OML/cmm/
 m/it/14.4 P[]; P[]; :::; P[]; :::$ \T2A/cmr/m/n/14.4 та-ких, что $\OML/cmm/m/it
 /14.4 ^^V\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 P[]\OT1/cmr/m/n/14.4 ) \OMS/cmsy
 /m/n/14.4 !
  []
 
-<img/lecture33/the_area_of_the_figure.png, id=263, 730.22812pt x 620.3175pt>
+<img/lecture33/the_area_of_the_figure.png, id=1937, 730.22812pt x 620.3175pt>
 File: img/lecture33/the_area_of_the_figure.png Graphic file (type png)
 <use img/lecture33/the_area_of_the_figure.png>
 Package pdftex.def Info: img/lecture33/the_area_of_the_figure.png  used on inpu
-t line 2050.
+t line 4081.
 (pdftex.def)             Requested size: 204.85672pt x 174.019pt.
-[71
+[128
 
 ]
-<img/lecture33/polar_coordinates.png, id=267, 501.875pt x 585.18625pt>
+<img/lecture33/polar_coordinates.png, id=1946, 501.875pt x 585.18625pt>
 File: img/lecture33/polar_coordinates.png Graphic file (type png)
 <use img/lecture33/polar_coordinates.png>
 Package pdftex.def Info: img/lecture33/polar_coordinates.png  used on input lin
-e 2063.
+e 4094.
 (pdftex.def)             Requested size: 153.64644pt x 179.1557pt.
- [72 <./img/lecture33/the_area_of_the_figure.png> <./img/lecture33/polar_coordi
-nates.png>]
-<img/lecture33/the_area_of_the_figure2.png, id=274, 592.46344pt x 584.93532pt>
+ [129 <./img/lecture33/the_area_of_the_figure.png> <./img/lecture33/polar_coord
+inates.png>]
+<img/lecture33/the_area_of_the_figure2.png, id=1953, 592.46344pt x 584.93532pt>
+
 File: img/lecture33/the_area_of_the_figure2.png Graphic file (type png)
 <use img/lecture33/the_area_of_the_figure2.png>
 Package pdftex.def Info: img/lecture33/the_area_of_the_figure2.png  used on inp
-ut line 2075.
+ut line 4106.
 (pdftex.def)             Requested size: 153.64644pt x 151.6958pt.
-<img/lecture33/max_sectors.jpg, id=275, 2357.80875pt x 1658.195pt>
+<img/lecture33/max_sectors.jpg, id=1954, 2357.80875pt x 1658.195pt>
 File: img/lecture33/max_sectors.jpg Graphic file (type jpg)
 <use img/lecture33/max_sectors.jpg>
-Package pdftex.def Info: img/lecture33/max_sectors.jpg  used on input line 2082
+Package pdftex.def Info: img/lecture33/max_sectors.jpg  used on input line 4113
 .
 (pdftex.def)             Requested size: 153.64644pt x 108.03947pt.
-<img/lecture33/min_sectors.jpg, id=276, 4111.36pt x 2699.08376pt>
+<img/lecture33/min_sectors.jpg, id=1955, 4111.36pt x 2699.08376pt>
 File: img/lecture33/min_sectors.jpg Graphic file (type jpg)
 <use img/lecture33/min_sectors.jpg>
-Package pdftex.def Info: img/lecture33/min_sectors.jpg  used on input line 2085
+Package pdftex.def Info: img/lecture33/min_sectors.jpg  used on input line 4116
 .
 (pdftex.def)             Requested size: 153.64644pt x 100.8612pt.
 
-Overfull \hbox (11.46361pt too wide) in paragraph at lines 2090--2091
+Overfull \hbox (11.46361pt too wide) in paragraph at lines 4121--4122
 []\T2A/cmr/m/n/14.4 Формулу пло-ща-ди кру-га $\OML/cmm/m/it/14.4 ^^Yr[]$ \T2A/c
 mr/m/n/14.4 мож-но до-ка-зать, по-счи-тав ин-те-грал $\OT1/cmr/m/n/14.4 4 [][] 
 [] \OML/cmm/m/it/14.4 dx$
  []
 
 
-Overfull \hbox (39.49995pt too wide) detected at line 2092
+Overfull \hbox (39.49995pt too wide) detected at line 4123
 \OT1/cmr/m/n/14.4 4 [][] [] \OML/cmm/m/it/14.4 dx \OT1/cmr/m/n/14.4 = 4 [][] \O
 ML/cmm/m/it/14.4 r[] dx \OT1/cmr/m/n/14.4 = [[] \OML/cmm/m/it/14.4 ' \OT1/cmr/m
 /n/14.4 = [] \OMS/cmsy/m/n/14.4 ) \OML/cmm/m/it/14.4 r [] ' \OT1/cmr/m/n/14.4 =
@@ -1088,35 +1554,37 @@ ML/cmm/m/it/14.4 r[] dx \OT1/cmr/m/n/14.4 = [[] \OML/cmm/m/it/14.4 ' \OT1/cmr/m
 /m/n/14.4 = \OML/cmm/m/it/14.4 dx\OT1/cmr/m/n/14.4 ] =
  []
 
-[73 <./img/lecture33/the_area_of_the_figure2.png> <./img/lecture33/max_sectors.
-jpg> <./img/lecture33/min_sectors.jpg>]
-<img/lecture33/sector.jpg, id=281, 1078.0275pt x 727.71875pt>
+[130 <./img/lecture33/the_area_of_the_figure2.png> <./img/lecture33/max_sectors
+.jpg> <./img/lecture33/min_sectors.jpg>]
+<img/lecture33/sector.jpg, id=1962, 1078.0275pt x 727.71875pt>
 File: img/lecture33/sector.jpg Graphic file (type jpg)
 <use img/lecture33/sector.jpg>
-Package pdftex.def Info: img/lecture33/sector.jpg  used on input line 2101.
+Package pdftex.def Info: img/lecture33/sector.jpg  used on input line 4132.
 (pdftex.def)             Requested size: 102.42836pt x 69.13399pt.
-<img/lecture33/the_area_of_the_figure3.png, id=282, 586.44093pt x 642.90187pt>
+<img/lecture33/the_area_of_the_figure3.png, id=1963, 586.44093pt x 642.90187pt>
+
 File: img/lecture33/the_area_of_the_figure3.png Graphic file (type png)
 <use img/lecture33/the_area_of_the_figure3.png>
 Package pdftex.def Info: img/lecture33/the_area_of_the_figure3.png  used on inp
-ut line 2119.
+ut line 4150.
 (pdftex.def)             Requested size: 153.64644pt x 168.43564pt.
- [74 <./img/lecture33/sector.jpg>]
-[75 <./img/lecture33/the_area_of_the_figure3.png>]
-<img/lecture33/the_area_of_the_figure4.png, id=290, 532.99126pt x 586.44093pt>
+ [131 <./img/lecture33/sector.jpg>]
+[132 <./img/lecture33/the_area_of_the_figure3.png>]
+<img/lecture33/the_area_of_the_figure4.png, id=1977, 532.99126pt x 586.44093pt>
+
 File: img/lecture33/the_area_of_the_figure4.png Graphic file (type png)
 <use img/lecture33/the_area_of_the_figure4.png>
 Package pdftex.def Info: img/lecture33/the_area_of_the_figure4.png  used on inp
-ut line 2144.
+ut line 4175.
 (pdftex.def)             Requested size: 153.64644pt x 169.05234pt.
- [76 <./img/lecture33/the_area_of_the_figure4.png>]
-<img/lecture34/plot.jpg, id=295, 4625.28pt x 3468.96pt>
+ [133 <./img/lecture33/the_area_of_the_figure4.png>]
+<img/lecture34/plot.jpg, id=1984, 4625.28pt x 3468.96pt>
 File: img/lecture34/plot.jpg Graphic file (type jpg)
 <use img/lecture34/plot.jpg>
-Package pdftex.def Info: img/lecture34/plot.jpg  used on input line 2162.
+Package pdftex.def Info: img/lecture34/plot.jpg  used on input line 4193.
 (pdftex.def)             Requested size: 256.07481pt x 192.0373pt.
- [77 <./img/lecture34/plot.jpg>]
-Overfull \hbox (12.21056pt too wide) detected at line 2196
+ [134 <./img/lecture34/plot.jpg>]
+Overfull \hbox (12.21056pt too wide) detected at line 4227
 [] [] \OML/cmm/m/it/14.4 f\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 x\OT1/cmr/m/n/1
 4.4 )^^A\OML/cmm/m/it/14.4 x[] \U/msa/m/n/14.4 6 \OT1/cmr/m/n/14.4 ([]) [] \OML
 /cmm/m/it/14.4 S\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 x[]; x[]\OT1/cmr/m/n/14.4
@@ -1124,43 +1592,43 @@ Overfull \hbox (12.21056pt too wide) detected at line 2196
  []
 
 
-Overfull \hbox (33.42813pt too wide) in paragraph at lines 2204--2205
-\T2A/cmr/bx/n/14.4 Определение 12.8. \T2A/cmr/m/it/14.4 Пусть $\OML/cmm/m/it/14
-.4 ^^M \OT1/cmr/m/n/14.4 : [\OML/cmm/m/it/14.4 a; b\OT1/cmr/m/n/14.4 ] \OMS/cms
-y/m/n/14.4 ! \U/msb/m/n/14.4 R[]$ \T2A/cmr/m/it/14.4 - глад-кая кри-вая, т.е. $
-\OML/cmm/m/it/14.4 ^^M\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 t\OT1/cmr/m/n/14.4 
-) = (\OML/cmm/m/it/14.4 x\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 t\OT1/cmr/m/n/14
-.4 )\OML/cmm/m/it/14.4 ; y\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 t\OT1/cmr/m/n/1
-4.4 )\OML/cmm/m/it/14.4 ; z\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 t\OT1/cmr/m/n/
-14.4 ))$
+Overfull \hbox (33.42813pt too wide) in paragraph at lines 4235--4236
+[][]\T2A/cmr/bx/n/14.4 Определение 12.8. []\T2A/cmr/m/it/14.4 Пусть $\OML/cmm/m
+/it/14.4 ^^M \OT1/cmr/m/n/14.4 : [\OML/cmm/m/it/14.4 a; b\OT1/cmr/m/n/14.4 ] \O
+MS/cmsy/m/n/14.4 ! \U/msb/m/n/14.4 R[]$ \T2A/cmr/m/it/14.4 - глад-кая кри-вая, 
+т.е. $\OML/cmm/m/it/14.4 ^^M\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 t\OT1/cmr/m/n
+/14.4 ) = (\OML/cmm/m/it/14.4 x\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 t\OT1/cmr/
+m/n/14.4 )\OML/cmm/m/it/14.4 ; y\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 t\OT1/cmr
+/m/n/14.4 )\OML/cmm/m/it/14.4 ; z\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 t\OT1/cm
+r/m/n/14.4 ))$
  []
 
-[78] [79]
+[135] [136]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 13.
-[80
+[137
 
 ]
-Overfull \hbox (5.73483pt too wide) in paragraph at lines 2269--2270
+Overfull \hbox (5.73483pt too wide) in paragraph at lines 4300--4301
 []\T2A/cmr/m/n/14.4 Всякое нор-ми-ро-ван-ное про-стран-ство яв-ля-ет-ся мет-ри-
 че-ским с мет-ри-кой $\OML/cmm/m/it/14.4 d\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4
  x; y\OT1/cmr/m/n/14.4 ) =
  []
 
 
-Overfull \hbox (2.61336pt too wide) in paragraph at lines 2287--2288
+Overfull \hbox (2.61336pt too wide) in paragraph at lines 4318--4319
 \T2A/cmr/m/it/14.4 Линейное про-стран-ство $\OML/cmm/m/it/14.4 X$ \T2A/cmr/m/it
 /14.4 со ска-ляр-ным про-из-ве-де-ни-ем на-зы-ва-ет-ся $[]$. 
  []
 
 
-Overfull \hbox (25.06839pt too wide) in paragraph at lines 2291--2292
-\T2A/cmr/bx/n/14.4 Пример 13.5. \T2A/cmr/m/it/14.4 На ли-ней-ном про-стран-стве
- $\U/msb/m/n/14.4 R[]$ \T2A/cmr/m/it/14.4 всех упо-ря-до-чен-ных на-бо-ров $\OT
-1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 x[]; :::; x[]\OT1/cmr/m/n/14.4 )$
+Overfull \hbox (25.06839pt too wide) in paragraph at lines 4322--4323
+[][]\T2A/cmr/bx/n/14.4 Пример 13.5. []\T2A/cmr/m/it/14.4 На ли-ней-ном про-стра
+н-стве $\U/msb/m/n/14.4 R[]$ \T2A/cmr/m/it/14.4 всех упо-ря-до-чен-ных на-бо-ро
+в $\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 x[]; :::; x[]\OT1/cmr/m/n/14.4 )$
  []
 
-[81]
-Overfull \hbox (1.84819pt too wide) in paragraph at lines 2316--2317
+[138]
+Overfull \hbox (1.84819pt too wide) in paragraph at lines 4347--4348
 []$\OMS/cmsy/m/n/14.4 jj\OML/cmm/m/it/14.4 x \OT1/cmr/m/n/14.4 + \OML/cmm/m/it/
 14.4 y\OMS/cmsy/m/n/14.4 jj[] \OT1/cmr/m/n/14.4 = \OMS/cmsy/m/n/14.4 h\OML/cmm/
 m/it/14.4 x \OT1/cmr/m/n/14.4 + \OML/cmm/m/it/14.4 y; x \OT1/cmr/m/n/14.4 + \OM
@@ -1170,8 +1638,8 @@ OML/cmm/m/it/14.4 x; x\OMS/cmsy/m/n/14.4 i \OT1/cmr/m/n/14.4 + 2\OMS/cmsy/m/n/1
 m/n/14.4 h\OML/cmm/m/it/14.4 y; y\OMS/cmsy/m/n/14.4 i \U/msa/m/n/14.4 6 []$
  []
 
-[82]
-Overfull \hbox (23.20535pt too wide) detected at line 2344
+[139]
+Overfull \hbox (23.20535pt too wide) detected at line 4375
 \OMS/cmsy/m/n/14.4 j\OML/cmm/m/it/14.4 d\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 x
 []; y[]\OT1/cmr/m/n/14.4 ) \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/it/14.4 d\OT1/cmr/
 m/n/14.4 (\OML/cmm/m/it/14.4 x; y\OT1/cmr/m/n/14.4 )\OMS/cmsy/m/n/14.4 j \OT1/c
@@ -1187,7 +1655,7 @@ n/14.4 ) \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/it/14.4 d\OT1/cmr/m/n/14.4 (\OML/cmm
  []
 
 
-Overfull \hbox (3.79541pt too wide) in paragraph at lines 2350--2351
+Overfull \hbox (3.79541pt too wide) in paragraph at lines 4381--4382
 []\T2A/cmr/m/n/14.4 Пусть $\OML/cmm/m/it/14.4 x[] \OMS/cmsy/m/n/14.4 ! \OML/cmm
 /m/it/14.4 x; x[] \OMS/cmsy/m/n/14.4 ! \OML/cmm/m/it/14.4 y$\T2A/cmr/m/n/14.4 .
  По пер-во-му пунк-ту $\OML/cmm/m/it/14.4 d\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.
@@ -1197,28 +1665,28 @@ Overfull \hbox (3.79541pt too wide) in paragraph at lines 2350--2351
 n/14.4 ) =
  []
 
-[83]
-Overfull \hbox (14.98347pt too wide) detected at line 2371
+[140]
+Overfull \hbox (14.98347pt too wide) detected at line 4402
 [] \OMS/cmsy/m/n/14.4 j\OML/cmm/m/it/14.4 x[]\OMS/cmsy/m/n/14.4 j \OT1/cmr/m/n/
 14.4 = [] \U/msa/m/n/14.4 6 [] 6 [] [] \OMS/cmsy/m/n/14.4 j\OML/cmm/m/it/14.4 x
 []\OMS/cmsy/m/n/14.4 j
  []
 
-[84] [85]
-<img/lecture35/limit_of_a_complex_function.jpg, id=325, 1284.8pt x 827.09pt>
+[141] [142]
+<img/lecture35/limit_of_a_complex_function.jpg, id=2069, 1284.8pt x 827.09pt>
 File: img/lecture35/limit_of_a_complex_function.jpg Graphic file (type jpg)
 <use img/lecture35/limit_of_a_complex_function.jpg>
 Package pdftex.def Info: img/lecture35/limit_of_a_complex_function.jpg  used on
- input line 2456.
+ input line 4487.
 (pdftex.def)             Requested size: 153.64644pt x 98.90576pt.
- [86 <./img/lecture35/limit_of_a_complex_function.jpg>]
-Overfull \hbox (1.32137pt too wide) in paragraph at lines 2487--2488
+ [143 <./img/lecture35/limit_of_a_complex_function.jpg>]
+Overfull \hbox (1.32137pt too wide) in paragraph at lines 4518--4519
 []\T2A/cmr/m/it/14.4 Если $\OML/cmm/m/it/14.4 x[]$ \T2A/cmr/m/it/14.4 - изо-ли-
 ро-ван-ная точ-ка, то лю-бая по-сле-до-ва-тель-ность,
  []
 
 
-Overfull \hbox (16.79643pt too wide) detected at line 2491
+Overfull \hbox (16.79643pt too wide) detected at line 4522
 \OMS/cmsy/m/n/14.4 ) \OML/cmm/m/it/14.4 x[] \OMS/cmsy/m/n/14.4 6\OT1/cmr/m/n/14
 .4 = \OML/cmm/m/it/14.4 x[]\OT1/cmr/m/n/14.4 ([]\OML/cmm/m/it/14.4 " > \OT1/cmr
 /m/n/14.4 0) \OMS/cmsy/m/n/14.4 ) 9\OML/cmm/m/it/14.4 x[]\OT1/cmr/m/n/14.4 (\OM
@@ -1230,10 +1698,10 @@ mr/m/n/14.4 ))\OMS/cmsy/m/n/14.4 jj \U/msa/m/n/14.4 > \OML/cmm/m/it/14.4 " \OMS
 /cmsy/m/n/14.4 ^^@ []
  []
 
-[87] [88]
+[144] [145]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 14.
 
-Overfull \hbox (4.26945pt too wide) detected at line 2556
+Overfull \hbox (4.26945pt too wide) detected at line 4587
 \OMS/cmsy/m/n/14.4 jj\OML/cmm/m/it/14.4 Lh\OMS/cmsy/m/n/14.4 jj \OT1/cmr/m/n/14
 .4 = \OMS/cmsy/m/n/14.4 jj\OML/cmm/m/it/14.4 L\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/
 14.4 e[]\OT1/cmr/m/n/14.4 )\OML/cmm/m/it/14.4 h[] \OT1/cmr/m/n/14.4 + \OML/cmm/
@@ -1249,10 +1717,10 @@ m/m/it/14.4 h[]\OMS/cmsy/m/n/14.4 j \OT1/cmr/m/n/14.4 = \OML/cmm/m/it/14.4 C []
  6
  []
 
-[89
+[146
 
 ]
-Overfull \hbox (21.00467pt too wide) in paragraph at lines 2568--2569
+Overfull \hbox (21.00467pt too wide) in paragraph at lines 4599--4600
 []\T2A/cmr/m/n/14.4 Пользуясь опре-де-ле-ни-ем диф-фе-рен-ци-ру-е-мо-сти, $\OMS
 /cmsy/m/n/14.4 jj\OML/cmm/m/it/14.4 f\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 x \O
 T1/cmr/m/n/14.4 + \OML/cmm/m/it/14.4 h\OT1/cmr/m/n/14.4 ) \OMS/cmsy/m/n/14.4 ^^
@@ -1260,20 +1728,20 @@ T1/cmr/m/n/14.4 + \OML/cmm/m/it/14.4 h\OT1/cmr/m/n/14.4 ) \OMS/cmsy/m/n/14.4 ^^
 )\OMS/cmsy/m/n/14.4 jj \OT1/cmr/m/n/14.4 =
  []
 
-[90]
-<img/lecture36/deriv.jpg, id=342, 1284.8pt x 1051.93pt>
+[147]
+<img/lecture36/deriv.jpg, id=2105, 1284.8pt x 1051.93pt>
 File: img/lecture36/deriv.jpg Graphic file (type jpg)
 <use img/lecture36/deriv.jpg>
-Package pdftex.def Info: img/lecture36/deriv.jpg  used on input line 2609.
+Package pdftex.def Info: img/lecture36/deriv.jpg  used on input line 4640.
 (pdftex.def)             Requested size: 204.85672pt x 167.71834pt.
- [91 <./img/lecture36/deriv.jpg>]
-<img/lecture36/polar.jpg, id=346, 1284.8pt x 1261.71375pt>
+ [148 <./img/lecture36/deriv.jpg>]
+<img/lecture36/polar.jpg, id=2112, 1284.8pt x 1261.71375pt>
 File: img/lecture36/polar.jpg Graphic file (type jpg)
 <use img/lecture36/polar.jpg>
-Package pdftex.def Info: img/lecture36/polar.jpg  used on input line 2630.
+Package pdftex.def Info: img/lecture36/polar.jpg  used on input line 4661.
 (pdftex.def)             Requested size: 204.85672pt x 201.16599pt.
- [92 <./img/lecture36/polar.jpg>]
-Overfull \hbox (46.31662pt too wide) detected at line 2670
+ [149 <./img/lecture36/polar.jpg>]
+Overfull \hbox (46.31662pt too wide) detected at line 4701
 \OML/cmm/m/it/14.4 df\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 h\OT1/cmr/m/n/14.4 )
  = \OML/cmm/m/it/14.4 df\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 e[]\OT1/cmr/m/n/1
 4.4 )\OML/cmm/m/it/14.4 h[] \OT1/cmr/m/n/14.4 + \OML/cmm/m/it/14.4 df\OT1/cmr/m
@@ -1288,21 +1756,21 @@ mr/m/n/14.4 (\OML/cmm/m/it/14.4 h\OT1/cmr/m/n/14.4 )
  []
 
 
-Overfull \hbox (27.47873pt too wide) in paragraph at lines 2676--2677
-\T2A/cmr/bx/n/14.4 Определение 14.10. $[]$ \T2A/cmr/m/it/14.4 функ-ции $\OML/cm
-m/m/it/14.4 f$ \T2A/cmr/m/it/14.4 на-зы-ва-ет-ся век-тор $\OMS/cmsy/m/n/14.4 r\
-OML/cmm/m/it/14.4 f \OT1/cmr/m/n/14.4 := ([]\OML/cmm/m/it/14.4 ; :::; []\OT1/cm
-r/m/n/14.4 )$\T2A/cmr/m/it/14.4 . 
+Overfull \hbox (27.47873pt too wide) in paragraph at lines 4707--4708
+[][]\T2A/cmr/bx/n/14.4 Определение 14.10. []$[]$ \T2A/cmr/m/it/14.4 функ-ции $\
+OML/cmm/m/it/14.4 f$ \T2A/cmr/m/it/14.4 на-зы-ва-ет-ся век-тор $\OMS/cmsy/m/n/1
+4.4 r\OML/cmm/m/it/14.4 f \OT1/cmr/m/n/14.4 := ([]\OML/cmm/m/it/14.4 ; :::; []\
+OT1/cmr/m/n/14.4 )$\T2A/cmr/m/it/14.4 . 
  []
 
-[93] [94]
-Overfull \hbox (4.82944pt too wide) in paragraph at lines 2725--2726
+[150] [151]
+Overfull \hbox (4.82944pt too wide) in paragraph at lines 4756--4757
 \T2A/cmr/m/it/14.4 от-вет-ству-ю-щую ли-ней-но-му отоб-ра-же-нию $\OML/cmm/m/it
 /14.4 df$\T2A/cmr/m/it/14.4 , на-зы-ва-ют $[]$ отоб-
  []
 
 
-Overfull \hbox (18.93105pt too wide) detected at line 2748
+Overfull \hbox (18.93105pt too wide) detected at line 4779
 \OML/cmm/m/it/14.4 ^^Z \OT1/cmr/m/n/14.4 = \OML/cmm/m/it/14.4 f\OT1/cmr/m/n/14.
 4 (\OML/cmm/m/it/14.4 a\OT1/cmr/m/n/14.4 ) + [](\OML/cmm/m/it/14.4 a\OT1/cmr/m/
 n/14.4 )\OML/cmm/m/it/14.4 h[] \OT1/cmr/m/n/14.4 + \OML/cmm/m/it/14.4 ::: \OT1/
@@ -1317,29 +1785,29 @@ h\OT1/cmr/m/n/14.4 )\OMS/cmsy/m/n/14.4 jj\OML/cmm/m/it/14.4 h\OMS/cmsy/m/n/14.4
 /14.4 jj\OT1/cmr/m/n/14.4 )
  []
 
-[95]
-<img/lecture37/circle.jpg, id=359, 1284.8pt x 1168.365pt>
+[152]
+<img/lecture37/circle.jpg, id=2142, 1284.8pt x 1168.365pt>
 File: img/lecture37/circle.jpg Graphic file (type jpg)
 <use img/lecture37/circle.jpg>
-Package pdftex.def Info: img/lecture37/circle.jpg  used on input line 2760.
+Package pdftex.def Info: img/lecture37/circle.jpg  used on input line 4791.
 (pdftex.def)             Requested size: 204.85672pt x 186.2826pt.
- [96 <./img/lecture37/circle.jpg>] [97]
-Overfull \hbox (7.71286pt too wide) in paragraph at lines 2811--2812
-\T2A/cmr/bx/n/14.4 Теорема 14.21 \T2A/cmr/m/n/14.4 (Юнг)\T2A/cmr/bx/n/14.4 . \T
-2A/cmr/m/it/14.4 Пусть $\OML/cmm/m/it/14.4 f$ \T2A/cmr/m/it/14.4 - диф-фе-рен-ц
-и-ру-е-ма в окрест-но-сти точ-ки $\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 x[]; y[
-]\OT1/cmr/m/n/14.4 )$\T2A/cmr/m/it/14.4 ,
+ [153 <./img/lecture37/circle.jpg>] [154]
+Overfull \hbox (7.71286pt too wide) in paragraph at lines 4842--4843
+[][]\T2A/cmr/bx/n/14.4 Теорема 14.21 \T2A/cmr/m/n/14.4 (Юнг)\T2A/cmr/bx/n/14.4 
+. []\T2A/cmr/m/it/14.4 Пусть $\OML/cmm/m/it/14.4 f$ \T2A/cmr/m/it/14.4 - диф-фе
+-рен-ци-ру-е-ма в окрест-но-сти точ-ки $\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 x
+[]; y[]\OT1/cmr/m/n/14.4 )$\T2A/cmr/m/it/14.4 ,
  []
 
-[98] [99]
-Overfull \hbox (3.6131pt too wide) in paragraph at lines 2866--2868
+[155] [156]
+Overfull \hbox (3.6131pt too wide) in paragraph at lines 4897--4899
 \T2A/cmr/m/n/14.4 то эту квад-ра-тич-ную фор-му $\OML/cmm/m/it/14.4 d[]f \OT1/c
 mr/m/n/14.4 := [][] [](\OML/cmm/m/it/14.4 a\OT1/cmr/m/n/14.4 )\OML/cmm/m/it/14.
 4 dx[]dx[]$ \T2A/cmr/m/n/14.4 и на-зы-ва-ют $[]$
  []
 
 
-Overfull \hbox (36.81535pt too wide) detected at line 2889
+Overfull \hbox (36.81535pt too wide) detected at line 4920
 \OT1/cmr/m/n/14.4 = \OML/cmm/m/it/14.4 a\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 d
 f\OMS/cmsy/m/n/14.4 j[]\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 h\OT1/cmr/m/n/14.4
  ) + \OML/cmm/m/it/14.4 \OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 h\OT1/cmr/m/n/14
@@ -1357,8 +1825,8 @@ r/m/n/14.4 ) + (\OML/cmm/m/it/14.4 \OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 h\OT1
  jj \OT1/cmr/m/n/14.4 =
  []
 
-[100]
-Overfull \hbox (1.7976pt too wide) detected at line 2895
+[157]
+Overfull \hbox (1.7976pt too wide) detected at line 4926
 \OT1/cmr/m/n/14.4 (\OMS/cmsy/m/n/14.4 ^^C\OT1/cmr/m/n/14.4 ) = (\OML/cmm/m/it/1
 4.4 f\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 x\OT1/cmr/m/n/14.4 ) + \OML/cmm/m/it
 /14.4 o\OT1/cmr/m/n/14.4 (1))(\OML/cmm/m/it/14.4 dg\OMS/cmsy/m/n/14.4 j[]\OT1/c
@@ -1374,8 +1842,8 @@ m/n/14.4 )\OML/cmm/m/it/14.4 dg\OMS/cmsy/m/n/14.4 j[]\OT1/cmr/m/n/14.4 (\OML/cm
 m/m/it/14.4 h\OT1/cmr/m/n/14.4 )+
  []
 
-[101] [102]
-Overfull \hbox (37.16948pt too wide) detected at line 2963
+[158] [159]
+Overfull \hbox (37.16948pt too wide) detected at line 4994
 \OML/cmm/m/it/14.4 dg\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 f\OT1/cmr/m/n/14.4 )
  = []\OML/cmm/m/it/14.4 dx[] \OT1/cmr/m/n/14.4 + \OML/cmm/m/it/14.4 ::: \OT1/cm
 r/m/n/14.4 + []\OML/cmm/m/it/14.4 dx[] \OT1/cmr/m/n/14.4 = [] [] \OML/cmm/m/it/
@@ -1383,8 +1851,8 @@ r/m/n/14.4 + []\OML/cmm/m/it/14.4 dx[] \OT1/cmr/m/n/14.4 = [] [] \OML/cmm/m/it/
 m/n/14.4 =
  []
 
-[103]
-Overfull \hbox (33.79036pt too wide) in paragraph at lines 2988--2990
+[160]
+Overfull \hbox (33.79036pt too wide) in paragraph at lines 5019--5021
 \T2A/cmr/m/n/14.4 Пользуемся ли-ней-но-стью диф-фе-рен-ци-а-ла и тем, что по за
 -ме-ча-нию 14.2 $\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 df\OMS/cmsy/m/n/14.4 j[]
 \OT1/cmr/m/n/14.4 )[](\OML/cmm/m/it/14.4 \OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4
@@ -1392,7 +1860,7 @@ Overfull \hbox (33.79036pt too wide) in paragraph at lines 2988--2990
  []
 
 
-Overfull \hbox (28.43634pt too wide) detected at line 2997
+Overfull \hbox (28.43634pt too wide) detected at line 5028
 \OMS/cmsy/m/n/14.4 jj\OML/cmm/m/it/14.4 df[][][] \OT1/cmr/m/n/14.4 + \OML/cmm/m
 /it/14.4 \OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 h\OT1/cmr/m/n/14.4 )\OMS/cmsy/m
 /n/14.4 jj \U/msa/m/n/14.4 > \OMS/cmsy/m/n/14.4 jj\OML/cmm/m/it/14.4 df[][][]\O
@@ -1403,19 +1871,19 @@ MS/cmsy/m/n/14.4 jj ^^@ jj\OML/cmm/m/it/14.4 \OT1/cmr/m/n/14.4 (\OML/cmm/m/it/
 = 0
  []
 
-[104]
+[161]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 15.
-[105
+[162
 
 ]
-<img/lecture39/matrix_yakobi.jpg, id=392, 2089.8075pt x 1328.965pt>
+<img/lecture39/matrix_yakobi.jpg, id=2207, 2089.8075pt x 1328.965pt>
 File: img/lecture39/matrix_yakobi.jpg Graphic file (type jpg)
 <use img/lecture39/matrix_yakobi.jpg>
-Package pdftex.def Info: img/lecture39/matrix_yakobi.jpg  used on input line 30
-46.
+Package pdftex.def Info: img/lecture39/matrix_yakobi.jpg  used on input line 50
+77.
 (pdftex.def)             Requested size: 204.85672pt x 130.2681pt.
- [106 <./img/lecture39/matrix_yakobi.jpg>] [107] [108] [109]
-Overfull \hbox (19.52469pt too wide) in paragraph at lines 3156--3157
+ [163 <./img/lecture39/matrix_yakobi.jpg>] [164] [165] [166]
+Overfull \hbox (19.52469pt too wide) in paragraph at lines 5187--5188
 []\T2A/cmr/m/n/14.4 Для со-кра-ще-ния всех за-пи-сей бу-дем ис-поль-зо-вать обо
 -зна-че-ние $\OML/cmm/m/it/14.4 F[]\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 x; y\O
 T1/cmr/m/n/14.4 ) := [](\OML/cmm/m/it/14.4 x; y\OT1/cmr/m/n/14.4 )$\T2A/cmr/m/n
@@ -1423,52 +1891,57 @@ T1/cmr/m/n/14.4 ) := [](\OML/cmm/m/it/14.4 x; y\OT1/cmr/m/n/14.4 )$\T2A/cmr/m/n
  []
 
 
-Overfull \hbox (7.7225pt too wide) in paragraph at lines 3174--3175
+Overfull \hbox (7.7225pt too wide) in paragraph at lines 5205--5206
 \T2A/cmr/m/it/14.4 диф-фе-рен-ци-ру-е-мо в неко-то-рой окрест-но-сти $\OML/cmm/
 m/it/14.4 U$ \T2A/cmr/m/it/14.4 точ-ки $\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 a
 ; b\OT1/cmr/m/n/14.4 ) = (\OML/cmm/m/it/14.4 a[]; :::; a[]; b[]; :::; b[]\OT1/c
 mr/m/n/14.4 ) \OMS/cmsy/m/n/14.4 2
  []
 
-[110] [111] (main.aux) ) 
+[167] [168] (main.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: DCE8ED8AC487837A0FCCF0031B605919;45180.
+ ) 
 Here is how much of TeX's memory you used:
- 7344 strings out of 476331
- 121058 string characters out of 5786349
- 1872660 words of memory out of 5000000
- 27607 multiletter control sequences out of 15000+600000
- 535934 words of font info for 86 fonts, out of 8000000 for 9000
+ 15757 strings out of 476331
+ 251700 string characters out of 5786349
+ 1873660 words of memory out of 5000000
+ 34949 multiletter control sequences out of 15000+600000
+ 538679 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,11n,80p,2019b,442s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Р•РіРѕСЂ\AppData\Local\MiKTeX\fonts/pk/ljfou
-r/lh/lh-t2a/dpi600\lati1000.pk> <C:\Users\Р•РіРѕСЂ\AppData\Local\MiKTeX\fonts/p
-k/ljfour/lh/lh-t2a/dpi600\larm1000.pk> <C:\Users\Р•РіРѕСЂ\AppData\Local\MiKTeX\
-fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1440.pk> <C:\Users\Р•РіРѕСЂ\AppData\Loca
-l\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labi1440.pk> <C:\Users\Р•РіРѕСЂ\AppDa
-ta\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lati1440.pk> <C:\Users\Р•РіРѕС
-Ђ\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.pk> <C:\Users\
-Р•РіРѕСЂ\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1728.pk> <C:
-\Users\Р•РіРѕСЂ\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1200.
-pk> <C:\Users\Р•РіРѕСЂ\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\la
-bx1200.pk> <C:\Users\Р•РіРѕСЂ\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dp
-i600\labx2488.pk> <C:\Users\Р•РіРѕСЂ\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh
--t2a/dpi600\larm1440.pk> <C:\Users\Р•РіРѕСЂ\AppData\Local\MiKTeX\fonts/pk/ljfou
-r/lh/lh-t2a/dpi600\larm2074.pk><C:/Users/Р•РіРѕСЂ/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Р•РіРѕСЂ/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Р•РіРѕСЂ/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Р•
-РіРѕСЂ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><
+ 80i,23n,80p,2019b,677s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Р•РіРѕСЂ\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lat
+i1000.pk> <C:\Users\Р•РіРѕСЂ\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi
+600\larm1000.pk> <C:\Users\Р•РіРѕСЂ\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-
+t2a/dpi600\labi1440.pk> <C:\Users\Р•РіРѕСЂ\AppData\Local\MiKTeX\fonts/pk/ljfour
+/lh/lh-t2a/dpi600\lati1440.pk> <C:\Users\Р•РіРѕСЂ\AppData\Local\MiKTeX\fonts/pk
+/ljfour/lh/lh-t2a/dpi600\labx1440.pk> <C:\Users\Р•РіРѕСЂ\AppData\Local\MiKTeX\f
+onts/pk/ljfour/jknappen/ec/dpi600\tcrm1440.pk> <C:\Users\Р•РіРѕСЂ\AppData\Local
+\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1728.pk> <C:\Users\Р•РіРѕСЂ\AppDat
+a\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1200.pk> <C:\Users\Р•РіРѕСЂ
+\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1200.pk> <C:\Users\Р
+•РіРѕСЂ\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx2488.pk> <C:\
+Users\Р•РіРѕСЂ\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1440.p
+k> <C:\Users\Р•РіРѕСЂ\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lar
+m2074.pk><C:/Users/Р•РіРѕСЂ/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmex10.pfb><C:/Users/Р•РіРѕСЂ/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Р•РіРѕСЂ/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Р•РіРѕСЂ/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Р•РіРѕСЂ/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Р•
+РіРѕСЂ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><
 C:/Users/Р•РіРѕСЂ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmr10.pfb><C:/Users/Р•РіРѕСЂ/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmr12.pfb><C:/Users/Р•РіРѕСЂ/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmr7.pfb><C:/Users/Р•РіРѕСЂ/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Р•РіРѕСЂ/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Р•РіРѕСЂ/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/User
-s/Р•РіРѕСЂ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/ms
-bm10.pfb>
-Output written on main.pdf (112 pages, 19336664 bytes).
+cmr7.pfb><C:/Users/Р•РіРѕСЂ/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb><C:/Users/Р•РіРѕСЂ/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Р•РіРѕСЂ/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Р•РіРѕСЂ/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (169 pages, 28632243 bytes).
 PDF statistics:
- 1017 PDF objects out of 1200 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 131 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3091 PDF objects out of 3580 (max. 8388607)
+ 936 named destinations out of 1000 (max. 500000)
+ 1610 words of extra memory for PDF output out of 10000 (max. 10000000)
 

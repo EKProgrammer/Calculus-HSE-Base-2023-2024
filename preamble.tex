@@ -11,6 +11,9 @@
 
 \usepackage{xr, amsmath, amsfonts, amssymb, amsthm, mathtools, mathtext, physics}
 
+\usepackage[unicode, pdftex, colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref}
+\usepackage{multirow}
+
 \newtheorem{theorem}{Теорема}[chapter]
 \newtheorem{lemma}[theorem]{Лемма}
 \newtheorem{mention}[theorem]{Замечание}
@@ -29,15 +32,14 @@
 \usepackage{titleps}
 \newpagestyle{main}{
 	\setheadrule{0.4pt}
-	\sethead{НИУ ВШЭ}{}{Корчагин Егор}
+	\sethead{ПМИ ВШЭ}{}{Конспект лекций по математическому анализу 2023/2024}
 	\setfootrule{0.4pt}
-	\setfoot{Конспект лекций по математическому анализу 2023/2024}{}{\thepage}
+	\setfoot{}{\thepage}{}
 }
 \pagestyle{main}
 
 \usepackage{soulutf8}
 
-\newcommand{\deriv}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\R}{\mathbb R}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\N}{\mathbb N}
@@ -50,8 +52,13 @@
 
 \DeclareMathOperator{\Kerr}{Ker}
 \DeclareMathOperator{\Imm}{Im}
+\DeclareMathOperator*\lowlim{\underline{lim}}
+\DeclareMathOperator*\uplim{\overline{lim}}
 
 \DeclareMathOperator*{\argmax}{argmax}
 
+\newcommand{\deriv}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\percent}{\mathbin{\%}}
 \newcommand{\symdiff}{\mathbin{\triangle}}
+
+

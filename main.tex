@@ -6,48 +6,2081 @@
 	\maketitle{}
 	
 	\tableofcontents{}
-	
+
 	\large
 	
 	\chapter{Вещественные числа}
 	
 	\section*{Лекция 1: Множества, функции, вещественные числа}
 	
+	\section{Кванторы и обозначения}
+	
+	\begin{itemize}
+		\item Квантор всеобщности - $\forall$.
+		\item Квантор существования - $\exists$.
+		\item Импликация (логическое следствие) - $\Rightarrow$.
+		\item Равносильность — $\Leftrightarrow$.
+		\item Выполнено - $\rightarrow$ (будем использовать редко).
+	\end{itemize}
+	
+	\section{Парадокс Рассела}
+	
+	Из лекций по дискретной математике вы знаете, что такое \textbf{высказывание}. Высказывание всегда либо истинно, либо ложно.
+	
+	\begin{example}
+		$a$ = «любую карту можно покрасить в четыре цвета так, чтобы соседние участки были различных цветов» - высказывание.
+	\end{example}
+	
+	\begin{example}
+		«Данное высказывание ложно» - это не высказывание.
+	\end{example}
+	
+	\begin{itemize}
+		\item Предположим, что для любого свойства $P(x)$ можно выделить множество, элементы которого этому свойству удовлетворяют
+		\[ \exists y \forall x (x \in y \Leftrightarrow P(x)). \]
+		(для всякого условия $P(x)$ существует множество $y$, состоящее из тех $x$, которые удовлетворяют условию $P(x)$)
+		\item Пусть $P(x)$ есть $x \not\in x.$
+		\item Тогда найдётся множество $y$ такое, что
+		\[ \forall x (x \in y \Leftrightarrow x \not\in x). \]
+		\item Так как это верно для любого $x$, то верно и для $x = y$. То есть
+		\[ y \in y \Leftrightarrow y \not\in y - \text{\underline{противоречие}}. \]
+	\end{itemize}
+	
+	\underline{Альтернативное объяснение парадокса Рассела}
+	
+	Если разрешить содержать в множестве само же множество как  элемент (т. е. $X \in X$), то возникает противоречие называемое парадоксом Рассела.
+	
+	Рассмотрим множество $M = \{X: X \not\in X\}$, элементами которого являются все множества такие, что эти множества не содержат себя в качестве элемента.
+	
+	\begin{enumerate}
+		\item Пусть $M \not\in M \Rightarrow M \in M$ (потому что $M$ состоит их всех множеств, не содержащих себя в качестве элемента).
+		\item Пусть $M \in M \Rightarrow M \not\in M$ (потому что все элементы множества $M$ удовлетворяют условию $X \not\in X$)
+	\end{enumerate}
+	
+	Получаем противоречие $M \in M \Leftrightarrow M \not\in M \Rightarrow$ все такие конструкции как $M$ не должны являться множествами. $\newline$
+	
+    Выход из положения - система аксиом Цермело - Френкеля (ZF) или системой Цермело - Френкеля с аксиомой выбора (ZFC).
+    
+	Однако, если ZFC непротиворечива, то её непротиворечивость не может быть доказана средствами ZFC, согласно второй теореме Гёделя.
+	
+	\section{Декартово произведение множеств}
+	
+	\begin{definition}
+		Декартовым произведением множеств $A$ и $B$ называют множество, состоящее из всех упорядоченных пар элементов из $A$ и $B$
+		\[ A \times B = \{(a, b) \text{ } | \text{ } a \in A, b \in B\}. \]
+		Замечание: $(a, b) \neq (b, a)$.
+	\end{definition}
+	
+	\begin{mention}
+		Если рассматривается декартово произведение одного и того же множества $A$, то вместо $A \times A$ используется более короткое обозначение $A^2$.
+	\end{mention}
+	
+	\begin{example}
+		Множество точек на плоскости $\R^2$, узлы решётки $\Z^2$, пространство $\R^3$. Ещё пример: $A = \{a, 1, \circ\}, B = \{b, \circ\}$
+		\[ A \times B = \{ (a, b), (a, \circ), (1, b), (1, \circ), (\circ, b), (\circ, \circ) \} \]
+	\end{example}
+	
+	\section{Функция}
+	
+	\begin{definition}
+		Функцией $f$ из множества $X$ в множество $Y$ называется такое подмножество декартова произведения $X \times Y$, что
+		\[ \forall x \in X \text{ } \exists! \text{ } y \in Y : (x, y) \in f. \]
+		Будем обозначать соответствующий $y$ через $f(x)$.
+	\end{definition}
+	
+	\begin{center}
+		\includegraphics[width=0.2\textwidth]{img/lecture1/function}
+	\end{center}
+	
+	\begin{definition}
+		Функция $f$ называется \underline{инъекцией}, если
+		\[ \forall x_1, x_2 \in X : x_1 \neq x_2 \Rightarrow f(x_1) \neq f(x_2). \]
+	\end{definition}
+	
+	\begin{center}
+		\includegraphics[width=0.2\textwidth]{img/lecture1/injection1}
+		\includegraphics[width=0.2\textwidth]{img/lecture1/injection2}
+	\end{center}
+	
+	\begin{definition}
+		Функция $f$ называется \underline{сюръекцией}, если
+		\[ \forall y \in Y \text{ } \exists x \in X : f(x) = y. \]
+	\end{definition}
+	
+	\begin{center}
+		\includegraphics[width=0.2\textwidth]{img/lecture1/surjection}
+	\end{center}
+	
+	\begin{definition}
+		Функция называется \underline{биекцией}, если она одновременно является инъекцией и сюръекция.
+	\end{definition}
+		
+	\begin{center}
+		\includegraphics[width=0.2\textwidth]{img/lecture1/bijection}
+	\end{center}
+	
+	\begin{sentence}
+		Если $f$ - биекция, то существует обратная функция $f^{-1}$, для которой $f^{-1}(y) = x \Leftrightarrow f(x) = y.$
+	\end{sentence}
+	
+	\begin{proof}
+		$f$ - биекция $\Rightarrow f$ - инъекция, $x_1 \neq x_2 \Rightarrow f(x_1) \neq f(x_2)$
+		
+		$f$ - сюръекция $\Rightarrow \forall y$ $\exists x: f(x) = y$
+		
+		\begin{center}
+		    \includegraphics[width=0.3\textwidth]{img/lecture1/proof_bijection}
+		\end{center}
+		(Обозначение: если $f(x) = y$, то $f^{-1}(y) = x$)
+		
+		Определение функции для наглядности: 
+		\[ \forall x \in X \text{ } \exists! y \in Y : f(x) = y \]
+		\[ \forall y \in Y \text{ } \exists \text{(сюръекция)} ! \text{(инъекция)} \text{ } x \in X : f(x) = y \Leftrightarrow \forall y \in Y \text{ } \exists! x \in X : f^{-1}(y) = x. \]
+	\end{proof}
+	
+	\section{Последовательность}
+	
+	\begin{definition}
+		Последовательностью элементов из множества $X$ называется функция $f: \N \rightarrow X$.
+	\end{definition}
+	
+	\begin{example}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			$x_1$ & $x_2$ & $x_3$ & $x_4$ & $x_5$ & ... \\
+			\hline
+			$2$ & $4$ & $\pi$ & $12$ & $-1$ & ... \\
+			\hline
+		\end{tabular}
+		
+		\begin{center}
+			\includegraphics[width=0.3\textwidth]{img/lecture1/sequence}
+		\end{center}
+	\end{example}
+	
+	\section{Вещественные числа I: аксиомы}
+	
+	\begin{definition}
+		Множеством действительных (вещественных) чисел $\R$ называется множество, на котором определены операции сложения и умножения и отношение порядка $\leqslant$, удовлетворяющие следующим 16 аксиомам, и которое состоит
+		более чем из одного элемента.
+	\end{definition}
+	
+	\underline{Аксиомы сложения}
+	
+	1. $\forall a, b \in \R \rightarrow a + b = b + a;$
+	
+	2. $\forall a, b, c \in \R \rightarrow (a + b) + c = a + (b + c);$
+	
+	3. $\exists 0 \in \R : \forall a \in \R \rightarrow a + 0 = a;$
+	
+	4. $\forall a \in \R$ $\exists -a \in \R : a + (-a) = 0.$
+	
+	\underline{Аксиомы умножения}
+	
+	5. $\forall a, b \in \R \rightarrow a \cdot b = b \cdot a;$
+	
+	6. $\forall a, b, c \in \R \rightarrow (a \cdot b) \cdot c = a \cdot (b \cdot c);$
+	
+	7. $\exists 1 \in \R : \forall a \in \R \rightarrow a \cdot 1 = a;$
+	
+	8. $\forall a \in \R \setminus \{0\}$ $\exists \frac{1}{a} \in \R : a \cdot \frac{1}{a} = 1.$
+	
+	\underline{Аксиома связи сложения и умножения}
+	
+	9. $\forall a, b, c \in \R \rightarrow a \cdot (b + c) = a \cdot b + a \cdot c.$
+	
+	\begin{example}
+	    Докажите, что если $a, b \in \R$ и $b + a = a$, то $b = 0$.
+	\end{example}
+	
+	\begin{proof}
+		$b = 0 + b = a + (-a) + b = a + b + (-a) = a + (-a) = 0$
+	\end{proof}
+	
+	\underline{Аксиомы отношения порядка}
+	
+	10. $\forall a \in \R \rightarrow a \leqslant a;$
+	
+	11. $\forall a, b \in \R \rightarrow a \leqslant b$ или $b \leqslant a;$
+	
+	12. $\forall a, b \in \R : (a \leqslant b$ и $b \leqslant a) \rightarrow a = b;$
+	
+	13. $\forall a, b, c \in \R : (a \leqslant b$ и $b \leqslant c) \rightarrow a \leqslant c.$
+	
+	\underline{Связь отношения порядка и сложения}
+	
+	14. $\forall a, b, c \in \R : a \leqslant b \rightarrow a + c \leqslant b + c.$
+	
+	\underline{Связь отношения порядка и умножения}
+	
+	15. $\forall a, b, c \in \R : (a \leqslant b$ и $0 \leqslant c) \rightarrow a \cdot c \leqslant b \cdot c.$
+	
+	Аксиомы 1-15 известны Вам из школы как свойства действительных чисел. С другой стороны, эти аксиомы определяют алгебраические структуры. В частности, аксиомы 1-4 означают, что $\R$ является абелевой (т.е. коммутативной или перестановочной) группой по сложению. Аксиомы 5-8 говорят, что $\R \setminus \{0\}$ является абелевой группой по умножению. Аксиомы 1-9 соответствуют определению поля, а аксиомы 1-15 - определению упорядоченного поля.
+	
+	\underline{Аксиома непрерывности}
+	
+	16. Если $A, B \subset \R$ и множество $A$ лежит слева от множества $B$ (т.е. $\forall a \in A$ $\forall b \in B \rightarrow a \leqslant b$), то $\exists c \in \R : \forall a \in A$ $\forall b \in B \rightarrow a \leqslant c \leqslant b.$
+	
+	\section{Вещественные числа II: сечения Дедекинда}
+	
+	Рациональные числа: $\Q = \{\frac{p}{q} \text{ } | \text{ } p \in \Z, q \in \N\}$
+	
+	\begin{definition}
+		Дедекиндово сечение - это упорядоченная пара непустых непересекающихся подмножеств $A$ и $B$ в множестве рациональных чисел $\Q$, обладающих следующими свойствами:
+		\begin{itemize}
+			\item $A \cup B = \Q, A \cap B = \varnothing;$
+			\item если $a \in A$ и $b \in B$, то $a < b;$
+			\item в $A$ нет наибольшего элемента.
+		\end{itemize}
+	\end{definition}
+	
+	\begin{definition}
+		Вещественное число — это дедекиндово сечение. Для удобства в определении будем использовать только множество $A$ (потому что, имея множество $A$, можно достроить множество $B$).
+	\end{definition}
+	
+	\underline{Вопрос.} Чем отличаются иррациональные числа от рациональных?
+	
+	\underline{Ответ.} В том, что если в $B$ есть минимальный элемент, то этот минимальный элемент - это рациональное число, иначе минимальный элемент - иррациональное число, значит $B$ не имеет минимального элемента.
+	
+	\[ A = \{x \in \Q \text{ } | \text{ } x^2 < 2\} \cup \{x \in \Q \text{ } | \text{ } x < 0\} \]
+	
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{img/lecture1/sqrt_of_two}
+	\end{center}
+	
+	\begin{itemize}
+		\item На множестве сечений можно определить определить арифметические операции и порядок. 
+		\item Например, сложение определяется следующим образом:
+	     \[ A + B := \{a + b : a \in A \wedge b  \in B\}. \]
+	     \begin{center}
+	     	\includegraphics[width=0.4\textwidth]{img/lecture1/addition}
+	     \end{center}
+	    \item Умножение устроено несколько сложнее:
+		\begin{itemize}
+		    \item если $A, B \geqslant 0$, то
+		    \[ A \times B := \{a \times b : a \geqslant 0 \wedge a \in A \wedge b  \geqslant 0 \wedge b \in B\} \cup \{x \in Q : x < 0\} \]
+		    \item если $A$ или $B$ отрицательны, используем тождества 
+		    \[ A \times B = -(A \times -B) = -(-A \times B) = (-A \times -B) \] чтобы преобразовать $A$ и/или $B$ в положительные числа, а затем использовать пункт выше.
+		\end{itemize}
+		\item Сечения Дедекинда удовлетворяют аксиомам вещественных чисел.
+	\end{itemize}
+	
+	Проверка аксиом: \href{http://ikfia.ysn.ru/wp-content/uploads/2018/01/Landau1947ru.pdf}{Эдмунд Ландау. Основы анализа, 1947.}
+	
+	\section{Вещественные числа III: бесконечные десятичные последовательности}
+	
+	\begin{definition}
+		Вещественное число можно определить как бесконечную
+		десятичную дробь:
+		\[ \pm a_0, a_1 a_2 ... a_n ... \]		
+		где $a_0$ — целое неотрицательное число, $a_1$, $a_2$, ... $a_n$, ... - последовательность десятичных знаков.
+	\end{definition}
+	
+	\begin{itemize}
+		\item Сравнить бесконечные десятичные дроби можно поразрядно.
+		\item Как сложить два вещественных числа?
+	\end{itemize}
+	
+	\href{https://timofey.pro/static/pdfdocs/AI_004_Ter_Krikorov_2001_672s.pdf}{Тер-Крикоров А. М., Шабунин М. И. Курс математического анализа.}
+	
+    Последовательность из бесконечного количества 9 в этом определении запрещаем: $0,(9) = 1$.
+    
+    $0,(9) = x$ $| \cdot  10 \Rightarrow 9,(9) = 10x$ $| -x \Rightarrow 9 = 9x$ $| \cdot \frac{1}{9} \Rightarrow x = 1$
+    
+    Здесь применяем следующие аксиомы:
+    
+    \begin{enumerate}
+    	\item $a = b \rightarrow \forall c$ $a + c = b + c$
+    	\item $a = b \rightarrow \forall c$ $a \cdot c = b \cdot c$
+    \end{enumerate}
+	
+	\begin{theorem}
+		При таком определении для вещественных чисел выполнена
+		аксиома непрерывности.
+	\end{theorem}
+	
+	\newpage
+
 	\section*{Лекция 2: Множества, функции, вещественные числа}
+	
+	\begin{proof}[Доказательство теоремы 1.18]
+		Аксиома непрерывности:
+		
+		Если $A \neq \varnothing$ и $B \neq \varnothing$ таковы, что $\forall a \in A$ и $\forall b \in B \rightarrow a \leqslant b,$ то $\exists c: \forall a \in A, \forall b \in B \rightarrow a \leqslant c \leqslant b.$
+		
+		$b := \pm b_0, b_1 b_2 b_3 ... \in B$
+		
+		$\exists a \in A: \forall b \in B$ $a \leqslant b$
+		
+		Множество целых частей элементов из $B$ ограничено снизу. Возьмём в $B$ все числа, которые начинаются с $b_0$, ...
+		
+		Возьмём минимальное $b_1$ для тех $b$, которые начинаются с $b_0, ...$
+		
+		Возьмём минимальное $b_2$ для тех $b$, которые начинаются с $b_0, b_1 ...$
+		
+		$\dots$
+		
+		\begin{tabular}{cccccc}
+			& $b_0,$ & $b_1$ & $b_2$ & ... \\
+			& || & || & || &  \\
+			$c =$ & $c_0,$ & $c_1$ & $c_2$ &  \\
+		\end{tabular}
+		
+		Докажем следующие утверждения:
+		\begin{enumerate}
+			\item $\forall b \in B \rightarrow c \leqslant b$
+			
+			Пусть $\exists b \in B,$ что $b < c$
+			
+			\begin{center}
+				\begin{tabular}{r}
+					$b_0, b_1 b_2 \dots b_k b_{k + 1}$ \\
+					$\wedge$ $\text{ }$ \\
+					$c_0, c_1 c_2 \dots c_k c_{k + 1}$ \\
+				\end{tabular}
+			\end{center}
+			
+			Получаем противоречие, т. к. в качестве $c_{k + 1}$ мы берём минимальный $b_{k + 1}$ среди тех, которые начинаются с $b_0, b_1 b_2 ... b_k ...$
+			
+			\item $\forall a \in A \rightarrow c \geqslant a$
+			
+			\begin{center}
+				\begin{tabular}{ccccccc}
+					$a =$ & $a_0,$ & $a_1$ & $\dots$ & $a_k$ & $a_{k + 1}$ & $\dots$ \\
+					& || & || & & || & $\vee$ & \\
+					$c =$ & $c_0,$ & $c_1$ & $\dots$ & $c_k$ & $c_{k + 1}$ & $\dots$ \\
+					& || & || & & || & || & \\
+					$b =$ & $b_0,$ & $b_1$ & $\dots$ & $b_k$ & $b_{k + 1}$ & $\dots$ \\
+				\end{tabular}
+			\end{center}
+			
+			Тогда $b < a$ - противоречие.	
+		\end{enumerate}
+	\end{proof}
+	
+	\section{Вещественная прямая}
+	
+	Множество вещественных чисел также представляют в виде вещественной прямой.
+	
+	\begin{definition}
+		\begin{itemize}
+			\item интервал: $(a, b) = \{x \in \R : a < x < b\};$
+			\item отрезок: $[a, b] = \{x \in \R : a \leqslant x \leqslant b\};$
+			\item полуинтервалы: $[a, b) = \{x \in \R : a \leqslant x < b\}, (a, b] = \{x \in \R : a < x \leqslant b\};$
+			\item лучи:
+			\[ [a, +\infty) = \{x \in \R : a \leqslant x\}, (a, +\infty) = \{x \in \R : a < x\}, \]
+			\[ (-\infty, a] = \{x \in \R : x \leqslant a\}, (-\infty, a) = \{x \in \R : x < a\}; \]
+			\item точка: $\{a\};$
+			\item числовая прямая: $(-\infty, +\infty) = \R.$
+		\end{itemize}
+	\end{definition}
+	
+	\section{Верхняя и нижняя грани}
+	
+	\begin{definition}	
+		\begin{enumerate}
+			\item Число $M \in \R$ называется верхней гранью множества $A \subset \R$, если число $M$ лежит справа от множества $A$, т. е. $\forall a \in A \rightarrow a \leqslant M.$
+			\item Множество $A \subset \R$ называется ограниченным сверху, если существует (конечная) верхняя грань этого множества: $\exists M \in \R : \forall a \in A \rightarrow a \leqslant M.$
+			\item Число $m \in \R$ называется нижней гранью множества $A \subset \R$, если число $m$ лежит слева от множества $A$, т. е. $\forall a \in A \rightarrow a \geqslant m.$
+			\item Множество $A \subset \R$ называется ограниченным снизу, если существует (конечная) нижняя грань этого множества: $\exists m \in \R : \forall a \in A \rightarrow a \geqslant m.$
+			\item Множество $A$ называется ограниченным, если $A$ ограничено сверху и ограничено снизу.
+		\end{enumerate}
+	\end{definition}
+	
+	\section{Максимальный и минимальный элементы}
+	
+	\begin{definition}
+		Число $M$ называется максимальным элементом множества $A \subset \R$ (пишут $M = \max{A}$), если
+		\begin{itemize}
+			\item $M \in A,$
+			\item $M$ является верхней гранью $A$.
+		\end{itemize}
+		Число m называется минимальным элементом множества $A \subset \R$ (пишут $m = \min{A}$), если
+		\begin{itemize}
+			\item $m \in A,$
+			\item $m$ является нижней гранью $A$.
+		\end{itemize}
+	\end{definition}
+	
+	\section{Супремум}
+	
+	\begin{definition}
+		Число $M \in \R$ называется точной верхней гранью или супремумом множества $A \subset \R$ (пишут: $M = \sup{A}$), если
+		\begin{enumerate}
+			\item $M$ является верхней гранью множества $A$ и
+			\item не существует числа, меньшего, чем $M$, и являющегося верхней гранью множества $A$,
+		\end{enumerate}
+		то есть
+		\begin{enumerate}
+			\item $\forall a \in A \rightarrow a \leqslant M$ и
+			\item $\neg (\exists M' \in \R : M' < M$ и $\forall a \in A \rightarrow a \leqslant M').$
+		\end{enumerate}
+	\end{definition}
+	
+	\begin{mention}
+		Пункт (2) определения супремума можно записать в виде
+		\[ \forall M' < M \rightarrow \neg (\forall a \in A \rightarrow a \leqslant M')\]		
+		или
+		\[ \forall M' < M \text{ } \exists a \in A : M' < a. \]
+	\end{mention}
+	
+	\section{Инфимум}
+	
+	\begin{definition}
+		Число $m \in \R$ называется точной нижней гранью или инфимумом множества $A \subset \R$ (пишут: $m = \inf{A}$), если $m$	является максимальной нижней гранью $A$.
+	\end{definition}
+	
+	\begin{theorem}
+		Пусть множество $A \subset \R$ ограничено сверху. Тогда существует
+		единственное число $M \in \R$, которое является точной верхней гранью (супремум) множества $A$.
+	\end{theorem}
+	
+	Аналогичное утверждение верно и для инфимума.
+	
+	\begin{proof}
+		$A \subset \R$ - ограничено сверху $\Rightarrow \exists M \in \R : \forall a \in A \rightarrow a \leqslant M$.
+		
+		Пусть $B$ множество верхних граней $A$.
+		
+		Тогда $B \neq \varnothing$ $(M \in B)$.
+		
+		$\forall a \in A$ и $\forall b \in B \rightarrow a \leqslant b \Rightarrow$ по аксиоме непрерывности $\exists c \in \R : \forall a \in A, \forall b \in B$ $a \leqslant c \leqslant b$.
+		
+		Докажем, что $c = \sup{A}$.
+		\begin{enumerate}
+			\item $c \in B$.
+			
+			$\forall a \in A \rightarrow a \leqslant c \Rightarrow c \in B$
+			
+			\item $c$ - минимальная верхняя грань.
+			
+			Пусть $\exists b \in B : b < c$ - противоречит построению $c$ (аксиома непрерывности).
+		\end{enumerate}
+	\end{proof}
+	
+	\newpage
 	
 	\chapter{Предел последовательности}
 	
 	\section*{Лекция 3: Предел числовой последовательности}
 	
+	\section{Числовая последовательность}
+	
+	\begin{definition}
+		Числовой последовательностью $\{a_n\}$ называется функция $a : \N \rightarrow \R$, где $a(n) = a_n$ для любого $n \in \N$. Элемент
+		последовательности - это пара $(n, a_n)$, где $n$ - номер элемента
+		последовательности, а $a_n$ - значение элемента последовательности.
+	\end{definition}
+	
+	\section{Предел последовательности}
+	
+	\begin{definition}
+		Пусть заданы числа $a, \epsilon \in \R, \epsilon > 0$. Интервал  $B_{\epsilon}(a) = (a - \epsilon, a + \epsilon)$ называется $\epsilon$-окрестностью числа $a$.
+	\end{definition}
+	
+	\begin{definition}
+		Число $a \in \R$ называется пределом последовательности $\{a_n\}$ (пишут $a = \lim_{n \to \infty} a_n$ или $a_n \to a$ при $n \to \infty$), если
+		\[ \forall \epsilon > 0 \text{ } \exists N : \forall n \geqslant N \rightarrow a_n \in B_{\epsilon}(a), \]
+		т. е.
+		\[ \forall \epsilon > 0 \text{ } \exists N : \forall n \geqslant N \rightarrow |a_n - a| < \epsilon \]
+		(здесь и далее в аналогичных выражениях, если не оговорено противное, мы подразумеваем, что $n, N$ - натуральные числа).
+	\end{definition}
+	
+	\begin{example}
+		Последовательность $a_n = \frac{1}{n}$ сходится к числу $a = 0$.
+	\end{example}
+	\[ \forall \epsilon > 0 \text{ } \exists N : \forall n \geqslant N \rightarrow |a_n - a| < \epsilon \]
+	\[ a = 0, \text{ } |a_n - a| = \bigg|\frac{1}{n} - 0\bigg| = \frac{1}{n} < \epsilon \]
+	При этом $n = \big[\frac{1}{\epsilon}\big] + 1$ неравенство выполнено
+	\[ \forall \epsilon > 0 \text{ } \exists N(\epsilon) = \bigg[\frac{1}{\epsilon}\bigg] + 1 : \forall n \geqslant N(\epsilon) \text{ } |a_n - a| = \frac{1}{n} < \epsilon. \]
+	
+	\begin{example}
+		Последовательность $a_n = (-1)^n$ не имеет предела.
+	\end{example}
+	От противного. Пусть
+	\[ \exists a \in \R : \forall \epsilon > 0 \text{ } \exists N : \forall n \geqslant N \text{ } |a_n - a| < \epsilon \]
+	Для $\epsilon = \frac{1}{2}$ $\exists N: \forall n \geqslant N$ $|a_n - a| < \frac{1}{2}$
+	\[ 2 = |a_n - a_{n + 1}| = |a_n - a + a - a_{n + 1}| \leqslant |a_n - a| + |a - a_{n + 1}| (\text{неравенство треугольника}) < \]
+	\[ < \frac{1}{2} + \frac{1}{2} = 1 \Rightarrow 2 < 1 - \text{противоречие}. \]
+	
+	\begin{mention}
+		Пусть $\alpha > 0$ - фиксированное число. Тогда свойство
+		\[ \forall \epsilon > 0 \text{ } \exists N(\epsilon) \in \N : \forall n > N(\epsilon) \text{ } |a_n - a| \leqslant \alpha \epsilon \]
+		равносильно тому, что $\lim_{n \to \infty} a_n = a.$
+	\end{mention}
+	
+	\begin{proof}
+		\begin{itemize}
+			\item[$\Leftarrow$] $\forall \epsilon' > 0$ $\exists N_1 : \forall n \geqslant N_1$ $|a_n - a| < \epsilon'$ (определение предела)
+			
+			$\epsilon' = \alpha \epsilon$
+			
+			Для $\epsilon'$ $\exists N_1: \forall n \geqslant N_1$ $|a_n - a| < \epsilon' = \alpha \epsilon$
+			\item[$\Rightarrow$] $\forall \epsilon > 0$ $\exists N: \forall n \geqslant N$ $|a_n - a| \leqslant \epsilon \alpha$
+			
+			Пусть $\epsilon = \frac{\epsilon'}{2 \alpha}$. Тогда $|a_n - a| \leqslant \epsilon \alpha = \frac{\epsilon'}{2 \alpha} \cdot \alpha = \frac{\epsilon'}{2}$.
+			
+			\[ \forall \epsilon' > 0 \text{ } \exists N_1 = N\bigg(\frac{\epsilon'}{2 \alpha}\bigg) + 1: \forall n > N_1 \text{ } |a_n - a| \leqslant \frac{\epsilon'}{2} < \epsilon' \]
+		\end{itemize}
+	\end{proof}
+	
+	\section{Единственность предела}
+	
+	\begin{sentence}
+		Пусть $\lim_{n \to \infty} a_n = a$ и $\lim_{n \to \infty} a_n = b$, тогда $a = b$.
+	\end{sentence}
+	
+	\begin{proof}
+		\begin{enumerate}
+			\item $\forall \epsilon > 0$ $\exists N_1: \forall n \geqslant N_1$ $|a_n - a| < \epsilon$
+			\item $\forall \epsilon > 0$ $\exists N_2: \forall n \geqslant N_2$ $|a_n - b| < \epsilon$
+		\end{enumerate}
+		Пусть $a \neq b, |a - b| = \epsilon_0 > 0$.
+		
+		Возьмём такие $N_1$ и $N_2$, что $|a_n - a| < \frac{\epsilon_0}{2}$ и $|a_n - b| < \frac{\epsilon_0}{2}$.
+		
+		Тогда $\forall n \geqslant \max{(N_1, N_2)}$
+		\[ \epsilon_0 = |a - b| = |a - a_n + a_n - b| \leqslant |a - a_n| + |a_n - b| < \frac{\epsilon_0}{2} + \frac{\epsilon_0}{2} = \epsilon_0 \Rightarrow \epsilon_0 < \epsilon_0 - \]
+		противоречие.
+	\end{proof}
+	
+	\section{Ограниченная последовательность}
+	
+	\begin{definition}
+		Последовательность $\{a_n\}^{\infty}_{n = 1}$ называется \textbf{ограниченной}, если существуют такие числа $C, c \in \R,$ что $c \leqslant a_n \leqslant C$ для каждого $n \in \N$.
+	\end{definition}
+	
+	\begin{mention}
+		\begin{enumerate}
+			\item Последовательность ограничена сверху, если
+			
+			$\exists C : \forall n$ $a_n \leqslant C$.
+			\item Последовательность ограничена снизу, если $\exists c : \forall n$ $a_n \geqslant c$.
+		\end{enumerate}
+	\end{mention}
+	
+	\begin{sentence}
+		Сходящаяся последовательность ограничена.
+	\end{sentence}
+	
+	\begin{proof}
+		Пусть есть последовательность $\{a_n\}^{\infty}_{n = 1}, \lim_{n \to \infty} a_n = a$.
+		
+		$\forall \epsilon > 0$ $\exists N: \forall n \geqslant N$ $|a_n - a| < \epsilon$
+		
+		$\exists N: \forall n \geqslant N$ $|a_n - a| < 1 \Rightarrow$ по неравенству треугольника $|a_n| - |a| \leqslant |a_n - a| < 1 \Rightarrow |a_n| < |a| + 1$
+		
+		$\forall n$ $|a_n| \leqslant \max\{|a_1|, |a_2|, ..., |a_N|, |a| + 1\} \Rightarrow \forall n$ $c \leqslant a_n \leqslant C,$ где
+		
+		$c = -\max\{|a_1|, |a_2|, ..., |a_N|, |a| + 1\}, C = \max\{|a_1|, |a_2|, ..., |a_N|, |a| + 1\}.$
+	\end{proof}
+	
+	\begin{lemma}[Об отделимости]
+		Если $a_n \rightarrow a$ и $a \neq 0$, то найдется номер $N \in \N$, для которого $|a_n| > \frac{|a|}{2} > 0$ при $n > N$.
+	\end{lemma}
+	
+	\begin{proof}
+		$a_n \to a \Rightarrow \forall \epsilon > 0$ $\exists N: \forall n > N$ $|a_n - a| < \epsilon$
+		
+		$\epsilon = \frac{|a|}{2} > 0$ $\exists N: \forall n \geqslant N$ $|a_n - a| < \frac{|a|}{2}$
+		
+		Тогда по неравенству треугольника $|a| - |a_n| \leqslant |a_n - a| < \frac{|a|}{2} \Rightarrow |a_n| > \frac{|a|}{2}.$
+	\end{proof}
+	
+	\section{Арифметические свойства предела}
+	
+	\begin{theorem}
+		Пусть $\lim_{n \to \infty} a_n = a$ и $\lim_{n \to \infty} b_n = b$. Тогда
+		\begin{enumerate}
+			\item $\lim_{n \to \infty} (\alpha a_n + \beta b_n) = \alpha a + \beta b$ $\forall \alpha, \beta \in \R;$
+			\item $\lim_{n \to \infty} a_n b_n = ab;$
+			\item если $b \neq 0, b_n \neq 0$, то $\lim_{n \to \infty} \frac{a_n}{b_n} = \frac{a}{b};$
+		\end{enumerate} 
+	\end{theorem}
+	
+	\begin{proof}
+		\begin{enumerate}
+			\item $\forall \epsilon > 0$ $\exists N_1: \forall n \geqslant N_1$ $|a_n - a| < \epsilon$
+			
+			$\forall \epsilon > 0$ $\exists N_2: \forall n \geqslant N_2$ $|b_n - b| < \epsilon$
+			
+			$N_3 = \max\{N_1, N_2\}.$ Тогда $\forall n \geqslant N_3$ $|\alpha a_n + \beta b_n - \alpha a - \beta b| = |\alpha a_n - \alpha a + \beta b_n - \beta b| \leqslant |\alpha a_n - \alpha a| + |\beta b_n - \beta b| = |\alpha| |a_n - a| + |\beta| |b_n - b| \leqslant (|\alpha| + |\beta|)\epsilon$
+			\item $\forall \epsilon > 0$ $\exists N_1: \forall n \geqslant N_1 \rightarrow |a_n - a| < \epsilon$
+			
+			$\forall \epsilon > 0$ $\exists N_2: \forall n \geqslant N_2 \rightarrow |b_n - b| < \epsilon$
+			
+			$c_n = a_n b_n$
+			
+			$a_1, a_2, a_3, ...$
+			
+			$b_1, b_2, b_3, ...$
+			
+			$c_1 = a_1 b_1, c_2 = a_2 b_2, c_3 = a_3 b_3, ...$
+			
+			Требуется доказать: $\forall \epsilon > 0$ $\exists N: \forall n \geqslant N \rightarrow |c_n - ab| = |a_n b_n - ab| < \epsilon.$
+			
+			$a_n$ сходится $\Rightarrow$ по предложению 2.10 $\exists C > 0: |a_n| \leqslant C.$
+			
+			$|a_n b_n - ab| = |a_n b_n - a_n b + a_n b - ab| \leqslant |a_n b_n - a_n b| + |a_n b - ab| = |a_n| |b_n - b| + |b| |a_n - a| \Rightarrow$ для $N = \max\{N_1, N_2\}$ $\forall n \geqslant N \rightarrow |a_n b_n - ab| \leqslant |a_n| |b_n - b| + |b| |a_n - a| < C \epsilon + |b| \epsilon = (C + |b|) \epsilon = \alpha \epsilon$ $(\alpha = C + |b| > 0)$
+			
+			По замечению 2.6
+			\[ \forall \epsilon > 0 \text{ } \exists N = \max\{N_1, N_2\}: \forall n > N \text{ } |a_n b_n - ab| < (C + |b|) \epsilon = \alpha \epsilon. \]
+			\item $\forall \epsilon > 0$ $\exists N_1: \forall n \geqslant N_1 \rightarrow |a_n - a| < \epsilon$ (1)
+			
+			$\forall \epsilon > 0$ $\exists N_2: \forall n \geqslant N_2 \rightarrow |b_n - b| < \epsilon$ (2)
+			
+			Требуется доказать: $\lim_{n \to \infty} \frac{a_n}{b_n} = \frac{a}{b}$.
+			
+			Докажем, что $\lim_{n \to \infty} \frac{1}{b_n} = \frac{1}{b}.$ Тогда из пункта 2 будет следовать пункт 3.
+			
+			$\forall \epsilon > 0$ $\exists N: \forall n \geqslant N \rightarrow \big|\frac{1}{b_n} - \frac{1}{b}\big| < \epsilon$ - требуется доказать.
+			
+			Оценим $\big|\frac{1}{b_n} - \frac{1}{b}\big| = \big|\frac{b - b_n}{b_n b}\big|$
+			
+			Из леммы 2.10 следует, что $\exists N_3: \forall n > N_3$ $|b_n| > \frac{|b|}{2} > 0$ (3)
+			
+			Из (1), (2) и (3) следует, что $\forall n \geqslant N_4 = \max\{N_1. N_2, N_3\}$ $\big|\frac{b - b_n}{b_n \cdot b}\big| < \frac{\epsilon}{\frac{|b|}{2} \cdot |b|} = \frac{2 \epsilon}{|b|^2} = \alpha \epsilon,$ где $\alpha = \frac{2}{|b|^2}.$ 
+		\end{enumerate}
+	\end{proof}
+	
+	\newpage
+	
 	\section*{Лекция 4: Теорема Вейерштрасса, число e}
+	
+	\begin{theorem}[Переход к пределу в неравенстве]
+		Пусть $\lim_{n \to \infty} a_n = a, \lim_{n \to \infty} b_n = b$. Если для некоторого номера $N$ выполнено $a_n \leqslant b_n$ при $n > N$, то $a \leqslant b$.
+	\end{theorem}
+	
+	\begin{proof}
+		Пусть $a > b \Rightarrow a - b = \epsilon_0 > 0$
+		
+		$\lim_{n \to \infty} a_n = a \Rightarrow \forall \epsilon = \frac{\epsilon_0}{2}$ $\exists N_1: \forall n \geqslant N_1$ $|a_n - a| < \frac{\epsilon_0}{2}$
+		
+		$\lim_{n \to \infty} b_n = b \Rightarrow \forall \epsilon = \frac{\epsilon_0}{2}$ $\exists N_2: \forall n \geqslant N_2$ $|b_n - b| < \frac{\epsilon_0}{2}$
+		
+		$\forall n > \max\{N, N_1, N_2\}$ $\epsilon_0 = a - b = a - a_n + a_n - b_n + b_n - b \leqslant$
+		
+		$\leqslant \underbrace{|a - a_n|}_{< \frac{\epsilon_0}{2}} + \underbrace{a_n - b_n}_{\leqslant 0 \text{ (из условия)}} + \underbrace{|b_n - b|}_{< \frac{\epsilon_0}{2}} < \epsilon_0$
+		
+		$\epsilon_0 < \epsilon_0$ - противоречие.
+	\end{proof}
+	
+	\section{Лемма о зажатой последовательности}
+	
+	\begin{lemma}[О зажатой последовательности]
+		Пусть $\lim_{n \to \infty} a_n = \lim_{n \to \infty} b_n = a$ и для некоторого $N \in \N$ выполнено $a_n \leqslant c_n \leqslant b_n$ при $n > N$. Тогда $\lim_{n \to \infty} c_n = a$.
+	\end{lemma}
+	
+	\begin{proof}
+		Выполнено:
+		\begin{enumerate}
+			\item $\forall \epsilon > 0$ $\exists N_1: \forall n \geqslant N_1$ $|a_n - a| < \epsilon (\Leftrightarrow a - \epsilon < a_n < a + \epsilon)$
+			\item $\forall \epsilon > 0$ $\exists N_2: \forall n \geqslant N_2$ $|b_n - a| < \epsilon (\Leftrightarrow a - \epsilon < b_n < a + \epsilon)$
+			\item $\forall n > N$ $a_n \leqslant c_n \leqslant b_n$
+		\end{enumerate}
+		Из этих пунктов следует, что $\forall n \geqslant N_4 = \max{(N, N_1, N_2)}$ $\Rightarrow a - \epsilon < a_n \leqslant c_n \leqslant b_n < a + \epsilon \Rightarrow \forall n \geqslant N_4$ $a - \epsilon < c_n < a + \epsilon \Leftrightarrow |c_n - a| < \epsilon$ (это определение предела)
+	\end{proof}
+	
+	\section{Теорема Вейерштрасса}
+	
+	\begin{theorem}[Вейерштрасс]
+		Пусть последовательность $\{a_n\}^{\infty}_{n = 1}$ не убывает $(a_n \leqslant a_{n + 1})$ и ограничена сверху. Тогда эта последовательность сходится $x$ своему супремуму.
+		
+		Аналогично, пусть последовательность $\{a_n\}^{\infty}_{n = 1}$ не возрастает $(a_{n + 1} \leqslant a_n)$ и ограничена снизу. Тогда эта последовательность сходится к своему инфимуму.
+	\end{theorem}
+	
+	\begin{proof}
+		$M = \sup\{a_n | n \in \N\}$ (супремум существует, т. к. $a_n$ ограничена сверху)
+		
+		Пусть $\epsilon > 0$ - произвольное. Хотим доказать, что $\forall \epsilon > 0$ $\exists N: \forall n \geqslant N \rightarrow |a_n - M| < \epsilon.$
+		
+		$M' = M - \epsilon.$ Т. к. $M = \sup\{a_n | n \in \N\},$ то из свойства супремума ($\forall M' < M$ $\exists a \in A$ $a > M'$) следует, что  $\exists a \in \{a_n | n \in \N\}: a > M'.$
+		
+		Но если $a \in \{a_n | n \in \N\},$ то $\exists N: a = a_N.$ Т. е. $\exists N: a_N > M' = M - \epsilon.$
+		
+		Т. к. $a_n$ не убывает (т. е. $a_N \leqslant a_{N + 1}$) $\forall n \geqslant N$ $a_n \geqslant a_N > M' = M - \epsilon$ (*)
+		
+		Только что доказано, что $M - \epsilon < a_n$, и из-за того, что $M$ - супремум, верно $a_n < M + \epsilon$. Тогда $M - \epsilon < a_n < M + \epsilon \Leftrightarrow |a_n - M| < \epsilon.$
+		
+		(*) $\Rightarrow \forall \epsilon > 0$ $\exists N: \forall n \geqslant N$ $|a_n - M| < \epsilon.$
+		
+		Для доказательства второго утверждения можно рассмотреть последовательность $a_n \rightsquigarrow -a_n.$ Если $a_n$ не возрастает, то $-a_n$ не убывает. Последовательность $-a_n \to \sup\{-a_n | n \in \N\} \Rightarrow$ последовательность $a_n \to -\sup\{-a_n | n \in \N\} = \inf\{a_n | n \in \N\}.$
+	\end{proof}
+	
+	\begin{example}
+		Пусть $a_{n + 1} = \frac{1}{2} \big(a_n + \frac{2}{a_n}\big), a_1 = 2$. Тогда последовательность $\{a_n\}^{\infty}_{n = 1}$ сходится и её предел равен $\sqrt{2}$.
+	\end{example}
+	
+	\begin{proof}
+		\begin{enumerate}
+			\item $a_n$ - ограничена снизу.
+			
+			Действительно, $a_{n + 1} = \frac{1}{2}\big(a_n + \frac{2}{a_n}\big) \geqslant \sqrt{a_n \cdot \frac{2}{a_n}} (\text{неравенство Коши}) = \sqrt{2} \Rightarrow a_n \geqslant \sqrt{2}.$
+			
+			\item $a_n$ - не возрастает
+			
+			$a_{n + 1} = \frac{1}{2}\big(a_n + \frac{2}{a_n}\big) = \frac{1}{2}\big(a_n + \frac{\sqrt{2} \cdot \sqrt{2}}{a_n}\big) \leqslant \frac{1}{2}\big(a_n + \frac{a_n^2}{a_n}\big) = \frac{1}{2}(a_n + a_n) = a_n \Rightarrow$ по теореме Вейерштрасса $\exists \lim_{n \to \infty} a_n = a.$
+			
+			$a_{n + 1} = \frac{1}{2}\big(a_n + \frac{2}{a_n}\big) \Rightarrow a = \lim_{n \to \infty} a_{n + 1} = \lim_{n \to \infty} \frac{1}{2}\big(a_n + \frac{2}{a_n}\big) = \lim_{n \to \infty} \frac{1}{2}a_n + \lim_{n \to \infty} \frac{1}{a_n} = \frac{1}{2}a + \frac{1}{a}$
+			
+			$a = \frac{1}{2}a + \frac{1}{a} \Rightarrow a^2 - \frac{1}{2}a^2 - 1 = 0 \Rightarrow \frac{1}{2}a^2 = 1 \Rightarrow a = \pm \sqrt{2}$
+			
+			$a = -\sqrt{2}$ - не подходит (поскольку $\forall n$ $a_n \geqslant \sqrt{2} > -\sqrt{2}$) $\Rightarrow a = \sqrt{2}.$
+			
+		\end{enumerate}
+	\end{proof}
+	
+	\newpage
 	
 	\section*{Лекция 5: Число e, частичный предел}
 	
+	\section{Число e}
+	
+	\begin{sentence}
+		Последовательность $a_n = \big(1 + \frac{1}{n}\big)^n$ сходится.
+	\end{sentence}
+	
+	\begin{proof}
+		\[ (a + b)^n = \sum_{k = 0}^n C_n^k a^k b^{n - k} - \text{бином Ньютона.} \]
+		\[ C_n^k = \frac{n!}{k!(n - k)!} = \frac{n(n - 1)(n - 2)...(n - k + 1)}{k!} \]
+		\[ a_n = \bigg(1 + \frac{1}{n}\bigg)^n = \sum_{k = 0}^n C_n^k \frac{1}{n^k} = 1 + 1 + \sum_{k = 2}^n C_n^k \frac{1}{n^k} = 2 + \sum_{k = 2}^n \frac{n(n - 1)...(n - k + 1)}{k! \underbrace{n n ... n}_{k \text{ раз}}} = \]
+		\[ = 2 + \sum_{k = 2}^n \frac{1}{k!} \cdot \bigg(1 - \frac{1}{n}\bigg)\bigg(1 - \frac{2}{n}\bigg)...\bigg(1 - \frac{k - 1}{n}\bigg) \leqslant 2 + \sum_{k = 2}^n \frac{1}{k!} \leqslant (*) \]
+		
+		Воспользуемся неравенством: при $k \geqslant 2$ $k! = 1 \cdot 2 \cdot 3 \cdot ... \cdot k \geqslant 2^{k - 1}.$
+		
+		\[ (*) \leqslant 2 + \sum_{k = 2}^n \frac{1}{2^{k - 1}} \leqslant 2 + 1 = 3, \]
+		значит $a_n$ ограничена, $a_n \leqslant 3.$
+		
+		Докажем, что $\sum_{k = 2}^n \frac{1}{2^{k - 1}} < 1$.
+		
+		Воспользуемся формулой суммы геометрической прогрессии.
+		\[ 1 + q + q^2 + ... + q^{k - 1} = \frac{1 - q^k}{1 - q} \]
+		\[ 1 + \frac{1}{2} + \frac{1}{4} + ... + \frac{1}{2^{k - 1}} = \frac{1 - \big(\frac{1}{2}\big)^k}{1 - \frac{1}{2}} = 2 \bigg(1 - \bigg(\frac{1}{2}\bigg)^k\bigg) < 2 \]
+		\[ a_n = 2 + \sum_{k = 2}^n \frac{1}{k!} \bigg(1 - \frac{1}{n}\bigg)\bigg(1 - \frac{2}{n}\bigg)...\bigg(1 - \frac{k - 1}{n}\bigg) \leqslant 2 + \sum_{k = 2}^n \frac{1}{k!} \bigg(1 - \frac{1}{n + 1}\bigg)\bigg(1 - \frac{2}{n + 1}\bigg)... \]
+		\[ ...\bigg(1 - \frac{k - 1}{n + 1}\bigg) < 2 + \sum_{k = 2}^{n + 1} \frac{1}{k!} \bigg(1 - \frac{1}{n + 1}\bigg)\bigg(1 - \frac{2}{n + 1}\bigg)...\bigg(1 - \frac{k - 1}{n + 1}\bigg) = a_{n + 1} \Rightarrow \]
+		$\Rightarrow a_n < a_{n + 1} \Rightarrow a_n \text{ возрастает}.$
+		
+		По теореме Вейерштрасса $a_n$ имеет предел.
+	\end{proof}
+	
+	\begin{definition}
+		Предел последовательности $a_n = \big(1 + \frac{1}{n}\big)^n$ называют \textbf{числом Эйлера} и обозначают
+		\[ \lim_{n \to \infty} \bigg(1 + \frac{1}{n}\bigg)^n = e \approx 2,71828182845904523536... \]
+	\end{definition}
+	
+	\section{Принцип вложенных отрезков}
+	
+	\begin{theorem}[Принцип вложенных отрезков]
+		\begin{enumerate}
+			\item Всякая последовательность $\{[a_n, b_n]\}^{\infty}_{n = 1}$ вложенных отрезков (т. е. $[a_{n + 1}, b_{n + 1}] \subset [a_n, b_n]$) имеет общую точку.
+			\item Кроме того, если длины отрезков стремятся к нулю, т.е. $b_n - a_n \to 0$, то такая общая точка только одна.
+		\end{enumerate}
+		
+		\begin{center}
+			\includegraphics[width=0.5\textwidth]{img/lecture5/nested_segments}
+		\end{center}
+	\end{theorem}
+	
+	\begin{proof}
+		\begin{enumerate}
+			\item $\{a_n | n \in \N\} = A, \{b_n | n \in \N\} = B$
+			
+			$\forall n$ $a_n \leqslant b_n$
+			
+			$\forall n, m$ $a_n \leqslant b_m$ - докажем это.
+			
+			\begin{enumerate}
+				\item $n > m$ $a_m \leqslant a_n \leqslant b_n \leqslant b_m$
+				\item $n \leqslant m$ $a_n \leqslant a_m \leqslant b_m \leqslant b_n$
+			\end{enumerate}
+			Тогда $\forall a \in A$ $\forall b \in B \rightarrow a \leqslant b$
+			
+			Множества $A$ и $B$ непустые $\Rightarrow$ по аксиоме непрерывности $\exists c: \forall a \in A, \forall b \in B$ $a \leqslant c \leqslant b.$
+			
+			$\forall n \in \N$ $a_n \leqslant c \leqslant b_n$ - точка $c$ принадлежит всем отрезкам.
+			
+			\item Пусть $\lim_{n \to \infty} (b_n - a_n) = 0.$
+			
+			$\exists c_1, c_2 \in [a_n, b_n]$ - от противного $(c_1 \neq c_2)$
+			
+			Пусть $c_1 < c_2$ $[c_1, c_2] \subseteq [a_n, b_n].$
+			
+			Но тогда $b_n - a_n \geqslant c_2 - c_1 = \epsilon_0 > 0.$
+			
+			$b_n - a_n \to 0 \Rightarrow 0 \geqslant \epsilon_0 > 0$ - противоречие.
+		\end{enumerate}
+	\end{proof}
+	
+	\section{Подпоследовательность}
+	
+	\begin{theorem}
+		Пусть задана последовательность $\{a_n\}^{\infty}_{n = 1}$ и пусть задана
+		возрастающая последовательность натуральных чисел $n_1 < n_2 < n_3 < ...$ Последовательность $b_k = a_{n_k}$ называется \textbf{подпоследовательностью} последовательности $\{a_n\}^{\infty}_{n = 1}$. Число $a \in \R$ называется \textbf{частичным пределом} последовательности $\{a_n\}^{\infty}_{n = 1}$, если выполнено $a = \lim_{k \to \infty} a_{n_k}$ для некоторой подпоследовательности $\{a_{n_k}\}^{\infty}_{k = 1}$.
+	\end{theorem}
+	
+	\begin{mention}
+		Последовательность $a_n = (-1)^n$ не имеет предела, но его подпоследовательность $b_k = a_{2n}$ имеет предел: $\lim_{k \to \infty} b_k = 1$.
+	\end{mention}
+	
+	\begin{sentence}
+		Любая подпоследовательность сходящейся последовательности сходится к пределу этой последовательности.
+	\end{sentence}
+	
+	\begin{proof}
+		$a_n \to a$ при $n \to \infty$
+		
+		$\forall \epsilon > 0$ $\exists N_1: \forall n \geqslant N_1$ $|a_n - a| < \epsilon$
+		
+		$b_k = a_{n_k}$ $k \leqslant n_k$
+		
+		$\forall \epsilon > 0$ $\exists N = N_1$ $\forall k \geqslant N_1 \text{ (пояснение: } n_k \geqslant k \geqslant N_1)$ $|b_k - a| = |a_{n_k} - a| \leqslant \text{(последовательность сходится) } |a_k - a| < \epsilon.$
+	\end{proof}
+	
+	\section{Нижний и верхний частичные пределы}
+	
+	\begin{definition}
+		Рассмотрим последовательности $M_n := \sup_{k > n} a_k$ и $m_n := \inf_{k > n} a_k$. Ясно, что последовательность $M_n$ - не возрастает, а
+		последовательность $m_n$ - не убывает. Поэтому для \textbf{ограниченной} последовательности $\{a_n\}^{\infty}_{n = 1}$ существуют пределы
+		\[ \uplim_{n \to \infty} a_n := \lim_{n \to \infty} M_n, \lowlim_{n \to \infty}	a_n := \lim_{n \to \infty} m_n, \]
+		которые называются соответственно \textbf{верхним и нижним частичными пределами} последовательности $\{a_n\}^{\infty}_{n = 1}$.
+	\end{definition}
+	
+	Иллюстрация для значений $m_n$ и $M_n$.
+	\begin{center}
+		\includegraphics[width=0.7\textwidth]{img/lecture5/inf_and_sup_examples}
+	\end{center}
+	
+	\section{Теорема Больцано}
+	
+	\begin{theorem}
+		Пусть $\{a_n\}^{\infty}_{n = 1}$ - \textbf{ограниченная} последовательность. Тогда $\displaystyle \uplim_{n \to \infty} a_n$ и $\displaystyle \lowlim_{n \to \infty} a_n$ - частичные пределы последовательности $\{a_n\}^{\infty}_{n = 1}$ и любой другой частичный предел принадлежит отрезку $\displaystyle \bigg[\lowlim_{n \to \infty} a_n, \uplim_{n \to \infty} a_n\bigg]$.
+	\end{theorem}
+	
+	\begin{proof}
+		Пусть $\displaystyle \uplim_{n \to \infty} a_n = \lim_{n \to \infty} M_n = M.$
+		
+		$M_n = \sup_{k > n} a_k$
+		
+		Построим последовательность $a_{n_k}$, которая обладает свойством $\lim_{k \to \infty} a_{n_k} = M$. Пусть $n_1 = 1.$ Пусть построены первые $j$ членов (т. е. подобраны $n_1 < n_2 < ... < n_j$). Подберём $n_{j + 1}$-й номер ($n_{j + 1} > n_{j}$).
+		
+		$M_{n_j} = \sup_{k > n_j} a_k$
+		
+		\begin{center}
+			\includegraphics[width=0.5\textwidth]{img/lecture5/theorem_bolcano}
+		\end{center}
+		
+		Т. к. $M_{n_j}$ - супремум, то $\exists a \in \{a_k | k > n_j\}$ такое, что
+		$M_{n_j} - \frac{1}{j} \leqslant a \leqslant M_{n_j}$ (в противном случае $M_{n_j}$ - не супремум). Т. к. $a \in \{a_k | k > n_j\},$ то пусть $a = a_{\lambda}$ $n_j > n_{j + 1} = \lambda.$
+		
+		$\forall j \in \N$ $M_{n_j} - \frac{1}{j} \leqslant a_{n_{j + 1}} \leqslant M_{n_j}$ . Т. к. $M_j \to M, \frac{1}{j} \to 0,$ то по теореме о зажатой последовательности
+		\[ M - 0 \leqslant \lim_{j \to \infty} a_{n_{j + 1}} \leqslant \lim_{j \to \infty} M_{n_j} = \text{(предложение 2.13) } M \]
+		Значит $\lim_{j \to \infty} a_{n_j} = M \Rightarrow \uplim_{n \to \infty} a_n$ - частичный предел.
+		
+		Теперь пусть $\lowlim_{n \to \infty} a_n = \lim_{n \to \infty} m_n = m.$
+		
+		Аналогично можно доказать, что
+		\[ \forall j \in \N \text{ } m_{n_j} \leqslant a_{n_{j + 1}} \leqslant m_{n_j} + \frac{1}{j} \]
+		\[ m = \lim_{j \to \infty} m_{n_j} \leqslant \lim_{j \to \infty} a_{n_{j + 1}} \leqslant m + 0 \]
+		$\lim_{j \to \infty} a_{n_{j + 1}} = m \Rightarrow \lowlim_{n \to \infty} a_n$ - частичный предел.
+		
+		Пусть теперь $a$ - частичный предел. Это означает, что $a = \lim_{k \to \infty} a_{n_k}$ для некоторой подпоследовательности $\{a_{n_k}\}^{\infty}_{k = 1}.$ Тогда $\displaystyle \inf_{p > n_{k - 1}} a_p = m_{n_{k - 1}} \leqslant a_{n_k} \leqslant M_{n_{k - 1}} = \sup_{p > n_{k - 1}} a_p.$ По теореме о переходе к пределу в неравенстве получаем, что $\displaystyle \lowlim_{n \to \infty} a_n \leqslant a \leqslant \uplim_{n \to \infty} a_n.$
+	\end{proof}
+	
+	\begin{corollary}[Теорема Больцано]
+		Во всякой \textbf{ограниченной} последовательности можно найти сходящуюся подпоследовательность.
+	\end{corollary}
+	
+	Можно, потому что, например, есть верхний частичный предел, который является частичным пределом соответствующей последовательности.
+	
+	\newpage
+	
 	\section*{Лекция 6: Критерий Коши}
+	
+	\begin{theorem}
+		\textbf{Ограниченная} последовательность сходится тогда и только тогда, когда множество её частичных пределов состоит из одного элемента.
+	\end{theorem}
+	
+	\begin{proof}
+		\begin{itemize}
+			\item[$\Rightarrow$] предложение 2.22
+			\item[$\Leftarrow$] Т. к. множество частичных пределов состоит из одного элемента, то
+			\[ \lowlim_{n \to \infty} a_n = \uplim_{n \to \infty} a_n = a \]
+			\[ \lowlim_{n \to \infty} a_n = \lim_{n \to \infty} m_n, m_n = \inf_{k > n} \{a_k\}, \uplim_{n \to \infty} a_n = \lim_{n \to \infty} M_n, M_n = \sup_{k > n} \{a_k\} \]
+			Тогда $\forall n$ $m_{n - 1} \leqslant a_n \leqslant M_{n - 1}.$
+			
+			Т. к. $m_{n - 1} \to a, M_{n - 1} \to a,$ то по теореме о зажатой последовательности $\lim_{n \to \infty} a_n = a.$
+		\end{itemize}
+	\end{proof}
+	
+	\section{Фундаментальная последовательность}
+	
+	\begin{definition}
+		Говорят, что последовательность $\{a_n\}^{\infty}_{n = 1}$ \textbf{фундаментальна} (или является последовательностью Коши), если для каждого числа $\epsilon > 0$ найдется такое натуральное число (номер) $N(\epsilon) \in \N$, что $|a_n - a_m| < \epsilon$ при каждых $n, m > N(\epsilon).$ То же
+		самое утверждение можно переписать в кванторах следующим образом:
+		\[ \forall \epsilon > 0 \text{ } \exists N(\epsilon) \in \N : \forall n, m > N(\epsilon) \text{ } |a_n - a_m| < \epsilon. \]
+	\end{definition}
+	
+	\begin{example}
+		\begin{enumerate}
+			\item Последовательность $a_n = \frac{1}{n}$ - фундаментальная.
+			\item Последовательность $a_n = (-1)^n$ не фундаментальная.
+		\end{enumerate}
+	\end{example}
+	
+	\begin{proof}
+		\begin{enumerate}
+			\item \[ |a_n - a_m| = \bigg|\frac{1}{n} - \frac{1}{m}\bigg| \leqslant \max\bigg\{\frac{1}{n}, \frac{1}{m}\bigg\} \leqslant \frac{1}{N} < \epsilon \]
+			\[ \forall \epsilon > 0 \text{ } \exists N = \bigg[\frac{1}{\epsilon}\bigg] + 1 > \epsilon: \forall n, m \geqslant N \text{ } |a_n - a_m| < \epsilon \]
+			\item \[ \exists \epsilon = 1: \forall N \text{ } \exists n = N, m = n + 1 \text{ } |a_n - a_m| = |a_n - a_{n + 1}| = 2 > 1 \]			
+		\end{enumerate}
+	\end{proof}
+	
+	\section{Критерий Коши}
+	
+	\begin{sentence}
+		Если последовательность $\{a_n\}^{\infty}_{n = 1}$ сходится, то она  фундаментальная.
+	\end{sentence}
+	
+	\begin{proof}
+		Последовательность сходиться $\Rightarrow \forall \epsilon_0 = \frac{\epsilon}{2} > 0$ $\exists N: \forall n \geqslant N$ $|a_n - a| < \epsilon_0 = \frac{\epsilon}{2}$
+	     
+	    Зафиксируем $\epsilon > 0$.
+	    \[ \forall m, n > N \text{ } |a_n - a_m| = |a_n - a + a - a_m| \leqslant |a_n - a| + |a - a_m| < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon \]
+	\end{proof}
+	
+	\begin{theorem}
+		Числовая последовательность сходится тогда и только тогда, когда она фундаментальна.
+	\end{theorem}
+	
+	\begin{proof}
+		\begin{itemize}
+			\item[$\Rightarrow$] предложение 2.29
+		    \item[$\Leftarrow$] Докажем, что последовательность $\{a_n\}^{\infty}_{n = 1}$ - ограничена.
+		    
+		    $\{a_n\}^{\infty}_{n = 1}$ - фундаментальна $\Rightarrow \forall \epsilon > 0$ $\exists N: \forall n, m > N$ $|a_n - a_m| < \epsilon$
+		    
+		    Для $\epsilon = 1$ $\exists N: \forall n, m > N$ $|a_n - a_m| < 1$
+		    
+		    Тогда для $n > N$ $|a_n| = |a_n - a_{N + 1} + a_{N + 1}| \leqslant |a_n - a_{N + 1}| + |a_{N + 1}| < 1 + |a_{N + 1}|$
+		    
+		    Значит $|a_n| \leqslant M = \max\{1 + |a_{N + 1}|, |a_1|, ..., |a_N|\} \Rightarrow \{a_n\}^{\infty}_{n = 1}$ - ограничена.
+		    
+		    У ограниченной последовательности по теореме Больцано есть хотя бы один частичный предел $a$. Пусть к нему сходится подпоследовательность $\{a_{n_k}\}^{\infty}_{k = 1},$ т. е.
+		    \[ \forall \epsilon > 0 \text{ } \exists k_0: k > k_0 \text{ } |a_{n_k} - a| < \epsilon. \]
+		    Кроме того, в силу фундаментальности
+		    \[ \forall \epsilon > 0 \text{ } \exists N: n, m > N \text{ } |a_n - a_m| < \epsilon. \]
+		    Пусть $k$ выбрано так, что $k > k_0$ и $m = n_k > N.$ Тогда 
+		    \[ \forall \epsilon > 0 \text{ } \forall n > N \text{ } |a_n - a| = |a_n - a_{n_k} + a_{n_k} - a| \leqslant |a_n - a_{n_k}| + |a_{n_k} - a| < \epsilon + \epsilon = 2\epsilon \]
+		    (замечание 2.8).
+		\end{itemize}
+	\end{proof}
+	
+	\section{Фундаментальная последовательность}
+	
+	\begin{example}
+		Пусть $a_{n + 1} = 1 + \frac{1}{1 + a_n}, a_1 = 1$. Докажите, что $a_n$ сходится, и найдите предел.
+	\end{example}
+	
+	\begin{proof}
+		Заметим, что $\forall n \in \N$ $a_n \geqslant 1$ и
+		\[ |a_{n + 1} - a_n| = \bigg|1 + \frac{1}{1 + a_n} - \bigg(1 + \frac{1}{1 + a_{n - 1}}\bigg)\bigg| = \frac{|a_n - a_{n - 1}|}{(1 + a_n)(1 + a_{n - 1})} \leqslant \frac{1}{4}|a_n - a_{n - 1}| \leqslant \]
+		\[ \leqslant \bigg(\frac{1}{4}\bigg)^{n - 1} |a_2 - a_1| = \bigg(\frac{1}{4}\bigg)^{n - 1} \bigg(1 + \frac{1}{1 + 1} - 1\bigg) = \bigg(\frac{1}{4}\bigg)^{n - 1}\frac{1}{2} \]
+		Отсюда при $m > n$
+		\[ |a_m - a_n| \leqslant |a_m - a_{m - 1} + a_{m - 1} - ... - a_{n + 1} + a_{n + 1} - a_n| \leqslant |a_m - a_{m - 1}| + |a_{m - 1} - a_{m - 2}| + ... + \]
+		\[ + |a_{n + 2} - a_{n + 1}| + |a_{n + 1} - a_n| \leqslant \frac{1}{2}\bigg(\bigg(\frac{1}{4}\bigg)^{m - 2} + \bigg(\frac{1}{4}\bigg)^{m - 3} + ... + \bigg(\frac{1}{4}\bigg)^n + \bigg(\frac{1}{4}\bigg)^{n - 1}\bigg) = \]
+		\[ = \frac{1}{2} \cdot \bigg(\frac{1}{4}\bigg)^{n - 1} \cdot \bigg(\frac{1 - \big(\frac{1}{4}\big)^{m - n}}{1 - \frac{1}{4}}\bigg) \leqslant \frac{1}{2} \cdot 4 \cdot \bigg(\frac{1}{4}\bigg)^n \cdot \frac{1}{\frac{3}{4}} = \frac{8}{3} \cdot \bigg(\frac{1}{4}\bigg)^n \]
+		Т. к. $\lim_{n \to \infty} \frac{8}{3} \cdot \big(\frac{1}{4}\big)^n = \frac{8}{3} \cdot 0 = 0,$ то
+		\[ \forall \epsilon > 0 \text{ } \exists N: \forall n > N \rightarrow \frac{8}{3}\bigg(\frac{1}{4}\bigg)^n < \epsilon \]
+		Тогда $\forall \epsilon > 0$ $\exists N: \forall n > N$ $|a_m - a_n| < \epsilon$ $(*),$ т. е. выполнен Критерий Коши $\Rightarrow$ существует $\lim_{n \to \infty} a_n = a.$
+		
+		Найдём этот предел.
+		\[ a_{n + 1} = 1 + \frac{1}{1 + a_n} \]
+		Возьмём предел от обеих частей:
+		\[ a = 1 + \frac{1}{1 + a} \Leftrightarrow a(1 + a) = 1 + a + 1 \Leftrightarrow a^2 = 2 \Leftrightarrow a = \sqrt{2}, \]
+		т. к. $a \geqslant 0$ $(a_n \geqslant 1)$.
+	\end{proof}
+	
+	\begin{explanation}
+		(*) Условие $|a_m - a_n| < \epsilon$ выполнено при $m > n > N.$ Но в определении фундаментальной последовательности это утверждении должно выполняться $\forall n, m > N.$ Это не является проблемой, т. к. в случае $m < n$ можно показать, что $|a_m - a_n| = |a_n - a_m|$ и переобозначить $m$ и $n$.
+	\end{explanation}
+	
+	\newpage
 	
 	\section*{Лекция 7: Числовые ряды}
 	
+	\begin{mention}
+		На самом деле, мы доказали следующее общее утверждение. Пусть $\{a_n\}^{\infty}_{n = 1}$ - числовая последовательность и предположим, нашлось такое число $q \in (0, 1)$, что 
+		\[ |a_{n + 1} - a_n| \leqslant q |a_n - a_{n - 1}| \]
+		при каждом $n \in \N, n \geqslant 2$. Тогда последовательность $\{a_n\}^{\infty}_{n = 1}$ сходится.
+	\end{mention}
+	
+	\begin{proof}
+		\[ |a_{n + 1} - a_n| \leqslant q |a_n - a_{n - 1}| \leqslant q^2 |a_{n - 1} - a_{n - 2}| \leqslant ... \leqslant q^{n - 1} |a_2 - a_1| = q^{n - 1} \cdot c_1 \]
+		Можем считать, что $m > n$.
+		\[ |a_m - a_n| = |a_m - a_{m - 1} + a_{m - 1} - a_{m - 2} + a_{m - 2} - ... - a_{n + 1} + a_{n + 1} - a_n| \leqslant \]
+		\[ \leqslant |a_m - a_{m - 1}| + |a_{m - 1} - a_{m - 2}| + ... + |a_{n + 1} - a_n| \leqslant q^{m - 2} \cdot c_1 + q^{m - 3} \cdot c_1 + ... + q^{n - 1} \cdot c_1 = \]
+		\[ = c_1 \cdot q^{n - 1} \cdot (1 + q + ... + q^{m - n - 1}) = c_1 \cdot q^{n - 1} \cdot \bigg(\frac{1 - q^{m - n}}{1 - q}\bigg) \leqslant c_1 \cdot q^{n - 1} \cdot \frac{1}{1 - q} = c_2 \cdot q^{n - 1} \]
+		Т. к. $\lim_{n \to \infty} c_2 q^{n - 1} = c_2 \lim_{n \to \infty} q^{n - 1} = c_2 \cdot 0 = 0,$ то
+		\[ \forall \epsilon > 0 \text{ } \exists N: \forall n > N \text{ } c_2 \cdot q^{n - 1} < \epsilon, \]
+		Тогда $\forall \epsilon > 0$ $\exists N: \forall n > N$ $|a_m - a_n| < \epsilon,$ т. е. выполнен критерий Коши $\Rightarrow$ существует $\lim_{n \to \infty} a_n = a.$ 
+	\end{proof}
+	
+	\section{Числовые ряды}
+	
+	\begin{definition}
+		Пусть $\{a_n\}^{\infty}_{n = 1}$ - числовая последовательность. Числовым
+		рядом с членами $a_n$ называется выражение 
+		\[ a_1 + a_2 + a_3 + ... = \sum^{\infty}_{k = 1} a_k. \]
+				
+		Конечные суммы $S_n := \sum^n_{k = 1} a_k$ называют \textbf{частичными суммами} ряда $\sum^{\infty}_{k = 1} a_k$.
+		
+		Говорят, что ряд $\sum^{\infty}_{k = 1} a_k$ \textbf{сходится}, если у последовательности $\{S_n\}^{\infty}_{n = 1}$ существует предел, который называют суммой ряда. Если такого предела не существует, то говорят, что ряд не сходится или \textbf{расходится}.
+	\end{definition}
+		
+	В силу арифметики предела на сходимость ряда (но не на сумму ряда) не влияет добавление (или отбрасывание) первых нескольких членов.
+	\begin{proof}
+		$S_n$ - сумма $n$ первых членов ряда, $C_k$ - сумма $k$ отброшенных, $Q_{n - k}$ - сумма членов ряда, входящих в сумму $S_n$ и не входящих в $C_k$. Тогда $S_n = C_k + Q_{n - k},$ где $k$ - постоянное число, не зависящее от $n$. Если существует $\lim_{n \to \infty} Q_{n - k},$ то существует и $\lim_{n \to \infty} S_n$, если существует $\lim_{n \to \infty} S_n$, то  существует и $\lim_{n \to \infty} Q_{n - k}$.
+	\end{proof}
+	
+	\begin{example}
+		При каких $q$ сходится ряд $\sum^{\infty}_{k = 0} q^k$?
+	\end{example}
+	
+	\begin{proof}
+		Вычислим его частичные суммы: если $q \neq 1,$ то
+		\[ S_n = 1 + q + q^2 + ... + q^{n - 1} = \frac{1 - q^n}{1 - q} \]
+		и ряд сходится к $\frac{1}{1 - q}$ при $|q| < 1$ и расходится при $|q| > 1$; если $q = 1$, то $S_n = n$ и ряд не сходится, если $q = -1$, то $S_1 = 1, S_2 = 1 - 1 = 0, S_3 = 1, S_4 = 0, ...,$ т. е. ряд не сходится (в силу теоремы 2.26; множество частичных пределов состоит из 2-х элементов)
+	\end{proof}
+	
+	Также часто бывает удобно индексировать суммирование не только натуральным рядом. Под выражением $\sum_{k = k_0}^{\infty} a_k$ естественным образом подразумевается $\sum_{k = 1}^{\infty} a_{k_0 + k - 1}$, т. е. такой числовой ряд, чья $n$-я частичная сумма имеет вид $S_n = a_{k_0} + a_{k_0 + 1} + ... + a_{k_0 + n - 1}$.
+	
+	Т. к. сходимость ряда равносильна сходимости последовательности его частичных сумм, то для сходимости ряда выполнен следующий критерий Коши.
+	
+	\section{Критерий Коши сходимости ряда}
+	
+	\begin{theorem}
+		Ряд $\sum^{\infty}_{k = 1} a_k$ сходится тогда и только тогда, когда для каждого $\epsilon > 0$ найдется такой номер $N$, что для всех $n > m > N$
+		выполнено
+		\[ \bigg|\sum^n_{k = m + 1} a_k\bigg| = |S_n - S_m| < \epsilon. \]
+	\end{theorem}
+	
+	\section{Необходимое условие сходимости ряда}
+	
+	\begin{corollary}[Необходимое условие сходимости ряда]
+		Если ряд $\sum_{k = 1}^{\infty}	a_k$ сходится, то $a_k \rightarrow 0$ при $k \rightarrow \infty.$
+	\end{corollary}
+	
+	\begin{proof}
+		Действительно, из критерия Коши следует, что для каждого $\epsilon > 0$ найдётся номер $N$, для которого при каждом $n > N + 1$ выполнено $|a_n| = |S_n - S_{n - 1}| < \epsilon$.
+	\end{proof}
+	
+	\begin{example}
+		\begin{enumerate}
+			\item Докажите, что ряд $\sum^{\infty}_{k = 1} \frac{1}{k(k + 1)}$ сходится.
+			\item Докажите, что гармонический ряд $\sum^{\infty}_{k = 1} \frac{1}{k}$ расходится.
+		\end{enumerate}
+	\end{example}
+	
+	\begin{proof}
+		\begin{enumerate}
+			\item Исследуем выполнение условия критерия Коши: пусть $n > m$, тогда
+			\[ \bigg|\sum_{k = m + 1}^n \frac{1}{k(k + 1)}\bigg| = \bigg|\sum_{k = m + 1}^n \frac{1}{k} - \frac{1}{k + 1}\bigg| = \bigg|\frac{1}{m + 1} - \frac{1}{n + 1}\bigg| \leqslant \frac{1}{m + 1}. \]
+			Поэтому при $n > m > N(\epsilon) = \big[\frac{1}{\epsilon}\big]$ выполнено $\displaystyle \bigg|\sum_{k = m + 1}^n \frac{1}{k(k + 1)}\bigg| < \epsilon$, а значит ряд сходится.
+			\item Исследуем выполнение условия критерия Коши: пусть $n > m$, тогда \[ \bigg|\sum_{k = m + 1}^n \frac{1}{k}\bigg| > \underbrace{\frac{1}{n} + \frac{1}{n} + ... + \frac{1}{n}}_{n - m} = \frac{n - m}{n}. \]
+			Какой бы теперь ни был задан номер $N$, всегда можно взять $m > N$ (например, $m = N + 1$) и $n = 2m$, тогда $\displaystyle \bigg|\sum_{k = m + 1}^n a_k\bigg| \geqslant \frac{1}{2}$, а значит условие критерия Коши не выполнено и ряд расходится.
+		\end{enumerate}
+	\end{proof}
+	
+	\section{Абсолютная сходимость}
+	
+	\begin{corollary}
+		Из сходимости ряда $\sum^{\infty}_{k = 1} |a_k|$ следует сходимость ряда $\sum^{\infty}_{k = 1} a_k$.
+	\end{corollary}
+	
+	\begin{proof}
+		Действительно, из сходимости ряда $\sum^{\infty}_{k = 1} |a_k|$  следует выполнение для него условия критерия Коши, а именно, для каждого $\epsilon > 0$ найдётся такое натуральное число $N$, что при $n > m > N$ выполнено \[ \bigg|\sum^n_{k = m + 1} a_k\bigg| \leqslant \bigg|\sum^n_{k = m + 1} |a_k|\bigg| = \sum^n_{k = m + 1} |a_k| < \epsilon. \]
+		Следовательно, условие критерия Коши выполнено и для ряда $\sum^{\infty}_{k = m + 1} a_k,$ а значит он сходится.
+	\end{proof}
+	
+	\section{Абсолютная и условная сходимость}
+	
+	\begin{definition}
+		Говорят, что ряд $\sum^{\infty}_{k = 1} a_k$ \textbf{сходится абсолютно}, если сходится ряд $\sum^{\infty}_{k = 1} |a_k|$. Говорят, что ряд $\sum^{\infty}_{k = 1} a_k$ \textbf{сходится условно}, если он сходится, а ряд $\sum^{\infty}_{k = 1} |a_k|$ расходится.
+	\end{definition}
+	
+	\begin{example}
+		Ряд $1 + (-1) + \frac{1}{2} + (-\frac{1}{2}) + \frac{1}{3} + (-\frac{1}{3}) + ...$ - сходится условно.
+	\end{example}
+	
+	\begin{proof}
+		То, что ряд не сходится абсолютно, следует из установленной расходимости ряда $\sum^{\infty}_{k = 1} \frac{1}{k}.$ Сходимость ряда следует из того, что его частичные суммы равны либо 0, либо $\frac{1}{n}$ (т. к. оба $\to 0$, то множество частичных сумм равно $\{0\} \Rightarrow$ последовательность частичных сумм сходится)
+	\end{proof}
+	
+	Как показано выше, из того, что ряд сходится абсолютно, следует и то, что сам ряд сходится. Поэтому иногда может быть полезно отдельно исследовать абсолютную сходимость рядов, т. е. сходимость рядов с положительными слагаемыми.
+	
+	\section{Признак сравнения}
+	
+	\begin{sentence}
+		Пусть $a_k \geqslant 0$, тогда ряд $\sum^{\infty}_{k = 1} a_k$ сходится тогда и только тогда, когда последовательность его частичных сумм ограничена.
+	\end{sentence}
+	
+	\begin{proof}
+		$S_n$ - частичные суммы, не убывают.
+		\begin{enumerate}
+			\item $S_n$ - ограничена $\Rightarrow$ по теореме Вейерштрасса $\exists \lim_{n \to \infty} S_n \Rightarrow \sum^{\infty}_{k = 1} a_k$ - сходится.
+			\item $\sum^{\infty}_{k = 1} a_k$ - сходится $\Rightarrow \exists \lim_{n \to \infty} S_n \Rightarrow S_n$ - ограничена.
+		\end{enumerate}
+	\end{proof}
+	
+	\begin{sentence}
+		Пусть $0 \leqslant a_n \leqslant b_n$. Если ряд $\sum^{\infty}_{k = 1} b_k$ сходится, то сходится и ряд $\sum^{\infty}_{k = 1} a_k$. Наоборот, если ряд $\sum^{\infty}_{k = 1}	a_k$ расходится, то расходится и ряд $\sum^{\infty}_{k = 1} b_k.$
+	\end{sentence}
+	
+	\begin{proof}
+		\begin{enumerate}
+			\item $\sum^{\infty}_{k = 1} b_k$ сходится $\Rightarrow B_n$ - ограниченные частичные суммы ряда (предложение 2.41), $0 \leqslant A_n \leqslant B_n \Rightarrow A_n$ - ограничены и не убывают $\Rightarrow \sum^{\infty}_{k = 1} a_k$ - сходится.
+			\item $\sum^{\infty}_{k = 1} a_k$ расходится, $0 \leqslant A_n \leqslant B_n$. Если бы $B_n$ сходились, то $A_n$ были ограничены и не убывали $\Rightarrow A_n$ сходились, противоречие.
+		\end{enumerate}
+	\end{proof}
+	
+	\newpage
+	
 	\section*{Лекция 8: Перестановка членов ряда}
+	
+	\section{Признак Коши}
+	
+	\begin{theorem}[Признак Коши]
+		Пусть $\{a_n\}^{\infty}_{n = 1}$ - невозрастающая последовательность, $a_n \geqslant 0.$ Ряд $\sum^{\infty}_{k = 1} a_k$ сходится тогда и только тогда, когда сходится ряд $\sum^{\infty}_{k = 1} 2^k a_{2^k}.$
+	\end{theorem}
+	
+	\begin{proof}
+		Сделаем оценку сверху и снизу данной частичной суммы. \newline
+		\begin{tabular}{ccccccccc}
+			$a_2$ & $+$ & $2^1 \cdot a_{2^2}$ & $+$ & $2^2 \cdot a_{2^3}$ & $+$ & $\dots$ & $+$ & $2^n \cdot a_{2^{n + 1}}$ \\
+	        $\backslash //$ &  & $\backslash //$ &  & $\backslash //$ &  &  &  &  $\backslash //$ \\
+			$\overbracket{\underbracket{a_1}}$ & $+$ & $\overbracket{\underbracket{a_2 + a_3}}$ & $+$ & $\overbracket{\underbracket{a_4 + a_5 + a_6 + a_7}}$ & $+$ & $\dots$ & $+$ & $\overbracket{\underbracket{a_{2^n} + ... + a_{2^{n + 1} - 1}}}$ \\
+			$\backslash //$ &  & $\backslash //$ &  & $\backslash //$ &  &  &  & $\backslash //$ \\
+			$a_1$ & $+$ & $2^1 \cdot a_{2^1}$ & $+$ & $2^2 \cdot a_{2^2}$ & $+$ & $\dots$ & $+$ & $2^n \cdot a_{2^n}$ \\
+		\end{tabular}
+		
+		Пусть $S_n = \sum^n_{k = 1} a_k, \tilde{S_n} = \sum^n_{k = 1} 2^k a_{2^k}$. Тогда
+		\[ \tilde{S_n} \leqslant a_1 + \tilde{S_n} \leqslant S_{2^{n + 1} - 1} \leqslant \frac{1}{2}\tilde{S_n} \leqslant \tilde{S_n} \]
+		\begin{enumerate}
+			\item Если $\sum^{\infty}_{k = 1} 2^k a_{2^k}$ сходится $\Rightarrow \tilde{S_n}$ сходится $\tilde{S_n}$ ограничена $\Rightarrow S_{2^{n + 1} - 1}$ ограничена. Но $S_{2^{n + 1} - 1}$ не убывает $\Rightarrow S_{2^{n + 1} - 1}$ сходится $\Rightarrow \sum^{\infty}_{k = 1} a_k$ сходится.
+			\item Если $\sum^{\infty}_{k = 1} a_k$ сходится $\Rightarrow S_{2^{n + 1} - 1}$ сходится $\Rightarrow S_{2^{n + 1} - 1}$ ограничена $\Rightarrow \tilde{S_n}$ ограничена. Но $\tilde{S_n}$ не убывает $\Rightarrow \tilde{S_n}$ сходится $\Rightarrow \sum^{\infty}_{k = 1} 2^k a_{2^k}$ сходится.
+		\end{enumerate}
+	\end{proof}
+	
+	\begin{example}
+		Ряд $\sum^{\infty}_{k = 1} \frac{1}{k^p}$ сходятся при $p > 1$ и расходятся при $p \leqslant 1$.
+	\end{example}
+	
+	\begin{enumerate}
+		\item $p \leqslant 0$ $\frac{1}{k^p} \not\to 0$ при $x \to \infty$ (необходимо условие нарушено) $\Rightarrow \sum^{\infty}_{k = 1} \frac{1}{k^p}$ - расходится
+		\item $p > 0 \Rightarrow \frac{1}{k^p}$ - убывает.
+		
+		Признак Коши: 
+		\[ \sum_{k = 1}^{\infty} \frac{2^k}{(2^k)^p} = \sum_{k = 1}^{\infty} (2^{1 - p})^k - \text{сходится} \Leftrightarrow 2^{1 - p} < 1 \text{ (пример 2.34)} \Leftrightarrow p > 1. \]
+	\end{enumerate}
+	
+	\section{Перестановка членов ряда}
+	
+	$a_n$ - это функция $a(n)$
+	\begin{center}
+		\includegraphics[width=0.2\textwidth]{img/lecture8/sequence}
+	\end{center}
+	Если поменять местами слагаемые ряда
+	\begin{center}
+		\includegraphics[width=0.4\textwidth]{img/lecture8/replacement_summands}
+	\end{center}
+	Функция $k(j)$ - биекция на $\N, k(j) = k_j$ $\{a_{k_j} | j \in \N\} = \{a_n | n \in \N\}$
+	
+	\begin{example}[семинарская задача 3.2]
+		Если ряд сходится условно, то при перестановке членов его сумма может измениться.
+		\[ 1 - 1 + \frac{1}{2} - \frac{1}{2} + \frac{1}{3} - \frac{1}{3} + \dots = 0 \]
+		Переставим члены ряда
+		\[ 1 + \frac{1}{2} - 1 + \frac{1}{3} + \frac{1}{4} - \frac{1}{2} + \dots = \sum_{k = 1}^{3n} \tilde{a_k} = \sum_{k = 1}^{2n} \frac{1}{k} - \sum_{k = 1}^n \frac{1}{k} = \ln{2n} + \gamma + \alpha_n - \ln{n} - \gamma' - \alpha'_n = \]
+		\[ = \ln{2} + \gamma + \alpha_n - \gamma' - \alpha'_n \Rightarrow \text{ряд сходится к } \ln{2}, \text{ а не к нулю.} \]
+	\end{example}
+		
+	\begin{definition}
+		Будем говорить, что ряд $\sum_{j = 1}^{\infty} \tilde{a_j}$ получен перестановкой членов ряда $\sum_{k = 1}^{\infty} a_k$, если существует последовательность натуральных чисел $\{k_j\}^{\infty}_{j = 1}$, задающая взаимно однозначное преобразование (биекцию) множества $\N$, и такая, что $\forall j \in \N \rightarrow \tilde{a_j} = a_{k_j}$.
+	\end{definition}
+	
+	\begin{theorem}[О независимости суммы абсолютно сходящегося ряда от порядка слагаемых]
+		Если ряд $\sum^{\infty}_{j = 1} \tilde{a_j}$ получен перестановкой членов абсолютно сходящегося ряда $\sum^{\infty}_{k = 1} a_k$, то ряд $\sum^{\infty}_{j = 1} a_j$ абсолютно сходится и его сумма равна сумме ряда $\sum^{\infty}_{k = 1} a_k$.
+	\end{theorem}
+	
+	\begin{proof}
+		Краткая запись:
+		\[ \sum^{\infty}_{j = 1} a_j \rightsquigarrow \sum^{\infty}_{j = 1} \tilde{a_j} = \sum^{\infty}_{j = 1} a_{k_j} \]
+		\underline{Шаг 1} Рассмотрим случай, когда $a_k \geqslant 0$ $\forall k \in \N.$
+		
+		Для любого $n \in \N$ определим $\displaystyle M_n = \max_{j \in \{1, \dots, n\}} \{k_j\}.$
+		
+		Для любого $n \in \N$ имеем
+		\[ \sum_{j = 1}^n \tilde{a_j} = \sum_{j = 1}^n a_{k_j} \leqslant \sum_{k = 1}^{M_n} a_k \leqslant \sum^{\infty}_{k = 1} a_k \text{ (*)} \]
+		(последние два неравенства верны, потому что ряд с неотрицательными членами и $n \leqslant M_n$)
+		
+		Ряд $\sum^{\infty}_{k = 1} a_k$ - абсолютно сходящийся $\Rightarrow \sum^{\infty}_{k = 1} a_k$ - сходится.
+		
+		Частичные суммы $\sum^n_{j = 1} \tilde{a_j}$ не убывают (т. к. $a_k \geqslant 0$) и ограниченные числом $\sum^{\infty}_{k = 1} a_k \Rightarrow$ по теореме Вейерштрасса $\sum^{\infty}_{j = 1} \tilde{a_j}$ - сходится.
+		
+		Итак, $\tilde{A_n} = \sum^n_{j = 1} \tilde{a_j} \leqslant \sum^{\infty}_{j = 1} a_j = A$ $(A = const)$
+		
+		По теореме о переходе к пределу в неравенстве $\lim_{n \to \infty} \tilde{A_n} \leqslant \lim_{n \to \infty} A \Rightarrow \sum^{\infty}_{j = 1} \tilde{a_j} \leqslant \sum^{\infty}_{j = 1} a_j.$
+		
+		Поскольку ряд $\sum^{\infty}_{j = 1} a_j$ может быть получен из ряда $\sum^{\infty}_{j = 1} \tilde{a_j}$ обратной перестановкой слагаемых, то $\sum^{\infty}_{j = 1} a_j \leqslant \sum^{\infty}_{j = 1} \tilde{a_j}$. Поэтому при перестановке слагаемых ряда с неотрицательными членами его сумма не меняется.
+		
+		\underline{Шаг 2} Рассмотрим общий случай. Применяя утверждение шага 1 для сходимости ряда $\sum^{\infty}_{k = 1} |a_k|$, получаем сходимость ряда $\sum^{\infty}_{j = 1} |\tilde{a_j}|$. Поэтому ряд $\sum^{\infty}_{j = 1} \tilde{a_j}$  сходится абсолютно. Для любого $k \in \N$ обозначим через $a^+_k = \max\{a_k, 0\}, a^-_k = \max\{-a_k, 0\}.$ Тогда при всех $k \in \N$
+		\[ a_k = a^+_k - a^-_k \text{ (если } a_k > 0, \text{ то } a^+_k = a_k, a^-_k = 0; \text{ если } a_k < 0, \text{ то } a^+_k = 0, a^-_k = -a_k), \]
+		\[ |a_k| = a^+_k + a^-_k \text{ (тоже самое)}, 0 \leqslant a^+_k \leqslant |a_k|, 0 \leqslant a^-_k \leqslant |a_k|. \]
+		В силу утверждения, доказанного на шаге 1,
+		\[ \sum^{\infty}_{j = 1} \tilde{a}^+_j = \sum^{\infty}_{j = 1} a^+_{k_j} =  \sum^{\infty}_{k = 1} a^+_k, \sum^{\infty}_{j = 1} \tilde{a}^-_j = \sum^{\infty}_{j = 1} a^-_{k_j} =  \sum^{\infty}_{k = 1} a^-_k, \]
+		причём эти ряды сходятся по признаку сравнения (в силу (*)). Поэтому
+		\[ \sum^{\infty}_{j = 1} \tilde{a_j} = \sum^{\infty}_{j = 1} a_{k_j} = \sum^{\infty}_{j = 1} (a^+_{k_j} - a^-_{k_j}) = (**) \]
+		Предел последовательности разности частичных сумм равен разности пределов частичных сумм
+		\[ (**): \sum^{\infty}_{j = 1} a^+_{k_j} - \sum^{\infty}_{j = 1} a^-_{k_j} = \sum^{\infty}_{k = 1} a^+_k - \sum^{\infty}_{k = 1} a^-_k = \sum^{\infty}_{k = 1} (a^+_k - a^-_k) = \sum^{\infty}_{k = 1} a_k. \]
+	\end{proof}
+	
+	Заметим, что при перестановке условно сходящегося ряда, вообще говоря, меняется. Более того, справедлива следующая теорема.
+	
+	\begin{theorem}[Теорема Римана]
+		Если ряд $\sum^{\infty}_{k = 1} a_k$ сходится условно, то для любого $x \in \R \cup \{+\infty, -\infty\}$ можно так переставить члены ряда $\sum^{\infty}_{k = 1} a_k,$ что полученный $\sum^{\infty}_{j = 1} \tilde{a_j}$ будет иметь сумму равную $x$.
+	\end{theorem}
+	
+	Без доказательства.
 	
 	\chapter{Предел функции}
 	
+	\section{Окрестности}
+	
+	\begin{definition}
+		Пусть $\epsilon > 0$.
+		\begin{itemize}
+			\item Окрестностью радиуса $\epsilon$ (или $\epsilon$-окрестностью) точки
+			$a \in \R$ называется множество
+			\[ B_{\epsilon}(a) := \{x \in \R : |x - a| < \epsilon\} = (a - \epsilon, a + \epsilon). \]
+			\item Проколотой $\epsilon$-окрестностью точки $a \in \R$ называется
+			множество
+			\[ B'_{\epsilon}(a) := B_{\epsilon}(a) \setminus \{a\} = (a - \epsilon, a) \cup (a, a + \epsilon). \]
+		\end{itemize}
+	\end{definition}
+	
+	\section{Внутренние, предельные и граничные точки}
+	
+	\begin{definition}
+		\begin{itemize}
+			\item Точка $a \in \R$ называется \underline{внутренней} точкой множества $M$, если она входит в это множество $M$ с некоторой своей окрестностью (т. е. найдется такое $\epsilon > 0$, что $B_{\epsilon}(a) \subset M$).
+			\item Точка $a \in \R$ называется \underline{предельной} точкой множества $M$, если каждая ее проколотая окрестность имеет непустое пересечение с множеством $M$ (т. е. для каждого $\epsilon > 0$ пересечение $B'_{\epsilon}(a) \cap M \neq \varnothing$).
+			\item Точка $a \in \R$ называется \underline{граничной} точкой множества $M$, если каждая ее окрестность имеет непустое пересечение как с множеством $M$, так и с его дополнением (т. е. для каждого $\epsilon > 0$ и $B_{\epsilon}(a) \cap M \neq \varnothing$ и $B_{\epsilon}(a) \cap (\R \setminus M) \neq \varnothing)$.
+		\end{itemize}
+	\end{definition}
+	
+	\begin{example}
+		Например, для множества $M = (0, 1] \cup \{3\}$ точки $0, \frac{1}{2}, 1$ будут
+		предельными, а точки $-1$ и $3$ не будут; точки $0, 1, 3$ будут граничными, а точки $-1$ и $\frac{1}{2}$ не будут.
+	\end{example}
+	
+	\newpage
+	
 	\section*{Лекция 9: Предел функции}
+	
+	\begin{mention}
+		Точка a является предельной для $M$ тогда и только тогда, когда найдется сходящаяся к $a$ последовательность $a_n \in M \setminus \{a\}$.
+	\end{mention}
+	
+	\begin{proof}
+		\begin{itemize}
+			\item[$\Rightarrow$] Если $a$ предельная, то $\forall \epsilon > 0$ $B'_{\epsilon}(a) \cap M \neq \varnothing \Rightarrow \forall n$ $\epsilon = \frac{1}{n}$ $a_n (\neq a) \in B'_{\frac{1}{n}}(a) \cap M \neq \varnothing \Rightarrow 0 < |a_n - a| < \frac{1}{n}, \frac{1}{n} \to 0 \Rightarrow |a_n - a| \to 0 \Rightarrow a_n \to a.$
+			\item[$\Leftarrow$] Если $a_n \in M \setminus \{a\}$ и $a_n (\neq a) \to a,$ то $\forall \epsilon > 0$ $\exists N: \forall n > N \rightarrow |a_n - a| < \epsilon$. 
+			
+			Т. к. $a_n \in M \setminus \{a\}$ и $(a_n \neq a \Rightarrow 0 < |a_n - a| < \epsilon),$ то $a_n \in B'_{\epsilon}(a)$ и $a_n \in M \Rightarrow B'_{\epsilon}(a) \cap M \neq \varnothing.$
+		\end{itemize}
+	\end{proof}
+	
+	\section{Предел функции по Коши}
+	
+	\begin{theorem}
+		Пусть функция $f$ определена на некотором множестве $D \subset \R$ и пусть $a$ - предельная для $D$ точка. Число $A$ называется \underline{пределом} функции $f$ в точке $a$ (по множеству $D$), если для каждого $\epsilon > 0$ найдется такое $\delta > 0$, что $|f(x) - A| < \epsilon$ для каждого $x \in D \cap B'_{\delta}(a)$. Используют обозначения $\lim_{x \to a} f(x) = A$ или $f(x) \to A$ при $x \to a$.
+	\end{theorem}
+	
+	C помощью кванторов определение можно записать так: $\lim_{x \to a} f(x) = A,$  если $\forall \epsilon > 0$ $\exists \delta > 0: \forall x \in D \cap B'_{\delta}(a) \to |f(x) - A| < \epsilon$ или, эквивалентно,
+	\[ \forall \epsilon > 0 \text{ } \exists \delta > 0: \forall x \in D, 0 < |x - a| < \delta \rightarrow |f(x) - A| < \epsilon. \]
+	
+	\begin{center}
+		\includegraphics[width=0.7\textwidth]{img/lecture9/graphs}
+	\end{center}
+	
+	\begin{example}
+		Пусть $f(x) = x^2,$ тогда $\lim_{x \to 1} f(x) = 1.$
+	\end{example}
+	
+	\begin{proof}
+		Действительно, при $0 < |x - 1| < \delta$ выполнено $|f(x) - 1| = |x + 1||x - 1| < (\delta + 2)\delta$ $(|x + 1| \leqslant |x - 1| + 2 < \delta + 2).$ Поэтому при $\delta := \min\{1, \frac{\epsilon}{3}\}$ выполнено $|f(x) - 1| < \epsilon$ при каждом $x,$ для которого $0 < |x - 1| < \delta.$
+		\begin{explanation}
+			\begin{enumerate}
+				\item $\delta = \frac{\epsilon}{3} < 1 \Rightarrow \epsilon < 3$
+				
+				$\delta(\delta + 2) = \frac{\epsilon}{3}(\frac{\epsilon}{3} + 2) < \frac{\epsilon}{3} (1 + 2) = \epsilon$
+				\item $\delta = 1 \leqslant \frac{\epsilon}{3} \Rightarrow \epsilon \geqslant 3$
+				
+				$\delta(\delta + 2) = 3 \leqslant \epsilon$
+			\end{enumerate}
+		\end{explanation}
+	\end{proof}
+	
+	\begin{example}
+		Почему мы не берём сам предел в окрестность? А потому, что мы это используем при расчёте пределов:
+		\[ \lim_{x \to 1} \frac{x^2 - 1}{x - 1} = \lim_{x \to 1} \frac{(x - 1)(x + 1)}{x - 1} = \lim_{x \to 1} (x + 1) = 2 \]
+		
+		Проверка: $(\forall \epsilon > 0) (\exists \delta > 0) (\forall x)$ $0 < |x - 1| < \delta$ $\big|\frac{x^2 - 1}{x - 1} - 2\big| < \epsilon$
+		
+		Примем $\delta := \epsilon: 0 < |x - 1| < \epsilon \Rightarrow \big|\frac{(x - 1)(x + 1)}{x - 1} - 2\big| = |x - 1| < \epsilon$
+		
+		Если мы бы допустили, что $a$ включено в $\delta$-окрестность, то никакое бы $\delta$ не подошло - для значения $x = a = 1$ было бы неверно, что $f(1) \in B_{\delta}(2).$
+	\end{example}
+	
+	\begin{mention}
+		Если множество $D$ не ограничено сверху (снизу), то можно определить предел функции в «точке» $+\infty$ $(-\infty)$. Для этого по определению будем считать, что $B'_{\epsilon}(+\infty) := (\frac{1}{\epsilon}, +\infty)$ и $B'_{\epsilon}(-\infty) := (-\infty, -\frac{1}{\epsilon}).$
+	\end{mention}
+	
+	Можно дать альтернативное определение функции.
+	
+	\section{Предел функции по Гейне}
+	
+	\begin{theorem}
+		Пусть функция $f$ определена на некотором множестве $D \subset \R$ и пусть $a$ предельная для $D$ точка. Число $A$ называется \underline{пределом} функции $f$ в точке $a$ (по множеству $D$), если для каждой последовательности точек $x_n \in D \setminus \{a\}$ $(x_n \neq a),$ $x_n \to a,$ выполнено $f(x_n) \to A$ при $n \to \infty.$
+	\end{theorem}
+	
+	Покажем, что два этих определения задают один и тот же объект.
+	
+	\begin{theorem}
+		Определения предела функции по Коши и по Гейне эквивалентны.
+	\end{theorem}
+	
+	\begin{proof}
+		\begin{enumerate}
+			\item $\text{К} \Rightarrow \text{Г}$
+			Пусть $\lim_{x \to a} f(x) = A$ в смысле Коши. Рассмотрим последовательность точек $x_n \in D \setminus \{a\}, x_n \to a.$
+			\[ \lim_{x \to a} f(x) = A \Leftrightarrow \forall \epsilon > 0 \text{ } \exists \delta > 0: \forall x \in D, 0 < |x - a| < \delta \rightarrow |f(x) - A| < \epsilon \]
+			\[ \lim_{n \to \infty} x_n = a \Leftrightarrow \forall \delta > 0 \text{ } \exists N: \forall n > N \text{ } |x_n - a| < \delta \]
+			\item $\text{Г} \Rightarrow \text{К}$ От противного.
+			
+			Пусть число $A$ не является пределом функции $f$ в точке $a$ в смысле Коши. Это означает, что
+			\[ \exists \epsilon > 0 \text{ } \forall \delta > 0: \exists x_{\delta} \in D, 0 < |x_{\delta} - a| < \delta \rightarrow |f(x_{\delta}) - A| \geqslant \epsilon \]
+			(отрицание определения Коши)
+			
+			Рассмотрим последовательность $a_n = x_{\frac{1}{n}}$.
+			
+			Пусть $\delta = \frac{1}{n}.$ Тогда
+			\[ \exists \epsilon > 0 \text{ } \forall \delta > 0: \exists a_n \in D, 0 < |a_n - a| < \frac{1}{n} \rightarrow |f(a_n) - A| \geqslant \epsilon \]
+			$0 < |a_n - a| < \frac{1}{n} \Rightarrow$ по теореме о зажатой последовательности $a_n \to a,$ но последовательность точек $f(a_n)$ не сходится к $A$. Таким образом, число $A$ не является пределом функции $f$ в точке $a$ в смысле Гейне.
+		\end{enumerate}
+	\end{proof}
+	
+	\section{Арифметические свойства предела функции и неравенства}
+	
+	\begin{theorem}
+		Пусть функции $f, g, h$ определены на некотором множестве $D \subset \R$ и пусть $а$ - предельная для $D$ точка. Тогда
+		\begin{enumerate}
+			\item (единственность предела) если $\displaystyle \lim_{x \to a} f(x) = A$ и $\displaystyle \lim_{x \to a} f(x) = B,$ то $A = B$;
+			\item (линейность предела) если $\displaystyle \lim_{x \to a} f(x) = A$ и $\displaystyle \lim_{x \to a} g(x) = B,$ то $\displaystyle \lim_{x \to a} (\alpha f(x) + \beta g(x)) = \alpha A + \beta B$ $\forall \alpha, \beta \in \R;$
+			\item (предел произведения) если $\displaystyle \lim_{x \to a} f(x) = A$ и $\displaystyle \lim_{x \to a} g(x) = B,$ то $\displaystyle \lim_{x \to a} (f(x) \cdot g(x)) = A \cdot B;$
+			\item (предел отношения) если $\displaystyle \lim_{x \to a} f(x) = A, \lim_{x \to a} g(x) = B \neq 0$	и $g(x) \neq 0$ при $x \in D,$ то $\displaystyle \lim_{x \to a} \frac{f(x)}{g(x)} = \frac{A}{B};$
+			\item (переход к пределу в неравенстве) если $\exists r > 0 : f(x) \leqslant g(x)$ при $x \in D \cap B'_r(a)$ и $\displaystyle \lim_{x \to a} f(x) = A, \lim_{x \to a} g(x) = B,$ то $A \leqslant B;$
+			\item (предел зажатой функции) если $\exists r > 0 : f(x) \leqslant h(x) \leqslant g(x)$ при $x \in D \cap B'_r(a)$ и $\displaystyle \lim_{x \to a} f(x) = \lim_{x \to a} g(x) = A,$ то $\displaystyle \lim_{x \to a} h(x) = A;$
+			\item (ограниченность функции) если $\displaystyle \lim_{x \to a} f(x) = A,$ то найдутся такие $\delta > 0$ и $C > 0,$ что $|f(x)| \leqslant C$ при каждом $x \in D \cap B'_{\delta}(a);$
+			\item (отделимость от нуля) если $\displaystyle \lim_{x \to a} f(x) = A \neq 0,$ то найдется такое $\delta > 0,$ что $|f(x)| > \frac{|A|}{2}$ при $x \in D \cap B'_{\delta}(a).$
+		\end{enumerate}
+	\end{theorem}
+	
+	\begin{proof}
+		Свойства 1) - 6) следуют из аналогичных свойств для предела последовательности и определения функции по Гейне.
+		
+		7) При $\epsilon = 1 > 0$ $\exists \delta > 0: \forall x \in D \cap B'_{\delta}(a)$ $|f(x) - A| < 1 \Rightarrow |f(x)| - |A| \leqslant |f(x) - A| < 1 \Rightarrow |f(x)| \leqslant |A| + 1 = C > 0$
+		
+		8) При $\epsilon = \frac{|A|}{2} > 0$ $\exists \delta > 0: \forall x \in D \cap B'_{\delta}(a)$ $|f(x) - A| < \frac{|A|}{2} \Rightarrow |A - f(x)| < \frac{|A|}{2} \Rightarrow |A| - |f(x)| \leqslant |A - f(x)| < \frac{|A|}{2} \Rightarrow |f(x)| > \frac{|A|}{2}.$
+	\end{proof}
+	
+	\section{Теорема о пределе сложной функции}
+	
+	\begin{theorem}
+		Пусть $f : D \rightarrow E, g : E \rightarrow \R$, $a$ - предельная точка множества
+		$D$, $b$ - предельная точка множества $E$, $\lim_{x \to a} f(x) = b, \lim_{y \to b} g(y) = с$ и есть такая проколотая окрестность $B'_{\delta}(a)$ точки $a$, что $f(x) \neq b$ для каждой точки $x \in B'_{\delta}(a) \cap D.$ Тогда $\lim_{x \to a} g(f(x)) = c.$
+	\end{theorem}
+	
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{img/lecture9/function_composition}
+	\end{center}
+	
+	\begin{proof}
+		$h(x) = g(f(x))$
+		
+		$\lim_{x \to a} f(x) = b \Rightarrow \forall \{x_n\}^{\infty}_{n = 1} \subset D \setminus \{a\}$ при $x_n \to a$ $y_n = f(x_n) \to b.$
+		
+		$x_n \to a$ и $\exists \delta > 0: \forall x \in B'_{\delta}(a) \to f(x) \neq b \Rightarrow$
+		
+		$\Rightarrow \exists N: \forall n \geqslant N \rightarrow x_n \in B'_{\delta}(a)$ $(\epsilon = \delta)$ и $f(x_n) \neq b.$
+		
+		Тогда последовательность $\{f(x_n)\}^{\infty}_{n = N} \subset E \setminus \{b\}$ и $f(x_n) \to b \Rightarrow$
+		
+		 $\Rightarrow$ (из $\lim_{x \to b} g(x) = c$) $g(f(x_n)) \to c.$
+	\end{proof}
+	
+	\newpage	
 	
 	\section*{Лекция 10: Замечательные пределы, критерий Коши}
 	
+	\section{Первый замечательный предел}
+	
+	\begin{sentence}
+		$\displaystyle \lim_{x \to 0} \frac{\sin{x}}{x} = 1.$
+	\end{sentence}
+	
+	\begin{proof}
+		\begin{enumerate}
+			\item $x \in \big(0; \frac{\pi}{2}\big)$
+			\begin{center}
+				\includegraphics[width=0.4\textwidth]{img/lecture10/first_wonderful_limit}
+			\end{center}
+			\[ S_{\text{с}} \leqslant S_{\text{з}} \leqslant S_{\text{к}} \text{ - площади синего, зелёного и красного треугольников} \]
+			
+			Используем формулу площади прямоугольного треугольника $S_{\text{с}} = \frac{1}{2} \cdot \sin{x} \cdot \cos{x}, S_{\text{к}} = \frac{\tg{x}}{2}$, а затем $x$-ой части круга $S_{\text{з}} = \frac{x}{2\pi} \cdot \pi \cdot 1^2$.	
+			\[ \frac{1}{2} \cdot \sin{x} \cdot \cos{x} < \frac{x}{2\pi} \cdot \pi \cdot 1^2 = \frac{x}{2} < \frac{\tg{x}}{2} \text{ } | \cdot 2 \]
+			\[ \sin{x} \cdot \cos{x} < x < \tg{x} = \frac{\sin{x}}{\cos{x}} \]
+			\[ \sin{x} \cdot \cos{x} < x \text{ } | : x > 0 \Rightarrow \frac{\sin{x}}{x} \cdot \cos{x} < 1 \text{ } | : \cos{x} > 0 \Rightarrow \frac{\sin{x}}{x} < \frac{1}{\cos{x}} \]
+			\[ x < \frac{\sin{x}}{\cos{x}} \text{ } | \cdot \cos{x} > 0 \Rightarrow x \cdot \cos{x} < \sin{x} \text{ } | : x > 0 \Rightarrow \cos{x} < \frac{\sin{x}}{x} \]
+			\[ \cos{x} < \frac{\sin{x}}{x} < \frac{1}{\cos{x}} \]
+			$\displaystyle \lim_{x \to 0} \cos{x} = 1, \lim_{x \to 0} \frac{1}{\cos{x}} = 1 \Rightarrow \lim_{x \to 0} \frac{\sin{x}}{x} = 1$ по теореме о зажатой функции.
+			\item $x \in \big(-\frac{\pi}{2}; 0\big)$
+			\[ -\frac{1}{2} \cdot \sin{x} \cdot \cos{x} < -\frac{x}{2\pi} \cdot \pi \cdot 1^2 = -\frac{x}{2} < -\frac{\tg{x}}{2} \]
+			\[ \sin{x} \cdot \cos{x} > x > \tg{x} = \frac{\sin{x}}{\cos{x}} \]
+			\[ \sin{x} \cdot \cos{x} > x \text{ } | : x < 0 \Rightarrow \frac{\sin{x}}{x} \cdot \cos{x} < 1 \text{ } | : \cos{x} > 0 \Rightarrow \frac{\sin{x}}{x} < \frac{1}{\cos{x}} \]
+			\[ x > \frac{\sin{x}}{\cos{x}} \text{ } | \cdot \cos{x} > 0 \Rightarrow x \cdot \cos{x} > \sin{x} \text{ } | : x < 0 \Rightarrow \cos{x} < \frac{\sin{x}}{x} \]
+			\[ \cos{x} < \frac{\sin{x}}{x} < \frac{1}{\cos{x}} \]
+			
+			Осталось доказать, что $\lim_{x \to y} \cos{x} = \cos{y},$ т. е. функция непрерывна (предел в этой точке равен значению функции в этой точке)
+			
+			Требуется доказать $\displaystyle \lim_{x \to y} \cos{x} = \cos{y}.$
+			\[ \forall \epsilon > 0 \text{ } \exists \delta > 0: \forall x \in D, 0 < |x - y| < \delta \rightarrow |\cos{x} - \cos{y}| < \epsilon \]
+			\[ |\cos{x} - \cos{y}| = \bigg|2\sin{\bigg(\frac{x + y}{2}\bigg)}\sin{\bigg(\frac{x - y}{2}\bigg)}\bigg| \leqslant 2\bigg|\sin{\bigg(\frac{x - y}{2}\bigg)}\bigg| \leqslant 2\bigg|\frac{x - y}{2}\bigg| = |x - y| \]
+			Здесь мы пользуемся неравенством $|\sin{\alpha}| \leqslant |\alpha|$
+			\begin{center}
+				\includegraphics[width=0.2\textwidth]{img/lecture10/sin_inequality}
+			\end{center}
+			Дуга больше отрезка $AB$. Отрезок больше высоты. Поэтому дуга угла $\alpha$ больше синуса соответствующего угла (или равна, если $A = B$).
+			
+			Тогда если взять $\delta = \frac{\epsilon}{2},$ то $|x - y| \leqslant \frac{\epsilon}{2} < \epsilon \Rightarrow |\cos{x} - \cos{y}| < \epsilon.$ 
+		\end{enumerate}
+	\end{proof}
+	
+	\section{Второй замечательный предел}
+	
+	\begin{sentence}
+		$\displaystyle \lim_{x \to +\infty} \bigg(1 + \frac{1}{x}\bigg)^x = e.$
+	\end{sentence}
+	
+	\begin{proof}
+		Пусть $f(x) := \big(1 + \frac{1}{1 + [x]}\big)^{[x]}, g(x) := \big(1 + \frac{1}{[x]}\big)^{[x] + 1}.$
+		
+		Тогда $f(x) \leqslant \big(1 + \frac{1}{x}\big)^x \leqslant g(x).$
+		
+		Кроме того, 
+		\[ \lim_{n \to +\infty} \bigg(1 + \frac{1}{n + 1}\bigg)^n = \lim_{n \to +\infty} \frac{\big(1 + \frac{1}{n + 1}\big)^{n + 1}}{\big(1 + \frac{1}{n + 1}\big)} = \frac{e}{1} = e, \]
+		\[ \lim_{n \to +\infty} \bigg(1 + \frac{1}{n}\bigg)^{n + 1} = \lim_{n \to +\infty} \bigg(1 + \frac{1}{n}\bigg)^n \bigg(1 + \frac{1}{n}\bigg) = e \cdot 1 = e. \]
+		
+		Следовательно, $\displaystyle \lim_{x \to +\infty} f(x) = \lim_{x \to +\infty} g(x) = e.$
+		
+		Утверждение следует из теоремы о пределе зажатой функции.
+	\end{proof}
+	
+	\section{Критерий Коши}
+	
+	\begin{theorem}
+		Пусть $f : D \rightarrow \R$ и $a$ - предельная точка $D$. Предел $\lim_{x \to a} f(x)$ существует тогда и только тогда, когда для каждого $\epsilon > 0$ найдется такое $\delta > 0$, что для каждых $x, y \in B'_{\delta}(a) \cap D$ выполнено $|f(x) - f(y)| < \epsilon$.
+	\end{theorem}
+	
+	\begin{proof}
+		\begin{itemize}
+			\item[$\Rightarrow$] Пусть $\lim_{x \to a} f(x) = A \Rightarrow \forall \epsilon > 0$ $\exists \delta > 0: \forall x \in D,$
+			
+			$0 < |x - a| < \delta \rightarrow |f(x) - A| < \frac{\epsilon}{2}.$
+			
+			Тогда $|f(x) - A| < \frac{\epsilon}{2}, |f(y) - A| < \frac{\epsilon}{2} \Rightarrow |f(x) - f(y)| = |f(x) - A + A - f(y)| \leqslant |f(x) - A| + |A - f(y)| < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon.$
+			\item[$\Leftarrow$] Пусть $\forall \epsilon > 0$ $\exists \delta > 0: \forall x, y \in B'_{\delta}(a) \cap D \rightarrow |f(x) - f(y)| < \epsilon.$ Рассмотрим произвольную последовательность $\{x_n\}^{\infty}_{n = 1} \subset D \setminus  \{a\}, x_n \to a.$ Тогда $f(x_n)$ - фундаментальна (т. к. $\exists N: \forall n \geqslant N, x_n \in B'_{\delta}(a) \cap D \Rightarrow \forall n, m > N \rightarrow |f(x_n) - f(x_m)| < \epsilon) \Rightarrow\exists \lim_{n \to \infty} f(x_n) = A.$
+			
+			Пусть есть другая последовательность $\{y_n\}^{\infty}_{n = 1} \subset D \setminus \{a\}, y_n \to a.$
+			
+			Рассмотрим последовательность $z_{2k - 1} = x_k, z_{2k} = y_k,$ т. е. это последовательность вида $x_1, y_1, ... \subset D \setminus \{a\}.$
+			
+			\begin{tabular}{c|c}
+				$x_n \to a \Rightarrow \forall \epsilon > 0$ $\exists N_1: \forall n \geqslant N_1 \rightarrow |x_n - a| < \epsilon$ & \multirow{2}*{$\Rightarrow \forall \epsilon > 0$ $\exists N_3 = 2\max\{N_1, N_2\}:$} \\
+				$y_n \to a \Rightarrow \forall \epsilon > 0$ $\exists N_2: \forall n \geqslant N_2 \rightarrow |y_n - a| < \epsilon$ &                  
+			\end{tabular}
+			$\forall n \geqslant N_3 \rightarrow |z_n - a| < \epsilon \Rightarrow z_n \to a \Rightarrow$ (из определения предела функции по Гейне) $\lim_{n \to \infty} f(z_n) = B.$
+			
+			Но т. к. подпоследовательность $f(x_n)$ последовательности $f(z_n)$ сходится к $A$, то вся последовательность $f(z_n)$ сходится к $A = B.$ Значит $\lim_{x \to a} f(x)$ единственный. Таким образом, доказано существование предела по Гейне.
+		\end{itemize}
+	\end{proof}
+	
+	\newpage
+	
 	\section*{Лекция 11: Эквивалентность и o-символика}
+	
+	\section{Пределы справа и слева}
+	
+	Пусть $D^+_a := D \cap (a, +\infty)$ и $D^-_a := D \cap (-\infty, a).$
+	
+	\begin{definition}
+		Пусть точка $a$ - предельная для множества $D^+_a$ и существует предел функции $f$ по множеству $D^+_a$ в точке $a$. Этот предел называют пределом справа функции $f$ в точке $a$ и обозначают $\lim_{x \to a + 0} f(x)$. Аналогично определяется предел слева, который обозначают $\lim_{x \to a - 0} f(x)$.
+	\end{definition}
+	\[ \lim_{x \to a + 0} f(x) = A, \lim_{x \to a - 0} f(x) = B \]
+	\begin{center}
+		\includegraphics[width=0.3\textwidth]{img/lecture11/right_and_left_limit}
+	\end{center}
+	
+	\section{Теорема Вейерштрасса}
+	
+	\begin{theorem}
+		Пусть $f$ - не убывает и ограничена на множестве $D$, $a$ - предельная точка множества $D^-_a$. Тогда существует предел слева
+		\[ \lim_{x \to a - 0} f(x) = \sup\{f(x) : x \in D^-_a\}. \]
+		Пусть $f$ - не убывает и ограничена на множестве $D$, $a$ - предельная точка множества $D^+_a$. Тогда существует предел справа
+		\[ \lim_{x \to a + 0} f(x) = \inf\{f(x) : x \in D^+_a\}. \]
+		Аналогичные утверждения с заменой $\inf$ на $\sup$ справедливы и для невозрастающей функции.
+	\end{theorem}
+	
+	\begin{proof}
+		Пусть $M = \sup_{x \in D^-_a} f(x).$
+		\begin{enumerate}
+			\item $\forall \epsilon > 0$ $\exists x_0 \in D^-_a : f(x_0) > M - \epsilon$
+			
+			\underline{Пояснение.} $M = \sup{A}$
+			\begin{enumerate}
+				\item $\forall a \in A$ $a \leqslant M$
+				\item $\forall b$ - верхняя грань $A \rightarrow b \geqslant M$
+			\end{enumerate}
+			$\forall \epsilon > 0$ $\exists a \in A: a > M - \epsilon$
+			\item $f(x)$ не убывает $\Rightarrow \forall x \geqslant x_0 \rightarrow f(x) \geqslant f(x_0) \Rightarrow f(x_0) \leqslant f(x) \leqslant M < M + \epsilon$
+		\end{enumerate}
+		Из (1) и (2) $\Rightarrow \epsilon > 0$ $\exists \delta = a - x_0 > 0: \forall x \in B'_{\delta}(a) \cap D^-_a \rightarrow |f(x) - M| < \epsilon$
+		
+		Для предела справа доказывается аналогично.
+	\end{proof}
+	
+	\section{Отношение эквивалентности}
+	
+	\begin{definition}
+		Бинарное отношение $\sim$ на множестве $X$ называется \newline \underline{отношением эквивалентности}, если оно обладает следующими свойствами:
+		\begin{enumerate}
+			\item рефлексивность: $\forall x \in X \rightarrow x \sim x;$
+			\item симметричность: $\forall x, y \in X \rightarrow x \sim y \Rightarrow y \sim x;$
+			\item транзитивность: $\forall x, y, z \in X \rightarrow (x \sim y$ и $y \sim z) \Rightarrow x \sim z.$ 
+		\end{enumerate} 
+	\end{definition}
+	
+	\section{Классы эквивалентности}
+	
+	\begin{definition}
+		Пусть на множестве $X$ задано отношение эквивалентности $\sim$. \underline{Классом эквивалентности} элемента $x \in X$ называется множество
+		\[ [x] = \{y \in X : x \sim y\} \]
+	\end{definition}
+	
+	\begin{example}
+		Пусть задано натуральное число $k$. Для целых чисел $m, n$ будем писать $m \overset{k}{\sim} n$, если $\frac{m - n}{k} \in \Z$. Проверьте, что бинарное отношение $\overset{k}{\sim}$ является отношением эквивалентности на $\Z$. Для любого $m \in \Z$ класс эквивалентности $[m]$ состоит из всех целых чисел, имеющих такой же остаток при делении на $k$, что и число $m$.
+	\end{example}
+	
+	\begin{proof}
+		Если $\frac{m - n}{k} \in \Z \Rightarrow m \underset{k}{\equiv} n.$
+		\begin{enumerate}
+			\item $m \underset{k}{\equiv} m$
+			\item если $m \underset{k}{\equiv} n$, то $n \underset{k}{\equiv} m$
+			\item если $m \underset{k}{\equiv} n, n \underset{k}{\equiv} p \Rightarrow m \underset{k}{\equiv} p$ 
+		\end{enumerate}
+		Таким образом, $\overset{k}{\sim}$ - класс эквивалентности.
+	\end{proof}
+	
+	\begin{definition}
+		Будем говорить, что множество $X$ является дизъюнктным объединением семейства множеств $\{X_{\alpha}\}_{\alpha \in A}$ и писать $X = \underset{\alpha \in A}{\bigsqcup} X_{\alpha}$, если
+		\begin{enumerate}
+			\item $X = \underset{\alpha \in A}{\bigcup} X_{\alpha}$
+			\item $X_{\alpha} \cap X_{\beta} = \varnothing$ $\forall \alpha, \beta \in A : \alpha \neq \beta.$
+		\end{enumerate}
+	\end{definition}
+	
+	\begin{lemma}
+		Если на множестве $X$ задано отношение эквивалентности $\sim$, то $X$ является дизъюнктным объединением различных классов эквивалентности $[x]$, где $x \in X$.
+	\end{lemma}
+	
+	\begin{proof}
+		ДОДЕЛАТЬ
+	\end{proof}
+	
+	\section{Эквивалентность функций}
+	
+	\begin{definition}
+		Пусть функции $f$ и $g$ определены и не обращаются в $0$ в некоторой $B'(x_0)$. Функции $f$ и $g$ называются \underline{эквивалентными} (пишут: $f(x) \sim g(x)$) при $x \to x_0$, если $\lim_{x \to x_0} \frac{f(x)}{g(x)} = 1$.
+	\end{definition}
+	
+	\begin{lemma}
+		Отношение эквивалентности функций при $x \to x_0$ является отношением эквивалентности на множестве функций, определенных и не обращающихся в ноль в $B'_{\delta}(x_0)$.
+	\end{lemma}
+	
+	\begin{proof}
+		Проверим требуемые свойства.
+		\begin{enumerate}
+			\item Рефлексивность: $\lim_{x \to x_0} \frac{f(x)}{f(x)} = 1 \Rightarrow f(x) \sim f(x);$
+			\item Симметричность: $f(x) \sim g(x) \Rightarrow \lim_{x \to x_0} \frac{f(x)}{g(x)} = 1$
+			
+			$\lim_{x \to x_0} \frac{g(x)}{f(x)} = \lim_{x \to x_0} \frac{1}{\frac{f(x)}{g(x)}} = \frac{1}{1} = 1 \Rightarrow g(x) \sim f(x);$
+			\item Транзитивность:
+			\[ \begin{cases}
+				f(x) \sim g(x) \\
+				g(x) \sim h(x)
+			\end{cases} \Rightarrow \begin{cases}
+				\lim_{x \to x_0} \frac{f(x)}{g(x)} = 1 \\
+				\lim_{x \to x_0} \frac{g(x)}{h(x)} = 1
+			\end{cases} \Rightarrow \lim_{x \to x_0} \frac{f(x)}{h(x)} \Rightarrow \lim_{x \to x_0} \frac{f(x) g(x)}{g(x) h(x)} = 1 \cdot 1 = 1. \]
+		\end{enumerate}
+	\end{proof}
+	
+	\begin{mention}
+		Замечательные пределы и разобранные на семинарах примеры показывают, что при $x \to 0$
+		\[ x \sim \sin{x} \sim \tg{x} \sim \arctg{x} \sim \arcsin{x} \sim e^x - 1 \sim \ln(1 + x). \]
+		\[ \lim_{x \to 0} \frac{\sin{x}}{x} = 1, \lim_{x \to 0} \frac{\arctg{x}}{x} = 1,  \lim_{x \to 0} \frac{\sin{x}}{\arcsin{x}} = 1, \lim_{x \to 0} \frac{\sin{x}}{\ln{(1 + x)}} = 1 \]
+	\end{mention}
+	
+	\section{Свойства отношения эквивалентности}
+	
+	\begin{lemma}
+		Пусть функции $f_1(x), f_2(x), g_1(x), g_2(x)$ определены и не обращаются в $0$ в некоторой $B'_{\delta}(x_0)$ и пусть $f_1(x) \sim f_2(x), g_1(x) \sim g_2(x)$ при $x \to x_0$. Тогда $f_1(x)g_1(x) \sim f_2(x)g_2(x)$, $\frac{f_1(x)}{g_1(x)} \sim \frac{f_2(x)}{g_2(x)}$ при $x \to x_0$.
+	\end{lemma}
+	
+	\begin{proof}
+		\begin{enumerate}
+			\item $\lim_{x \to x_0} \frac{f_1(x) \cdot g_1(x)}{f_2(x) \cdot g_2(x)} = 1 \cdot 1 = 1$
+			\item $\lim_{x \to x_0} \frac{f_1(x)}{g_1(x)} : \frac{f_2(x)}{g_2(x)} = \lim_{x \to x_0} \frac{f_1(x) \cdot g_2(x)}{f_2(x) \cdot g_1(x)} = 1 \cdot 1 = 1$
+		\end{enumerate}
+	\end{proof}
+	
+	\begin{mention}
+		Из условий $f_1(x) \sim f_2(x), g_1(x) \sim g_2(x)$ при $x \to x_0$ не следует $f_1(x) + g_1(x) \sim f_2(x) + g_2(x)$ при $x \to x_0$. Например, $-x \sim -x$, $x + x^2 \sim x + x^3$ при $x \to 0$, но $-x + x + x^2 \not\sim -x + x + x^3$ при $x \to 0$.
+		\[ \lim_{x \to 0} \frac{-x}{-x} = 1, \lim_{x \to 0} \frac{x + x^2}{x + x^3} = \lim_{x \to 0} \frac{1 + x}{1 + x^2} = \frac{1}{1} = 1, \lim_{x \to 0} \frac{x^2}{x^3} = \lim_{x \to 0} \frac{1}{x} = \infty. \]
+	\end{mention}
+	
+	\section{Подсчет пределов}
+	
+	\begin{lemma}
+		Если $f(x) \sim g(x)$ при $x \to x_0$, то $\lim_{x \to x_0} f(x) = \lim_{x \to x_0} g(x)$, a если один из пределов не существует, то не существует и другой.
+	\end{lemma}
+	
+	\begin{proof}
+		\[ \exists \lim_{x \to x_0} f(x) = A \Rightarrow \lim_{x \to x_0} g(x) = \lim_{x \to x_0} \frac{g(x)}{f(x)} f(x) = \lim_{x \to x_0} f(x) = A. \]
+	\end{proof}
+	
+	\begin{corollary}
+		При вычислении пределов произведений и частных функций эти функции можно заменять на эквивалентные.
+	\end{corollary}
+	
+	\begin{example}
+		Найдите $lim_{x \to 0} \frac{(e^x - 1) \arcsin{x^2}}{\tg{x} \ln^2{(1 + x)}} = \lim_{x \to 0} \frac{x \cdot x^2}{x \cdot x^2} = 1.$
+		\begin{enumerate}
+			\item $e^x - 1 \sim x \Rightarrow \lim_{x \to 0} \frac{e^x - 1}{x} = 1$
+			\item $\arcsin{x^2} \sim x^2 \Rightarrow \lim_{x \to 0} \frac{\arcsin{x^2}}{x^2} = 1$ (теорема о пределе сложной функции)
+			\item $\tg{x} \sim x \Rightarrow \lim_{x \to 0} \frac{\tg{x}}{x} = 1$
+			\item $\ln{(1 + x)} \sim x \Rightarrow \ln^2{(1 + x)} \sim x^2$ (произведение эквивалентных функций)
+		\end{enumerate}
+	\end{example}
+	
+	\begin{lemma}
+		Пусть $f(y) \sim g(y)$ при $y \to y_0$, и пусть $y(x) \to y_0$ при $x \to x_0$ и $y(x) \neq y_0$ при $x \in B'_{\delta}(x_0)$. Тогда $f(y(x)) \sim g(y(x))$ при $x \to x_0$.
+	\end{lemma}
+	
+	\begin{proof}
+		По теореме о пределе сложной функции
+		\[ \lim_{x \to x_0} \frac{f(y(x))}{g(y(x))} = \lim_{y \to y_0} \frac{f(y)}{g(y)} = 1 \]
+	\end{proof}
+	
+	\begin{example}
+		\[ \lim_{x \to 0} \frac{(e^{\sin{x}} - 1)^3}{\tg{(\sin{x})} \ln^2{(1 + (e^x - 1))}} = \lim_{x \to 0} \frac{(e^x - 1)^3}{\tg{x} \ln^2{(1 + x)}} \text{ (лемма 3.31)} = \lim_{x \to 0} \frac{x^3}{x \cdot x^2} = \]
+		\[ = \lim_{x \to 0} 1 = 1. \]
+	\end{example}
+	
+	\newpage
 	
 	\section*{Лекция 12: Эквивалентность и o-символика}
 	
-	\section*{Лекция 13: Свойства непрерывных функций}
+	\section{o-малое}
+	
+	\begin{definition}
+		Пусть функции $f$ и $g$ определены в $B'(x_0)$ и функция $g(x)$ не обращается в $0$. Говорят, что функция $f$ является \underline{бесконечно малой} относительно функции $g$ при $x \to x_0$ и пишут $f(x) = o(g(x))$ при $x \to x_0$, если $\lim_{x \to x_0} \frac{f(x)}{g(x)} = 0$.
+	\end{definition}
+	
+	\begin{mention}
+		$o(g(x))$ - это класс функций. Запись $f(x) = o(g(x))$ означает, что функция $f(x)$ принадлежит классу функций $o(g(x))$. Поэтому равенство в записи $f(x) = o(g(x))$ необратимо, т. е. нельзя писать $o(g(x)) = f(x)$. Например, $x^3 = o(x), x^2 = o(x),$ при $x \to 0$, но $x^3 \neq x^2.$
+	\end{mention}
+	
+	\begin{explanation}
+		$\newline$
+		\begin{tabular}{ccc}
+			$x^3 = o(x)$ & $\lim_{x \to 0} \frac{x^3}{x} = \lim_{x \to 0} x^2 = 0$ & $x^3 \in o(x)$ \\
+			$x^2 = o(x)$ & $\lim_{x \to 0} \frac{x^2}{x} = \lim_{x \to 0} x = 0$ & $x^2 \in o(x)$ \\
+			$x^3 \neq x^2$ & & \\
+		\end{tabular}
+	\end{explanation}
+	
+	\begin{theorem}
+		$f(x) \sim g(x)$ при $x \to x_0 \Leftrightarrow f(x) = g(x) + o(g(x))$ при $x \to x_0$.
+	\end{theorem}
+	
+	\begin{proof}
+		\[ f(x) \sim g(x) \Leftrightarrow \lim_{x \to x_0} \frac{f(x)}{g(x)} = 1 \Leftrightarrow \lim_{x \to x_0} \frac{f(x) - g(x)}{g(x)} = 0 \Leftrightarrow f(x) - g(x) = o(g(x)) \Leftrightarrow \]
+		\[ \Leftrightarrow f(x) = g(x) + o(g(x)) \]
+	\end{proof}
+
+	\begin{example}
+		Из теоремы 3.32 следует, что эквивалентности из замечания 3.25 можно переписать в виде
+		\[ \lim_{x \to 0} \frac{\sin{x}}{x} = 1 \Leftrightarrow \sin{x} \sim x \Leftrightarrow \sin{x} = x + o(x) \text{ (теорема 3.32)} \]
+		\begin{center}
+			\begin{tabular}{ccc}
+				$\sin{x} = x + o(x),$ & $\tg{x} = x + o(x),$ & \\
+				$\arcsin{x} = x + o(x),$ & $\arctg{x} = x + o(x),$ & \\
+				$e^x = 1 + x + o(x),$ & $\ln{(1 + x)} = x + o(x),$ & \\
+				$\sh{x} = x + o(x),$ & $\th{x} = x + o(x)$ & при $x \to 0.$
+			\end{tabular}
+		\end{center}
+		
+		\underline{Справка по гиперболическим функциям} $\newline$
+		\begin{tabular}{ccc}
+			$\displaystyle \sh{x} = \frac{e^x - e^{-x}}{2}$ & $\displaystyle \ch{x} = \frac{e^x + e^{-x}}{2}$ & $\displaystyle \th{x} = \frac{\sh{x}}{\ch{x}}$ \\
+		\end{tabular}
+	\end{example}
+	
+	\begin{example}
+		\[ \lim_{x \to 0} \frac{\sin{x} + e^x - 1}{x} = \lim_{x \to 0} \frac{x + o(x) + x + o(x)}{x} = \lim_{x \to 0} \frac{2x + o(x)}{x} = \lim_{x \to 0} \bigg(\frac{2x}{x} + \frac{o(x)}{x}\bigg) = \]
+		\[ = \lim_{x \to 0} 2 + \lim_{x \to 0} \frac{o(x)}{x} = 2 + 0 = 2 \]
+		\[ \lim_{x \to 0} \frac{\sh{x}}{x} = \lim_{x \to 0} \frac{e^x - e^{-x}}{2x} = \lim_{x \to 0} e^{-x} \cdot \frac{e^{2x} - 1}{2x} = 1 \cdot 1 = 1 \Rightarrow \sh{x} \sim x \Rightarrow \sh{x} = x + o(x) \]
+	\end{example}
+	
+	\section{O-большое}
+	
+	\begin{definition}
+		Пусть функции $f$ и $g$ определены в $B'_{\delta}(x_0)$. Говорят, что функция $f$ \underline{ограничена относительно функции} $g$, и пишут $f(x) = O(g(x))$ при $x \to x_0$, если
+		\[ \exists C \in \R : \forall x \in B'(x_0) \rightarrow |f(x)| \leqslant C|g(x)|. \]
+	\end{definition}
+	
+	\section{Свойства o-малого и O-большого}
+	
+	\begin{theorem}
+		Для функций, не обращающихся в $0$ в некоторой $B'(x_0)$ при $x \to x_0$, справедливы равенства:
+		\begin{enumerate}
+			\item $o(f) \pm o(f) = o(f)$
+			\item $O(f) \pm O(f) = O(f)$
+			\item $o(f) = O(f)$
+			\item $o(O(f)) = o(f)$
+			\item $O(o(f)) = o(f)$
+			\item $O(O(f)) = O(f)$
+			\item $o(f) \cdot O(g) = o(fg)$
+			\item $O(f) \cdot O(g) = O(fg)$
+			\item $(o(f))^{\alpha} = o(f^{\alpha})$ $\forall \alpha > 0$
+			\item $(O(f))^{\alpha} = O(f^{\alpha})$ $\forall \alpha > 0$.
+		\end{enumerate}
+	\end{theorem}
+	
+	\begin{proof}
+		\begin{enumerate}
+			\item $o(f) \pm o(f) \subseteq o(f)$ - это подразумевается под равенством
+			
+			Пусть $g(x) \in o(f), h(x) \in o(f)$.
+			\[ g(x) = o(f(x)) \Leftrightarrow \lim_{x \to x_0} \frac{g(x)}{f(x)} = 0, h(x) = o(f(x)) \Leftrightarrow \lim_{x \to x_0} \frac{h(x)}{f(x)} = 0 \]
+			\[ \lim_{x \to x_0} \frac{g(x) \pm h(x)}{f(x)} = \lim_{x \to x_0} \frac{g(x)}{f(x)} \pm \lim_{x \to x_0} \frac{h(x)}{f(x)} = 0 \pm 0 = 0 \Rightarrow g(x) \pm h(x) \in o(f) \]
+			\item $O(f) + O(f) = O(f)$
+			
+			Пусть $g(x) \in O(f), h(x) \in O(f)$. Тогда $\exists C_1: |g(x)| \leqslant C_1 |f(x)|, \exists C_2: |h(x)| \leqslant C_2 |f(x)| \Rightarrow |g(x) + h(x)| \leqslant |g(x)| + |h(x)| \leqslant C_1 |f(x)| + C_2 |f(x)| = (C_1 + C_2) |f(x)| \Rightarrow g(x) + h(x) \in O(f).$
+			\item $o(f) \subseteq O(f)$
+			
+			Пусть $g(x) \in o(f) \Leftrightarrow \lim_{x \to x_0} \frac{g(x)}{f(x)} = 0 \Rightarrow \forall \epsilon > 0$ $\exists \delta: \forall x \in B'_{\delta}(x_0)$ $\big|\frac{g(x)}{f(x)}\big| < \epsilon \Rightarrow |g(x)| \leqslant \epsilon |f(x)|$ (в данной окрестности $f(x)$ не обращается в ноль)
+			\item $o(O(f)) \subseteq o(f)$
+			
+			Пусть $g(x) \in O(f) \Leftrightarrow \exists C: |g(x)| \leqslant C \cdot |f(x)| \Rightarrow \big|\frac{g(x)}{f(x)}\big| \leqslant C.$
+			
+			$h(x) \in o(g(x)) \Leftrightarrow \lim_{x \to x_0} \frac{h(x)}{g(x)} = 0$
+			\[ \lim_{x \to x_0} \frac{h(x)}{f(x)} = \lim_{x \to x_0} \frac{h(x)}{g(x)} \cdot \frac{g(x)}{f(x)} \]
+			\[ -C \cdot \bigg|\frac{h(x)}{g(x)}\bigg| \leqslant \frac{h(x)}{g(x)} \cdot \frac{g(x)}{f(x)} \leqslant C \cdot \bigg|\frac{h(x)}{g(x)}\bigg| \]
+			$\big|\frac{h(x)}{g(x)}\big| \to 0 \Rightarrow$ по теореме о зажатой функции $\lim_{x \to x_0} \frac{h(x)}{g(x)} \cdot \frac{g(x)}{f(x)} = 0 \Rightarrow h(x) \in o(f).$
+			\item $O(o(f)) = o(f)$
+			
+			Пусть $g(x) \in o(f(x)) \Leftrightarrow \lim_{x \to x_0} \frac{g(x)}{f(x)} = 0.$
+			
+			$h(x) \in O(g(x)) \Leftrightarrow \exists C: |h(x)| \leqslant C|g(x)| \Rightarrow \big|\frac{h(x)}{g(x)}\big| \leqslant C$
+			\[ \bigg|\lim_{x \to x_0} \frac{h(x)}{f(x)}\bigg| = \lim_{x \to x_0} \bigg|\frac{h(x)}{f(x)}\bigg| = \lim_{x \to x_0} \bigg|\frac{h(x)}{g(x)}\bigg| \cdot \bigg|\frac{g(x)}{f(x)}\bigg| = 0 \]
+			\[ \lim_{x \to x_0} \frac{h(x)}{f(x)} = 0 \]
+			\item $O(O(f)) = O(f)$
+			
+			Пусть $g(x) \in O(f(x)), h(x) \in O(g(x)).$
+			\[ \exists C_1: |g(x)| \leqslant C_1 \cdot |f(x)| \]
+			\[ \exists C_2: |h(x)| \leqslant C_2 \cdot |g(x)| \leqslant C_1 \cdot C_2 \cdot |f(x)| = C \cdot |f(x)| \]
+			\item $o(f) \cdot O(g) \subseteq o(fg)$
+			
+			Пусть $h(x) \in o(f), k(x) \in O(g).$
+			
+			Тогда $\lim_{x \to x_0} \frac{h(x)}{f(x)} = 0, \exists C: |k(x)| \leqslant C|g(x)|.$
+			\[ -C \bigg|\frac{h(x)}{g(x)}\bigg| \leqslant \frac{h(x) \cdot k(x)}{f(x) \cdot g(x)} \leqslant C \bigg|\frac{h(x)}{f(x)}\bigg| \Rightarrow h(x) \cdot k(x) \in o(fg) \]
+			\item $O(f) \cdot O(g) = O(fg)$
+			
+			Пусть $h(x) \in O(f), k(x) \in O(g).$
+			
+			Тогда $\exists C_1 : |h(x)| \leqslant C_1 |f(x)|,$ $\exists C_2 : |k(x)| \leqslant C_2 |g(x)| \Rightarrow |h(x) \cdot k(x)| = |h(x)| \cdot |k(x)| \leqslant C_1 \cdot C_2 \cdot |f(x) \cdot g(x)| \Rightarrow h(x) \cdot k(x) \in O(fg)$
+			\item $(o(f))^{\alpha} = o(f^{\alpha})$ $\forall \alpha > 0$
+			
+			Пусть $g(x) \in o(f) \Rightarrow \lim_{x \to x_0} \frac{g(x)}{f(x)} = 0, \lim_{x \to 0} x^{\alpha} = 0 \text{ (при } \alpha > 0) \Rightarrow$ по теореме о пределе сложной функции $\lim_{x \to x_0} \big(\frac{g(x)}{f(x)}\big)^{\alpha} = 0.$ Но
+			\[ \bigg(\frac{g(x)}{f(x)}\bigg)^{\alpha} = \frac{g^{\alpha}(x)}{f^{\alpha}(x)} \Rightarrow \lim_{x \to x_0} \frac{g^{\alpha}(x)}{f^{\alpha}(x)} = 0 \Rightarrow g^{\alpha}(x) = o(f^{\alpha}). \]
+			\item $(O(f))^{\alpha} = O(f^{\alpha})$ $\forall \alpha > 0$
+			
+			Пусть $g(x) \in O(f) \Leftrightarrow \exists C: |g(x)| \leqslant C|f(x)| \Rightarrow |g(x)|^{\alpha} \leqslant C^{\alpha} |f(x)|^{\alpha} = C'|f(x)|^{\alpha} \Rightarrow |g^{\alpha}(x)| \leqslant C'|f^{\alpha}(x)| \Rightarrow g^{\alpha}(x) \in O(f^{\alpha}).$
+		\end{enumerate}
+	\end{proof}
 	
 	\chapter{Непрерывные функции}
 	
+	\begin{definition}
+		Функция $f : D \rightarrow \R$ \underline{непрерывна} (по множеству $D$) в точке $a \in D$, если для каждого $\epsilon > 0$ найдется такое $\delta > 0$, что для каждого $x \in D$, $|x - a| < \delta$, выполнено $|f(x) - f(a)| < \epsilon$. С помощью кванторов данное утверждение записывается в виде
+		\[ \forall \epsilon > 0 \text{ } \exists \delta > 0: \forall x \in D \text{ } |x - a| < \delta \rightarrow |f(x) - f(a)| < \epsilon. \]
+	\end{definition}
+	
+	\begin{definition}
+		Точка $a \in D$ называется \underline{изолированной} точкой множества $D$, если для некоторого $\delta > 0$ выполнено $B'_{\delta}(a) \cap D = \varnothing.$
+	\end{definition}
+	
+	\begin{mention}
+		Точка $a \in D$ может быть либо изолированной, либо предельной точкой множества $D$.
+		
+		Если точка $a$ не изолированная, то $\forall \delta > 0$ $B'_{\delta}(a) \cap D \neq \varnothing \Rightarrow a$ - предельная.
+		
+		Если точка $a$ не предельная, то $\exists \epsilon > 0: B'_{\epsilon}(a) \cap D = \varnothing \Rightarrow a$ - изолированная.
+	\end{mention}
+	
+	\begin{sentence}
+		Пусть $f : D \rightarrow \R, a \in D$. Следующие утверждения
+		равносильны:
+		\begin{enumerate}
+			\item функция $f$ непрерывна в точке $a$ (по множеству $D$);
+			\item для каждой последовательности точек $x_n \in D, x_n \to a,$ выполнено $f(x_n) \to f(a)$;
+			\item либо точка $a$ - изолированная точка множества $D$, либо $a$ - предельная точка множества $D$ и $\lim_{x \to a} f(x) = f(a)$.
+		\end{enumerate}
+	\end{sentence}
+	
+	\begin{proof}
+		I. $a$ - изолированная $\Rightarrow \exists \delta > 0 \rightarrow B'_{\delta}(a) \cap D = \varnothing$
+		\begin{enumerate}
+			\item Возьмём в определении 4.1 такую $\delta$. Тогда в данной окрестности $B_{\delta}(a)$ нет точек, кроме самой $a$, которые принадлежат $D$. Но для точки $a$ и любого $\epsilon > 0$ выполнено неравенство $|f(a) - f(a)| = 0 < \epsilon \Rightarrow f(x)$ - непрерывна.
+			\item $x_n \to a \Rightarrow$ начиная с какого-то номера все члены последовательности $x_n$ принадлежат $B'_{\delta}(a)$. Возьмём в определении предела $\epsilon = \delta$. Но при этом они должны лежать в $D$, значит они становятся равными $a$. Следовательно, с какого-то номера $f(x_n)$ становится равной $f(a) \Rightarrow f(x_n) \to a.$
+			\item автоматически выполнено ($a$ - изолированная точка)
+		\end{enumerate}
+		Значит если точка $a$ - изолированная, то эти утверждения равносильны.
+		
+		II. $a$ - не изолированная $\Rightarrow a$ - предельная (по замечанию)
+		\begin{itemize}
+			\item[$1) \Rightarrow 2)$] От противного. Пусть $\exists x_n \to a$ и $f(x_n) \not\to f(a)$. Тогда $\exists \epsilon > 0: \forall N$ $\exists n \geqslant N \rightarrow |f(x_n) - f(a)| \geqslant \epsilon$
+			
+			$x_n \neq a,$ иначе $|f(a) - f(a)| = 0 < \epsilon$
+			
+			Таких $x_n$ бесконечно много, потому что в противном случае, если таких $x_n$ конечное число, то есть последний по номеру. Возьмём $N$ равное номеру $x_n$, идущего в последовательности после последнего. Тогда, начиная с $n \geqslant N,$ $|f(x_n) - f(a)| < \epsilon$ - противоречие.
+			
+			Значит такие $\{x_n\}$ образуют подпоследовательность $\{y_k\}$. Причём $y_k \neq a \Rightarrow \forall y_k \in D \setminus \{a\}$ $y_k \to a$ (предел подпоследовательности $y_k$ равен пределу сходящейся последовательности $x_n$)
+			
+			Почему отсюда будет следовать, что $f(y_k) \to f(a)$? Функция $f$ - непрерывна в точке $a \Rightarrow f(x) \to f(a)$ по Коши (первое условие сильнее второго, т. к. в определении непрерывности $|x - a| < \delta,$ а в определении по Коши $0 < |x - a| < \delta$). Определение предела функции по Коши эквивалентно определению по Гейне: $f(y_k) \to f(a)$ - противоречие.
+			\item[$2) \Rightarrow 3)$] Из $2)$ следует определение предела функции по Гейне (2) сильнее Гейне) $\Rightarrow$ определение предела по Коши $\Rightarrow \lim_{x \to a} f(x) = f(a)$.
+			\item[$3) \Rightarrow 1)$] Пусть $\lim_{x \to a} f(x) = f(a) \Rightarrow$ по Коши
+			\[ \forall \epsilon > 0 \text{ } \exists \delta > 0: \forall x \in D, 0 < |x - a| < \delta \rightarrow |f(x) - f(a)| < \epsilon \Rightarrow \]
+			$\Rightarrow$ определение непрерывности
+			\[ \forall \epsilon > 0 \text{ } \exists \delta > 0: \forall x \in D, |x - a| < \delta \rightarrow |f(x) - f(a)| < \epsilon \]
+			(т. к. при $x = a$ оно и так выполняется $|f(a) - f(a)| = 0 < \epsilon$).
+			
+			$1) \Leftarrow 2),$ т. к. $2) \Rightarrow 3) \Rightarrow 1)$
+			
+			$2) \Leftarrow 3),$ т. к. $3) \Rightarrow 1) \Rightarrow 2)$
+			
+			$3) \Leftarrow 1),$ т. к. $1) \Rightarrow 2) \Rightarrow 3)$
+			
+			Значит $1) \Leftrightarrow 2) \Leftrightarrow 3).$
+		\end{itemize}
+	\end{proof}
+	
+	\begin{sentence}
+		Пусть функции $f, g$ определены на некотором множестве $D \subset \R$ и непрерывны в некоторой точке $a \in D$. Тогда
+		\begin{enumerate}
+			\item $\alpha f + \beta g, f \cdot g$ - непрерывны в точке $a$;
+			\item если $g(x) \neq 0$ при $x \in D$, то $f/g$ - непрерывна в точке $a$;
+			\item найдутся такие $\delta > 0$ и $C > 0$, что $|f(x)| \leqslant C$ при каждом $x \in D \cap B_{\delta}(a)$;
+			\item если $f(a) \neq 0$, то найдется такое $\delta > 0$, что $|f(x)| > \frac{|f(a)|}{2}$ при $x \in D \cap B_{\delta}(a)$.
+		\end{enumerate}
+	\end{sentence}
+	
+	\begin{proof}
+		I. $a$ - изолированная на множестве $D$.
+		\begin{enumerate}
+			\item $\alpha f + \beta g$ и $f \cdot g$ определены на множестве $D \Rightarrow$ по предложению 4.3 из 3) $\Rightarrow$ 1), т. е. $\alpha f + \beta g$ - непрерывна в точке $a$ и $f \cdot g$ непрерывна в точке $a$.
+			\item $\frac{f}{g}$ определение на множестве $D \Rightarrow$ по предложению 4.3 из 3) $\Rightarrow$ 1).
+			\item По определения изолированной точки $\exists \delta > 0 \rightarrow B'_{\delta}(a) \cap D = \varnothing \Rightarrow$ при таком $\delta$ только $a \in B_{\delta}(a) \cap D \Rightarrow$ можно подобрать такое $C > 0$, что $|f(a)| \leqslant C.$
+			\item Из определения изолированной точки $\exists \delta > 0 \rightarrow B'_{\delta}(a) \cap D = \varnothing \Rightarrow$ при таком $\delta$ только $a \in B_{\delta}(a) \cap D$ и $|f(a)| > \frac{|a|}{2}$ (т. к. $f(a) \neq 0$).
+		\end{enumerate}
+		II. $a$ - предельная и $\lim_{x \to a} f(x) = f(a), \lim_{x \to a} g(x) = g(a).$
+		\begin{enumerate}
+			\item $\lim_{x \to a} (\alpha f(x) + \beta g(x)) = \alpha f(a) + \beta g(a) \Rightarrow \alpha f(x) + \beta g(x)$ - непрерывна в точке $a$ (по предложению 4.3 3) $\Rightarrow$ 1)).
+			
+			$\lim_{x \to a} f(x) \cdot g(x) = f(a) \cdot g(a) \Rightarrow f(x) \cdot g(x)$ - непрерывна в точке $a$ (по предложению 4.3 3) $\Rightarrow$ 1)).
+			\item $\lim_{x \to a} \frac{f(x)}{g(x)} = \frac{f(a)}{g(a)} \Rightarrow \frac{f(x)}{g(x)}$ - непрерывна в точке $a$ (по предложению 4.3 3) $\Rightarrow$ 1)).
+			\item $\lim_{x \to a} f(x) = f(a) \Rightarrow$ из ограниченности функции следует утверждение.
+			\item $\lim_{x \to a} f(x) = f(a) \Rightarrow$ из отделимости от нуля следует утверждение.
+		\end{enumerate}
+	\end{proof}
+	
+	\newpage
+	
+	\section*{Лекция 13: Свойства непрерывных функций}
+	
+	\section{Непрерывность композиции}
+	
+	\begin{sentence}
+		Пусть $f : D \rightarrow K \subset \R$ и $g : K \rightarrow \R$, причем $f$ непрерывна в точке $a \in D$ по множеству $D$, а $g$ непрерывна в точке $f(a)$ по
+		множеству $K$. Тогда функция $g \circ f$ непрерывная в точке $а$ по множеству $D$, где $g \circ f(x) := g(f(x))$.
+	\end{sentence}
+	
+	\begin{proof}
+		\begin{enumerate}
+			\item Если $a$ - изолированная $\Rightarrow$ по предложению 4.3 $f \circ g(x)$ непрерывна в точке $a$ по множеству $D$ (какую юы функцию мы не рассматриваем)
+			\item Если $a$ - предельная, то по предложению 4.3 из непрерывности $f$ и $g$ следует, что если $x_n \in D, x_n \to a,$ то $f(x_n) \to f(a), f(x_n) \in K$ и что $g(f(x_n)) \to g(f(a))$
+		\end{enumerate}
+	\end{proof}
+	
+	\begin{definition}
+		Точка $a \in D$ называется \underline{точкой разрыва функции} $f : D \rightarrow \R$, если $f$ не является непрерывной в точке $a$.
+	\end{definition}
+	
+	\section{Классификация разрывов}
+	
+	\begin{definition}
+		\underline{Устранимый разрыв}: существует $\lim_{x \to x_0} f(x)$, но или $f$ не определена в точке $x_0$, или $\lim_{x \to x_0} f(x) \neq f(x_0)$.
+		
+		\underline{Разрыв 1-го рода}: в точке разрыва $x_0$ существуют оба односторонних предела
+		\[ \lim_{x \to x_0 - 0} f(x) = f(x_0 - 0), \lim_{x \to x_0 + 0} f(x) = f(x_0 + 0), \]		
+		но скачок функции
+		\[ \Delta f(x_0) = |f(x_0 + 0) - f(x_0 - 0)| \neq 0. \]
+		
+		\underline{Разрыв 2-го рода}: не существует хотя бы один из односторонних пределов
+		\[ \lim_{x \to x_0 - 0} f(x) \text{ или } \lim_{x \to x_0 + 0} f(x). \]
+	\end{definition}
+	
+	\begin{example}
+		Классифицируйте точки разрыва функции:
+		\begin{enumerate}
+			\item $f(x) = \frac{\sin{x}}{x};$
+			\item $f(x) = \frac{\sin{x}}{|x|}.$
+		\end{enumerate}
+	\end{example}
+	
+	\begin{enumerate}
+		\item Функция $\sin{x}$ непрерывна на $\R$
+	\end{enumerate}
+	
+	\begin{example}
+		Пусть $f(x) = \sin{\frac{1}{x}}$, если $x \neq 0, f(0) = 0$. Тогда точка $x = 0$ - разрыв второго рода для функции $f$, заданной на всем множестве $\R$.
+	\end{example}
+	
+	\section{Разрывы монотонной функции}
+	
+	\begin{sentence}
+		Пусть $f$ - монотонная на интервале $(a, b)$ функция (т. е. $f$ либо не убывает, либо не возрастает). Тогда $f$ может иметь разрывы только первого рода на интервале $(a, b)$.
+	\end{sentence}
+	
+	\begin{proof}
+	\end{proof}
+	
+	\section{Теорема Вейерштрасса}
+	
+	\begin{definition}
+		Функцию, непрерывную в каждой точке множества $D$ (по множеству $D$), будем называть просто непрерывной на множестве $D$.
+	\end{definition}
+	
+	\begin{definition}
+		Будем говорить, что функция ограничена на множестве $D$, если найдется такое число $C > 0$, что $\forall x \in [a, b] \rightarrow |f(x)| \leqslant C$.
+	\end{definition}
+	
+	\begin{theorem}[Вейерштрасс]
+		Пусть функция $f$ непрерывна на отрезке $[a, b]$. Тогда она ограничена на $[a, b]$ и достигает минимума и максимума, т. е. существуют такие точки $x_m, x_M \in [a, b]$, что
+		\[ f(x_m) = \inf\{f(x) : x \in [a, b]\} \text{ и } f(x_M) = \sup\{f(x) : x \in [a, b]\}. \]
+	\end{theorem}
+	
+	\begin{proof}
+	\end{proof}
+	
+	\section{Теорема о промежуточном значении}
+	
+	\begin{theorem}[Коши]
+		Пусть $f$ непрерывна на отрезке $[a, b]$. Если $f(a) = A, f(b) = B$, то для каждого значения $C \in [A, B]$ (или $C \in [B, A]$, если $B < A$) найдется точка $c \in [a, b]$, для которой $f(c) = C$.
+	\end{theorem}
+	
+	\begin{proof}
+	\end{proof}
+	
 	\section*{Лекция 14: Построение показательной функции}
 	
-	\chapter{Производная}
+	\begin{theorem}[Критерий непрерывности монотонной функции]
+		Монотонная функция $f : [a, b] \to \R$ непрерывна на $[a, b]$ тогда и только тогда, когда $f([a, b])$ - отрезок.
+	\end{theorem}
+	
+	\begin{proof}
+	\end{proof}
+	
+	\section{Непрерывность обратной функции}
+	
+	\begin{theorem}[О непрерывности обратной функции]
+		Пусть $f$ непрерывна и строго монотонна на $[a, b]$ (т. е. $f$ монотонна и $f(x) \neq f(y)$ при $x \neq y$). Тогда $f$ - биекция между отрезками $I = [a, b]$ и $J$ с концами $f(a)$ и $f(b)$ и $f^{-1}$ непрерывна и строго монотонна на $J$.
+	\end{theorem}
+	
+	\begin{proof}
+	\end{proof}
+	
+	\begin{example}
+		У функции $f(x) = \tg{x}$ на интервале $\big(-\frac{\pi}{2}, \frac{\pi}{2})$ есть непрерывная и строго монотонная на $\R$ обратная функция.
+	\end{example}
+	
+	\begin{proof}
+	\end{proof}
+	
+	\section{Построение показательной функции}
+	
+	\begin{lemma}
+		Пусть $N \in \N$. Тогда найдется такое число $C(N)$, что для всех $x, y \in \Q, x, y \leqslant N$, выполнено $|a^x - a^y| \leqslant C(N)|x - y|$
+	\end{lemma}
+	
+	\begin{proof}
+	\end{proof}
+	
+	\newpage
 	
 	\section*{Лекция 15: Производная и дифференциал}
+	
+	\begin{theorem}
+		Пусть $a > 1$. Существует единственная непрерывная функция $f : \R \rightarrow \R$, совпадающая с $x \mapsto a^x$ при $x \in \Q$.
+	\end{theorem}
+	
+	\begin{proof}
+	\end{proof}
+	
+	\begin{corollary}
+		Для построенной функции $a^x$ выполнены следующие свойства:
+		\[ a^{x + y} = a^x \cdot a^y \text{ и } x < y \Rightarrow a^x < a^y. \]
+	\end{corollary}
+	
+	\begin{proof}
+	\end{proof}
+	
+	По теореме об обратной функции корректно определена
+	непрерывная строго монотонная функция $\log_a : (0, +\infty) \rightarrow \R$.
+	
+	\chapter{Производная}
 	
 	\section*{Лекция 16: Свойства дифференцируемых функций}
 	
@@ -125,12 +2158,10 @@
 		\includegraphics[width=0.4\textwidth]{img/lecture21/convex}
 	\end{center}
 	
-	
 	\begin{definition}
 		Функция $f$ на интервале $(a, b)$ называется \textbf{вогнутой}, если $\forall x, y \in (a, b)$ и для каждого $t \in [0, 1]$ выполнено
 		\[ f(tx + (1 - t)y) \geqslant tf(x) + (1 - t)f(y). \]
 	\end{definition}
-	
 	
 	\begin{lemma}
 		Функция $f$ на интервале $(a, b)$ выпукла тогда и только тогда, когда для всех точек $x < z < y$ из этого интервала выполнено
