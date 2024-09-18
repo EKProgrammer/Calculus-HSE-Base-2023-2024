@@ -1920,17 +1920,17 @@
 	\begin{proof}
 		I. $a$ - изолированная на множестве $D$.
 		\begin{enumerate}
-			\item $\alpha f + \beta g$ и $f \cdot g$ определены на множестве $D \Rightarrow$ по предложению 4.3 из 3) $\Rightarrow$ 1), т. е. $\alpha f + \beta g$ - непрерывна в точке $a$ и $f \cdot g$ непрерывна в точке $a$.
-			\item $\frac{f}{g}$ определение на множестве $D \Rightarrow$ по предложению 4.3 из 3) $\Rightarrow$ 1).
+			\item $\alpha f + \beta g$ и $f \cdot g$ определены на множестве $D \Rightarrow$ по предложению 4.4 из 3) $\Rightarrow$ 1), т. е. $\alpha f + \beta g$ - непрерывна в точке $a$ и $f \cdot g$ непрерывна в точке $a$.
+			\item $\frac{f}{g}$ определение на множестве $D \Rightarrow$ по предложению 4.4 из 3) $\Rightarrow$ 1).
 			\item По определения изолированной точки $\exists \delta > 0 \rightarrow B'_{\delta}(a) \cap D = \varnothing \Rightarrow$ при таком $\delta$ только $a \in B_{\delta}(a) \cap D \Rightarrow$ можно подобрать такое $C > 0$, что $|f(a)| \leqslant C.$
 			\item Из определения изолированной точки $\exists \delta > 0 \rightarrow B'_{\delta}(a) \cap D = \varnothing \Rightarrow$ при таком $\delta$ только $a \in B_{\delta}(a) \cap D$ и $|f(a)| > \frac{|a|}{2}$ (т. к. $f(a) \neq 0$).
 		\end{enumerate}
 		II. $a$ - предельная и $\lim_{x \to a} f(x) = f(a), \lim_{x \to a} g(x) = g(a).$
 		\begin{enumerate}
-			\item $\lim_{x \to a} (\alpha f(x) + \beta g(x)) = \alpha f(a) + \beta g(a) \Rightarrow \alpha f(x) + \beta g(x)$ - непрерывна в точке $a$ (по предложению 4.3 3) $\Rightarrow$ 1)).
+			\item $\lim_{x \to a} (\alpha f(x) + \beta g(x)) = \alpha f(a) + \beta g(a) \Rightarrow \alpha f(x) + \beta g(x)$ - непрерывна в точке $a$ (по предложению 4.4 3) $\Rightarrow$ 1)).
 			
-			$\lim_{x \to a} f(x) \cdot g(x) = f(a) \cdot g(a) \Rightarrow f(x) \cdot g(x)$ - непрерывна в точке $a$ (по предложению 4.3 3) $\Rightarrow$ 1)).
-			\item $\lim_{x \to a} \frac{f(x)}{g(x)} = \frac{f(a)}{g(a)} \Rightarrow \frac{f(x)}{g(x)}$ - непрерывна в точке $a$ (по предложению 4.3 3) $\Rightarrow$ 1)).
+			$\lim_{x \to a} f(x) \cdot g(x) = f(a) \cdot g(a) \Rightarrow f(x) \cdot g(x)$ - непрерывна в точке $a$ (по предложению 4.4 3) $\Rightarrow$ 1)).
+			\item $\lim_{x \to a} \frac{f(x)}{g(x)} = \frac{f(a)}{g(a)} \Rightarrow \frac{f(x)}{g(x)}$ - непрерывна в точке $a$ (по предложению 4.4 3) $\Rightarrow$ 1)).
 			\item $\lim_{x \to a} f(x) = f(a) \Rightarrow$ из ограниченности функции следует утверждение.
 			\item $\lim_{x \to a} f(x) = f(a) \Rightarrow$ из отделимости от нуля следует утверждение.
 		\end{enumerate}
@@ -1949,8 +1949,8 @@
 	
 	\begin{proof}
 		\begin{enumerate}
-			\item Если $a$ - изолированная $\Rightarrow$ по предложению 4.3 $f \circ g(x)$ непрерывна в точке $a$ по множеству $D$ (какую юы функцию мы не рассматриваем)
-			\item Если $a$ - предельная, то по предложению 4.3 из непрерывности $f$ и $g$ следует, что если $x_n \in D, x_n \to a,$ то $f(x_n) \to f(a), f(x_n) \in K$ и что $g(f(x_n)) \to g(f(a))$
+			\item Если $a$ - изолированная $\Rightarrow$ по предложению 4.4 $f \circ g(x)$ непрерывна в точке $a$ по множеству $D$ (какую бы функцию мы не рассматриваем)
+			\item Если $a$ - предельная, то по предложению 4.4 из непрерывности $f$ и $g$ следует, что если $x_n \in D, x_n \to a,$ то $f(x_n) \to f(a), f(x_n) \in K$ и что $g(f(x_n)) \to g(f(a))$
 		\end{enumerate}
 	\end{proof}
 	
@@ -1980,13 +1980,46 @@
 		\end{enumerate}
 	\end{example}
 	
+	\underline{Решение.}	
 	\begin{enumerate}
-		\item Функция $\sin{x}$ непрерывна на $\R$
+		\item Функция $\sin{x}$ непрерывна на $\R$:
+		\[ \forall \epsilon > 0 \text{ } \exists \delta = \epsilon > 0 \text{ } \forall x: |x - y| < \delta \]
+		\[ |\sin{x} - \sin{y}| = \bigg|2\sin{\bigg(\frac{x - y}{2}\bigg)}\cos{\bigg(\frac{x + y}{2}\bigg)}\bigg| \leqslant 2\bigg|\sin{\bigg(\frac{x - y}{2}\bigg)}\bigg| = 2\bigg|\frac{x - y}{2}\bigg| = \]
+		\[ = |x - y| < \delta \]
+		Функция $x$ непрерывна на $\R$.
+		
+		Отношение непрерывных функций непрерывна, кроме $x = 0$, где функция неопределена.
+		
+		Возьмём предел в точке $x = 0$:
+		
+		$\lim_{x \to 0} \frac{\sin{x}}{x} = 1$ - предел существует $\Rightarrow$ разрыв устранимый.
+		\item Если $x > 0,$ то функция совпадает с предыдущей и непрерывна при $x > 0$.
+		
+		Если $x < 0,$ то это та же функция, только со знаком «-» $\Rightarrow$ при $x < 0$ непрерывна (предложение 4.5 пункт 1) при $\alpha = -1, \beta = 0$)
+		
+		$\lim_{x \to 0+} \frac{\sin{x}}{x} = 1, \lim_{x \to 0-} -\frac{\sin{x}}{x} = -1 \Rightarrow$ односторонние пределы существуют, скачок равен $|1 - (-1)| = 2 \neq 0 \Rightarrow$ разрыв 1-го рода.
 	\end{enumerate}
 	
 	\begin{example}
 		Пусть $f(x) = \sin{\frac{1}{x}}$, если $x \neq 0, f(0) = 0$. Тогда точка $x = 0$ - разрыв второго рода для функции $f$, заданной на всем множестве $\R$.
 	\end{example}
+	
+	\begin{explanation}
+		\begin{equation*}
+			f(x) = \begin{cases}
+				\sin{\frac{1}{x}}, x \neq 0; \\
+				0, x = 0.
+			\end{cases}
+		\end{equation*}
+		Функция $\frac{1}{x}$ непрерывна на всей числовой прямой, кроме нуля, $\sin{x}$ непрерывна на $\R \Rightarrow$ композиция функций $\sin{\frac{1}{x}}$ непрерывна на $\R \setminus \{0\}$ (предложение 4.6)
+		
+		$\lim_{x \to 0+} \sin{\frac{1}{x}}$ - существует ли такой предел? Пусть есть такая последовательность, которая стремится справа в точке $0$:
+		\[ x_n \to 0, x_n = \frac{1}{\frac{\pi}{2} + \pi n} \]
+		$\sin{\frac{1}{x_n}} = \sin{\big(\frac{\pi}{2} + \pi n\big)} = (-1)^n \Rightarrow \lim_{n \to \infty} \sin{\frac{1}{x_n}}$ - не существует $\Rightarrow \lim_{x \to 0+} \sin{\frac{1}{x}}$ не существует $\Rightarrow$ разрыв 2-го рода.
+		\begin{center}
+			\includegraphics[width=\textwidth]{img/lecture13/graph_of_sin}
+		\end{center}
+	\end{explanation}
 	
 	\section{Разрывы монотонной функции}
 	
@@ -1995,12 +2028,31 @@
 	\end{sentence}
 	
 	\begin{proof}
+		Сначала оговоримся, что когда говорят о функции монотонной на $(a, b)$, подразумевают, что она определена в каждой точке на этом интервале.
+		
+		Пусть $x_0$ - точка разрыва, $x_0 \in (a, b) \Rightarrow x_0$ - предельная для множества $D^-_{x_0}$ и $D^+_{x_0}$. Будем считать, что $f(x)$ не убывает (без ограничения общности) $\Rightarrow$ по теореме Вейерштрасса 
+		\[ \exists \lim_{x \to x_0+} f(x) = \sup_{x < x_0} f(x) \leqslant f(x_0) \text{ } (f \text{ не убывает}) \]
+		Тоже самое для правой окрестности:
+		\[ \exists \lim_{x \to x_0+} f(x) = \inf_{x > x_0} f(x) \geqslant f(x_0) \]
+		Тогда $\lim_{x \to x_0-} f(x) \leqslant f(x_0) \leqslant \lim_{x \to x_0+} f(x).$
+		
+		Это не разрыв 2-го рода, т. к. пределы справа и слева существует. Если бы это был разрыв устранимый, то пределы справа и слева совпадают, но тогда $\lim_{x \to x_0} f(x) = f(x_0) \Rightarrow$ это не является разрывом. Значит если точка $x_0$ является разрывом $\Rightarrow$ скачок ненулевой $\Rightarrow$ это разрыв 1-го рода.
+		
+		Применяя теорему Вейерштрасса, мы пользовались тем, что $f(x)$ ограничена на интервале $(a, b)$. Пусть это не так.
+		
+		\begin{center}
+			\includegraphics[width=0.5\textwidth]{img/lecture13/interval_line}
+		\end{center}
+		
+		Тогда рассмотрим $\delta$-окрестность точки $x_0$. $x_0 - \delta$ и $x_0 + \delta$ лежат внутри $(a, b) \Rightarrow$ функция определена в этих точках $\Rightarrow \exists f(x_0 - \delta)$ и $\exists f(x_0 + \delta) \Rightarrow f(x_0 - \delta) \leqslant f(x) \leqslant f(x_0 + \delta).$ Т. е. на всём интервале $(a, b)$ функция может быть неограничена, но на интервале $(x_0 - \delta, x_0 + \delta)$ она ограничена и здесь значения функции определены. Поэтому мы пользуемся теоремой Вейерштрасса не на всём интервале $(a, b)$, а на подинтервале $(x_0 - \delta, x_0 + \delta)$.
 	\end{proof}
 	
 	\section{Теорема Вейерштрасса}
 	
 	\begin{definition}
 		Функцию, непрерывную в каждой точке множества $D$ (по множеству $D$), будем называть просто непрерывной на множестве $D$.
+		
+		Краткая запись: $f(x) \in C(D)$ - функция непрерывна на множестве $D$.
 	\end{definition}
 	
 	\begin{definition}
@@ -2013,6 +2065,16 @@
 	\end{theorem}
 	
 	\begin{proof}
+		\begin{enumerate}
+			\item $f(x)$ - ограничена.
+			
+			Пусть это не так:
+			\[ \forall n \geqslant \N \text{ } \exists x_n \in [a, b]: |f(x_n)| > n \text{ } (*) \]
+			Все такие $\{x_n\}$ образуют ограниченную последовательность, т. к. все $x_n \in [a, b] \Rightarrow$ можно выделить $\{x_{n_k}\}$ - сходящуюся подпоследовательность, пусть $x_{n_k} \to x_0.$ Тогда $f(x_{n_k}) \to f(x_0),$ т. к. $f(x)$ - непрерывна (предложение 4.4). Но такого не может быть, т. к. $|f(x_{n_k})| > n_k$ (пользуемся (*)), а $n_k \to \infty$.
+			\item Докажем, что $\sup_{x \in [a, b]} f(x) = M$ и $\inf_{x \in [a, b]} f(x) = m$ достигаются.
+			
+			Докажем следующие $x_n$: $M - \frac{1}{n} \leqslant f(x_n) \leqslant M$ (**). Такие $x_n$ (их бесконечно много) найдутся из определения супремума. Значит $x_n$ - ограниченная последовательность $\Rightarrow \exists x_{n_k}$ - подпоследовательность, сходящаяся к $x_M \Rightarrow \exists \lim_{n_k \to \infty} f(x_{n_k}) = f(x_M)$ (по непрерывности функции) и с другой стороны $\lim_{n_k \to \infty} f(x_{n_k}) = M$ (по теореме о зажатой последовательности, применяемой к (**)). Следовательно, $f(x_M) = M$.  
+		\end{enumerate}
 	\end{proof}
 	
 	\section{Теорема о промежуточном значении}
@@ -2021,16 +2083,64 @@
 		Пусть $f$ непрерывна на отрезке $[a, b]$. Если $f(a) = A, f(b) = B$, то для каждого значения $C \in [A, B]$ (или $C \in [B, A]$, если $B < A$) найдется точка $c \in [a, b]$, для которой $f(c) = C$.
 	\end{theorem}
 	
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{img/lecture13/intermediate_value_theorem}
+	\end{center}
+	
 	\begin{proof}
+		\begin{enumerate}
+			\item $g(x) = f(x) - C,$ т. е. хотим доказать, что $\exists c: g(x) = 0.$
+			\item Если $g(a) = 0$, то $c = a$. Если $g(b) = 0$, то $c = b$. Поэтому будем считать, что $g(a) \neq 0$ и $g(b) \neq 0$. Но тогда  $g(a)$ и $g(b)$ разного знака, т. к. $A \leqslant C \leqslant B$ или $B \leqslant C \leqslant A$.
+			\item Рассмотрим отрезок $[a, b]$ и точку $\frac{a + b}{2}$.
+			
+			Если $g\big(\frac{a + b}{2}\big) = 0,$ то мы нашли такую точку, что $g(x) = 0$.
+			
+			Если $g\big(\frac{a + b}{2}\big) > 0,$ то рассматриваем отрезок $[a; \frac{a + b}{2}]$.
+			
+			Если $g\big(\frac{a + b}{2}\big) < 0,$ то рассматриваем отрезок $[\frac{a + b}{2}; b]$.
+			
+			(Таким образом, мы зажимаем искомую точку отрезком, в одном конце которого $g(x) < 0$, а в другом $g(x) > 0$)
+			
+			Если ни одной точки, где $g(c) = 0$ не найдено, то мы получим последовательность вложенных отрезков. Тогда по теореме о вложенных отрезков $\exists c \in [a, b]$ - общая точка (длина отрезков стремится к нулю, потому что мы каждый раз длину делим пополам, $\frac{b - a}{2^n} \to 0$)
+			
+			Левые концы отрезков обозначим $a_n$, правые - $b_n$. Тогда $\lim_{n \to \infty} a_n = c, \lim_{n \to \infty} b_n = c$. Из непрерывности функции следует, что $\lim_{n \to \infty} g(a_n) = g(c) \leqslant 0$ (т. к. $g(a_n) < 0$) и $\lim_{n \to \infty} g(b_n) = g(c) \geqslant 0$ (т. к. $g(b_n) > 0$) $\Rightarrow 0 \leqslant g(c) \leqslant 0 \Rightarrow g(c) = 0 \Rightarrow f(c) = C.$
+			
+		\end{enumerate}
 	\end{proof}
+	
+	\newpage
 	
 	\section*{Лекция 14: Построение показательной функции}
 	
 	\begin{theorem}[Критерий непрерывности монотонной функции]
-		Монотонная функция $f : [a, b] \to \R$ непрерывна на $[a, b]$ тогда и только тогда, когда $f([a, b])$ - отрезок.
+		Монотонная функция $f : [a, b] \to \R$ непрерывна на $[a, b]$ тогда и только тогда, когда $f([a, b])$ - отрезок ($f([a, b]) = \{f(x) | x \in [a, b]\}$ - образ).
 	\end{theorem}
 	
 	\begin{proof}
+	    Будем считать, что $f$ - не убивает без ограничения общности.
+	    \begin{itemize}
+	    	\item[$\Rightarrow$]
+		    \begin{enumerate}
+		    	\item По теореме Коши $\forall C \in [f(a), f(b)]$ $\exists c \in [a, b]: f(c) = C,$ т. к. $f$ - непрерывна на $[a, b]$.
+		    	\item $\forall x \in [a, b]$ $f(a) \leqslant f(x) \leqslant f(b)$ (функция монотонная)
+		    	
+		    	2) утверждает, что образ $f([a, b])$ содержится в отрезке $[f(a), f(b)]$, т. е. все точки образа лежат в $[f(a), f(b)]$. И при этом они лежат плотно друг к другу (т. е. нет дырок, иначе это не был бы отрезок), это следует 1).
+		    \end{enumerate}
+		    \item[$\Leftarrow$] $f([a, b]) = [f(a), f(b)]$ (из того, что $f$ - не убывает, следует, что $f(a)$ - левая граница отрезка, а $f(b)$ - правая граница отрезка).
+		    
+		    Пусть $f$ - не непрерывна $\Rightarrow$ у неё есть точки разрыва. Пусть $x_0$ - точка разрыва $\Rightarrow$ из предложения 4.11 (т. к. $f$ - монотонна) $x_0$ - разрыв 1-го рода $\Rightarrow \exists \lim_{x \to x_0-} f(x) = \sup_{x < x_0} f(x)$ и $\exists \lim_{x \to x_0+} f(x) = \inf_{x > x_0} f(x)$ (как в предложении 4.10) и эти пределы не равны $\Rightarrow (\sup_{x < x_0} f(x), \inf_{x > x_9} f(x))$ - не пустой. Тогда этом интервале есть точка $C \neq f(x_0) \Rightarrow \not\exists c: f(c) = C.$
+		    
+		    \begin{center}
+		    	\includegraphics[width=0.3\textwidth]{img/lecture14/graph_of_monotonic _function}
+		    \end{center}
+		    
+		    \begin{tabular}{cc|c}
+		    	Иначе & $\sup_{x < x_0} f(x) < C = f(c) \Rightarrow c \geqslant x_0$ & \multirow{2}*{$\Rightarrow c = x_0$, но $f(x_0) \neq C$.} \\
+		    	& $\inf_{x > x_0} f(x) > C = f(c) \Rightarrow c \leqslant x_0$ &
+		    \end{tabular}
+		    
+		    Если $x_0 = a$, то рассмотрим интервал $(\sup_{x < x_0} f(x), f(x_0))$, если $x_0 = b$, то рассмотрим интервал $(f(x_0), \inf_{x > x_0} f(x))$.
+		\end{itemize}
 	\end{proof}
 	
 	\section{Непрерывность обратной функции}
@@ -2040,6 +2150,27 @@
 	\end{theorem}
 	
 	\begin{proof}
+		$f$ - строго возрастает (без ограничения общности).
+		\begin{enumerate}
+			\item $f$ - инъекция. $\newline$
+			\begin{tabular}{c|c}
+				$x_1 < x_2 \Rightarrow f(x_1) < f(x_2)$ & \multirow{2}*{$\Leftrightarrow (x_1 \neq x_2 \Rightarrow f(x_1) \neq f(x_2))$} \\
+				$x_1 > x_2 \Rightarrow f(x_1) > f(x_2)$ &
+			\end{tabular}
+			\item $f$ - сюръекция.
+			
+			$f$ - непрерывная, монотонная $\Rightarrow$ по теореме 4.16 $f([a, b]) = [f(a), f(b)]$ для любой точки отрезка есть прообраз.
+			
+			Из 1) и 2) $f$ - биекция $\Rightarrow \exists f^{-1}(y)$.
+			\item $f^{-1}(y)$ - монотонная.
+			
+			Пусть $y_1 < y_2 (y_1, y_2 \in [f(a), f(b)]), y_1 = f(x_1), y_2 = f(x_2) \Rightarrow f(x_1) < f(x_2) \Rightarrow x_1 < x_2$.
+			
+			$x_1 = f^{-1}(y_1), x_2 = f^{-1}(y_2), x_1 < x_2 \Rightarrow f^{-1}(y_1) < f^{-1}(y_2)$
+			
+			В итоге: $y_1 < y_2 \Rightarrow f^{-1}(y_1) < f^{-1}(y_2)$.
+			\item $f: I \rightarrow J \Rightarrow f^{-1}: J \rightarrow I$ (функция из отрезка в отрезок) $\Rightarrow$ по теореме 4.16 $f^{-1}$ - непрерывная.
+		\end{enumerate}
 	\end{proof}
 	
 	\begin{example}
@@ -2047,15 +2178,42 @@
 	\end{example}
 	
 	\begin{proof}
+		Функцию $f(x) = \tg{x}$ строго возрастает и непрерывна на интервале $\big(-\frac{\pi}{2}, \frac{\pi}{2}\big)$. Поэтому образ отрезка $\big[-\frac{\pi}{2} + \frac{1}{n}, \frac{\pi}{2} - \frac{1}{n}\big]$ есть отрезок 
+		
+		$\big[\tg{\big(-\frac{\pi}{2} + \frac{1}{n}\big)}, \tg{\big(\frac{\pi}{2} - \frac{1}{n}\big)}\big]$, на котором существует непрерывная строго монотонная обратная функция $f^{-1}_n$ (теорема 4.17). Эти функции согласованы, т. е. $f^{-1}_{n + 1}(x) = f^{-1}_n(x)$ для каждой точки 
+		\[ x \in \bigg[\tg{\bigg(-\frac{\pi}{2} + \frac{1}{n}\bigg)}, \tg{\bigg(\frac{\pi}{2} - \frac{1}{n}\bigg)}\bigg], \text{ a } \bigcup_{n = 1}^{\infty} \bigg[\tg{\bigg(-\frac{\pi}{2} + \frac{1}{n}\bigg)}, \tg{\bigg(\frac{\pi}{2} - \frac{1}{n}\bigg)}\bigg] = \R. \]
+		$(\tg{\big(-\frac{\pi}{2} + \frac{1}{n}\big)} \to -\infty, \tg{\big(\frac{\pi}{2} - \frac{1}{n}\big)}) \to +\infty$
+		
+		Тем самым, построена обратная функция $f^{-1}$ на $\R$, которую мы обозначим $\arctg{x}$.
 	\end{proof}
 	
 	\section{Построение показательной функции}
+	
+	Пусть $a > 1$. Будем считать известным из школьного курса, что для рациональных $x$ значение $a^x$ корректно определено и выполнены свойства
+	\[ a^0 = 1, a^{x + y} = a^x \cdot a^y, x < y \Rightarrow a^x < a^y \]	
+	для рациональных $x$ и $y$.
 	
 	\begin{lemma}
 		Пусть $N \in \N$. Тогда найдется такое число $C(N)$, что для всех $x, y \in \Q, x, y \leqslant N$, выполнено $|a^x - a^y| \leqslant C(N)|x - y|$
 	\end{lemma}
 	
 	\begin{proof}
+		Если $x - y \geqslant 1$, то $0 < a^x - a^y \leqslant a^x \leqslant a^N \leqslant a^N|x - y| = C(N)|x - y|$.
+		
+		Если $0 < |x - y| < 1$, то найдётся натуральное число $n$, для которого $\frac{1}{n + 1} \leqslant x - y < \frac{1}{n}$. Тогда
+		\[ a^x - a^y = a^y(a^{x - y} - 1) \leqslant a^N(a^{x - y} - 1) \leqslant a^N(a^{\frac{1}{n}} - 1) \leqslant a^N \frac{(a - 1)}{n} \]
+		\begin{explanation}
+			Докажем последнее неравенство
+			
+			$(a^{\frac{1}{n}} - 1) \leqslant \frac{a - 1}{n} \Leftrightarrow n(a^{\frac{1}{n}} - 1) \leqslant a - 1 \Leftrightarrow n(a^{\frac{1}{n}} - 1) + 1 \leqslant a$
+			
+			$x = a^{\frac{1}{n}} - 1 > 0 \Leftrightarrow x + 1 = a^{\frac{1}{n}} \Leftrightarrow (x + 1)^n = a$
+			
+			Из последних двух строчек следует неравенство Бернулли: $nx + 1 \leqslant (x + 1)^n$. Повторяем шаги в обратную сторону и доказываем требуемое неравенство.
+		\end{explanation}
+		\[ \frac{1}{n} \leqslant \frac{2}{n + 1} \Rightarrow a^N \frac{(a - 1)}{n} \leqslant \frac{2a^N(a - 1)}{n + 1} \]
+		\[ \frac{1}{n + 1} \leqslant x - y \Rightarrow \frac{2a^N(a - 1)}{n + 1} \leqslant 2a^N(a - 1)(x - y) = C(N)(x - y) \]
+		\[ C(N) = \max\{a^N, 2a^N(a - 1)\} \]
 	\end{proof}
 	
 	\newpage
