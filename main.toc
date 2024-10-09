@@ -36,7 +36,7 @@
 \contentsline {section}{\numberline {2.20}Абсолютная и условная сходимость}{35}{section.2.20}%
 \contentsline {section}{\numberline {2.21}Признак сравнения}{35}{section.2.21}%
 \contentsline {section}{\numberline {2.22}Признак Коши}{36}{section.2.22}%
-\contentsline {section}{\numberline {2.23}Перестановка членов ряда}{36}{section.2.23}%
+\contentsline {section}{\numberline {2.23}Перестановка членов ряда}{37}{section.2.23}%
 \contentsline {chapter}{\numberline {3}Предел функции}{40}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Окрестности}{40}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Внутренние, предельные и граничные точки}{40}{section.3.2}%

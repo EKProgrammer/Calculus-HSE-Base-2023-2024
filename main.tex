@@ -112,7 +112,7 @@
 	\end{center}
 	
 	\begin{definition}
-		Функция называется \underline{биекцией}, если она одновременно является инъекцией и сюръекция.
+		Функция называется \underline{биекцией}, если она одновременно является инъекцией и сюръекцией.
 	\end{definition}
 		
 	\begin{center}
@@ -674,8 +674,8 @@
 	\begin{proof}
 		Выполнено:
 		\begin{enumerate}
-			\item $\forall \epsilon > 0$ $\exists N_1: \forall n \geqslant N_1$ $|a_n - a| < \epsilon (\Leftrightarrow a - \epsilon < a_n < a + \epsilon)$
-			\item $\forall \epsilon > 0$ $\exists N_2: \forall n \geqslant N_2$ $|b_n - a| < \epsilon (\Leftrightarrow a - \epsilon < b_n < a + \epsilon)$
+			\item $\forall \epsilon > 0$ $\exists N_1: \forall n \geqslant N_1$ $|a_n - a| < \epsilon$ $(\Leftrightarrow a - \epsilon < a_n < a + \epsilon)$
+			\item $\forall \epsilon > 0$ $\exists N_2: \forall n \geqslant N_2$ $|b_n - a| < \epsilon$ $(\Leftrightarrow a - \epsilon < b_n < a + \epsilon)$
 			\item $\forall n > N$ $a_n \leqslant c_n \leqslant b_n$
 		\end{enumerate}
 		Из этих пунктов следует, что $\forall n \geqslant N_4 = \max{(N, N_1, N_2)}$ $\Rightarrow a - \epsilon < a_n \leqslant c_n \leqslant b_n < a + \epsilon \Rightarrow \forall n \geqslant N_4$ $a - \epsilon < c_n < a + \epsilon \Leftrightarrow |c_n - a| < \epsilon$ (это определение предела)
@@ -1154,20 +1154,25 @@
 	\end{theorem}
 	
 	\begin{proof}
-		Сделаем оценку сверху и снизу данной частичной суммы. \newline
-		\begin{tabular}{ccccccccc}
-			$a_2$ & $+$ & $2^1 \cdot a_{2^2}$ & $+$ & $2^2 \cdot a_{2^3}$ & $+$ & $\dots$ & $+$ & $2^n \cdot a_{2^{n + 1}}$ \\
-	        $\backslash //$ &  & $\backslash //$ &  & $\backslash //$ &  &  &  &  $\backslash //$ \\
-			$\overbracket{\underbracket{a_1}}$ & $+$ & $\overbracket{\underbracket{a_2 + a_3}}$ & $+$ & $\overbracket{\underbracket{a_4 + a_5 + a_6 + a_7}}$ & $+$ & $\dots$ & $+$ & $\overbracket{\underbracket{a_{2^n} + ... + a_{2^{n + 1} - 1}}}$ \\
-			$\backslash //$ &  & $\backslash //$ &  & $\backslash //$ &  &  &  & $\backslash //$ \\
-			$a_1$ & $+$ & $2^1 \cdot a_{2^1}$ & $+$ & $2^2 \cdot a_{2^2}$ & $+$ & $\dots$ & $+$ & $2^n \cdot a_{2^n}$ \\
-		\end{tabular}
+		Пусть $S_n = \sum^n_{k = 1} a_k, \tilde{S}_n = \sum^n_{k = 0} 2^k a_{2^k}$. Сделаем оценку сверху и снизу частичной суммы $S_N$.
 		
-		Пусть $S_n = \sum^n_{k = 1} a_k, \tilde{S_n} = \sum^n_{k = 1} 2^k a_{2^k}$. Тогда
-		\[ \tilde{S_n} \leqslant a_1 + \tilde{S_n} \leqslant S_{2^{n + 1} - 1} \leqslant \frac{1}{2}\tilde{S_n} \leqslant \tilde{S_n} \]
+		{\small
+		\begin{tabular}{ccccccccc}
+			$a_1 + a_1$ & $+$ & $2^1 a_{2^1}$ & $+$ & $2^2 \cdot a_{2^2}$ & $+ \dots +$ & $2^{n - 2} \cdot a_{2^{n - 2}}$ & $+$ & $2^{n - 1} \cdot a_{2^{n - 1}}$ \\
+			$\backslash //$ $\backslash //$ & & $\backslash //$ & & $\backslash //$ & & $\backslash //$ & & $\backslash //$ \\
+			$\overbracket{\underbracket{a_1}} + \overbracket{\underbracket{a_2}}$ & $+$ & $\overbracket{\underbracket{a_3 + a_4}}$ & $+$ & $\overbracket{\underbracket{a_5 + a_6 + a_7 + a_8}}$ & $+ \dots +$ & $\overbracket{\underbracket{a_{2^{n - 2} + 1} + \dots + a_{2^{n - 1}}}}$ & $+$ & $\overbracket{\underbracket{a_{2^{n - 1} + 1} + \dots + a_{2^n}}}$ \\
+			$\backslash //$ $\backslash //$ & & $\backslash //$ & & $\backslash //$ & & $\backslash //$ & & $\backslash //$ \\
+			$\overbracket{\underbracket{a_1}} + \overbracket{\underbracket{a_2}}$ & $+$ & $\overbracket{\underbracket{a_3 + a_4}}$ & $+$ & $\overbracket{\underbracket{a_5 + a_6 + a_7 + a_8}}$ & $+ \dots +$ & $\overbracket{\underbracket{a_{2^{n - 2} + 1} + \dots + a_{2^{n - 1}}}}$ & $+$ & $0$ \\
+			$\backslash //$ $\backslash //$ & & $\backslash //$ & & $\backslash //$ & & $\backslash //$ & & $\backslash //$ \\
+			$a_1 + a_{2^1}$ & $+$ & $2^1 \cdot a_{2^2}$ & $+$ & $2^2 \cdot a_{2^3}$ & $+ \dots +$ & $2^{n - 2} \cdot a_{2^{n - 1}}$ & $+$ & $0$ \\
+		\end{tabular}
+	    }
+	    
+		В случае, если $2^{n - 1} \leqslant N \leqslant 2^n$,
+		\[ \frac{1}{2}(a_1 + \tilde{S}_{n - 1}) \leqslant S_{2^{n - 1}} \leqslant S_N \leqslant S_{2^n} \leqslant a_1 + \tilde{S}_{n - 1} \]
 		\begin{enumerate}
-			\item Если $\sum^{\infty}_{k = 1} 2^k a_{2^k}$ сходится $\Rightarrow \tilde{S_n}$ сходится $\tilde{S_n}$ ограничена $\Rightarrow S_{2^{n + 1} - 1}$ ограничена. Но $S_{2^{n + 1} - 1}$ не убывает $\Rightarrow S_{2^{n + 1} - 1}$ сходится $\Rightarrow \sum^{\infty}_{k = 1} a_k$ сходится.
-			\item Если $\sum^{\infty}_{k = 1} a_k$ сходится $\Rightarrow S_{2^{n + 1} - 1}$ сходится $\Rightarrow S_{2^{n + 1} - 1}$ ограничена $\Rightarrow \tilde{S_n}$ ограничена. Но $\tilde{S_n}$ не убывает $\Rightarrow \tilde{S_n}$ сходится $\Rightarrow \sum^{\infty}_{k = 1} 2^k a_{2^k}$ сходится.
+			\item Если $\sum^{\infty}_{k = 0} 2^k a_{2^k}$ сходится $\Rightarrow \tilde{S_n}$ сходится $\Rightarrow \tilde{S_n}$ ограничена $\Rightarrow S_N$ ограничена. Но $S_N$ не убывает $\Rightarrow S_N$ сходится $\Rightarrow \sum^{\infty}_{k = 1} a_k$ сходится.
+			\item Если $\sum^{\infty}_{k = 1} a_k$ сходится $\Rightarrow S_N$ сходится $\Rightarrow S_N$ ограничена $\Rightarrow \tilde{S}_n$ ограничена. Но $\tilde{S}_n$ не убывает $\Rightarrow \tilde{S_n}$ сходится $\Rightarrow \sum^{\infty}_{k = 0} 2^k a_{2^k}$ сходится.
 		\end{enumerate}
 	\end{proof}
 	
@@ -2117,18 +2122,18 @@
 	\end{theorem}
 	
 	\begin{proof}
-	    Будем считать, что $f$ - не убивает без ограничения общности.
+	    Будем считать, что $f$ - не убывает без ограничения общности.
 	    \begin{itemize}
 	    	\item[$\Rightarrow$]
 		    \begin{enumerate}
 		    	\item По теореме Коши $\forall C \in [f(a), f(b)]$ $\exists c \in [a, b]: f(c) = C,$ т. к. $f$ - непрерывна на $[a, b]$.
 		    	\item $\forall x \in [a, b]$ $f(a) \leqslant f(x) \leqslant f(b)$ (функция монотонная)
 		    	
-		    	2) утверждает, что образ $f([a, b])$ содержится в отрезке $[f(a), f(b)]$, т. е. все точки образа лежат в $[f(a), f(b)]$. И при этом они лежат плотно друг к другу (т. е. нет дырок, иначе это не был бы отрезок), это следует 1).
+		    	2 пункт утверждает, что образ $f([a, b])$ содержится в отрезке $[f(a), f(b)]$, т. е. все точки образа лежат в $[f(a), f(b)]$. И при этом они лежат плотно друг к другу (т. е. нет дырок, иначе это не был бы отрезок), это следует из 1 пункта.
 		    \end{enumerate}
 		    \item[$\Leftarrow$] $f([a, b]) = [f(a), f(b)]$ (из того, что $f$ - не убывает, следует, что $f(a)$ - левая граница отрезка, а $f(b)$ - правая граница отрезка).
 		    
-		    Пусть $f$ - не непрерывна $\Rightarrow$ у неё есть точки разрыва. Пусть $x_0$ - точка разрыва $\Rightarrow$ из предложения 4.11 (т. к. $f$ - монотонна) $x_0$ - разрыв 1-го рода $\Rightarrow \exists \lim_{x \to x_0-} f(x) = \sup_{x < x_0} f(x)$ и $\exists \lim_{x \to x_0+} f(x) = \inf_{x > x_0} f(x)$ (как в предложении 4.10) и эти пределы не равны $\Rightarrow (\sup_{x < x_0} f(x), \inf_{x > x_9} f(x))$ - не пустой. Тогда этом интервале есть точка $C \neq f(x_0) \Rightarrow \not\exists c: f(c) = C.$
+		    Пусть $f$ - не непрерывна $\Rightarrow$ у неё есть точки разрыва. Пусть $x_0$ - точка разрыва $\Rightarrow$ из предложения 4.11 (т. к. $f$ - монотонна) $x_0$ - разрыв 1-го рода $\Rightarrow \exists \lim_{x \to x_0-} f(x) = \sup_{x < x_0} f(x)$ и $\exists \lim_{x \to x_0+} f(x) = \inf_{x > x_0} f(x)$ (как в предложении 4.11) и эти пределы не равны $\Rightarrow (\sup_{x < x_0} f(x), \inf_{x > x_9} f(x))$ - не пустой. Тогда этом интервале есть точка $C \neq f(x_0) \Rightarrow \not\exists c: f(c) = C.$
 		    
 		    \begin{center}
 		    	\includegraphics[width=0.3\textwidth]{img/lecture14/graph_of_monotonic _function}
@@ -3673,7 +3678,7 @@
 		Пусть $f_i(x), g_i(x)$ $i \in \{1, 2, 3\}$ - неотрицательные на
 		промежутке $[a, b)$ функции, причем $f_3(x) > 0, g_3(x) > 0$ и
 		$f_i(x) \overset{\text{сх.}}{\sim} g_i(x)$ $i \in \{1, 2, 3\}$ при $x \rightarrow b - 0$. Тогда
-		\[ \frac{f_1(x) \cdot f_2(x)}{f_3(x)} \overset{\text{сх.}}{\sim} \frac{f_1(x) \cdot f_2(x)}{f_3(x)} \text{ при } x \rightarrow b - 0.\]
+		\[ \frac{f_1(x) \cdot f_2(x)}{f_3(x)} \overset{\text{сх.}}{\sim} \frac{g_1(x) \cdot g_2(x)}{g_3(x)} \text{ при } x \rightarrow b - 0.\]
 	\end{sentence}
 	
 	\begin{proof}
