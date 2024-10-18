@@ -344,6 +344,8 @@
 			
 			\item $\forall a \in A \rightarrow c \geqslant a$
 			
+			От противного: пусть $c < a$.
+			
 			\begin{center}
 				\begin{tabular}{ccccccc}
 					$a =$ & $a_0,$ & $a_1$ & $\dots$ & $a_k$ & $a_{k + 1}$ & $\dots$ \\
@@ -811,6 +813,10 @@
 		\end{enumerate}
 	\end{proof}
 	
+	Рациональные числа удобно представлять точками на прямой: на прямой отмечается точка нуль и от нее откладывается вправо отрезок единичной длины (выбор единицы измерения), после чего кратным повторение данного отрезка получаем натуральные числа, делением единичного отрезка на $q$ равных частей получаем числа вида $\frac{1}{q}$, из которых, аналогично натуральным, получаются числа вида $\frac{p}{q}, p > 0$; отрицательные числа получаются симметрией относительно нуля.
+	
+	Доказанная выше теорема позволяет дать вещественным числам следующую геометрическую интерпретацию. Сопоставим десятичной дроби $0.a_1 a_2 ...$ последовательность вложенных отрезков по следующему правилу. Разделим отрезок $[0, 1]$ на 10 равных частей и выберем из получившихся десяти отрезков $a_1 + 1$-й по счету. Теперь проделываем ту же самую процедуру с выбранным отрезком и выбираем $a_2 + 1$-й по счету. И так далее. Получаем последовательность вложенных отрезков, причем длина отрезка, получаемого на $n$-м шаге, равна $\frac{1}{10^n}$. По доказанной теореме существует единственная общая точка построенной последовательности вложенных отрезков, которая как раз и совпадает с $0.a_1 a_2 ...$.
+	
 	\section{Подпоследовательность}
 	
 	\begin{theorem}
@@ -831,7 +837,7 @@
 		
 		$\forall \epsilon > 0$ $\exists N_1: \forall n \geqslant N_1$ $|a_n - a| < \epsilon$
 		
-		$b_k = a_{n_k}$ $k \leqslant n_k$
+		$b_k = a_{n_k}$ - подпоследовательность, $k \leqslant n_k$
 		
 		$\forall \epsilon > 0$ $\exists N = N_1$ $\forall k \geqslant N_1 \text{ (пояснение: } n_k \geqslant k \geqslant N_1)$ $|b_k - a| = |a_{n_k} - a| \leqslant \text{(последовательность сходится) } |a_k - a| < \epsilon.$
 	\end{proof}
@@ -870,17 +876,17 @@
 		\end{center}
 		
 		Т. к. $M_{n_j}$ - супремум, то $\exists a \in \{a_k | k > n_j\}$ такое, что
-		$M_{n_j} - \frac{1}{j} \leqslant a \leqslant M_{n_j}$ (в противном случае $M_{n_j}$ - не супремум). Т. к. $a \in \{a_k | k > n_j\},$ то пусть $a = a_{\lambda}$ $n_j > n_{j + 1} = \lambda.$
+		$M_{n_j} - \frac{1}{j} \leqslant a \leqslant M_{n_j}$ (в противном случае $M_{n_j}$ - не супремум). Т. к. $a \in \{a_k | k > n_j\},$ то пусть $a = a_{\lambda}$ $n_j < n_{j + 1} = \lambda.$
 		
-		$\forall j \in \N$ $M_{n_j} - \frac{1}{j} \leqslant a_{n_{j + 1}} \leqslant M_{n_j}$ . Т. к. $M_j \to M, \frac{1}{j} \to 0,$ то по теореме о зажатой последовательности
-		\[ M - 0 \leqslant \lim_{j \to \infty} a_{n_{j + 1}} \leqslant \lim_{j \to \infty} M_{n_j} = \text{(предложение 2.13) } M \]
-		Значит $\lim_{j \to \infty} a_{n_j} = M \Rightarrow \uplim_{n \to \infty} a_n$ - частичный предел.
+		$\forall j \in \N$ $M_{n_j} - \frac{1}{j} \leqslant a_{n_{j + 1}} \leqslant M_{n_j}$ . Т. к. $M_{n_j} \to M, \frac{1}{j} \to 0,$ при $j \to \infty,$ то по теореме о зажатой последовательности
+		\[ M - 0 \leqslant \lim_{j \to \infty} a_{n_{j + 1}} \leqslant M \text{ (предложение 2.13)} \]
+		Значит $\lim_{j \to \infty} a_{n_{j + 1}} = M \Rightarrow \uplim_{n \to \infty} a_n$ - частичный предел.
 		
 		Теперь пусть $\lowlim_{n \to \infty} a_n = \lim_{n \to \infty} m_n = m.$
 		
 		Аналогично можно доказать, что
 		\[ \forall j \in \N \text{ } m_{n_j} \leqslant a_{n_{j + 1}} \leqslant m_{n_j} + \frac{1}{j} \]
-		\[ m = \lim_{j \to \infty} m_{n_j} \leqslant \lim_{j \to \infty} a_{n_{j + 1}} \leqslant m + 0 \]
+		\[ m \leqslant \lim_{j \to \infty} a_{n_{j + 1}} \leqslant m + 0 \]
 		$\lim_{j \to \infty} a_{n_{j + 1}} = m \Rightarrow \lowlim_{n \to \infty} a_n$ - частичный предел.
 		
 		Пусть теперь $a$ - частичный предел. Это означает, что $a = \lim_{k \to \infty} a_{n_k}$ для некоторой подпоследовательности $\{a_{n_k}\}^{\infty}_{k = 1}.$ Тогда $\displaystyle \inf_{p > n_{k - 1}} a_p = m_{n_{k - 1}} \leqslant a_{n_k} \leqslant M_{n_{k - 1}} = \sup_{p > n_{k - 1}} a_p.$ По теореме о переходе к пределу в неравенстве получаем, что $\displaystyle \lowlim_{n \to \infty} a_n \leqslant a \leqslant \uplim_{n \to \infty} a_n.$
@@ -948,7 +954,7 @@
 	    \[ \forall m, n > N \text{ } |a_n - a_m| = |a_n - a + a - a_m| \leqslant |a_n - a| + |a - a_m| < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon \]
 	\end{proof}
 	
-	\begin{theorem}
+	\begin{theorem}[Критерий Коши]
 		Числовая последовательность сходится тогда и только тогда, когда она фундаментальна.
 	\end{theorem}
 	
@@ -969,7 +975,7 @@
 		    \[ \forall \epsilon > 0 \text{ } \exists k_0: k > k_0 \text{ } |a_{n_k} - a| < \epsilon. \]
 		    Кроме того, в силу фундаментальности
 		    \[ \forall \epsilon > 0 \text{ } \exists N: n, m > N \text{ } |a_n - a_m| < \epsilon. \]
-		    Пусть $k$ выбрано так, что $k > k_0$ и $m = n_k > N.$ Тогда 
+		    Пусть $k$ выбрано так, что $k > k_0$ и $m = n_k > N$ (помним, что $n_k \geqslant k$). Тогда 
 		    \[ \forall \epsilon > 0 \text{ } \forall n > N \text{ } |a_n - a| = |a_n - a_{n_k} + a_{n_k} - a| \leqslant |a_n - a_{n_k}| + |a_{n_k} - a| < \epsilon + \epsilon = 2\epsilon \]
 		    (замечание 2.8).
 		\end{itemize}
