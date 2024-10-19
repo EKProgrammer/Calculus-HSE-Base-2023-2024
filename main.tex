@@ -1375,7 +1375,10 @@
 			\item $\text{К} \Rightarrow \text{Г}$
 			Пусть $\lim_{x \to a} f(x) = A$ в смысле Коши. Рассмотрим последовательность точек $x_n \in D \setminus \{a\}, x_n \to a.$
 			\[ \lim_{x \to a} f(x) = A \Leftrightarrow \forall \epsilon > 0 \text{ } \exists \delta > 0: \forall x \in D, 0 < |x - a| < \delta \rightarrow |f(x) - A| < \epsilon \]
-			\[ \lim_{n \to \infty} x_n = a \Leftrightarrow \forall \delta > 0 \text{ } \exists N: \forall n > N \text{ } |x_n - a| < \delta \]
+			\[ \lim_{n \to \infty} x_n = a \Leftrightarrow \forall \delta > 0 \text{ (в частности для } \delta \text{ выше) } \exists N: \forall n > N \text{ } |x_n - a| < \delta \]
+			В итоге
+			\[ \forall \epsilon > 0 \text{ } \exists \delta > 0 \text{ } \exists N: \forall n > N \text{ } \forall \{x_n\} \text{  } 0 < |x_n - a| < \delta \rightarrow |f(x_n) - A| < \epsilon \]
+			
 			\item $\text{Г} \Rightarrow \text{К}$ От противного.
 			
 			Пусть число $A$ не является пределом функции $f$ в точке $a$ в смысле Коши. Это означает, что
